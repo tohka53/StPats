@@ -1,44 +1,139 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
+    <link rel="stylesheet" href="@Url.Content("~/Content/AdminLte/css/font-awesome.min.css")">
+    <link rel="stylesheet" href="@Url.Content("~/Content/AdminLte/css/ionicons.min.css")">
+    <link rel="stylesheet" href="@Url.Content("~/Content/AdminLte/css/AdminLTE.css")">
+    <link rel="stylesheet" href="@Url.Content("~/Content/AdminLte/css/skins/skin-red.css")">
+
+
+
+
 </head>
-<body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+<body class="skin-red">
+
+    <!-- Left side column. contains the logo and sidebar -->   <!-- Left side column. contains the logo and sidebar -->
+    <aside class="main-sidebar">
+        <!-- sidebar: style can be found in sidebar.less -->
+        <section class="sidebar">
+            <!-- Sidebar user panel (optional) -->
+            <div class="user-panel">
+                <div class="pull-left image">
+                    <img src="@Url.Content("~/Content/AdminLte/img/user2_160-160.png")" class="img-circle" alt="User Image" />
+                </div>
+                <div class="pull-left info">
+                    <p>@Html.Encode(User.Identity.Name.ToUpper())</p>
+                    <!-- Status -->
+                    <a href="#"><i class="fa fa-circle text-success"></i> St Pats is Online</a>
+                </div>
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
-                @Html.Partial("_LoginPartial")
+            <!-- Sidebar Menu -->
+            <ul class="sidebar-menu">
+                <!-- Optionally, you can add icons to the links -->
+                <li>@Html.ActionLink("Home Page", "Index", "Home")</li>
+                <li>@Html.ActionLink("About Us", "About", "Home")</li>
+                <li>@Html.ActionLink("Contact Us", "Contact", "Home")</li>
+                <li class="treeview">
+                    <a href="#"><span>Administracion</span> <i class="fa fa-angle-left pull-right"></i></a>
+                    <ul class="treeview-menu">
+                        <li>@Html.ActionLink("Empresa", "", "Empresas")</li>
+                        <li>@Html.ActionLink("Estado Motor", "", "Estado_Motor")</li>
+                        <li>@Html.ActionLink("Marca Motor", "", "Marca_Motor")</li>
+                        <li>@Html.ActionLink("Sitios", "", "Sitios")</li>
+                        <li>@Html.ActionLink("Recursos Humanos", "", "rrhh")</li>
+
+
+                    </ul>
+                </li>
+
+
+            </ul><!-- /.sidebar-menu -->
+        </section>
+        <!-- /.sidebar -->
+    </aside>
+    <!--**********************************-->
+    <div class="container-fluid">
+        <div class="col-md-12 col-lg-12" style="position: fixed; padding: 0px; margin: 0px;">
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox" id="backgroundCarousel">
+                    <div class="item active">
+                        <img src="@Url.Content("~/Content/img/banner1.png")" alt="..." style="width:100%;opacity: 0.5; filter: alpha(opacity=50);">
+                    </div>
+                    <div class="item">
+                        <img src="@Url.Content("~/Content/img/banner2.png")" alt="..." style="width:100%;opacity: 0.5; filter: alpha(opacity=50);">
+                    </div>
+                    <div class="item">
+                        <img src="@Url.Content("~/Content/img/banner3.png")" alt="..." style="width:100%;opacity: 0.5; filter: alpha(opacity=50);">
+                    </div>
+                    <div class="item">
+                        <img src="@Url.Content("~/Content/img/banner4.png")" alt="..." style="width:100%;opacity: 0.5; filter: alpha(opacity=50);">
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
-    </div>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
+    </div><!-- /.container-fluid -->
+    <!--**********************************-->
+
+    <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header"></section>
+        <!-- Main content -->
+        <section class="content">
+            @RenderBody()
+        </section><!-- /.content -->
+    </div><!-- /.content-wrapper -->
+    <!-- Main Footer -->
+    <footer class="main-footer">
+
+        <!--<div class="row">
+            <div class="hidden-sm hidden-xs col-md-1 col-lg-1">&nbsp;</div>
+            <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10">
+                @*@RenderBody()*@
+            </div>
+            <div class="hidden-sm hidden-xs col-md-1 col-lg-1">&nbsp;</div>
+
+        </div><!-- /.row -->
+        <!-- Default to the left -->
+
+
+        <div class="row">
+            <!--<div class="hidden-sm hidden-xs col-md-1 col-lg-1">&nbsp;</div>-->
+            <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10">
+                <strong>Copyright &copy; 2018 <a href="#">St. Patrick´s of Texas</a>.</strong> All rights reserved.
+            </div>
+            <div class="hidden-sm hidden-xs col-md-1 col-lg-1">&nbsp;</div>
+            <!-- Your Page Content Here -->
+        </div><!-- /.row -->
+    </footer>
+
+
+
+    <!--- COMIENZA EL CODIGO HTML ORIGINAL --->
+    @*@Scripts.Render("~/bundles/jquery")*@
+    @*@Scripts.Render("~/bundles/bootstrap")*@
+
+
+    @Scripts.Render("~/Scripts/jquery-1.10.2.min.js")
+    @Scripts.Render("~/Scripts/bootstrap.js")
+    @Scripts.Render("~/Content/AdminLte/js/app.js")
+    @Scripts.Render("~/bundles/jqueryval")
     @RenderSection("scripts", required: false)
 </body>
 </html>
