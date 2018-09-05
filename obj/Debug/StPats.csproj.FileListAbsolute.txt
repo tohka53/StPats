@@ -117,3 +117,4 @@ C:\Users\Admin\Desktop\Mio\stpats\StPats\StPats\obj\Debug\StPats.csproj.CoreComp
 C:\Users\Admin\Desktop\Mio\stpats\StPats\StPats\obj\Debug\StPats.csproj.CopyComplete
 C:\Users\Admin\Desktop\Mio\stpats\StPats\StPats\obj\Debug\StPats.dll
 C:\Users\Admin\Desktop\Mio\stpats\StPats\StPats\obj\Debug\StPats.pdb
+C:\Users\Admin\Desktop\Mio\stpats\StPats\StPats\obj\Debug\StPats.csprojAssemblyReference.cache
