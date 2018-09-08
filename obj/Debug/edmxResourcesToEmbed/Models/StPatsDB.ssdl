@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="StPatsDataBaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'StPatsDataBase.dbo.Product_StPats' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Product_StPats">
+    <Key>
+      <PropertyRef Name="id_producto" />
+      <PropertyRef Name="descripcion" />
+      <PropertyRef Name="disponibilidad" />
+      <PropertyRef Name="precio" />
+      <PropertyRef Name="capacidad" />
+    </Key>
+    <Property Name="id_producto" Type="int" Nullable="false" />
+    <Property Name="descripcion" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="disponibilidad" Type="int" Nullable="false" />
+    <Property Name="precio" Type="money" Nullable="false" />
+    <Property Name="capacidad" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="StPatsDataBaseModelStoreContainer">
+    <EntitySet Name="Product_StPats" EntityType="Self.Product_StPats" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Product_StPats].[id_producto] AS [id_producto], 
+    [Product_StPats].[descripcion] AS [descripcion], 
+    [Product_StPats].[disponibilidad] AS [disponibilidad], 
+    [Product_StPats].[precio] AS [precio], 
+    [Product_StPats].[capacidad] AS [capacidad]
+    FROM [dbo].[Product_StPats] AS [Product_StPats]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>
