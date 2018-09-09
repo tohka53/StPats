@@ -62,6 +62,9 @@
     <Property Name="stok" Type="Int32" Nullable="false" />
     <Property Name="location" Type="Int32" Nullable="false" />
     <NavigationProperty Name="Locations_StPats" Relationship="StPatsDataBaseModel.FK_Tanks_StPats_Locations_StPats" FromRole="Tanks_StPats" ToRole="Locations_StPats" />
+    <Property Name="manual" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="image" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="desription" Type="String" MaxLength="450" FixedLength="false" Unicode="false" />
   </EntityType>
   <Association Name="FK_Tanks_StPats_Locations_StPats">
     <End Type="StPatsDataBaseModel.Locations_StPats" Role="Locations_StPats" Multiplicity="1" />

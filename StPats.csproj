@@ -435,16 +435,16 @@
     <Content Include="vendor\bootstrap\css\bootstrap-reboot.min.css.map" />
     <Content Include="vendor\bootstrap\css\bootstrap.css.map" />
     <Content Include="vendor\bootstrap\css\bootstrap.min.css.map" />
-    <Content Include="Views\Tanks_StPats\Create.cshtml" />
-    <Content Include="Views\Tanks_StPats\Delete.cshtml" />
-    <Content Include="Views\Tanks_StPats\Details.cshtml" />
-    <Content Include="Views\Tanks_StPats\Edit.cshtml" />
-    <Content Include="Views\Tanks_StPats\Index.cshtml" />
     <Content Include="Views\Locations_StPats\Create.cshtml" />
     <Content Include="Views\Locations_StPats\Delete.cshtml" />
     <Content Include="Views\Locations_StPats\Details.cshtml" />
     <Content Include="Views\Locations_StPats\Edit.cshtml" />
     <Content Include="Views\Locations_StPats\Index.cshtml" />
+    <Content Include="Views\Tanks_StPats\Create.cshtml" />
+    <Content Include="Views\Tanks_StPats\Delete.cshtml" />
+    <Content Include="Views\Tanks_StPats\Details.cshtml" />
+    <Content Include="Views\Tanks_StPats\Edit.cshtml" />
+    <Content Include="Views\Tanks_StPats\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

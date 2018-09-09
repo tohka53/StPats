@@ -27,6 +27,9 @@
           <Property Name="price" Type="money" Nullable="false" />
           <Property Name="stok" Type="int" Nullable="false" />
           <Property Name="location" Type="int" Nullable="false" />
+          <Property Name="manual" Type="varchar" MaxLength="150" Nullable="false" />
+          <Property Name="image" Type="varchar" MaxLength="150" Nullable="false" />
+          <Property Name="desription" Type="varchar" MaxLength="450" />
         </EntityType>
         <Association Name="FK_Tanks_StPats_Locations_StPats">
           <End Role="Locations_StPats" Type="Self.Locations_StPats" Multiplicity="1" />
@@ -145,6 +148,9 @@
           <Property Name="stok" Type="Int32" Nullable="false" />
           <Property Name="location" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Locations_StPats" Relationship="StPatsDataBaseModel.FK_Tanks_StPats_Locations_StPats" FromRole="Tanks_StPats" ToRole="Locations_StPats" />
+          <Property Name="manual" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="image" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="desription" Type="String" MaxLength="450" FixedLength="false" Unicode="false" />
         </EntityType>
         <Association Name="FK_Tanks_StPats_Locations_StPats">
           <End Type="StPatsDataBaseModel.Locations_StPats" Role="Locations_StPats" Multiplicity="1" />
@@ -186,6 +192,9 @@
           <EntitySetMapping Name="Tanks_StPats">
             <EntityTypeMapping TypeName="StPatsDataBaseModel.Tanks_StPats">
               <MappingFragment StoreEntitySet="Tanks_StPats">
+                <ScalarProperty Name="desription" ColumnName="desription" />
+                <ScalarProperty Name="image" ColumnName="image" />
+                <ScalarProperty Name="manual" ColumnName="manual" />
                 <ScalarProperty Name="location" ColumnName="location" />
                 <ScalarProperty Name="stok" ColumnName="stok" />
                 <ScalarProperty Name="price" ColumnName="price" />

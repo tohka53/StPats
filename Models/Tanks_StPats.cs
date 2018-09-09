@@ -25,6 +25,9 @@ namespace StPats.Models
         public decimal price { get; set; }
         public int stok { get; set; }
         public int location { get; set; }
+        public string manual { get; set; }
+        public string image { get; set; }
+        public string desription { get; set; }
     
         public virtual Locations_StPats Locations_StPats { get; set; }
     }

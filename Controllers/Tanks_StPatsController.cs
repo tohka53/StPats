@@ -48,7 +48,7 @@ namespace StPats.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "id_tanque,codigo_tanque,capacidad,bottom_valve,manway,lifting_arm,vent,replacemnet_infiatable_gasket,price,stok,location")] Tanks_StPats tanks_StPats)
+        public ActionResult Create([Bind(Include = "id_tanque,codigo_tanque,capacidad,bottom_valve,manway,lifting_arm,vent,replacemnet_infiatable_gasket,price,stok,location,manual,image,desription")] Tanks_StPats tanks_StPats)
         {
             if (ModelState.IsValid)
             {
@@ -82,7 +82,7 @@ namespace StPats.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "id_tanque,codigo_tanque,capacidad,bottom_valve,manway,lifting_arm,vent,replacemnet_infiatable_gasket,price,stok,location")] Tanks_StPats tanks_StPats)
+        public ActionResult Edit([Bind(Include = "id_tanque,codigo_tanque,capacidad,bottom_valve,manway,lifting_arm,vent,replacemnet_infiatable_gasket,price,stok,location,manual,image,desription")] Tanks_StPats tanks_StPats)
         {
             if (ModelState.IsValid)
             {

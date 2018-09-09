@@ -85,6 +85,30 @@
         </dd>
 
         <dt>
+            @Html.DisplayNameFor(model => model.manual)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.manual)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.image)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.image)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.desription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.desription)
+        </dd>
+
+        <dt>
             @Html.DisplayNameFor(model => model.Locations_StPats.description)
         </dt>
 
@@ -97,9 +121,18 @@
     @using (Html.BeginForm()) {
         @Html.AntiForgeryToken()
 
-        <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
-        </div>
-    }
+
+<button class="btn btn-danger btn-sm" onclick="location.href = '@Url.Action("Delete", new { id = Model.id_tanque })'">
+    <span class="glyphicon glyphicon-trash"></span>&nbsp;Eliminar
+</button>
+}
+    <p></p>
+    <div class="form-group">
+        <button class="btn-bitbucket btn-sm" onclick="location.href = '@Url.Action("Index")'">
+            <span class="glyphicon glyphicon-backward"></span>&nbsp;Back to list
+        </button>
+    </div>
 </div>
+
+
+

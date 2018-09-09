@@ -22,6 +22,9 @@
     <Property Name="price" Type="money" Nullable="false" />
     <Property Name="stok" Type="int" Nullable="false" />
     <Property Name="location" Type="int" Nullable="false" />
+    <Property Name="manual" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="image" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="desription" Type="varchar" MaxLength="450" />
   </EntityType>
   <Association Name="FK_Tanks_StPats_Locations_StPats">
     <End Role="Locations_StPats" Type="Self.Locations_StPats" Multiplicity="1" />

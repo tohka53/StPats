@@ -1,96 +1,103 @@
 ﻿@model IEnumerable<StPats.Models.Tanks_StPats>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Tanks";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<h2>Tanks</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+<div class="form-group">
+    <button class="btn btn-sm btn-success" onclick="location.href = '@Url.Action("Create")'">
+        <span class="glyphicon glyphicon-plus-sign"></span>&nbsp;Add New Locatios
+    </button>
+</div>
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.codigo_tanque)
+            Tank Code
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.capacidad)
+            Capacity
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.bottom_valve)
+            Bottom Valve
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.manway)
+            Manway
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.lifting_arm)
+            Lifting Arm
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.vent)
+            Vent
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.replacemnet_infiatable_gasket)
+            Replacemnet Infiatable Gasket
+        </th>
+
+        <th>
+            Stock
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.price)
+            Location
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.stok)
+            Price
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Locations_StPats.description)
-        </th>
-        <th>
-            Actiones
+            Actions
         </th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.codigo_tanque)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.capacidad)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.bottom_valve)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.manway)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.lifting_arm)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.vent)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.replacemnet_infiatable_gasket)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.price)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.stok)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Locations_StPats.description)
-        </td>
-        <td>
-            <button class="btn btn-primary btn-sm" onclick="location.href = '@Url.Action("Edit", new { id = item.id_tanque })'">
-                <span class="glyphicon glyphicon-edit"></span>&nbsp;Editar
-            </button>
-            <button class="btn btn-info btn-sm" onclick="location.href = '@Url.Action("Details", new { id = item.id_tanque })'">
-                <span class="glyphicon glyphicon-list-alt"></span>&nbsp; Detalle
-            </button>
-            <button class="btn btn-danger btn-sm" onclick="location.href = '@Url.Action("Delete", new { id = item.id_tanque })'">
-                <span class="glyphicon glyphicon-trash"></span>&nbsp;Eliminar
-            </button>
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.codigo_tanque)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.capacidad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.bottom_valve)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.manway)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.lifting_arm)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.vent)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.replacemnet_infiatable_gasket)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.stok)
+            </td>
+
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Locations_StPats.description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.price)
+            </td>
+            <td>
+                <button class="btn btn-primary btn-sm" onclick="location.href = '@Url.Action("Edit", new { id = item.id_tanque })'">
+                    <span class="glyphicon glyphicon-edit"></span>&nbsp;Edit
+                </button>
+                <button class="btn btn-info btn-sm" onclick="location.href = '@Url.Action("Details", new { id = item.id_tanque })'">
+                    <span class="glyphicon glyphicon-list-alt"></span>&nbsp; Details
+                </button>
+                <button class="btn btn-danger btn-sm" onclick="location.href = '@Url.Action("Delete", new { id = item.id_tanque })'">
+                    <span class="glyphicon glyphicon-trash"></span>&nbsp;Delete
+                </button>
+            </td>
+        </tr>
+    }
 
 </table>

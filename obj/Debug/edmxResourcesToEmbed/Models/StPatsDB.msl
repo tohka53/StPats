@@ -12,6 +12,9 @@
     <EntitySetMapping Name="Tanks_StPats">
       <EntityTypeMapping TypeName="StPatsDataBaseModel.Tanks_StPats">
         <MappingFragment StoreEntitySet="Tanks_StPats">
+          <ScalarProperty Name="desription" ColumnName="desription" />
+          <ScalarProperty Name="image" ColumnName="image" />
+          <ScalarProperty Name="manual" ColumnName="manual" />
           <ScalarProperty Name="location" ColumnName="location" />
           <ScalarProperty Name="stok" ColumnName="stok" />
           <ScalarProperty Name="price" ColumnName="price" />

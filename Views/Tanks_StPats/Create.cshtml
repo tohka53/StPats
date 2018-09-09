@@ -8,16 +8,18 @@
 <h2>Create</h2>
 
 
-@using (Html.BeginForm()) 
+@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <h4>Tanks_StPats</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
-            @Html.LabelFor(model => model.codigo_tanque, htmlAttributes: new { @class = "control-label col-md-2" })
+            <strong>
+                @Html.LabelFor(model => model.codigo_tanque, "Code Tank", htmlAttributes: new { @class = "control-label col-md-2" })
+                </strong>  
             <div class="col-md-10">
                 @Html.EditorFor(model => model.codigo_tanque, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.codigo_tanque, "", new { @class = "text-danger" })
@@ -25,7 +27,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.capacidad, htmlAttributes: new { @class = "control-label col-md-2" })
+            <strong> @Html.LabelFor(model => model.capacidad, "Capacity", htmlAttributes: new { @class = "control-label col-md-2" }) </strong> 
             <div class="col-md-10">
                 @Html.EditorFor(model => model.capacidad, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.capacidad, "", new { @class = "text-danger" })
@@ -97,17 +99,46 @@
         </div>
 
         <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+            @Html.LabelFor(model => model.manual, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.manual, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.manual, "", new { @class = "text-danger" })
             </div>
         </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.image, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.image, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.image, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.desription, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.desription, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.desription, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <button class="btn btn-success btn-sm" type="submit">
+                    <span class="glyphicon glyphicon-save"></span>&nbsp;Save New Tank
+                </button>
+            </div>
+        </div>
+
     </div>
 }
 
-<div>
-    @Html.ActionLink("Back to List", "Index")
+<div class="form-group">
+    <button class="btn-bitbucket btn-sm" onclick="location.href = '@Url.Action("Index")'">
+        <span class="glyphicon glyphicon-backward"></span>&nbsp;  Back to List
+    </button>
 </div>
-
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
 }
