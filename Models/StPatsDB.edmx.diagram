@@ -5,7 +5,9 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="b9fd071074c445878ea38c96fbb39e56" Name="Diagram1">
-        <EntityTypeShape EntityType="StPatsDataBaseModel.Product_StPats" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="StPatsDataBaseModel.Locations_StPats" Width="1.5" PointX="3.75" PointY="0.75" />
+        <EntityTypeShape EntityType="StPatsDataBaseModel.Tanks_StPats" Width="1.5" PointX="0.75" PointY="3.75" />
+        <AssociationConnector Association="StPatsDataBaseModel.FK_Tanks_StPats_Locations_StPats" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

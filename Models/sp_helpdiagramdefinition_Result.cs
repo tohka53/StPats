@@ -10,14 +10,10 @@
 namespace StPats.Models
 {
     using System;
-    using System.Collections.Generic;
     
-    public partial class Product_StPats
+    public partial class sp_helpdiagramdefinition_Result
     {
-        public int id_producto { get; set; }
-        public string descripcion { get; set; }
-        public int disponibilidad { get; set; }
-        public decimal precio { get; set; }
-        public string capacidad { get; set; }
+        public Nullable<int> version { get; set; }
+        public byte[] definition { get; set; }
     }
 }

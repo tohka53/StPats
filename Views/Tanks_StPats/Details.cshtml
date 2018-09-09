@@ -1,0 +1,99 @@
+﻿@model StPats.Models.Tanks_StPats
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Tanks_StPats</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.codigo_tanque)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.codigo_tanque)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.capacidad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.capacidad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.bottom_valve)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.bottom_valve)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.manway)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.manway)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.lifting_arm)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lifting_arm)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.vent)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.vent)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.replacemnet_infiatable_gasket)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.replacemnet_infiatable_gasket)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.stok)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.stok)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Locations_StPats.description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Locations_StPats.description)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id_tanque }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

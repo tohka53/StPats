@@ -1,0 +1,38 @@
+﻿@model StPats.Models.Locations_StPats
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Location Name</h2>
+
+<div>
+    <h4></h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+          
+        </dt>
+
+        <dd>
+            <h3> @Html.DisplayFor(model => model.description)</h3> 
+        </dd>
+
+    </dl>
+</div>
+<p>
+    <dl class="dl-horizontal">
+        <dd>
+            <button class="btn btn-primary btn-sm" onclick="location.href = '@Url.Action("Edit", new { id = Model.id_location })'">
+                <span class="glyphicon glyphicon-edit"></span>&nbsp; Edit
+            </button>
+        </dd>
+    </dl>
+
+    <div class="form-group">
+        <button class="btn-bitbucket btn-sm" onclick="location.href = '@Url.Action("Index")'">
+            <span class="glyphicon glyphicon-backward"></span>&nbsp; Back to the last page
+        </button>
+    </div>
+</p>

@@ -1,0 +1,44 @@
+﻿@model IEnumerable<StPats.Models.Locations_StPats>
+
+@{
+    ViewBag.Title = "Locatios";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Locatios</h2>
+
+<div class="form-group">
+    <button class="btn btn-sm btn-success" onclick="location.href = '@Url.Action("Create")'">
+        <span class="glyphicon glyphicon-plus-sign"></span>&nbsp;Add New Locatios
+    </button>
+</div>
+<table class="table">
+    <tr>
+        <th>
+            Name Location
+        </th>
+        <th>
+            Actiones
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.description)
+        </td>
+        <td>
+            <button class="btn btn-primary btn-sm" onclick="location.href = '@Url.Action("Edit", new { id = item.id_location })'">
+                <span class="glyphicon glyphicon-edit"></span>&nbsp;Editar
+            </button>
+            <button class="btn btn-info btn-sm" onclick="location.href = '@Url.Action("Details", new { id = item.id_location })'">
+                <span class="glyphicon glyphicon-list-alt"></span>&nbsp; Detalle
+            </button>
+            <button class="btn btn-danger btn-sm" onclick="location.href = '@Url.Action("Delete", new { id = item.id_location })'">
+                <span class="glyphicon glyphicon-trash"></span>&nbsp;Eliminar
+            </button>
+        </td>
+    </tr>
+}
+
+</table>

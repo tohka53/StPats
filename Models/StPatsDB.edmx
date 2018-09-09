@@ -4,73 +4,226 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="StPatsDataBaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'StPatsDataBase.dbo.Product_StPats' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-        <EntityType Name="Product_StPats">
+    <Schema Namespace="StPatsDataBaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Locations_StPats">
           <Key>
-            <PropertyRef Name="id_producto" />
-            <PropertyRef Name="descripcion" />
-            <PropertyRef Name="disponibilidad" />
-            <PropertyRef Name="precio" />
-            <PropertyRef Name="capacidad" />
+            <PropertyRef Name="id_location" />
           </Key>
-          <Property Name="id_producto" Type="int" Nullable="false" />
-          <Property Name="descripcion" Type="varchar" MaxLength="200" Nullable="false" />
-          <Property Name="disponibilidad" Type="int" Nullable="false" />
-          <Property Name="precio" Type="money" Nullable="false" />
-          <Property Name="capacidad" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="id_location" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="description" Type="varchar" MaxLength="50" Nullable="false" />
         </EntityType>
+        <EntityType Name="Tanks_StPats">
+          <Key>
+            <PropertyRef Name="id_tanque" />
+          </Key>
+          <Property Name="id_tanque" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="codigo_tanque" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="capacidad" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="bottom_valve" Type="real" Nullable="false" />
+          <Property Name="manway" Type="int" Nullable="false" />
+          <Property Name="lifting_arm" Type="int" Nullable="false" />
+          <Property Name="vent" Type="int" Nullable="false" />
+          <Property Name="replacemnet_infiatable_gasket" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="price" Type="money" Nullable="false" />
+          <Property Name="stok" Type="int" Nullable="false" />
+          <Property Name="location" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Tanks_StPats_Locations_StPats">
+          <End Role="Locations_StPats" Type="Self.Locations_StPats" Multiplicity="1" />
+          <End Role="Tanks_StPats" Type="Self.Tanks_StPats" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Locations_StPats">
+              <PropertyRef Name="id_location" />
+            </Principal>
+            <Dependent Role="Tanks_StPats">
+              <PropertyRef Name="location" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+        <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <EntityContainer Name="StPatsDataBaseModelStoreContainer">
-          <EntitySet Name="Product_StPats" EntityType="Self.Product_StPats" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [Product_StPats].[id_producto] AS [id_producto], 
-    [Product_StPats].[descripcion] AS [descripcion], 
-    [Product_StPats].[disponibilidad] AS [disponibilidad], 
-    [Product_StPats].[precio] AS [precio], 
-    [Product_StPats].[capacidad] AS [capacidad]
-    FROM [dbo].[Product_StPats] AS [Product_StPats]</DefiningQuery>
-          </EntitySet>
+          <EntitySet Name="Locations_StPats" EntityType="Self.Locations_StPats" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tanks_StPats" EntityType="Self.Tanks_StPats" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Tanks_StPats_Locations_StPats" Association="Self.FK_Tanks_StPats_Locations_StPats">
+            <End Role="Locations_StPats" EntitySet="Locations_StPats" />
+            <End Role="Tanks_StPats" EntitySet="Tanks_StPats" />
+          </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="StPatsDataBaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityType Name="Product_StPats">
-          <Key>
-            <PropertyRef Name="id_producto" />
-            <PropertyRef Name="descripcion" />
-            <PropertyRef Name="disponibilidad" />
-            <PropertyRef Name="precio" />
-            <PropertyRef Name="capacidad" />
-          </Key>
-          <Property Name="id_producto" Type="Int32" Nullable="false" />
-          <Property Name="descripcion" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="disponibilidad" Type="Int32" Nullable="false" />
-          <Property Name="precio" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
-          <Property Name="capacidad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-        </EntityType>
         <EntityContainer Name="StPatsDataBaseEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Product_StPats" EntityType="Self.Product_StPats" />
+          <EntitySet Name="Locations_StPats" EntityType="StPatsDataBaseModel.Locations_StPats" />
+          <EntitySet Name="Tanks_StPats" EntityType="StPatsDataBaseModel.Tanks_StPats" />
+          <AssociationSet Name="FK_Tanks_StPats_Locations_StPats" Association="StPatsDataBaseModel.FK_Tanks_StPats_Locations_StPats">
+            <End Role="Locations_StPats" EntitySet="Locations_StPats" />
+            <End Role="Tanks_StPats" EntitySet="Tanks_StPats" />
+          </AssociationSet>
+          <FunctionImport Name="sp_alterdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_creatediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_dropdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(StPatsDataBaseModel.sp_helpdiagramdefinition_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(StPatsDataBaseModel.sp_helpdiagrams_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_renamediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="new_diagramname" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_upgraddiagrams" />
         </EntityContainer>
+        <EntityType Name="Locations_StPats">
+          <Key>
+            <PropertyRef Name="id_location" />
+          </Key>
+          <Property Name="id_location" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="description" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Tanks_StPats" Relationship="StPatsDataBaseModel.FK_Tanks_StPats_Locations_StPats" FromRole="Locations_StPats" ToRole="Tanks_StPats" />
+        </EntityType>
+        <EntityType Name="Tanks_StPats">
+          <Key>
+            <PropertyRef Name="id_tanque" />
+          </Key>
+          <Property Name="id_tanque" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="codigo_tanque" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="capacidad" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="bottom_valve" Type="Single" Nullable="false" />
+          <Property Name="manway" Type="Int32" Nullable="false" />
+          <Property Name="lifting_arm" Type="Int32" Nullable="false" />
+          <Property Name="vent" Type="Int32" Nullable="false" />
+          <Property Name="replacemnet_infiatable_gasket" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="price" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="stok" Type="Int32" Nullable="false" />
+          <Property Name="location" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Locations_StPats" Relationship="StPatsDataBaseModel.FK_Tanks_StPats_Locations_StPats" FromRole="Tanks_StPats" ToRole="Locations_StPats" />
+        </EntityType>
+        <Association Name="FK_Tanks_StPats_Locations_StPats">
+          <End Type="StPatsDataBaseModel.Locations_StPats" Role="Locations_StPats" Multiplicity="1" />
+          <End Type="StPatsDataBaseModel.Tanks_StPats" Role="Tanks_StPats" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Locations_StPats">
+              <PropertyRef Name="id_location" />
+            </Principal>
+            <Dependent Role="Tanks_StPats">
+              <PropertyRef Name="location" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <ComplexType Name="sp_helpdiagramdefinition_Result">
+          <Property Type="Int32" Name="version" Nullable="true" />
+          <Property Type="Binary" Name="definition" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_helpdiagrams_Result">
+          <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+          <Property Type="Int32" Name="OwnerID" Nullable="false" />
+        </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="StPatsDataBaseModelStoreContainer" CdmEntityContainer="StPatsDataBaseEntities">
-          <EntitySetMapping Name="Product_StPats">
-            <EntityTypeMapping TypeName="StPatsDataBaseModel.Product_StPats">
-              <MappingFragment StoreEntitySet="Product_StPats">
-                <ScalarProperty Name="id_producto" ColumnName="id_producto" />
-                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
-                <ScalarProperty Name="disponibilidad" ColumnName="disponibilidad" />
-                <ScalarProperty Name="precio" ColumnName="precio" />
-                <ScalarProperty Name="capacidad" ColumnName="capacidad" />
+          <EntitySetMapping Name="Locations_StPats">
+            <EntityTypeMapping TypeName="StPatsDataBaseModel.Locations_StPats">
+              <MappingFragment StoreEntitySet="Locations_StPats">
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="id_location" ColumnName="id_location" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="Tanks_StPats">
+            <EntityTypeMapping TypeName="StPatsDataBaseModel.Tanks_StPats">
+              <MappingFragment StoreEntitySet="Tanks_StPats">
+                <ScalarProperty Name="location" ColumnName="location" />
+                <ScalarProperty Name="stok" ColumnName="stok" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="replacemnet_infiatable_gasket" ColumnName="replacemnet_infiatable_gasket" />
+                <ScalarProperty Name="vent" ColumnName="vent" />
+                <ScalarProperty Name="lifting_arm" ColumnName="lifting_arm" />
+                <ScalarProperty Name="manway" ColumnName="manway" />
+                <ScalarProperty Name="bottom_valve" ColumnName="bottom_valve" />
+                <ScalarProperty Name="capacidad" ColumnName="capacidad" />
+                <ScalarProperty Name="codigo_tanque" ColumnName="codigo_tanque" />
+                <ScalarProperty Name="id_tanque" ColumnName="id_tanque" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="StPatsDataBaseModel.Store.sp_alterdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="StPatsDataBaseModel.Store.sp_creatediagram" />
+          <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="StPatsDataBaseModel.Store.sp_dropdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="StPatsDataBaseModel.Store.sp_helpdiagramdefinition">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="StPatsDataBaseModel.sp_helpdiagramdefinition_Result">
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="StPatsDataBaseModel.Store.sp_helpdiagrams">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="StPatsDataBaseModel.sp_helpdiagrams_Result">
+                <ScalarProperty Name="Database" ColumnName="Database" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Owner" ColumnName="Owner" />
+                <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="StPatsDataBaseModel.Store.sp_renamediagram" />
+          <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="StPatsDataBaseModel.Store.sp_upgraddiagrams" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

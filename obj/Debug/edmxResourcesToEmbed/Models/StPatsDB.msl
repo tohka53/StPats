@@ -1,16 +1,54 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="StPatsDataBaseModelStoreContainer" CdmEntityContainer="StPatsDataBaseEntities">
-    <EntitySetMapping Name="Product_StPats">
-      <EntityTypeMapping TypeName="StPatsDataBaseModel.Product_StPats">
-        <MappingFragment StoreEntitySet="Product_StPats">
-          <ScalarProperty Name="id_producto" ColumnName="id_producto" />
-          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
-          <ScalarProperty Name="disponibilidad" ColumnName="disponibilidad" />
-          <ScalarProperty Name="precio" ColumnName="precio" />
-          <ScalarProperty Name="capacidad" ColumnName="capacidad" />
+    <EntitySetMapping Name="Locations_StPats">
+      <EntityTypeMapping TypeName="StPatsDataBaseModel.Locations_StPats">
+        <MappingFragment StoreEntitySet="Locations_StPats">
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="id_location" ColumnName="id_location" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="Tanks_StPats">
+      <EntityTypeMapping TypeName="StPatsDataBaseModel.Tanks_StPats">
+        <MappingFragment StoreEntitySet="Tanks_StPats">
+          <ScalarProperty Name="location" ColumnName="location" />
+          <ScalarProperty Name="stok" ColumnName="stok" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="replacemnet_infiatable_gasket" ColumnName="replacemnet_infiatable_gasket" />
+          <ScalarProperty Name="vent" ColumnName="vent" />
+          <ScalarProperty Name="lifting_arm" ColumnName="lifting_arm" />
+          <ScalarProperty Name="manway" ColumnName="manway" />
+          <ScalarProperty Name="bottom_valve" ColumnName="bottom_valve" />
+          <ScalarProperty Name="capacidad" ColumnName="capacidad" />
+          <ScalarProperty Name="codigo_tanque" ColumnName="codigo_tanque" />
+          <ScalarProperty Name="id_tanque" ColumnName="id_tanque" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="StPatsDataBaseModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="StPatsDataBaseModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="StPatsDataBaseModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="StPatsDataBaseModel.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="StPatsDataBaseModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="StPatsDataBaseModel.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="StPatsDataBaseModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="StPatsDataBaseModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="StPatsDataBaseModel.Store.sp_upgraddiagrams" />
   </EntityContainerMapping>
 </Mapping>
