@@ -5,14 +5,14 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Details</h2>
+<h2>Details of Tank  @Html.DisplayFor(model => model.codigo_tanque) </h2>
 
 <div>
-    <h4>Tanks_StPats</h4>
+    <h4></h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.codigo_tanque)
+            Tank Code
         </dt>
 
         <dd>
@@ -20,7 +20,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.capacidad)
+            Capacity
         </dt>
 
         <dd>
@@ -28,7 +28,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.bottom_valve)
+            Bottom Valve
         </dt>
 
         <dd>
@@ -36,7 +36,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.manway)
+            ManWay
         </dt>
 
         <dd>
@@ -44,7 +44,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.lifting_arm)
+            Lifting Arm
         </dt>
 
         <dd>
@@ -52,7 +52,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.vent)
+            Vent
         </dt>
 
         <dd>
@@ -60,7 +60,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.replacemnet_infiatable_gasket)
+            Replacemnet Infiatable Gasket
         </dt>
 
         <dd>
@@ -68,7 +68,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.price)
+            Price
         </dt>
 
         <dd>
@@ -76,7 +76,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.stok)
+            Stock
         </dt>
 
         <dd>
@@ -84,24 +84,23 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.manual)
+            Manual
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.manual)
+            <a href="@Html.DisplayFor(model => model.manual)"> See Manual</a>
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.image)
+            Image
         </dt>
 
         <dd>
-
             <a href="@Html.DisplayFor(model => model.image)"> See Image</a>
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.desription)
+            Description
         </dt>
 
         <dd>
@@ -109,13 +108,12 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Locations_StPats.description)
+            Location
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.Locations_StPats.description)
         </dd>
-
     </dl>
 </div>
 <p>
