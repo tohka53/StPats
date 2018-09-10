@@ -26,5 +26,12 @@ namespace StPats.Controllers
 
             return View();
         }
+        public ActionResult PoliciesCompany()
+        {
+            ViewBag.Message = "Policies Company";
+
+            return View();
+        }
+        
     }
 }

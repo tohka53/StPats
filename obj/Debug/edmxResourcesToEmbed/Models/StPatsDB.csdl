@@ -37,6 +37,7 @@
       <Parameter Name="new_diagramname" Mode="In" Type="String" />
     </FunctionImport>
     <FunctionImport Name="sp_upgraddiagrams" />
+    <EntitySet Name="Filtros_StPats" EntityType="StPatsDataBaseModel.Filtros_StPats" />
   </EntityContainer>
   <EntityType Name="Locations_StPats">
     <Key>
@@ -89,4 +90,14 @@
     <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
     <Property Type="Int32" Name="OwnerID" Nullable="false" />
   </ComplexType>
+  <EntityType Name="Filtros_StPats">
+    <Key>
+      <PropertyRef Name="id_filtro" />
+    </Key>
+    <Property Name="id_filtro" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="filtro_codigo" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="numero_plates" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="area_superficie" Type="Single" Nullable="false" />
+    <Property Name="precio" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+  </EntityType>
 </Schema>

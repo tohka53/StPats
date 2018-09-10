@@ -5,6 +5,16 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="StPatsDataBaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Filtros_StPats">
+          <Key>
+            <PropertyRef Name="id_filtro" />
+          </Key>
+          <Property Name="id_filtro" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="filtro_codigo" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="numero_plates" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="area_superficie" Type="real" Nullable="false" />
+          <Property Name="precio" Type="money" Nullable="false" />
+        </EntityType>
         <EntityType Name="Locations_StPats">
           <Key>
             <PropertyRef Name="id_location" />
@@ -75,6 +85,7 @@
         </Function>
         <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <EntityContainer Name="StPatsDataBaseModelStoreContainer">
+          <EntitySet Name="Filtros_StPats" EntityType="Self.Filtros_StPats" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Locations_StPats" EntityType="Self.Locations_StPats" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Tanks_StPats" EntityType="Self.Tanks_StPats" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_Tanks_StPats_Locations_StPats" Association="Self.FK_Tanks_StPats_Locations_StPats">
@@ -123,6 +134,7 @@
             <Parameter Name="new_diagramname" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="sp_upgraddiagrams" />
+          <EntitySet Name="Filtros_StPats" EntityType="StPatsDataBaseModel.Filtros_StPats" />
         </EntityContainer>
         <EntityType Name="Locations_StPats">
           <Key>
@@ -175,6 +187,16 @@
           <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
           <Property Type="Int32" Name="OwnerID" Nullable="false" />
         </ComplexType>
+        <EntityType Name="Filtros_StPats">
+          <Key>
+            <PropertyRef Name="id_filtro" />
+          </Key>
+          <Property Name="id_filtro" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="filtro_codigo" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="numero_plates" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="area_superficie" Type="Single" Nullable="false" />
+          <Property Name="precio" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -233,6 +255,17 @@
           </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="StPatsDataBaseModel.Store.sp_renamediagram" />
           <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="StPatsDataBaseModel.Store.sp_upgraddiagrams" />
+          <EntitySetMapping Name="Filtros_StPats">
+            <EntityTypeMapping TypeName="StPatsDataBaseModel.Filtros_StPats">
+              <MappingFragment StoreEntitySet="Filtros_StPats">
+                <ScalarProperty Name="precio" ColumnName="precio" />
+                <ScalarProperty Name="area_superficie" ColumnName="area_superficie" />
+                <ScalarProperty Name="numero_plates" ColumnName="numero_plates" />
+                <ScalarProperty Name="filtro_codigo" ColumnName="filtro_codigo" />
+                <ScalarProperty Name="id_filtro" ColumnName="id_filtro" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

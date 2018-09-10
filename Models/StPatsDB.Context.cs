@@ -29,6 +29,7 @@ namespace StPats.Models
     
         public virtual DbSet<Locations_StPats> Locations_StPats { get; set; }
         public virtual DbSet<Tanks_StPats> Tanks_StPats { get; set; }
+        public virtual DbSet<Filtros_StPats> Filtros_StPats { get; set; }
     
         public virtual int sp_alterdiagram(string diagramname, Nullable<int> owner_id, Nullable<int> version, byte[] definition)
         {

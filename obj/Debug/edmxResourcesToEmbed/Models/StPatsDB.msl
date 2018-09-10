@@ -53,5 +53,16 @@
     </FunctionImportMapping>
     <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="StPatsDataBaseModel.Store.sp_renamediagram" />
     <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="StPatsDataBaseModel.Store.sp_upgraddiagrams" />
+    <EntitySetMapping Name="Filtros_StPats">
+      <EntityTypeMapping TypeName="StPatsDataBaseModel.Filtros_StPats">
+        <MappingFragment StoreEntitySet="Filtros_StPats">
+          <ScalarProperty Name="precio" ColumnName="precio" />
+          <ScalarProperty Name="area_superficie" ColumnName="area_superficie" />
+          <ScalarProperty Name="numero_plates" ColumnName="numero_plates" />
+          <ScalarProperty Name="filtro_codigo" ColumnName="filtro_codigo" />
+          <ScalarProperty Name="id_filtro" ColumnName="id_filtro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

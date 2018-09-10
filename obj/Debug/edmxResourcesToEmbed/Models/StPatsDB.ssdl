@@ -1,5 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="StPatsDataBaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Filtros_StPats">
+    <Key>
+      <PropertyRef Name="id_filtro" />
+    </Key>
+    <Property Name="id_filtro" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="filtro_codigo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="numero_plates" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="area_superficie" Type="real" Nullable="false" />
+    <Property Name="precio" Type="money" Nullable="false" />
+  </EntityType>
   <EntityType Name="Locations_StPats">
     <Key>
       <PropertyRef Name="id_location" />
@@ -70,6 +80,7 @@
   </Function>
   <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <EntityContainer Name="StPatsDataBaseModelStoreContainer">
+    <EntitySet Name="Filtros_StPats" EntityType="Self.Filtros_StPats" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Locations_StPats" EntityType="Self.Locations_StPats" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Tanks_StPats" EntityType="Self.Tanks_StPats" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK_Tanks_StPats_Locations_StPats" Association="Self.FK_Tanks_StPats_Locations_StPats">

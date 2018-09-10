@@ -39,21 +39,26 @@
                 <!-- Optionally, you can add icons to the links -->
                 <li>@Html.ActionLink("Home Page", "Index", "Home")</li>
                 <li>@Html.ActionLink("About Us", "About", "Home")</li>
+                <li>@Html.ActionLink("Policies", "PoliciesCompany", "Home")</li>
                 <li>@Html.ActionLink("Contact Us", "Contact", "Home")</li>
-                <li class="treeview">
-                    <a href="#"><span>Products</span> <i class="fa fa-angle-left pull-right"></i></a>
-                    <ul class="treeview-menu">
-                        <li>@Html.ActionLink("Locations", "", "Locations_StPats")</li>
-                        <li>@Html.ActionLink("Tanks", "", "Tanks_StPats")</li>
-                     
+                <!--- <li>@Html.ActionLink("Locations", "Index", "Locations_StPats")</li>-->
 
 
-                    </ul>
-                </li>nm
+        <li class="treeview">
+            <a href="#"><span>Products</span> <i class="fa fa-angle-left pull-right"></i></a>
+            <ul class="treeview-menu">
+
+                <li>@Html.ActionLink("Tanks", "", "Tanks_StPats")</li>
+                <li>@Html.ActionLink("Filters", "", "Filtros_StPats")</li>
 
 
-            </ul><!-- /.sidebar-menu -->
-        </section>
+            </ul>
+        </li>
+
+
+
+    </ul><!-- /.sidebar-menu -->
+</section>
         <!-- /.sidebar -->
     </aside>
     <!--**********************************-->
