@@ -201,23 +201,44 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\Estado_StPatsController.cs" />
     <Compile Include="Controllers\Filtros_StPatsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\Lista_Productos_StPatsController.cs" />
     <Compile Include="Controllers\Locations_StPatsController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\Productos_StPatsController.cs" />
+    <Compile Include="Controllers\Shopping_Cart_Detalle_StPatsController.cs" />
+    <Compile Include="Controllers\Shopping_Cart_StPatsController.cs" />
     <Compile Include="Controllers\Tanks_StPatsController.cs" />
+    <Compile Include="Controllers\Tipo_Producto_StPatsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Estado_StPats.cs">
+      <DependentUpon>StPatsDB.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Filtros_StPats.cs">
       <DependentUpon>StPatsDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\Lista_Productos_StPats.cs">
+      <DependentUpon>StPatsDB.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Locations_StPats.cs">
       <DependentUpon>StPatsDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Productos_StPats.cs">
+      <DependentUpon>StPatsDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Shopping_Cart_Detalle_StPats.cs">
+      <DependentUpon>StPatsDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Shopping_Cart_StPats.cs">
+      <DependentUpon>StPatsDB.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\sp_helpdiagramdefinition_Result.cs">
       <DependentUpon>StPatsDB.tt</DependentUpon>
     </Compile>
@@ -239,8 +260,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>StPatsDB.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\sysdiagram.cs">
+      <DependentUpon>StPatsDB.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\TanksController.cs" />
     <Compile Include="Models\Tanks_StPats.cs">
+      <DependentUpon>StPatsDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Tipo_Producto_StPats.cs">
       <DependentUpon>StPatsDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -457,6 +484,36 @@
     <Content Include="Views\Filtros_StPats\Details.cshtml" />
     <Content Include="Views\Filtros_StPats\Edit.cshtml" />
     <Content Include="Views\Filtros_StPats\Index.cshtml" />
+    <Content Include="Views\Estado_StPats\Create.cshtml" />
+    <Content Include="Views\Estado_StPats\Delete.cshtml" />
+    <Content Include="Views\Estado_StPats\Details.cshtml" />
+    <Content Include="Views\Estado_StPats\Edit.cshtml" />
+    <Content Include="Views\Estado_StPats\Index.cshtml" />
+    <Content Include="Views\Lista_Productos_StPats\Create.cshtml" />
+    <Content Include="Views\Lista_Productos_StPats\Delete.cshtml" />
+    <Content Include="Views\Lista_Productos_StPats\Details.cshtml" />
+    <Content Include="Views\Lista_Productos_StPats\Edit.cshtml" />
+    <Content Include="Views\Lista_Productos_StPats\Index.cshtml" />
+    <Content Include="Views\Shopping_Cart_Detalle_StPats\Create.cshtml" />
+    <Content Include="Views\Shopping_Cart_Detalle_StPats\Delete.cshtml" />
+    <Content Include="Views\Shopping_Cart_Detalle_StPats\Details.cshtml" />
+    <Content Include="Views\Shopping_Cart_Detalle_StPats\Edit.cshtml" />
+    <Content Include="Views\Shopping_Cart_Detalle_StPats\Index.cshtml" />
+    <Content Include="Views\Shopping_Cart_StPats\Create.cshtml" />
+    <Content Include="Views\Shopping_Cart_StPats\Delete.cshtml" />
+    <Content Include="Views\Shopping_Cart_StPats\Details.cshtml" />
+    <Content Include="Views\Shopping_Cart_StPats\Edit.cshtml" />
+    <Content Include="Views\Shopping_Cart_StPats\Index.cshtml" />
+    <Content Include="Views\Tipo_Producto_StPats\Create.cshtml" />
+    <Content Include="Views\Tipo_Producto_StPats\Delete.cshtml" />
+    <Content Include="Views\Tipo_Producto_StPats\Details.cshtml" />
+    <Content Include="Views\Tipo_Producto_StPats\Edit.cshtml" />
+    <Content Include="Views\Tipo_Producto_StPats\Index.cshtml" />
+    <Content Include="Views\Productos_StPats\Create.cshtml" />
+    <Content Include="Views\Productos_StPats\Delete.cshtml" />
+    <Content Include="Views\Productos_StPats\Details.cshtml" />
+    <Content Include="Views\Productos_StPats\Edit.cshtml" />
+    <Content Include="Views\Productos_StPats\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

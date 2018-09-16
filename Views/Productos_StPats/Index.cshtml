@@ -1,0 +1,88 @@
+﻿@model IEnumerable<StPats.Models.Productos_StPats>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.codigo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.stock)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.image)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.manual)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.stock_menos_carrito)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Estado_StPats.descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Locations_StPats.description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tipo_Producto_StPats.descripcion_producto)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.codigo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.stock)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.image)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.manual)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.stock_menos_carrito)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Estado_StPats.descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Locations_StPats.description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tipo_Producto_StPats.descripcion_producto)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id_producto }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id_producto }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id_producto })
+        </td>
+    </tr>
+}
+
+</table>

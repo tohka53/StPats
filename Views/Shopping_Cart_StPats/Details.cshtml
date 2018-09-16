@@ -1,0 +1,67 @@
+﻿@model StPats.Models.Shopping_Cart_StPats
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Shopping_Cart_StPats</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.id_cliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.id_cliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.monto_sin_taxes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.monto_sin_taxes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.taxes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.taxes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.monto_total)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.monto_total)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Estado_StPats.descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estado_StPats.descripcion)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id_shoppingcart }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

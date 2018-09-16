@@ -30,6 +30,13 @@ namespace StPats.Models
         public virtual DbSet<Locations_StPats> Locations_StPats { get; set; }
         public virtual DbSet<Tanks_StPats> Tanks_StPats { get; set; }
         public virtual DbSet<Filtros_StPats> Filtros_StPats { get; set; }
+        public virtual DbSet<Estado_StPats> Estado_StPats { get; set; }
+        public virtual DbSet<Lista_Productos_StPats> Lista_Productos_StPats { get; set; }
+        public virtual DbSet<Productos_StPats> Productos_StPats { get; set; }
+        public virtual DbSet<Shopping_Cart_Detalle_StPats> Shopping_Cart_Detalle_StPats { get; set; }
+        public virtual DbSet<Shopping_Cart_StPats> Shopping_Cart_StPats { get; set; }
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
+        public virtual DbSet<Tipo_Producto_StPats> Tipo_Producto_StPats { get; set; }
     
         public virtual int sp_alterdiagram(string diagramname, Nullable<int> owner_id, Nullable<int> version, byte[] definition)
         {

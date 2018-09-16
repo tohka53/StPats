@@ -9,6 +9,22 @@
         <EntityTypeShape EntityType="StPatsDataBaseModel.Tanks_StPats" Width="1.5" PointX="0.75" PointY="3.75" />
         <AssociationConnector Association="StPatsDataBaseModel.FK_Tanks_StPats_Locations_StPats" />
         <EntityTypeShape EntityType="StPatsDataBaseModel.Filtros_StPats" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="StPatsDataBaseModel.Estado_StPats" Width="1.5" PointX="3.375" PointY="8.75" />
+        <EntityTypeShape EntityType="StPatsDataBaseModel.Lista_Productos_StPats" Width="1.5" PointX="8.25" PointY="6" />
+        <EntityTypeShape EntityType="StPatsDataBaseModel.Productos_StPats" Width="1.5" PointX="6" PointY="4" />
+        <EntityTypeShape EntityType="StPatsDataBaseModel.Shopping_Cart_Detalle_StPats" Width="1.5" PointX="10.5" PointY="11.5" />
+        <EntityTypeShape EntityType="StPatsDataBaseModel.Shopping_Cart_StPats" Width="1.5" PointX="5.625" PointY="16.625" />
+        <EntityTypeShape EntityType="StPatsDataBaseModel.sysdiagram" Width="1.5" PointX="6.375" PointY="0.75" />
+        <EntityTypeShape EntityType="StPatsDataBaseModel.Tipo_Producto_StPats" Width="1.5" PointX="3.75" PointY="5" />
+        <AssociationConnector Association="StPatsDataBaseModel.FK_Lista_Productos_StPats_Estado_StPats" />
+        <AssociationConnector Association="StPatsDataBaseModel.FK_Productos_StPats_Estado_StPats" />
+        <AssociationConnector Association="StPatsDataBaseModel.FK_Shopping_Cart_Detalle_StPats_Estado_StPats" />
+        <AssociationConnector Association="StPatsDataBaseModel.FK_Shopping_Cart_StPats_Estado_StPats" />
+        <AssociationConnector Association="StPatsDataBaseModel.FK_Lista_Productos_StPats_Productos_StPats" />
+        <AssociationConnector Association="StPatsDataBaseModel.FK_Shopping_Cart_Detalle_StPats_Lista_Productos_StPats" />
+        <AssociationConnector Association="StPatsDataBaseModel.FK_Productos_StPats_Locations_StPats" />
+        <AssociationConnector Association="StPatsDataBaseModel.FK_Productos_StPats_Tipo_Producto_StPats" />
+        <AssociationConnector Association="StPatsDataBaseModel.FK_Shopping_Cart_Detalle_StPats_Shopping_Cart_StPats" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

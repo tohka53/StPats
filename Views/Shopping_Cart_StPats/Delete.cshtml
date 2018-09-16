@@ -1,0 +1,73 @@
+﻿@model StPats.Models.Shopping_Cart_StPats
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Shopping_Cart_StPats</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.id_cliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.id_cliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.monto_sin_taxes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.monto_sin_taxes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.taxes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.taxes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.monto_total)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.monto_total)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Estado_StPats.descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estado_StPats.descripcion)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

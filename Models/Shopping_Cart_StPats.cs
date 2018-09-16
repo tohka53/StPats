@@ -12,21 +12,24 @@ namespace StPats.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Locations_StPats
+    public partial class Shopping_Cart_StPats
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Locations_StPats()
+        public Shopping_Cart_StPats()
         {
-            this.Tanks_StPats = new HashSet<Tanks_StPats>();
-            this.Productos_StPats = new HashSet<Productos_StPats>();
+            this.Shopping_Cart_Detalle_StPats = new HashSet<Shopping_Cart_Detalle_StPats>();
         }
     
-        public int id_location { get; set; }
-        public string description { get; set; }
+        public long id_shoppingcart { get; set; }
+        public int id_cliente { get; set; }
+        public System.DateTime date { get; set; }
+        public int id_estado { get; set; }
+        public decimal monto_sin_taxes { get; set; }
+        public decimal taxes { get; set; }
+        public decimal monto_total { get; set; }
     
+        public virtual Estado_StPats Estado_StPats { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Tanks_StPats> Tanks_StPats { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Productos_StPats> Productos_StPats { get; set; }
+        public virtual ICollection<Shopping_Cart_Detalle_StPats> Shopping_Cart_Detalle_StPats { get; set; }
     }
 }

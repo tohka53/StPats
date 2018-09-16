@@ -12,20 +12,17 @@ namespace StPats.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Locations_StPats
+    public partial class Tipo_Producto_StPats
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Locations_StPats()
+        public Tipo_Producto_StPats()
         {
-            this.Tanks_StPats = new HashSet<Tanks_StPats>();
             this.Productos_StPats = new HashSet<Productos_StPats>();
         }
     
-        public int id_location { get; set; }
-        public string description { get; set; }
+        public int id_tipo_producto { get; set; }
+        public string descripcion_producto { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Tanks_StPats> Tanks_StPats { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Productos_StPats> Productos_StPats { get; set; }
     }
