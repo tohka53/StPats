@@ -1,5 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="StPatsDataBaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Clientes_StPats">
+    <Key>
+      <PropertyRef Name="id_cliente" />
+    </Key>
+    <Property Name="id_cliente" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cliente_nombre" Type="varchar" MaxLength="150" Nullable="false" />
+  </EntityType>
   <EntityType Name="Estado_StPats">
     <Key>
       <PropertyRef Name="id_estado" />
@@ -205,6 +212,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_Shopping_Cart_StPats_Clientes_StPats">
+    <End Role="Clientes_StPats" Type="Self.Clientes_StPats" Multiplicity="1" />
+    <End Role="Shopping_Cart_StPats" Type="Self.Shopping_Cart_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Clientes_StPats">
+        <PropertyRef Name="id_cliente" />
+      </Principal>
+      <Dependent Role="Shopping_Cart_StPats">
+        <PropertyRef Name="id_cliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_Shopping_Cart_StPats_Estado_StPats">
     <End Role="Estado_StPats" Type="Self.Estado_StPats" Multiplicity="1" />
     <End Role="Shopping_Cart_StPats" Type="Self.Shopping_Cart_StPats" Multiplicity="*" />
@@ -261,6 +280,7 @@
   </Function>
   <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <EntityContainer Name="StPatsDataBaseModelStoreContainer">
+    <EntitySet Name="Clientes_StPats" EntityType="Self.Clientes_StPats" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Estado_StPats" EntityType="Self.Estado_StPats" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Filtros_StPats" EntityType="Self.Filtros_StPats" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Lista_Productos_StPats" EntityType="Self.Lista_Productos_StPats" Schema="dbo" store:Type="Tables" />
@@ -302,6 +322,10 @@
     <AssociationSet Name="FK_Shopping_Cart_Detalle_StPats_Shopping_Cart_StPats" Association="Self.FK_Shopping_Cart_Detalle_StPats_Shopping_Cart_StPats">
       <End Role="Shopping_Cart_StPats" EntitySet="Shopping_Cart_StPats" />
       <End Role="Shopping_Cart_Detalle_StPats" EntitySet="Shopping_Cart_Detalle_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Shopping_Cart_StPats_Clientes_StPats" Association="Self.FK_Shopping_Cart_StPats_Clientes_StPats">
+      <End Role="Clientes_StPats" EntitySet="Clientes_StPats" />
+      <End Role="Shopping_Cart_StPats" EntitySet="Shopping_Cart_StPats" />
     </AssociationSet>
     <AssociationSet Name="FK_Shopping_Cart_StPats_Estado_StPats" Association="Self.FK_Shopping_Cart_StPats_Estado_StPats">
       <End Role="Estado_StPats" EntitySet="Estado_StPats" />

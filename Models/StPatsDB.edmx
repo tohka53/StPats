@@ -5,6 +5,13 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="StPatsDataBaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Clientes_StPats">
+          <Key>
+            <PropertyRef Name="id_cliente" />
+          </Key>
+          <Property Name="id_cliente" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="cliente_nombre" Type="varchar" MaxLength="150" Nullable="false" />
+        </EntityType>
         <EntityType Name="Estado_StPats">
           <Key>
             <PropertyRef Name="id_estado" />
@@ -210,6 +217,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_Shopping_Cart_StPats_Clientes_StPats">
+          <End Role="Clientes_StPats" Type="Self.Clientes_StPats" Multiplicity="1" />
+          <End Role="Shopping_Cart_StPats" Type="Self.Shopping_Cart_StPats" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Clientes_StPats">
+              <PropertyRef Name="id_cliente" />
+            </Principal>
+            <Dependent Role="Shopping_Cart_StPats">
+              <PropertyRef Name="id_cliente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Shopping_Cart_StPats_Estado_StPats">
           <End Role="Estado_StPats" Type="Self.Estado_StPats" Multiplicity="1" />
           <End Role="Shopping_Cart_StPats" Type="Self.Shopping_Cart_StPats" Multiplicity="*" />
@@ -266,6 +285,7 @@
         </Function>
         <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <EntityContainer Name="StPatsDataBaseModelStoreContainer">
+          <EntitySet Name="Clientes_StPats" EntityType="Self.Clientes_StPats" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Estado_StPats" EntityType="Self.Estado_StPats" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Filtros_StPats" EntityType="Self.Filtros_StPats" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Lista_Productos_StPats" EntityType="Self.Lista_Productos_StPats" Schema="dbo" store:Type="Tables" />
@@ -307,6 +327,10 @@
           <AssociationSet Name="FK_Shopping_Cart_Detalle_StPats_Shopping_Cart_StPats" Association="Self.FK_Shopping_Cart_Detalle_StPats_Shopping_Cart_StPats">
             <End Role="Shopping_Cart_StPats" EntitySet="Shopping_Cart_StPats" />
             <End Role="Shopping_Cart_Detalle_StPats" EntitySet="Shopping_Cart_Detalle_StPats" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Shopping_Cart_StPats_Clientes_StPats" Association="Self.FK_Shopping_Cart_StPats_Clientes_StPats">
+            <End Role="Clientes_StPats" EntitySet="Clientes_StPats" />
+            <End Role="Shopping_Cart_StPats" EntitySet="Shopping_Cart_StPats" />
           </AssociationSet>
           <AssociationSet Name="FK_Shopping_Cart_StPats_Estado_StPats" Association="Self.FK_Shopping_Cart_StPats_Estado_StPats">
             <End Role="Estado_StPats" EntitySet="Estado_StPats" />
@@ -401,6 +425,11 @@
           <AssociationSet Name="FK_Shopping_Cart_Detalle_StPats_Shopping_Cart_StPats" Association="StPatsDataBaseModel.FK_Shopping_Cart_Detalle_StPats_Shopping_Cart_StPats">
             <End Role="Shopping_Cart_StPats" EntitySet="Shopping_Cart_StPats" />
             <End Role="Shopping_Cart_Detalle_StPats" EntitySet="Shopping_Cart_Detalle_StPats" />
+          </AssociationSet>
+          <EntitySet Name="Clientes_StPats" EntityType="StPatsDataBaseModel.Clientes_StPats" />
+          <AssociationSet Name="FK_Shopping_Cart_StPats_Clientes_StPats" Association="StPatsDataBaseModel.FK_Shopping_Cart_StPats_Clientes_StPats">
+            <End Role="Clientes_StPats" EntitySet="Clientes_StPats" />
+            <End Role="Shopping_Cart_StPats" EntitySet="Shopping_Cart_StPats" />
           </AssociationSet>
         </EntityContainer>
         <EntityType Name="Locations_StPats">
@@ -536,6 +565,7 @@
           <Property Name="monto_total" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
           <NavigationProperty Name="Estado_StPats" Relationship="StPatsDataBaseModel.FK_Shopping_Cart_StPats_Estado_StPats" FromRole="Shopping_Cart_StPats" ToRole="Estado_StPats" />
           <NavigationProperty Name="Shopping_Cart_Detalle_StPats" Relationship="StPatsDataBaseModel.FK_Shopping_Cart_Detalle_StPats_Shopping_Cart_StPats" FromRole="Shopping_Cart_StPats" ToRole="Shopping_Cart_Detalle_StPats" />
+          <NavigationProperty Name="Clientes_StPats" Relationship="StPatsDataBaseModel.FK_Shopping_Cart_StPats_Clientes_StPats" FromRole="Shopping_Cart_StPats" ToRole="Clientes_StPats" />
         </EntityType>
         <EntityType Name="sysdiagram">
           <Key>
@@ -660,6 +690,26 @@
             </Principal>
             <Dependent Role="Shopping_Cart_Detalle_StPats">
               <PropertyRef Name="id_shoppingcart" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Clientes_StPats">
+          <Key>
+            <PropertyRef Name="id_cliente" />
+          </Key>
+          <Property Name="id_cliente" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="cliente_nombre" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Shopping_Cart_StPats" Relationship="StPatsDataBaseModel.FK_Shopping_Cart_StPats_Clientes_StPats" FromRole="Clientes_StPats" ToRole="Shopping_Cart_StPats" />
+        </EntityType>
+        <Association Name="FK_Shopping_Cart_StPats_Clientes_StPats">
+          <End Type="StPatsDataBaseModel.Clientes_StPats" Role="Clientes_StPats" Multiplicity="1" />
+          <End Type="StPatsDataBaseModel.Shopping_Cart_StPats" Role="Shopping_Cart_StPats" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Clientes_StPats">
+              <PropertyRef Name="id_cliente" />
+            </Principal>
+            <Dependent Role="Shopping_Cart_StPats">
+              <PropertyRef Name="id_cliente" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -809,6 +859,14 @@
               <MappingFragment StoreEntitySet="Tipo_Producto_StPats">
                 <ScalarProperty Name="descripcion_producto" ColumnName="descripcion_producto" />
                 <ScalarProperty Name="id_tipo_producto" ColumnName="id_tipo_producto" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Clientes_StPats">
+            <EntityTypeMapping TypeName="StPatsDataBaseModel.Clientes_StPats">
+              <MappingFragment StoreEntitySet="Clientes_StPats">
+                <ScalarProperty Name="cliente_nombre" ColumnName="cliente_nombre" />
+                <ScalarProperty Name="id_cliente" ColumnName="id_cliente" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

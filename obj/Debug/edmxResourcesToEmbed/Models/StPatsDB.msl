@@ -144,5 +144,13 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="Clientes_StPats">
+      <EntityTypeMapping TypeName="StPatsDataBaseModel.Clientes_StPats">
+        <MappingFragment StoreEntitySet="Clientes_StPats">
+          <ScalarProperty Name="cliente_nombre" ColumnName="cliente_nombre" />
+          <ScalarProperty Name="id_cliente" ColumnName="id_cliente" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

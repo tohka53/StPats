@@ -37,6 +37,7 @@ namespace StPats.Models
         public virtual DbSet<Shopping_Cart_StPats> Shopping_Cart_StPats { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<Tipo_Producto_StPats> Tipo_Producto_StPats { get; set; }
+        public virtual DbSet<Clientes_StPats> Clientes_StPats { get; set; }
     
         public virtual int sp_alterdiagram(string diagramname, Nullable<int> owner_id, Nullable<int> version, byte[] definition)
         {

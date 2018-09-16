@@ -22,13 +22,18 @@ namespace StPats.Controllers
         }
 
         // GET: Lista_Productos_StPats/Details/5
-        public ActionResult Details(long? id)
+        public ActionResult Details(long? id,[Bind(Include = "id_lista_producto,id_producto,id_cantidad,precio_unitario,precio_total,id_estado,date")] Lista_Productos_StPats lista_Productos_St)
         {
+            
+            
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
+
             Lista_Productos_StPats lista_Productos_StPats = db.Lista_Productos_StPats.Find(id);
+           
+
             if (lista_Productos_StPats == null)
             {
                 return HttpNotFound();

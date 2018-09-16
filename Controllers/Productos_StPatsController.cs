@@ -34,8 +34,23 @@ namespace StPats.Controllers
                 return HttpNotFound();
             }
             return View(id);
+         
         }
- 
+        // GET: Productos_StPats/Details/5
+        public ActionResult Details_producto(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Productos_StPats productos_StPats = db.Productos_StPats.Find(id);
+            if (productos_StPats == null)
+            {
+                return HttpNotFound();
+            }
+            return View(productos_StPats);
+
+        }
 
         // GET: Productos_StPats/Create
         public ActionResult Create()

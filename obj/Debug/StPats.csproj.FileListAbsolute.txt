@@ -114,8 +114,8 @@ C:\Users\Admin\Desktop\Mio\stpats\StPats\StPats\bin\Microsoft.AI.DependencyColle
 C:\Users\Admin\Desktop\Mio\stpats\StPats\StPats\bin\Microsoft.AI.WindowsServer.xml
 C:\Users\Admin\Desktop\Mio\stpats\StPats\StPats\bin\Microsoft.AI.Web.xml
 C:\Users\Admin\Desktop\Mio\stpats\StPats\StPats\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Admin\Desktop\Mio\stpats\StPats\StPats\obj\Debug\StPats.csprojAssemblyReference.cache
 C:\Users\Admin\Desktop\Mio\stpats\StPats\StPats\obj\Debug\StPats.csproj.CoreCompileInputs.cache
 C:\Users\Admin\Desktop\Mio\stpats\StPats\StPats\obj\Debug\StPats.csproj.CopyComplete
 C:\Users\Admin\Desktop\Mio\stpats\StPats\StPats\obj\Debug\StPats.dll
 C:\Users\Admin\Desktop\Mio\stpats\StPats\StPats\obj\Debug\StPats.pdb
-C:\Users\Admin\Desktop\Mio\stpats\StPats\StPats\obj\Debug\StPats.csprojAssemblyReference.cache

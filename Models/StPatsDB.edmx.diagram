@@ -25,6 +25,8 @@
         <AssociationConnector Association="StPatsDataBaseModel.FK_Productos_StPats_Locations_StPats" />
         <AssociationConnector Association="StPatsDataBaseModel.FK_Productos_StPats_Tipo_Producto_StPats" />
         <AssociationConnector Association="StPatsDataBaseModel.FK_Shopping_Cart_Detalle_StPats_Shopping_Cart_StPats" />
+        <EntityTypeShape EntityType="StPatsDataBaseModel.Clientes_StPats" Width="1.5" PointX="8.375" PointY="0.875" />
+        <AssociationConnector Association="StPatsDataBaseModel.FK_Shopping_Cart_StPats_Clientes_StPats" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -5,63 +5,82 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Details</h2>
 
-<div>
-    <h4>Lista_Productos_StPats</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.id_cantidad)
-        </dt>
+<head>
 
-        <dd>
-            @Html.DisplayFor(model => model.id_cantidad)
-        </dd>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>
+            Order Details
+        </h2>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.precio_unitario)
-        </dt>
+        <thead>
+            <tr>
+                <dt>
+                    Quantity of products
+                </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.precio_unitario)
-        </dd>
+                <dd>
+                    @Html.DisplayFor(model => model.id_cantidad)
+                </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.precio_total)
-        </dt>
+                <dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.precio_total)
-        </dd>
+                    Price by unit
+                </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.date)
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.date)
-        </dd>
+                <dd>
+                    @Html.DisplayFor(model => model.precio_total)
+                </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Estado_StPats.descripcion)
-        </dt>
+                <dt>
+                    Product Code
+                </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Estado_StPats.descripcion)
-        </dd>
+                <dd>
+                    @Html.DisplayFor(model => model.Productos_StPats.codigo)
+                </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Productos_StPats.codigo)
-        </dt>
+                </dl>
 
-        <dd>
-            @Html.DisplayFor(model => model.Productos_StPats.codigo)
-        </dd>
+                <d class="text-center">
+                    <strong>Total Price </strong>
+                </d>
+                <dd>
+                    @Html.DisplayFor(model => model.precio_unitario)
+                </dd>
 
-    </dl>
-</div>
+               
+        </thead>
+    </div>
+</body>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.id_lista_producto }) |
-    @Html.ActionLink("Back to List", "Index")
+    <div class="form-group text-center">
+        <button class="btn-danger btn-sm" onclick="location.href = '@Url.Action("Index","Productos_StPats", "Productos_StPats")'">
+            <span class="	glyphicon glyphicon-backward"></span>&nbsp; Cancel Order
+        </button>
+    </div>
+    <div class="form-group text-center">
+        <button class="btn btn-success btn-sm" onclick="location.href = '@Url.Action("Details","Lista_Productos_StPats", new { id = Model.id_lista_producto })'">
+            <span class="glyphicon glyphicon-check"></span>Pay Order
+        </button>
+    </div>
 </p>
+<script>
+    $(document).ready(function () {
+        $("#myInput").on("keyup", function () {
+            var value = $(this).val().toLowerCase();
+            $("#myTable tr").filter(function () {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+        });
+    });
+</script>
