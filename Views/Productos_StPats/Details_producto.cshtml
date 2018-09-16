@@ -1,23 +1,16 @@
 ﻿@model StPats.Models.Productos_StPats
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "DetalleProducto";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-</head>
-<body>
+  
+    <h2 class="text-center">Details for the product: @Html.DisplayFor(model => model.codigo) </h2>
     <div class="container">
-        <h2>Details for the product: @Html.DisplayFor(model => model.codigo) </h2>
 
-            <tr>
+        <hr />
+        <dl class="dl-horizontal">
+            <h4>
                 <dt>
                     Code Product
                 </dt>
@@ -31,7 +24,7 @@
                 </dt>
 
                 <dd>
-                    @Html.DisplayFor(model => model.price)
+                  $  @Html.DisplayFor(model => model.price)
                 </dd>
 
                 <dt>
@@ -82,29 +75,19 @@
                     @Html.DisplayFor(model => model.Tipo_Producto_StPats.descripcion_producto)
                 </dd>
 
-                </dl>
-        </thead>
+        </dl>
+        </h4>
     </div>
-</body>
-<p>
-    <div class="form-group text-center">
-        <button class="btn-bitbucket btn-sm" onclick="location.href = '@Url.Action("Index")'">
-            <span class="	glyphicon glyphicon-backward"></span>&nbsp; Back to the last page
-        </button>
-    </div>
-    <div class="form-group text-center">
-        <button class="btn btn-success btn-sm" onclick="location.href = '@Url.Action("Details","Lista_Productos_StPats", new { id = Model.id_producto })'">
-            <span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart
-        </button>
-    </div>
-</p>
-<script>
-    $(document).ready(function () {
-        $("#myInput").on("keyup", function () {
-            var value = $(this).val().toLowerCase();
-            $("#myTable tr").filter(function () {
-                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-            });
-        });
-    });
-</script>
+    <p>
+        <div class="form-group text-center">
+            <button class="btn btn-success btn-sm" onclick="location.href = '@Url.Action("Details","Lista_Productos_StPats", new { id = Model.id_producto})'">
+                <span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart
+            </button>
+        </div>
+        <div class="form-group text-center">
+            <button class="btn-bitbucket btn-sm" onclick="location.href = '@Url.Action("Index")'">
+                <span class="	glyphicon glyphicon-backward"></span>&nbsp; Back to the last page
+            </button>
+        </div>
+
+    </p>

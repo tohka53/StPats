@@ -51,6 +51,8 @@ namespace StPats.Controllers
             return View(productos_StPats);
 
         }
+       
+        
 
         // GET: Productos_StPats/Create
         public ActionResult Create()
