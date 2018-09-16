@@ -1,88 +1,102 @@
 ﻿@model IEnumerable<StPats.Models.Productos_StPats>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Products";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<head>
 
-<h2>Index</h2>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.codigo)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.price)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.stock)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.description)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.image)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.manual)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.stock_menos_carrito)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Estado_StPats.descripcion)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Locations_StPats.description)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Tipo_Producto_StPats.descripcion_producto)
-        </th>
-        <th></th>
-    </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.codigo)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.price)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.stock)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.description)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.image)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.manual)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.stock_menos_carrito)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Estado_StPats.descripcion)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Locations_StPats.description)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Tipo_Producto_StPats.descripcion_producto)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.id_producto }) |
-            @Html.ActionLink("Details", "Details", new { id=item.id_producto }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.id_producto })
-        </td>
-    </tr>
-}
+    <p></p>
+    <div></div>
+    <p> </p>
+    <div class="container">
+        <h2>Product List</h2>
+        <p>Type something in the input field to search the table for first names, last names or emails:</p>
+        <input class="form-control" id="myInput" type="text" placeholder="Search..">
+        <br>
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>
+                        Product Tipe
+                    </th>
+                    <th>
+                        Code
+                    </th>
+                    <th>
+                        Price
+                    </th>
+                    <th>
+                        Stock
+                    </th>
+                    <th>
+                        Description
+                    </th>
+                    <th>
+                        Location
+                    </th>
 
-</table>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="myTable">
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Tipo_Producto_StPats.descripcion_producto)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.codigo)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.price)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.stock)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.description)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Locations_StPats.description)
+                        </td>
+                        <td>
+                            <button class="btn btn-info btn-sm" onclick="location.href = '@Url.Action("Details", new { id = item.id_producto })'">
+                                <span class=" glyphicon glyphicon-th-list"></span>&nbsp;  Details
+                            </button>
+                            <button class="btn btn-success btn-sm" onclick="location.href = '@Url.Action("Add_to_Cart", new { id = item.id_producto })'">
+                                <span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart
+                            </button>
+
+                        </td>
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $("#myInput").on("keyup", function () {
+                var value = $(this).val().toLowerCase();
+                $("#myTable tr").filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+    </script>
+
+
+
+</body>
