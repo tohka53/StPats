@@ -33,8 +33,9 @@ namespace StPats.Controllers
             {
                 return HttpNotFound();
             }
-            return View(productos_StPats);
+            return View(id);
         }
+ 
 
         // GET: Productos_StPats/Create
         public ActionResult Create()

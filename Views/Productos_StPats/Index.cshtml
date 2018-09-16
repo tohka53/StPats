@@ -74,11 +74,10 @@
                             <button class="btn btn-info btn-sm" onclick="location.href = '@Url.Action("Details", new { id = item.id_producto })'">
                                 <span class=" glyphicon glyphicon-th-list"></span>&nbsp;  Details
                             </button>
-                            <button class="btn btn-success btn-sm" onclick="location.href = '@Url.Action("Add_to_Cart", new { id = item.id_producto })'">
+                            <button class="btn btn-success btn-sm" onclick="location.href = '@Url.Action("Details","Lista_Productos_StPats", new { id = item.id_producto })'">
                                 <span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart
                             </button>
-
-                        </td>
+                      </td>
                     </tr>
                 }
 
