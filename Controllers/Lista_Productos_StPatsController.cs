@@ -40,6 +40,10 @@ namespace StPats.Controllers
             }
             return View(lista_Productos_StPats);
         }
+        public ActionResult PayPart()
+        {
+            return View();
+        }
 
         // GET: Lista_Productos_StPats/Create
         public ActionResult Create()

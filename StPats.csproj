@@ -3100,6 +3100,7 @@
     <Content Include="Views\Productos_StPats\Index.cshtml" />
     <Content Include="Views\Productos_StPats\Details_producto.cshtml" />
     <Content Include="Views\Productos_StPats\DetalleProducto.cshtml" />
+    <Content Include="Views\Lista_Productos_StPats\PayPart.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
