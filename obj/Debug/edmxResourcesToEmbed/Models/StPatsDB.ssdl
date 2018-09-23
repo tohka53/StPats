@@ -1,11 +1,35 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="StPatsDataBaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-  <EntityType Name="Clientes_StPats">
+  <EntityType Name="Bill_StPats">
+    <Key>
+      <PropertyRef Name="id_bill" />
+    </Key>
+    <Property Name="id_bill" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="date" Type="date" Nullable="false" />
+    <Property Name="id_paymet" Type="int" Nullable="false" />
+    <Property Name="id_shoppingCart" Type="bigint" Nullable="false" />
+    <Property Name="id_estado" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Ciudades_StPats">
+    <Key>
+      <PropertyRef Name="id_ciudad" />
+    </Key>
+    <Property Name="id_ciudad" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre_ciudad" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Clients_StPats">
     <Key>
       <PropertyRef Name="id_cliente" />
     </Key>
     <Property Name="id_cliente" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="cliente_nombre" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="nombre_cliente" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="usuario" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="password" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="retry_password" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="id_ciudad_estado" Type="int" Nullable="false" />
+    <Property Name="zip_code" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="telefono" Type="varchar" MaxLength="50" />
+    <Property Name="estado" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Estado_StPats">
     <Key>
@@ -18,7 +42,8 @@
     <Key>
       <PropertyRef Name="id_filtro" />
     </Key>
-    <Property Name="id_filtro" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_location" Type="int" />
+    <Property Name="id_filtro" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="filtro_codigo" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="numero_plates" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="area_superficie" Type="real" Nullable="false" />
@@ -42,6 +67,13 @@
     </Key>
     <Property Name="id_location" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="description" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PayMet_StPats">
+    <Key>
+      <PropertyRef Name="id_tipo_pago" />
+    </Key>
+    <Property Name="id_tipo_pago" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descripcion" Type="varchar" MaxLength="50" Nullable="false" />
   </EntityType>
   <EntityType Name="Productos_StPats">
     <Key>
@@ -75,10 +107,33 @@
     <Property Name="id_shoppingcart" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="id_cliente" Type="int" Nullable="false" />
     <Property Name="date" Type="date" Nullable="false" />
-    <Property Name="id_estado" Type="int" Nullable="false" />
     <Property Name="monto_sin_taxes" Type="money" Nullable="false" />
     <Property Name="taxes" Type="money" Nullable="false" />
     <Property Name="monto_total" Type="money" Nullable="false" />
+    <Property Name="estado" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="StaCi_StPats">
+    <Key>
+      <PropertyRef Name="id_ciudad_estado" />
+    </Key>
+    <Property Name="id_ciudad_estado" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_estado" Type="int" Nullable="false" />
+    <Property Name="id_ciudad" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Statax_StPats">
+    <Key>
+      <PropertyRef Name="id_estado_impuesto" />
+    </Key>
+    <Property Name="id_estado_impuesto" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_estado" Type="int" Nullable="false" />
+    <Property Name="impuesto" Type="real" Nullable="false" />
+  </EntityType>
+  <EntityType Name="State_StPats">
+    <Key>
+      <PropertyRef Name="is_estado" />
+    </Key>
+    <Property Name="is_estado" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre_estado" Type="varchar" MaxLength="50" Nullable="false" />
   </EntityType>
   <EntityType Name="sysdiagrams">
     <Key>
@@ -116,6 +171,78 @@
     <Property Name="id_tipo_producto" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="descripcion_producto" Type="varchar" MaxLength="50" Nullable="false" />
   </EntityType>
+  <Association Name="FK_Bill_StPats_Estado_StPats">
+    <End Role="Estado_StPats" Type="Self.Estado_StPats" Multiplicity="1" />
+    <End Role="Bill_StPats" Type="Self.Bill_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado_StPats">
+        <PropertyRef Name="id_estado" />
+      </Principal>
+      <Dependent Role="Bill_StPats">
+        <PropertyRef Name="id_estado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Bill_StPats_PayMet_StPats">
+    <End Role="PayMet_StPats" Type="Self.PayMet_StPats" Multiplicity="1" />
+    <End Role="Bill_StPats" Type="Self.Bill_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PayMet_StPats">
+        <PropertyRef Name="id_tipo_pago" />
+      </Principal>
+      <Dependent Role="Bill_StPats">
+        <PropertyRef Name="id_paymet" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Bill_StPats_Shopping_Cart_StPats">
+    <End Role="Shopping_Cart_StPats" Type="Self.Shopping_Cart_StPats" Multiplicity="1" />
+    <End Role="Bill_StPats" Type="Self.Bill_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Shopping_Cart_StPats">
+        <PropertyRef Name="id_shoppingcart" />
+      </Principal>
+      <Dependent Role="Bill_StPats">
+        <PropertyRef Name="id_shoppingCart" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Clients_StPats_Estado_StPats">
+    <End Role="Estado_StPats" Type="Self.Estado_StPats" Multiplicity="1" />
+    <End Role="Clients_StPats" Type="Self.Clients_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado_StPats">
+        <PropertyRef Name="id_estado" />
+      </Principal>
+      <Dependent Role="Clients_StPats">
+        <PropertyRef Name="estado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Clients_StPats_StaCi_StPats">
+    <End Role="StaCi_StPats" Type="Self.StaCi_StPats" Multiplicity="1" />
+    <End Role="Clients_StPats" Type="Self.Clients_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StaCi_StPats">
+        <PropertyRef Name="id_ciudad_estado" />
+      </Principal>
+      <Dependent Role="Clients_StPats">
+        <PropertyRef Name="id_ciudad_estado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Filtros_StPats_Locations_StPats">
+    <End Role="Locations_StPats" Type="Self.Locations_StPats" Multiplicity="0..1" />
+    <End Role="Filtros_StPats" Type="Self.Filtros_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Locations_StPats">
+        <PropertyRef Name="id_location" />
+      </Principal>
+      <Dependent Role="Filtros_StPats">
+        <PropertyRef Name="id_location" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_Lista_Productos_StPats_Estado_StPats">
     <End Role="Estado_StPats" Type="Self.Estado_StPats" Multiplicity="1" />
     <End Role="Lista_Productos_StPats" Type="Self.Lista_Productos_StPats" Multiplicity="*" />
@@ -212,11 +339,11 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Shopping_Cart_StPats_Clientes_StPats">
-    <End Role="Clientes_StPats" Type="Self.Clientes_StPats" Multiplicity="1" />
+  <Association Name="FK_Shopping_Cart_StPats_Clients_StPats">
+    <End Role="Clients_StPats" Type="Self.Clients_StPats" Multiplicity="1" />
     <End Role="Shopping_Cart_StPats" Type="Self.Shopping_Cart_StPats" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Clientes_StPats">
+      <Principal Role="Clients_StPats">
         <PropertyRef Name="id_cliente" />
       </Principal>
       <Dependent Role="Shopping_Cart_StPats">
@@ -232,6 +359,42 @@
         <PropertyRef Name="id_estado" />
       </Principal>
       <Dependent Role="Shopping_Cart_StPats">
+        <PropertyRef Name="estado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StaCi_StPats_Ciudades_StPats">
+    <End Role="Ciudades_StPats" Type="Self.Ciudades_StPats" Multiplicity="1" />
+    <End Role="StaCi_StPats" Type="Self.StaCi_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ciudades_StPats">
+        <PropertyRef Name="id_ciudad" />
+      </Principal>
+      <Dependent Role="StaCi_StPats">
+        <PropertyRef Name="id_ciudad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StaCi_StPats_State_StPats">
+    <End Role="State_StPats" Type="Self.State_StPats" Multiplicity="1" />
+    <End Role="StaCi_StPats" Type="Self.StaCi_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="State_StPats">
+        <PropertyRef Name="is_estado" />
+      </Principal>
+      <Dependent Role="StaCi_StPats">
+        <PropertyRef Name="id_estado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Statax_StPats_State_StPats">
+    <End Role="State_StPats" Type="Self.State_StPats" Multiplicity="1" />
+    <End Role="Statax_StPats" Type="Self.Statax_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="State_StPats">
+        <PropertyRef Name="is_estado" />
+      </Principal>
+      <Dependent Role="Statax_StPats">
         <PropertyRef Name="id_estado" />
       </Dependent>
     </ReferentialConstraint>
@@ -280,17 +443,47 @@
   </Function>
   <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <EntityContainer Name="StPatsDataBaseModelStoreContainer">
-    <EntitySet Name="Clientes_StPats" EntityType="Self.Clientes_StPats" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Bill_StPats" EntityType="Self.Bill_StPats" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Ciudades_StPats" EntityType="Self.Ciudades_StPats" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Clients_StPats" EntityType="Self.Clients_StPats" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Estado_StPats" EntityType="Self.Estado_StPats" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Filtros_StPats" EntityType="Self.Filtros_StPats" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Lista_Productos_StPats" EntityType="Self.Lista_Productos_StPats" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Locations_StPats" EntityType="Self.Locations_StPats" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PayMet_StPats" EntityType="Self.PayMet_StPats" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Productos_StPats" EntityType="Self.Productos_StPats" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Shopping_Cart_Detalle_StPats" EntityType="Self.Shopping_Cart_Detalle_StPats" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Shopping_Cart_StPats" EntityType="Self.Shopping_Cart_StPats" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StaCi_StPats" EntityType="Self.StaCi_StPats" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Statax_StPats" EntityType="Self.Statax_StPats" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="State_StPats" EntityType="Self.State_StPats" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Tanks_StPats" EntityType="Self.Tanks_StPats" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Tipo_Producto_StPats" EntityType="Self.Tipo_Producto_StPats" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Bill_StPats_Estado_StPats" Association="Self.FK_Bill_StPats_Estado_StPats">
+      <End Role="Estado_StPats" EntitySet="Estado_StPats" />
+      <End Role="Bill_StPats" EntitySet="Bill_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Bill_StPats_PayMet_StPats" Association="Self.FK_Bill_StPats_PayMet_StPats">
+      <End Role="PayMet_StPats" EntitySet="PayMet_StPats" />
+      <End Role="Bill_StPats" EntitySet="Bill_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Bill_StPats_Shopping_Cart_StPats" Association="Self.FK_Bill_StPats_Shopping_Cart_StPats">
+      <End Role="Shopping_Cart_StPats" EntitySet="Shopping_Cart_StPats" />
+      <End Role="Bill_StPats" EntitySet="Bill_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Clients_StPats_Estado_StPats" Association="Self.FK_Clients_StPats_Estado_StPats">
+      <End Role="Estado_StPats" EntitySet="Estado_StPats" />
+      <End Role="Clients_StPats" EntitySet="Clients_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Clients_StPats_StaCi_StPats" Association="Self.FK_Clients_StPats_StaCi_StPats">
+      <End Role="StaCi_StPats" EntitySet="StaCi_StPats" />
+      <End Role="Clients_StPats" EntitySet="Clients_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Filtros_StPats_Locations_StPats" Association="Self.FK_Filtros_StPats_Locations_StPats">
+      <End Role="Locations_StPats" EntitySet="Locations_StPats" />
+      <End Role="Filtros_StPats" EntitySet="Filtros_StPats" />
+    </AssociationSet>
     <AssociationSet Name="FK_Lista_Productos_StPats_Estado_StPats" Association="Self.FK_Lista_Productos_StPats_Estado_StPats">
       <End Role="Estado_StPats" EntitySet="Estado_StPats" />
       <End Role="Lista_Productos_StPats" EntitySet="Lista_Productos_StPats" />
@@ -323,13 +516,25 @@
       <End Role="Shopping_Cart_StPats" EntitySet="Shopping_Cart_StPats" />
       <End Role="Shopping_Cart_Detalle_StPats" EntitySet="Shopping_Cart_Detalle_StPats" />
     </AssociationSet>
-    <AssociationSet Name="FK_Shopping_Cart_StPats_Clientes_StPats" Association="Self.FK_Shopping_Cart_StPats_Clientes_StPats">
-      <End Role="Clientes_StPats" EntitySet="Clientes_StPats" />
+    <AssociationSet Name="FK_Shopping_Cart_StPats_Clients_StPats" Association="Self.FK_Shopping_Cart_StPats_Clients_StPats">
+      <End Role="Clients_StPats" EntitySet="Clients_StPats" />
       <End Role="Shopping_Cart_StPats" EntitySet="Shopping_Cart_StPats" />
     </AssociationSet>
     <AssociationSet Name="FK_Shopping_Cart_StPats_Estado_StPats" Association="Self.FK_Shopping_Cart_StPats_Estado_StPats">
       <End Role="Estado_StPats" EntitySet="Estado_StPats" />
       <End Role="Shopping_Cart_StPats" EntitySet="Shopping_Cart_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StaCi_StPats_Ciudades_StPats" Association="Self.FK_StaCi_StPats_Ciudades_StPats">
+      <End Role="Ciudades_StPats" EntitySet="Ciudades_StPats" />
+      <End Role="StaCi_StPats" EntitySet="StaCi_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StaCi_StPats_State_StPats" Association="Self.FK_StaCi_StPats_State_StPats">
+      <End Role="State_StPats" EntitySet="State_StPats" />
+      <End Role="StaCi_StPats" EntitySet="StaCi_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Statax_StPats_State_StPats" Association="Self.FK_Statax_StPats_State_StPats">
+      <End Role="State_StPats" EntitySet="State_StPats" />
+      <End Role="Statax_StPats" EntitySet="Statax_StPats" />
     </AssociationSet>
     <AssociationSet Name="FK_Tanks_StPats_Locations_StPats" Association="Self.FK_Tanks_StPats_Locations_StPats">
       <End Role="Locations_StPats" EntitySet="Locations_StPats" />

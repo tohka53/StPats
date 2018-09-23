@@ -27,17 +27,23 @@ namespace StPats.Models
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Locations_StPats> Locations_StPats { get; set; }
-        public virtual DbSet<Tanks_StPats> Tanks_StPats { get; set; }
-        public virtual DbSet<Filtros_StPats> Filtros_StPats { get; set; }
+        public virtual DbSet<Bill_StPats> Bill_StPats { get; set; }
+        public virtual DbSet<Ciudades_StPats> Ciudades_StPats { get; set; }
+        public virtual DbSet<Clients_StPats> Clients_StPats { get; set; }
         public virtual DbSet<Estado_StPats> Estado_StPats { get; set; }
+        public virtual DbSet<Filtros_StPats> Filtros_StPats { get; set; }
         public virtual DbSet<Lista_Productos_StPats> Lista_Productos_StPats { get; set; }
+        public virtual DbSet<Locations_StPats> Locations_StPats { get; set; }
+        public virtual DbSet<PayMet_StPats> PayMet_StPats { get; set; }
         public virtual DbSet<Productos_StPats> Productos_StPats { get; set; }
         public virtual DbSet<Shopping_Cart_Detalle_StPats> Shopping_Cart_Detalle_StPats { get; set; }
         public virtual DbSet<Shopping_Cart_StPats> Shopping_Cart_StPats { get; set; }
+        public virtual DbSet<StaCi_StPats> StaCi_StPats { get; set; }
+        public virtual DbSet<Statax_StPats> Statax_StPats { get; set; }
+        public virtual DbSet<State_StPats> State_StPats { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
+        public virtual DbSet<Tanks_StPats> Tanks_StPats { get; set; }
         public virtual DbSet<Tipo_Producto_StPats> Tipo_Producto_StPats { get; set; }
-        public virtual DbSet<Clientes_StPats> Clientes_StPats { get; set; }
     
         public virtual int sp_alterdiagram(string diagramname, Nullable<int> owner_id, Nullable<int> version, byte[] definition)
         {

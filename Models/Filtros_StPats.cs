@@ -14,10 +14,13 @@ namespace StPats.Models
     
     public partial class Filtros_StPats
     {
-        public int id_filtro { get; set; }
+        public Nullable<int> id_location { get; set; }
+        public string id_filtro { get; set; }
         public string filtro_codigo { get; set; }
         public string numero_plates { get; set; }
         public float area_superficie { get; set; }
         public decimal precio { get; set; }
+    
+        public virtual Locations_StPats Locations_StPats { get; set; }
     }
 }

@@ -57,7 +57,7 @@ namespace StPats.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.id_estado = new SelectList(db.Estado_StPats, "id_estado", "descripcion", shopping_Cart_StPats.id_estado);
+            ViewBag.id_estado = new SelectList(db.Estado_StPats, "id_estado", "descripcion");
             return View(shopping_Cart_StPats);
         }
 
@@ -73,7 +73,7 @@ namespace StPats.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.id_estado = new SelectList(db.Estado_StPats, "id_estado", "descripcion", shopping_Cart_StPats.id_estado);
+            ViewBag.id_estado = new SelectList(db.Estado_StPats, "id_estado", "descripcion");
             return View(shopping_Cart_StPats);
         }
 
@@ -90,7 +90,7 @@ namespace StPats.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.id_estado = new SelectList(db.Estado_StPats, "id_estado", "descripcion", shopping_Cart_StPats.id_estado);
+            ViewBag.id_estado = new SelectList(db.Estado_StPats, "id_estado", "descripcion");
             return View(shopping_Cart_StPats);
         }
 
