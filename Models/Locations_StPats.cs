@@ -17,6 +17,8 @@ namespace StPats.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Locations_StPats()
         {
+            this.Bottle_Finishing_StPats = new HashSet<Bottle_Finishing_StPats>();
+            this.Filling_Machine_StPats = new HashSet<Filling_Machine_StPats>();
             this.Filtros_StPats = new HashSet<Filtros_StPats>();
             this.Productos_StPats = new HashSet<Productos_StPats>();
             this.Tanks_StPats = new HashSet<Tanks_StPats>();
@@ -25,6 +27,10 @@ namespace StPats.Models
         public int id_location { get; set; }
         public string description { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Bottle_Finishing_StPats> Bottle_Finishing_StPats { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Filling_Machine_StPats> Filling_Machine_StPats { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Filtros_StPats> Filtros_StPats { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

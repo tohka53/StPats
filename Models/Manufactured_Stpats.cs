@@ -12,36 +12,21 @@ namespace StPats.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Productos_StPats
+    public partial class Manufactured_Stpats
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Productos_StPats()
+        public Manufactured_Stpats()
         {
             this.Bottle_Finishing_StPats = new HashSet<Bottle_Finishing_StPats>();
             this.Filling_Machine_StPats = new HashSet<Filling_Machine_StPats>();
-            this.Lista_Productos_StPats = new HashSet<Lista_Productos_StPats>();
         }
     
-        public int id_producto { get; set; }
-        public int id_tipo_producto { get; set; }
-        public string codigo { get; set; }
-        public decimal price { get; set; }
-        public int stock { get; set; }
-        public string description { get; set; }
-        public int id_location { get; set; }
-        public string image { get; set; }
-        public int id_estado { get; set; }
-        public string manual { get; set; }
-        public int stock_menos_carrito { get; set; }
+        public int id_manufactured { get; set; }
+        public string name_manufactured { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Bottle_Finishing_StPats> Bottle_Finishing_StPats { get; set; }
-        public virtual Estado_StPats Estado_StPats { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Filling_Machine_StPats> Filling_Machine_StPats { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Lista_Productos_StPats> Lista_Productos_StPats { get; set; }
-        public virtual Locations_StPats Locations_StPats { get; set; }
-        public virtual Tipo_Producto_StPats Tipo_Producto_StPats { get; set; }
     }
 }

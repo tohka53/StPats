@@ -28,12 +28,15 @@ namespace StPats.Models
         }
     
         public virtual DbSet<Bill_StPats> Bill_StPats { get; set; }
+        public virtual DbSet<Bottle_Finishing_StPats> Bottle_Finishing_StPats { get; set; }
         public virtual DbSet<Ciudades_StPats> Ciudades_StPats { get; set; }
         public virtual DbSet<Clients_StPats> Clients_StPats { get; set; }
         public virtual DbSet<Estado_StPats> Estado_StPats { get; set; }
+        public virtual DbSet<Filling_Machine_StPats> Filling_Machine_StPats { get; set; }
         public virtual DbSet<Filtros_StPats> Filtros_StPats { get; set; }
         public virtual DbSet<Lista_Productos_StPats> Lista_Productos_StPats { get; set; }
         public virtual DbSet<Locations_StPats> Locations_StPats { get; set; }
+        public virtual DbSet<Manufactured_Stpats> Manufactured_Stpats { get; set; }
         public virtual DbSet<PayMet_StPats> PayMet_StPats { get; set; }
         public virtual DbSet<Productos_StPats> Productos_StPats { get; set; }
         public virtual DbSet<Shopping_Cart_Detalle_StPats> Shopping_Cart_Detalle_StPats { get; set; }

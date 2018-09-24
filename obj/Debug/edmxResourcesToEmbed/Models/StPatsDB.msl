@@ -36,6 +36,27 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="Bottle_Finishing_StPats">
+      <EntityTypeMapping TypeName="StPatsDataBaseModel.Bottle_Finishing_StPats">
+        <MappingFragment StoreEntitySet="Bottle_Finishing_StPats">
+          <ScalarProperty Name="extra_things" ColumnName="extra_things" />
+          <ScalarProperty Name="id_estado" ColumnName="id_estado" />
+          <ScalarProperty Name="stock" ColumnName="stock" />
+          <ScalarProperty Name="id_manufactured" ColumnName="id_manufactured" />
+          <ScalarProperty Name="voltage_regulator" ColumnName="voltage_regulator" />
+          <ScalarProperty Name="manual" ColumnName="manual" />
+          <ScalarProperty Name="image" ColumnName="image" />
+          <ScalarProperty Name="id_location" ColumnName="id_location" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="desctiption" ColumnName="desctiption" />
+          <ScalarProperty Name="name_product" ColumnName="name_product" />
+          <ScalarProperty Name="code_product" ColumnName="code_product" />
+          <ScalarProperty Name="id_tipo_product" ColumnName="id_tipo_product" />
+          <ScalarProperty Name="id_producto_general" ColumnName="id_producto_general" />
+          <ScalarProperty Name="C_id___bottle_finishing" ColumnName="[id_&#xD;&#xA;bottle_finishing" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="Ciudades_StPats">
       <EntityTypeMapping TypeName="StPatsDataBaseModel.Ciudades_StPats">
         <MappingFragment StoreEntitySet="Ciudades_StPats">
@@ -64,6 +85,28 @@
         <MappingFragment StoreEntitySet="Estado_StPats">
           <ScalarProperty Name="descripcion" ColumnName="descripcion" />
           <ScalarProperty Name="id_estado" ColumnName="id_estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Filling_Machine_StPats">
+      <EntityTypeMapping TypeName="StPatsDataBaseModel.Filling_Machine_StPats">
+        <MappingFragment StoreEntitySet="Filling_Machine_StPats">
+          <ScalarProperty Name="extra_things" ColumnName="extra_things" />
+          <ScalarProperty Name="id_estado" ColumnName="id_estado" />
+          <ScalarProperty Name="stock" ColumnName="stock" />
+          <ScalarProperty Name="regulador" ColumnName="regulador" />
+          <ScalarProperty Name="id_manufactured" ColumnName="id_manufactured" />
+          <ScalarProperty Name="voltage_regulator" ColumnName="voltage_regulator" />
+          <ScalarProperty Name="manual" ColumnName="manual" />
+          <ScalarProperty Name="image" ColumnName="image" />
+          <ScalarProperty Name="id_location" ColumnName="id_location" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="name_product" ColumnName="name_product" />
+          <ScalarProperty Name="code_produt" ColumnName="code_produt" />
+          <ScalarProperty Name="id_tipo_product" ColumnName="id_tipo_product" />
+          <ScalarProperty Name="id_producto_general" ColumnName="id_producto_general" />
+          <ScalarProperty Name="id_filling_machine" ColumnName="id_filling_machine" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -97,6 +140,14 @@
         <MappingFragment StoreEntitySet="Locations_StPats">
           <ScalarProperty Name="description" ColumnName="description" />
           <ScalarProperty Name="id_location" ColumnName="id_location" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Manufactured_Stpats">
+      <EntityTypeMapping TypeName="StPatsDataBaseModel.Manufactured_Stpats">
+        <MappingFragment StoreEntitySet="Manufactured_Stpats">
+          <ScalarProperty Name="name_manufactured" ColumnName="name_manufactured" />
+          <ScalarProperty Name="id_manufactured" ColumnName="id_manufactured" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

@@ -18,7 +18,9 @@ namespace StPats.Models
         public Estado_StPats()
         {
             this.Bill_StPats = new HashSet<Bill_StPats>();
+            this.Bottle_Finishing_StPats = new HashSet<Bottle_Finishing_StPats>();
             this.Clients_StPats = new HashSet<Clients_StPats>();
+            this.Filling_Machine_StPats = new HashSet<Filling_Machine_StPats>();
             this.Lista_Productos_StPats = new HashSet<Lista_Productos_StPats>();
             this.Productos_StPats = new HashSet<Productos_StPats>();
             this.Shopping_Cart_Detalle_StPats = new HashSet<Shopping_Cart_Detalle_StPats>();
@@ -31,7 +33,11 @@ namespace StPats.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Bill_StPats> Bill_StPats { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Bottle_Finishing_StPats> Bottle_Finishing_StPats { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Clients_StPats> Clients_StPats { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Filling_Machine_StPats> Filling_Machine_StPats { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Lista_Productos_StPats> Lista_Productos_StPats { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

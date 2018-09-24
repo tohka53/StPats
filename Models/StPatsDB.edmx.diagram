@@ -5,34 +5,47 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="b9fd071074c445878ea38c96fbb39e56" Name="Diagram1" ZoomLevel="86">
-        <EntityTypeShape EntityType="StPatsDataBaseModel.Bill_StPats" Width="1.5" PointX="3" PointY="9.5" />
-        <EntityTypeShape EntityType="StPatsDataBaseModel.Ciudades_StPats" Width="1.5" PointX="1.5" PointY="2.125" />
-        <EntityTypeShape EntityType="StPatsDataBaseModel.Clients_StPats" Width="1.5" PointX="6" PointY="9.125" />
-        <EntityTypeShape EntityType="StPatsDataBaseModel.Estado_StPats" Width="1.5" PointX="0.75" PointY="9.5" />
-        <EntityTypeShape EntityType="StPatsDataBaseModel.Filtros_StPats" Width="1.5" PointX="3" PointY="22.125" />
-        <EntityTypeShape EntityType="StPatsDataBaseModel.Lista_Productos_StPats" Width="1.5" PointX="3" PointY="5.375" />
-        <EntityTypeShape EntityType="StPatsDataBaseModel.Locations_StPats" Width="1.5" PointX="0.75" PointY="13.625" />
-        <EntityTypeShape EntityType="StPatsDataBaseModel.PayMet_StPats" Width="1.5" PointX="0.75" PointY="6.625" />
-        <EntityTypeShape EntityType="StPatsDataBaseModel.Productos_StPats" Width="1.5" PointX="3" PointY="12.875" />
-        <EntityTypeShape EntityType="StPatsDataBaseModel.Shopping_Cart_Detalle_StPats" Width="1.5" PointX="10.5" PointY="7.75" />
-        <EntityTypeShape EntityType="StPatsDataBaseModel.Shopping_Cart_StPats" Width="1.5" PointX="8.25" PointY="9.25" />
-        <EntityTypeShape EntityType="StPatsDataBaseModel.StaCi_StPats" Width="1.5" PointX="3.75" PointY="0.75" />
-        <EntityTypeShape EntityType="StPatsDataBaseModel.Statax_StPats" Width="1.5" PointX="3.75" PointY="19.5" />
-        <EntityTypeShape EntityType="StPatsDataBaseModel.State_StPats" Width="1.5" PointX="1.5" PointY="19.5" />
-        <EntityTypeShape EntityType="StPatsDataBaseModel.sysdiagram" Width="1.5" PointX="5.75" PointY="2.5" />
-        <EntityTypeShape EntityType="StPatsDataBaseModel.Tanks_StPats" Width="1.5" PointX="3" PointY="25.25" />
-        <EntityTypeShape EntityType="StPatsDataBaseModel.Tipo_Producto_StPats" Width="1.5" PointX="0.75" PointY="16.375" />
+        <EntityTypeShape EntityType="StPatsDataBaseModel.Bill_StPats" Width="1.5" PointX="3" PointY="10.25" />
+        <EntityTypeShape EntityType="StPatsDataBaseModel.Bottle_Finishing_StPats" Width="1.5" PointX="11.25" PointY="13.125" />
+        <EntityTypeShape EntityType="StPatsDataBaseModel.Ciudades_StPats" Width="1.5" PointX="1.5" PointY="6.5" />
+        <EntityTypeShape EntityType="StPatsDataBaseModel.Clients_StPats" Width="1.5" PointX="3" PointY="13.875" />
+        <EntityTypeShape EntityType="StPatsDataBaseModel.Estado_StPats" Width="1.5" PointX="0.75" PointY="14.125" />
+        <EntityTypeShape EntityType="StPatsDataBaseModel.Filling_Machine_StPats" Width="1.5" PointX="8.25" PointY="13" />
+        <EntityTypeShape EntityType="StPatsDataBaseModel.Filtros_StPats" Width="1.5" PointX="6" PointY="18.625" />
+        <EntityTypeShape EntityType="StPatsDataBaseModel.Lista_Productos_StPats" Width="1.5" PointX="8.25" PointY="9.125" />
+        <EntityTypeShape EntityType="StPatsDataBaseModel.Locations_StPats" Width="1.5" PointX="3.75" PointY="18" />
+        <EntityTypeShape EntityType="StPatsDataBaseModel.Manufactured_Stpats" Width="1.5" PointX="9" PointY="19.625" />
+        <EntityTypeShape EntityType="StPatsDataBaseModel.PayMet_StPats" Width="1.5" PointX="0.75" PointY="1.375" />
+        <EntityTypeShape EntityType="StPatsDataBaseModel.Productos_StPats" Width="1.5" PointX="6" PointY="13.375" />
+        <EntityTypeShape EntityType="StPatsDataBaseModel.Shopping_Cart_Detalle_StPats" Width="1.5" PointX="10.5" PointY="9.875" />
+        <EntityTypeShape EntityType="StPatsDataBaseModel.Shopping_Cart_StPats" Width="1.5" PointX="5.25" PointY="9" />
+        <EntityTypeShape EntityType="StPatsDataBaseModel.StaCi_StPats" Width="1.5" PointX="0.75" PointY="9.5" />
+        <EntityTypeShape EntityType="StPatsDataBaseModel.Statax_StPats" Width="1.5" PointX="3.75" PointY="3.875" />
+        <EntityTypeShape EntityType="StPatsDataBaseModel.State_StPats" Width="1.5" PointX="1.5" PointY="3.875" />
+        <EntityTypeShape EntityType="StPatsDataBaseModel.sysdiagram" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="StPatsDataBaseModel.Tanks_StPats" Width="1.5" PointX="6" PointY="21.75" />
+        <EntityTypeShape EntityType="StPatsDataBaseModel.Tipo_Producto_StPats" Width="1.5" PointX="3.75" PointY="21.125" />
         <AssociationConnector Association="StPatsDataBaseModel.FK_Bill_StPats_Estado_StPats" />
         <AssociationConnector Association="StPatsDataBaseModel.FK_Bill_StPats_PayMet_StPats" />
         <AssociationConnector Association="StPatsDataBaseModel.FK_Bill_StPats_Shopping_Cart_StPats" />
+        <AssociationConnector Association="StPatsDataBaseModel.FK_Bottle_Finishing_StPats_Estado_StPats" />
+        <AssociationConnector Association="StPatsDataBaseModel.FK_Bottle_Finishing_StPats_Locations_StPats" />
+        <AssociationConnector Association="StPatsDataBaseModel.FK_Bottle_Finishing_StPats_Manufactured_Stpats" />
+        <AssociationConnector Association="StPatsDataBaseModel.FK_Bottle_Finishing_StPats_Productos_StPats" />
+        <AssociationConnector Association="StPatsDataBaseModel.FK_Bottle_Finishing_StPats_Tipo_Producto_StPats" />
         <AssociationConnector Association="StPatsDataBaseModel.FK_StaCi_StPats_Ciudades_StPats" />
         <AssociationConnector Association="StPatsDataBaseModel.FK_Clients_StPats_Estado_StPats" />
         <AssociationConnector Association="StPatsDataBaseModel.FK_Clients_StPats_StaCi_StPats" />
         <AssociationConnector Association="StPatsDataBaseModel.FK_Shopping_Cart_StPats_Clients_StPats" />
+        <AssociationConnector Association="StPatsDataBaseModel.FK_Filling_Machine_StPats_Estado_StPats" />
         <AssociationConnector Association="StPatsDataBaseModel.FK_Lista_Productos_StPats_Estado_StPats" />
         <AssociationConnector Association="StPatsDataBaseModel.FK_Productos_StPats_Estado_StPats" />
         <AssociationConnector Association="StPatsDataBaseModel.FK_Shopping_Cart_Detalle_StPats_Estado_StPats" />
         <AssociationConnector Association="StPatsDataBaseModel.FK_Shopping_Cart_StPats_Estado_StPats" />
+        <AssociationConnector Association="StPatsDataBaseModel.FK_Filling_Machine_StPats_Locations_StPats" />
+        <AssociationConnector Association="StPatsDataBaseModel.FK_Filling_Machine_StPats_Manufactured_Stpats" />
+        <AssociationConnector Association="StPatsDataBaseModel.FK_Filling_Machine_StPats_Productos_StPats" />
+        <AssociationConnector Association="StPatsDataBaseModel.FK_Filling_Machine_StPats_Tipo_Producto_StPats" />
         <AssociationConnector Association="StPatsDataBaseModel.FK_Filtros_StPats_Locations_StPats" />
         <AssociationConnector Association="StPatsDataBaseModel.FK_Lista_Productos_StPats_Productos_StPats" />
         <AssociationConnector Association="StPatsDataBaseModel.FK_Shopping_Cart_Detalle_StPats_Lista_Productos_StPats" />
