@@ -1,19 +1,22 @@
-﻿@model StPats.Models.Filling_Machine_StPats
+﻿@model StPats.Models.Bottle_Finishing_StPats
 
 @{
     ViewBag.Title = "Details";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+
 <h2 class="text-center">Details for the product: @Html.DisplayFor(model => model.name_product) </h2>
 <div class="container">
 
     <hr />
     <dl class="dl-horizontal">
-        <h4>
+        <h5>
+
+           
 
             <dt>
-                Name Product
+               Name Product
             </dt>
 
             <dd>
@@ -21,22 +24,20 @@
             </dd>
 
             <dt>
-                Description)
+                Desctiption
             </dt>
 
             <dd>
-                @Html.DisplayFor(model => model.description)
+                @Html.DisplayFor(model => model.desctiption)
             </dd>
 
             <dt>
-                @Html.DisplayNameFor(model => model.price)
+                Price
             </dt>
 
             <dd>
                 $ @Html.DisplayFor(model => model.price)
             </dd>
-
-
 
             <dt>
                 Voltage Regulator
@@ -46,33 +47,6 @@
                 @Html.DisplayFor(model => model.voltage_regulator)
             </dd>
 
-            <dt>
-                Regulador
-            </dt>
-
-            <dd>
-                @Html.DisplayFor(model => model.regulador)
-            </dd>
-           
-            <dt>
-                @Html.DisplayNameFor(model => model.Locations_StPats.description)
-            </dt>
-
-            <dd>
-                @Html.DisplayFor(model => model.Locations_StPats.description)
-            </dd>
-
-            <dt>
-                Name Manufactured
-            </dt>
-
-            <dd>
-                @Html.DisplayFor(model => model.Manufactured_Stpats.name_manufactured)
-            </dd>
-
-           
-
-           
             <dt>
                 Extra Details
             </dt>

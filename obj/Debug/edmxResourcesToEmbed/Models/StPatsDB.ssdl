@@ -75,8 +75,8 @@
     <Property Name="voltage_regulator" Type="int" Nullable="false" />
     <Property Name="id_manufactured" Type="int" Nullable="false" />
     <Property Name="regulador" Type="varchar" MaxLength="10" Nullable="false" />
-    <Property Name="stock" Type="int" />
-    <Property Name="id_estado" Type="int" />
+    <Property Name="stock" Type="int" Nullable="false" />
+    <Property Name="id_estado" Type="int" Nullable="false" />
     <Property Name="extra_things" Type="varchar" MaxLength="100" Nullable="false" />
   </EntityType>
   <EntityType Name="Filtros_StPats">
@@ -340,7 +340,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Filling_Machine_StPats_Estado_StPats">
-    <End Role="Estado_StPats" Type="Self.Estado_StPats" Multiplicity="0..1" />
+    <End Role="Estado_StPats" Type="Self.Estado_StPats" Multiplicity="1" />
     <End Role="Filling_Machine_StPats" Type="Self.Filling_Machine_StPats" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Estado_StPats">

@@ -27,8 +27,8 @@ namespace StPats.Models
         public int voltage_regulator { get; set; }
         public int id_manufactured { get; set; }
         public string regulador { get; set; }
-        public Nullable<int> stock { get; set; }
-        public Nullable<int> id_estado { get; set; }
+        public int stock { get; set; }
+        public int id_estado { get; set; }
         public string extra_things { get; set; }
     
         public virtual Estado_StPats Estado_StPats { get; set; }

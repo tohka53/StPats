@@ -278,8 +278,8 @@
     <Property Name="voltage_regulator" Type="Int32" Nullable="false" />
     <Property Name="id_manufactured" Type="Int32" Nullable="false" />
     <Property Name="regulador" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
-    <Property Name="stock" Type="Int32" />
-    <Property Name="id_estado" Type="Int32" />
+    <Property Name="stock" Type="Int32" Nullable="false" />
+    <Property Name="id_estado" Type="Int32" Nullable="false" />
     <Property Name="extra_things" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="Estado_StPats" Relationship="StPatsDataBaseModel.FK_Filling_Machine_StPats_Estado_StPats" FromRole="Filling_Machine_StPats" ToRole="Estado_StPats" />
     <NavigationProperty Name="Locations_StPats" Relationship="StPatsDataBaseModel.FK_Filling_Machine_StPats_Locations_StPats" FromRole="Filling_Machine_StPats" ToRole="Locations_StPats" />
@@ -607,7 +607,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Filling_Machine_StPats_Estado_StPats">
-    <End Type="StPatsDataBaseModel.Estado_StPats" Role="Estado_StPats" Multiplicity="0..1" />
+    <End Type="StPatsDataBaseModel.Estado_StPats" Role="Estado_StPats" Multiplicity="1" />
     <End Type="StPatsDataBaseModel.Filling_Machine_StPats" Role="Filling_Machine_StPats" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Estado_StPats">
