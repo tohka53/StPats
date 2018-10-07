@@ -120,7 +120,6 @@ C:\Users\Admin\Desktop\Mio\stpats\StPats\StPats\bin\Microsoft.Owin.Security.Goog
 C:\Users\Admin\Desktop\Mio\stpats\StPats\StPats\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Users\Admin\Desktop\Mio\stpats\StPats\StPats\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\Admin\Desktop\Mio\stpats\StPats\StPats\bin\Microsoft.Owin.Security.OAuth.xml
-C:\Users\Admin\Desktop\Mio\stpats\StPats\StPats\obj\Debug\StPats.csprojAssemblyReference.cache
 C:\Users\Admin\Desktop\Mio\stpats\StPats\StPats\obj\Debug\StPats.csproj.CoreCompileInputs.cache
 C:\Users\Admin\Desktop\Mio\stpats\StPats\StPats\obj\Debug\StPats.csproj.CopyComplete
 C:\Users\Admin\Desktop\Mio\stpats\StPats\StPats\obj\Debug\StPats.dll

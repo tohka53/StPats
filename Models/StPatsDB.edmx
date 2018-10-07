@@ -33,7 +33,7 @@
           <Property Name="id_manufactured" Type="int" Nullable="false" />
           <Property Name="stock" Type="int" Nullable="false" />
           <Property Name="id_estado" Type="int" Nullable="false" />
-          <Property Name="extra_things" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="extra_things" Type="varchar" MaxLength="200" Nullable="false" />
         </EntityType>
         <EntityType Name="Ciudades_StPats">
           <Key>
@@ -75,8 +75,8 @@
           <Property Name="description" Type="varchar" MaxLength="999" Nullable="false" />
           <Property Name="price" Type="money" Nullable="false" />
           <Property Name="id_location" Type="int" Nullable="false" />
-          <Property Name="image" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="manual" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="image" Type="varchar" MaxLength="150" Nullable="false" />
+          <Property Name="manual" Type="varchar" MaxLength="150" Nullable="false" />
           <Property Name="voltage_regulator" Type="int" Nullable="false" />
           <Property Name="id_manufactured" Type="int" Nullable="false" />
           <Property Name="regulador" Type="varchar" MaxLength="10" Nullable="false" />
@@ -975,7 +975,7 @@
           <Property Name="id_manufactured" Type="Int32" Nullable="false" />
           <Property Name="stock" Type="Int32" Nullable="false" />
           <Property Name="id_estado" Type="Int32" Nullable="false" />
-          <Property Name="extra_things" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="extra_things" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Estado_StPats" Relationship="StPatsDataBaseModel.FK_Bottle_Finishing_StPats_Estado_StPats" FromRole="Bottle_Finishing_StPats" ToRole="Estado_StPats" />
           <NavigationProperty Name="Locations_StPats" Relationship="StPatsDataBaseModel.FK_Bottle_Finishing_StPats_Locations_StPats" FromRole="Bottle_Finishing_StPats" ToRole="Locations_StPats" />
           <NavigationProperty Name="Manufactured_Stpats" Relationship="StPatsDataBaseModel.FK_Bottle_Finishing_StPats_Manufactured_Stpats" FromRole="Bottle_Finishing_StPats" ToRole="Manufactured_Stpats" />
@@ -1034,8 +1034,8 @@
           <Property Name="description" Type="String" Nullable="false" MaxLength="999" FixedLength="false" Unicode="false" />
           <Property Name="price" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
           <Property Name="id_location" Type="Int32" Nullable="false" />
-          <Property Name="image" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="manual" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="image" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="manual" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
           <Property Name="voltage_regulator" Type="Int32" Nullable="false" />
           <Property Name="id_manufactured" Type="Int32" Nullable="false" />
           <Property Name="regulador" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />

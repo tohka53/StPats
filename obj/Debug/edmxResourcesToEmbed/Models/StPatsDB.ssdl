@@ -28,7 +28,7 @@
     <Property Name="id_manufactured" Type="int" Nullable="false" />
     <Property Name="stock" Type="int" Nullable="false" />
     <Property Name="id_estado" Type="int" Nullable="false" />
-    <Property Name="extra_things" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="extra_things" Type="varchar" MaxLength="200" Nullable="false" />
   </EntityType>
   <EntityType Name="Ciudades_StPats">
     <Key>
@@ -70,8 +70,8 @@
     <Property Name="description" Type="varchar" MaxLength="999" Nullable="false" />
     <Property Name="price" Type="money" Nullable="false" />
     <Property Name="id_location" Type="int" Nullable="false" />
-    <Property Name="image" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="manual" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="image" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="manual" Type="varchar" MaxLength="150" Nullable="false" />
     <Property Name="voltage_regulator" Type="int" Nullable="false" />
     <Property Name="id_manufactured" Type="int" Nullable="false" />
     <Property Name="regulador" Type="varchar" MaxLength="10" Nullable="false" />

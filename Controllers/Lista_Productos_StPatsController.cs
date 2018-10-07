@@ -46,10 +46,16 @@ namespace StPats.Controllers
         }
 
         // GET: Lista_Productos_StPats/Create
-        public ActionResult Create()
+        public ActionResult Create(int? id)
         {
             ViewBag.id_estado = new SelectList(db.Estado_StPats, "id_estado", "descripcion");
-            ViewBag.id_producto = new SelectList(db.Productos_StPats, "id_producto", "codigo");
+            ViewBag.id_producto = id;
+            ViewBag.nombre_producto = new SelectList(db.Productos_StPats, "id_producto", "description");
+            var list = new List<SelectListItem>();
+            for (var i = 1; i < 31; i++)
+                list.Add(new SelectListItem { Text = i.ToString(), Value = i.ToString() });
+            ViewBag.list = list;
+        
             return View();
         }
 
@@ -58,7 +64,7 @@ namespace StPats.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "id_lista_producto,id_producto,id_cantidad,precio_unitario,precio_total,id_estado,date")] Lista_Productos_StPats lista_Productos_StPats)
+        public ActionResult Create([Bind(Include = "id_lista_producto,id_cantidad,precio_unitario,precio_total,id_estado,date,Productos_StPats.description")] Lista_Productos_StPats lista_Productos_StPats,int? id)
         {
             if (ModelState.IsValid)
             {
@@ -68,7 +74,13 @@ namespace StPats.Controllers
             }
 
             ViewBag.id_estado = new SelectList(db.Estado_StPats, "id_estado", "descripcion", lista_Productos_StPats.id_estado);
-            ViewBag.id_producto = new SelectList(db.Productos_StPats, "id_producto", "codigo", lista_Productos_StPats.id_producto);
+            ViewBag.id_producto = id;
+            ViewBag.nombre_producto = new SelectList(db.Productos_StPats, "id_producto", "description", lista_Productos_StPats.Productos_StPats.description);
+            var list = new List<SelectListItem>();
+            for (var i = 1; i < 31; i++)
+                list.Add(new SelectListItem { Text = i.ToString(), Value = i.ToString() });
+            ViewBag.list = list;
+         
             return View(lista_Productos_StPats);
         }
 
