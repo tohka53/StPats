@@ -66,9 +66,18 @@ namespace StPats.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "id_lista_producto,id_cantidad,precio_unitario,precio_total,id_estado,date,Productos_StPats.description")] Lista_Productos_StPats lista_Productos_StPats,int? id)
         {
+            
             if (ModelState.IsValid)
             {
                 db.Lista_Productos_StPats.Add(lista_Productos_StPats);
+                lista_Productos_StPats.id_producto = Convert.ToInt32(id);
+                var list = new List<SelectListItem>();
+                for (var i = 1; i < 31; i++)
+                    list.Add(new SelectListItem { Text = i.ToString(), Value = i.ToString() });
+                ViewBag.list = list;
+                lista_Productos_StPats.id_cantidad = Convert.ToInt32(list);
+                
+
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -76,11 +85,7 @@ namespace StPats.Controllers
             ViewBag.id_estado = new SelectList(db.Estado_StPats, "id_estado", "descripcion", lista_Productos_StPats.id_estado);
             ViewBag.id_producto = id;
             ViewBag.nombre_producto = new SelectList(db.Productos_StPats, "id_producto", "description", lista_Productos_StPats.Productos_StPats.description);
-            var list = new List<SelectListItem>();
-            for (var i = 1; i < 31; i++)
-                list.Add(new SelectListItem { Text = i.ToString(), Value = i.ToString() });
-            ViewBag.list = list;
-         
+          
             return View(lista_Productos_StPats);
         }
 
