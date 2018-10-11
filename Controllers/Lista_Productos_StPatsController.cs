@@ -40,6 +40,24 @@ namespace StPats.Controllers
             }
             return View(lista_Productos_StPats);
         }
+        public ActionResult Bill(long? id, [Bind(Include = "id_lista_producto,id_producto,id_cantidad,precio_unitario,precio_total,id_estado,date")] Lista_Productos_StPats lista_Productos_St)
+        {
+
+
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+
+            Lista_Productos_StPats lista_Productos_StPats = db.Lista_Productos_StPats.Find(id);
+
+
+            if (lista_Productos_StPats == null)
+            {
+                return HttpNotFound();
+            }
+            return View(lista_Productos_StPats);
+        }
         public ActionResult PayPart()
         {
             return View();
@@ -79,7 +97,7 @@ namespace StPats.Controllers
                 var dateResult = currentDate.ToString("yyyy/dd/MM");
                 lista_Productos_StPats.date = Convert.ToDateTime(dateResult);
                 db.SaveChanges();
-                return RedirectToAction("Index","Home");
+                return RedirectToAction("Bill", "Lista_Productos_StPats",new {id=lista_Productos_StPats.id_lista_producto });
             }
 
             ViewBag.id_estado = new SelectList(db.Estado_StPats, "id_estado", "descripcion", lista_Productos_StPats.id_estado);

@@ -1,0 +1,92 @@
+﻿@model StPats.Models.Productos_StPats
+
+@{
+    ViewBag.Title = "DetalleProducto";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>DetalleProducto</h2>
+<head><meta charset="utf-8"></head>
+<div>
+    <h4>Productos_StPats</h4>
+    <hr />
+    <dl class="dl-horizontal">
+
+        <dt>
+            Code Product
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.codigo)
+        </dd>
+
+        <dt>
+            Price
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.price)
+        </dd>
+
+        <dt>
+            Available Stock
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.stock)
+        </dd>
+
+        <dt>
+            Description
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.description)
+        </dd>
+
+        <dt>
+            Manual
+        </dt>
+
+        <dd>
+            <a href="@Html.DisplayFor(model => model.manual)"> See Manual</a>
+        </dd>
+
+        <dt>
+            Image
+        </dt>
+
+        <dd>
+            <a href="@Html.DisplayFor(model => model.image)"> See Image</a>
+        </dd>
+
+        <dt>
+            Location of the product
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Locations_StPats.description)
+        </dd>
+
+        <dt>
+            Kind of Product
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tipo_Producto_StPats.descripcion_producto)
+        </dd>
+
+    </dl>
+
+</div>
+<p>
+    <div class="form-group text-center">
+        <button class="btn-bitbucket btn-sm" onclick="location.href = '@Url.Action("Index")'">
+            <span class="	glyphicon glyphicon-backward"></span>&nbsp; Back to the last page
+        </button>
+    </div>
+    <div class="form-group text-center">
+        <button class="btn-success btn-sm" onclick="location.href = '@Url.Action("Add_to_Cart")'">
+            <span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart
+        </button>
+    </div>
+</p>

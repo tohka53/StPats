@@ -21,6 +21,8 @@
     <WebStackScaffolding_DbContextTypeFullName>StPats.Models.StPatsDataBaseEntities</WebStackScaffolding_DbContextTypeFullName>
     <WebStackScaffolding_IsViewGenerationSelected>True</WebStackScaffolding_IsViewGenerationSelected>
     <ActiveDebugTarget />
+    <NameOfLastUsedPublishProfile>StPats - Web Deploy</NameOfLastUsedPublishProfile>
+    <ProjectView>ProjectFiles</ProjectView>
   </PropertyGroup>
   <ProjectExtensions>
     <VisualStudio>

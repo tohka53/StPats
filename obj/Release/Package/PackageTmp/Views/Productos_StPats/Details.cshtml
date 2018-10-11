@@ -1,0 +1,102 @@
+﻿@model StPats.Models.Productos_StPats
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Details for the product: @Html.DisplayFor(model => model.codigo) </h2>
+
+         <thead>
+      <tr>
+            <dt>
+                Code Product
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.codigo)
+            </dd>
+
+            <dt>
+                Price
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.price)
+            </dd>
+
+            <dt>
+                Available Stock
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.stock)
+            </dd>
+
+            <dt>
+                Description
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.description)
+            </dd>
+
+            <dt>
+                Manual
+            </dt>
+
+            <dd>
+                <a href="@Html.DisplayFor(model => model.manual)"> See Manual</a>
+            </dd>
+
+            <dt>
+                Image
+            </dt>
+
+            <dd>
+                <a href="@Html.DisplayFor(model => model.image)"> See Image</a>
+            </dd>
+
+            <dt>
+                Location of the product
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Locations_StPats.description)
+            </dd>
+
+            <dt>
+                Kind of Product
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Tipo_Producto_StPats.descripcion_producto)
+            </dd>
+
+        </dl>
+          </thead>
+    </div>
+</body>
+<p>
+    <div class="form-group text-center">
+        <button class="btn-bitbucket btn-sm" onclick="location.href = '@Url.Action("Index")'">
+            <span class="	glyphicon glyphicon-backward"></span>&nbsp; Back to the last page
+        </button>
+    </div>
+    <div class="form-group text-center">
+        <button class="btn-success btn-sm" onclick="location.href = '@Url.Action("Add_to_Cart")'">
+            <span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart
+        </button>
+    </div>
+</p>

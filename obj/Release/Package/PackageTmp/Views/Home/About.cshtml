@@ -1,0 +1,95 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+
+<div class="jumbotron jumbotron-fluid">
+    <div class="container-fluid">
+        <h1 class="display-4 text-center"><strong> St. Patrick´s Of Texas </strong></h1>
+        <p class="lead"></p>
+    </div>
+</div>
+<body>
+
+    <article>
+      
+            <p>
+                <h4>
+                    <div class="text-center">
+                        St. Patrick´s Of Texas was founded in 1993, is a company dedicated to the sale of all machinery  in the production of wines. <br />Our company gives you the best equipment and the best parts at the best price
+                    </div>
+                </h4>
+            </p>
+        </p>
+        <div class="col-xs-12" style="height:200px;"></div>
+    </article>
+</body>
+<footer>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                <h2>Location</h2>
+                <iframe src="https://maps.google.com/maps?q=10601+wetmore+rd+san+antonio&client=safari&oe=UTF-8&hnear=10601+Wetmore+Rd,+San+Antonio,+Texas+78216&t=m&z=14&amp;output=embed" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="425" height="350"></iframe><br /><small>
+                    <a style="color: #0000ff; text-align: left;"
+                       href="https://maps.google.com/maps?q=10601+wetmore+rd+san+antonio&client=safari&oe=UTF-8&hnear=10601+Wetmore+Rd,+San+Antonio,+Texas+78216&t=m&z=14">Click here for map</a>
+                </small>
+            </div>
+            <div class="col-sm">
+                <table class="sdmd-table">
+                    <tbody>
+                        <tr class="sdmd-table-header"><th><h4> Office Hours CST </h4></th><th></th></tr>
+                        <tr></tr>
+                        <tr><td><strong><span class='sdmd sdmd-text-accent-2'><h4><strong>Monday </strong></h4></span></strong></td><td><strong><span class='sdmd sdmd-text-accent-2'></span> <span class='sdmd sdmd-audio'><span class='sdmd sdmd-text-audio'><span class='sdmd sdmd-text-accent-2'><h4><strong>10 A.M to 4 P.M</h4></strong></span></span></span></strong> </td></tr>
+                        <tr><td><strong><span class='sdmd sdmd-text-accent-2'><h4><strong>Tuesday</strong></h4></strong></td><td><strong><span class='sdmd sdmd-text-accent-2'></span> <span class='sdmd sdmd-audio'><span class='sdmd sdmd-text-audio'><span class='sdmd sdmd-text-accent-2'><h4><strong>10 A.M to 4 P.M</h4></strong></span></span></strong> </td></tr>
+                        <tr><td><strong><span class='sdmd sdmd-text-accent-2'><h4><strong>Wednesday</strong></h4></strong></td><td><strong><span class='sdmd sdmd-text-accent-2'></span> <span class='sdmd sdmd-audio'><span class='sdmd sdmd-text-audio'><span class='sdmd sdmd-text-accent-2'><h4><strong>10 A.M to 4 P.M</h4></strong></span></span></span></strong> </td></tr>
+                        <tr><td><strong><span class='sdmd sdmd-text-accent-2'><h4><strong>Thursday</strong></h4></span></strong></td><td><strong><span class='sdmd sdmd-text-accent-2'></span> <span class='sdmd sdmd-audio'><span class='sdmd sdmd-text-audio'><span class='sdmd sdmd-text-accent-2'><h4><strong>10 A.M to 4 P.M</h4></strong></span></span></span></strong> </td></tr>
+                        <tr><td><strong><span class='sdmd sdmd-text-accent-2'><h4><strong>Friday</strong></h4></span></strong></td><td><strong><span class='sdmd sdmd-text-accent-2'></span> <span class='sdmd sdmd-audio'><span class='sdmd sdmd-text-audio'><span class='sdmd sdmd-text-accent-2'><h4><strong>10 A.M to 4 P.M</h4></strong></span></span></span></strong> </td></tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <br />
+    </div>
+    <p>
+        <h3 class="text-body text-center">
+            The San Antonio warehouse is nearly 50,000 sf, located at northeast end of San Antonio airport. Intersection of Wetmore and Broadway. Walk-ins by appointment only.
+            June, 2016.
+        </h3>
+
+
+
+
+
+</footer>
+
+<!-- SCRIPTS -->
+<!-- JQuery -->
+<!--Google Maps-->
+<script src="https://maps.google.com/maps/api/js"></script>
+
+
+<!-- Google Maps settings -->
+<script>
+    // Regular map
+    function regular_map() {
+        var var_location = new google.maps.LatLng(29.537845, -98.450322);
+
+        var var_mapoptions = {
+            center: var_location,
+            zoom: 14
+        };
+
+        var var_map = new google.maps.Map(document.getElementById("map-container"),
+            var_mapoptions);
+
+        var var_marker = new google.maps.Marker({
+            position: var_location,
+            map: var_map,
+            title: "New York"
+        });
+    }
+
+    // Initialize maps
+    google.maps.event.addDomListener(window, 'load', regular_map);
+</script>

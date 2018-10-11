@@ -1,0 +1,167 @@
+﻿@model IEnumerable<StPats.Models.Filling_Machine_StPats>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<div class="jumbotron-fluid bg-secondary ">
+    <Div class="box-title">
+        <h1 class="text-center">Filling Machine Terminology </h1>
+    </Div>
+    <div class="text-center">
+        <h4>Wine Bottle Fillers are Level-Filling</h4>
+    </div>
+    <div class="text-center">
+        <h4>Volume-Filling Machines cannot be used for wine bottles</h4>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-md-8">
+            <div align="justify">
+                There are two basic approaches to filling machines that cover virtually all industries. One approach, and the one that MUST be used for wine, is to control the Fill-Level. The other approach, Volume-Filling, controls the volume. As discussed below, a perfect Volume-Filler, when used for wine bottles, will result in fill levels ranging over 2.4", greater than even the cork length.
+
+                <br />
+                <p>
+                    <strong>What is Volume-Filling?</strong>
+                    <br />
+                    Volume-Filling involves accurately measuring the Volume of liquid during filling. In its most accurate form, a piston
+                    (much like a syringe) of a precise volume is filled, then this piston is emptied into the container.
+                    You will find hundreds or products in a grocery store packaged with volume-fillers (but not wine). Bag-in-a-box fillers are
+                    a type of volume filler as well. Timer-based volume-filling is an alternative to piston volume-fillers. In this case, the volume
+                    is controlled by a pump and valve run under a timer. This is less accurate than the piston design but also less expensive. It is also less versatile than piston type fillers in handling a wide range of products, particularly those with suspended particles.
+                    <br />
+                </p>
+                <strong> Volume-Fillers, either the piston design or the timer design, are inherently flawed for filling wine bottles. </strong>
+                <br />
+                Wine bottles vary in volume by +/-0.25 oz. However, this relatively small volume variation results in very large Fill-Level variation due to the long narrow neck of a wine bottle. The +/- .25 oz volume translates into +/- 1.2" in fill level. In other words, a perfect volume- filler will result in fill levels varying over 2.4". [This is the best case for flat bottles. Punted bottles have slightly larger variations. The data on volume variatons for wine bottles was obtained from the largest manufacturer of wine bottles in North America.]
+                On the other hand, wine filling machines, both gravity and vacuum control the Fill Level on each individual bottle. It is the nozzle design that shuts off the filling at a preset level. Bottles of different volume are filled to the same level.
+                <br />
+                <br />   We receive many inquiries from small businesses who make a range of products including salsa, body lotion, liquid soaps, automobile fluids, .... Generally speaking, your bottle must have a narrow opening and long neck like a wine bottle to use the filling machines on this page. Secondly, you cannot have suspended particles that will plug the nozzles.
+            </div>
+
+        </div>
+        <div class="col-md-4">
+            <div align="justify"></strong>
+                <strong> MEP FILLING MACHINE with ELECTRONIC Float Control and Gas SPARGER</strong><br />
+                Professional unit complete with both Sparger and Electronic Level Control, Pump and N2 regulator.<br />
+
+                > Filling machine with Sparger and Electronic Float Control.<br />
+                > Pump with fittings/tubing to connect pump to filling machine<br />
+                > N2 regulator, 6' gas tubing, fittings.<br />
+            </div>
+            </div>
+        </div>
+   
+<h2></h2>
+<!-- @Html.ActionLink("Create New", "Create")-><p>
+
+</p>
+    </!--->
+
+<p></p>
+
+<div class="container">
+    <h2>Filling Machines</h2>
+    <p>Type something in the input field to search on the table</p>
+    <input class="form-control" id="myInput" type="text" placeholder="Search..">
+    <br>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>
+                    Name Product
+                </th>
+                <th>
+                    Description
+                <th>
+                    Price of Product
+                </th>
+
+                <th>
+                    Voltage Regulator
+                </th>
+
+                <th>
+                    Manufactured
+                </th>
+
+                <th>
+                    Stock
+                </th>
+                <th>
+                    Location
+                </th>
+                <th>
+                    Actions
+                </th>
+
+            </tr>
+        </thead>
+        <tbody id="myTable">
+            @foreach (var item in Model)
+            {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.name_product)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.description)
+                </td>
+                <td>
+                    $ @Html.DisplayFor(modelItem => item.price)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.voltage_regulator)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.Manufactured_Stpats.name_manufactured)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.stock)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Locations_StPats.description)
+                </td>
+
+                <td>
+                    <button class="btn btn-info btn-sm" onclick="location.href = '@Url.Action("Details","Filling_Machine_StPats", new { id = item.id_filling_machine })'">
+                        <span class=" glyphicon glyphicon-th-list"></span>&nbsp;  Details
+                    </button>
+                    <p></p>
+                   
+                    <button class="btn btn-success btn-sm" onclick="location.href = '@Url.Action("Create","Lista_Productos_StPats", new { id = item.id_producto_general, precio =item.Productos_StPats.price })'">
+                        <span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart
+                    </button>
+                </td>
+
+            </tr>
+            }
+
+        </tbody>
+    </table>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $("#myInput").on("keyup", function () {
+            var value = $(this).val().toLowerCase();
+            $("#myTable tr").filter(function () {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+        });
+    });
+</script>
+
+
+
+</body>

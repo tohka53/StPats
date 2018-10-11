@@ -1,0 +1,64 @@
+﻿@model IEnumerable<StPats.Models.Shopping_Cart_StPats>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.id_cliente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.monto_sin_taxes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.taxes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.monto_total)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Estado_StPats.descripcion)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.id_cliente)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.monto_sin_taxes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.taxes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.monto_total)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Estado_StPats.descripcion)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id_shoppingcart }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id_shoppingcart }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id_shoppingcart })
+        </td>
+    </tr>
+}
+
+</table>

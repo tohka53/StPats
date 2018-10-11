@@ -1,0 +1,49 @@
+﻿@model StPats.Models.Shopping_Cart_Detalle_StPats
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Shopping_Cart_Detalle_StPats</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Estado_StPats.descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estado_StPats.descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Lista_Productos_StPats.id_lista_producto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Lista_Productos_StPats.id_lista_producto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Shopping_Cart_StPats.id_shoppingcart)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Shopping_Cart_StPats.id_shoppingcart)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

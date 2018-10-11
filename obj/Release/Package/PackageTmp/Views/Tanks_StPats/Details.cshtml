@@ -1,0 +1,134 @@
+﻿@model StPats.Models.Tanks_StPats
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details of Tank  @Html.DisplayFor(model => model.codigo_tanque) </h2>
+
+<div>
+    <h4></h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Tank Code
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.codigo_tanque)
+        </dd>
+
+        <dt>
+            Capacity
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.capacidad)
+        </dd>
+
+        <dt>
+            Bottom Valve
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.bottom_valve)
+        </dd>
+
+        <dt>
+            ManWay
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.manway)
+        </dd>
+
+        <dt>
+            Lifting Arm
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lifting_arm)
+        </dd>
+
+        <dt>
+            Vent
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.vent)
+        </dd>
+
+        <dt>
+            Replacemnet Infiatable Gasket
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.replacemnet_infiatable_gasket)
+        </dd>
+
+        <dt>
+            Price
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.price)
+        </dd>
+
+        <dt>
+            Stock
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.stok)
+        </dd>
+
+        <dt>
+            Manual
+        </dt>
+
+        <dd>
+            <a href="@Html.DisplayFor(model => model.manual)"> See Manual</a>
+        </dd>
+
+        <dt>
+            Image
+        </dt>
+
+        <dd>
+            <a href="@Html.DisplayFor(model => model.image)"> See Image</a>
+        </dd>
+
+        <dt>
+            Description
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.desription)
+        </dd>
+
+        <dt>
+            Location
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Locations_StPats.description)
+        </dd>
+    </dl>
+</div>
+<p>
+    <dl class="dl-horizontal">
+        <!---<button class="btn btn-primary btn-sm" onclick="location.href = '@Url.Action("Edit", new { id = Model.id_tanque })'">
+                   <span class="glyphicon glyphicon-edit"></span>&nbsp; Edit
+               </button>  -->
+        <dd>
+
+        </dd>
+    </dl>
+
+    <div class="form-group">
+        <button class="btn-bitbucket btn-sm" onclick="location.href = '@Url.Action("Index")'">
+            <span class="glyphicon glyphicon-backward"></span>&nbsp; Back to the last page
+        </button>
+    </div>
+</p>

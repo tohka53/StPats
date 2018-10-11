@@ -6,7 +6,7 @@
 }
 
 
-<h2 class="text-center">Details for the product: @Html.DisplayFor(model => model.name_product) </h2>
+<h2 class="text-center">Details for the product: @Html.DisplayFor(model => model.Productos_StPats.description) </h2>
 <div class="container">
 
     <hr />
@@ -74,7 +74,8 @@
 </div>
 <p>
     <div class="form-group text-center">
-        <button class="btn btn-success btn-sm" onclick="location.href = '@Url.Action("Create","Lista_Productos_StPats", new { id = Model.id_producto_general})'">
+    
+        <button class="btn btn-success btn-sm" onclick="location.href = '@Url.Action("Create","Lista_Productos_StPats", new { id = Model.Productos_StPats.id_producto, precio =Model.Productos_StPats.price })'">
             <span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart
         </button>
     </div>

@@ -1,0 +1,58 @@
+﻿@model StPats.Models.Lista_Productos_StPats
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="text-center">Order Details </h2>
+<div class="container">
+
+
+    <hr />
+    <dl class="dl-horizontal">
+        <h4>
+            <dt>
+                Product Name
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Productos_StPats.description)
+            </dd>
+            <dt>
+                Quantity of products
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.id_cantidad)
+            </dd>
+            <dt>
+                Price by unit
+            </dt>
+            <dd>
+                $  @Html.DisplayFor(model => model.precio_unitario)
+            </dd>
+            <dt>
+                Total Price
+
+            </dt>
+            <dd>
+                $ @Html.DisplayFor(model => model.precio_total)
+            </dd>
+
+
+
+        </h4>
+</div>
+
+<p>
+    <div class="form-group text-center">
+        <button class="btn btn-success btn-sm" onclick="location.href = '@Url.Action("PayPart","Lista_Productos_StPats","Lista_Productos_StPats" )'">
+            <span class="glyphicon glyphicon-check"></span>Pay Order
+        </button>
+    </div>
+  
+
+
+
+</p>

@@ -1,0 +1,102 @@
+﻿@model IEnumerable<StPats.Models.Productos_StPats>
+
+@{
+    ViewBag.Title = "Products";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+
+    <p></p>
+    <div></div>
+    <p> </p>
+    <div class="container">
+        <h2>Product List</h2>
+        <p>Type something in the input field to search on the table</p>
+        <input class="form-control" id="myInput" type="text" placeholder="Search..">
+        <br>
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>
+                        Product Type
+                    </th>
+                    <th>
+                        Code
+                    </th>
+                    <th>
+                        Price
+                    </th>
+                    <th>
+                        Stock
+                    </th>
+                    <th>
+                        Description
+                    </th>
+                    <th>
+                        Location
+                    </th>
+
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="myTable">
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Tipo_Producto_StPats.descripcion_producto)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.codigo)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.price)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.stock)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.description)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Locations_StPats.description)
+                        </td>
+                        <td>
+                            <button class="btn btn-info btn-sm" onclick="location.href = '@Url.Action("Details_producto","Productos_StPats", new { id = item.id_producto })'">
+                                <span class=" glyphicon glyphicon-th-list"></span>&nbsp;  Details
+                            </button>
+                            <p></p>
+                            <button class="btn btn-success btn-sm" onclick="location.href = '@Url.Action("Details","Lista_Productos_StPats", new { id = item.id_producto })'">
+                                <span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart
+                            </button>
+                        </td>
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $("#myInput").on("keyup", function () {
+                var value = $(this).val().toLowerCase();
+                $("#myTable tr").filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+    </script>
+
+
+
+</body>
