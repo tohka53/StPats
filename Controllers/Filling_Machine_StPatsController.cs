@@ -12,7 +12,7 @@ namespace StPats.Controllers
 {
     public class Filling_Machine_StPatsController : Controller
     {
-        private StPatsDataBaseEntities db = new StPatsDataBaseEntities();
+        private StPatsDataBaseEntities1 db = new StPatsDataBaseEntities1();
 
         // GET: Filling_Machine_StPats
         public ActionResult Index()
