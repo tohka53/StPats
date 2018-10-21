@@ -90,6 +90,7 @@
     <Property Name="area_superficie" Type="real" Nullable="false" />
     <Property Name="precio" Type="money" Nullable="false" />
   </EntityType>
+<<<<<<< HEAD
   <EntityType Name="Labeler_StPats">
     <Key>
       <PropertyRef Name="id_labeler" />
@@ -110,6 +111,8 @@
     <Property Name="stock" Type="int" Nullable="false" />
     <Property Name="extra_things" Type="varchar" MaxLength="50" Nullable="false" />
   </EntityType>
+=======
+>>>>>>> c371271b4260ee18897a3011e214a9a5b4f96aa3
   <EntityType Name="Lista_Productos_StPats">
     <Key>
       <PropertyRef Name="id_lista_producto" />
@@ -431,6 +434,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+<<<<<<< HEAD
   <Association Name="FK_Labeler_StPats_Estado_StPats">
     <End Role="Estado_StPats" Type="Self.Estado_StPats" Multiplicity="1" />
     <End Role="Labeler_StPats" Type="Self.Labeler_StPats" Multiplicity="*" />
@@ -503,6 +507,8 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+=======
+>>>>>>> c371271b4260ee18897a3011e214a9a5b4f96aa3
   <Association Name="FK_Lista_Productos_StPats_Estado_StPats">
     <End Role="Estado_StPats" Type="Self.Estado_StPats" Multiplicity="1" />
     <End Role="Lista_Productos_StPats" Type="Self.Lista_Productos_StPats" Multiplicity="*" />
@@ -679,7 +685,10 @@
     <EntitySet Name="Estado_StPats" EntityType="Self.Estado_StPats" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Filling_Machine_StPats" EntityType="Self.Filling_Machine_StPats" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Filtros_StPats" EntityType="Self.Filtros_StPats" Schema="dbo" store:Type="Tables" />
+<<<<<<< HEAD
     <EntitySet Name="Labeler_StPats" EntityType="Self.Labeler_StPats" Schema="dbo" store:Type="Tables" />
+=======
+>>>>>>> c371271b4260ee18897a3011e214a9a5b4f96aa3
     <EntitySet Name="Lista_Productos_StPats" EntityType="Self.Lista_Productos_StPats" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Locations_StPats" EntityType="Self.Locations_StPats" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Manufactured_Stpats" EntityType="Self.Manufactured_Stpats" Schema="dbo" store:Type="Tables" />
@@ -757,6 +766,7 @@
       <End Role="Locations_StPats" EntitySet="Locations_StPats" />
       <End Role="Filtros_StPats" EntitySet="Filtros_StPats" />
     </AssociationSet>
+<<<<<<< HEAD
     <AssociationSet Name="FK_Labeler_StPats_Estado_StPats" Association="Self.FK_Labeler_StPats_Estado_StPats">
       <End Role="Estado_StPats" EntitySet="Estado_StPats" />
       <End Role="Labeler_StPats" EntitySet="Labeler_StPats" />
@@ -781,6 +791,8 @@
       <End Role="Tipo_Producto_StPats" EntitySet="Tipo_Producto_StPats" />
       <End Role="Labeler_StPats" EntitySet="Labeler_StPats" />
     </AssociationSet>
+=======
+>>>>>>> c371271b4260ee18897a3011e214a9a5b4f96aa3
     <AssociationSet Name="FK_Lista_Productos_StPats_Estado_StPats" Association="Self.FK_Lista_Productos_StPats_Estado_StPats">
       <End Role="Estado_StPats" EntitySet="Estado_StPats" />
       <End Role="Lista_Productos_StPats" EntitySet="Lista_Productos_StPats" />

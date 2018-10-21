@@ -191,7 +191,10 @@ B:\Escritorio\Mio\stpats\StPats\StPats\bin\Microsoft.AspNet.Identity.Core.dll
 B:\Escritorio\Mio\stpats\StPats\StPats\bin\Microsoft.AspNet.Identity.EntityFramework.dll
 B:\Escritorio\Mio\stpats\StPats\StPats\bin\Microsoft.AspNet.Identity.Owin.dll
 B:\Escritorio\Mio\stpats\StPats\StPats\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+<<<<<<< HEAD
 B:\Escritorio\Mio\stpats\StPats\StPats\bin\Microsoft.Azure.KeyVault.Core.dll
+=======
+>>>>>>> c371271b4260ee18897a3011e214a9a5b4f96aa3
 B:\Escritorio\Mio\stpats\StPats\StPats\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 B:\Escritorio\Mio\stpats\StPats\StPats\bin\Microsoft.Owin.dll
 B:\Escritorio\Mio\stpats\StPats\StPats\bin\Microsoft.Owin.Host.SystemWeb.dll
@@ -203,10 +206,15 @@ B:\Escritorio\Mio\stpats\StPats\StPats\bin\Microsoft.Owin.Security.MicrosoftAcco
 B:\Escritorio\Mio\stpats\StPats\StPats\bin\Microsoft.Owin.Security.OAuth.dll
 B:\Escritorio\Mio\stpats\StPats\StPats\bin\Microsoft.Owin.Security.Twitter.dll
 B:\Escritorio\Mio\stpats\StPats\StPats\bin\Microsoft.Web.Infrastructure.dll
+<<<<<<< HEAD
 B:\Escritorio\Mio\stpats\StPats\StPats\bin\Microsoft.WindowsAzure.Storage.dll
 B:\Escritorio\Mio\stpats\StPats\StPats\bin\Newtonsoft.Json.dll
 B:\Escritorio\Mio\stpats\StPats\StPats\bin\Owin.dll
 B:\Escritorio\Mio\stpats\StPats\StPats\bin\Syn.Speech.dll
+=======
+B:\Escritorio\Mio\stpats\StPats\StPats\bin\Newtonsoft.Json.dll
+B:\Escritorio\Mio\stpats\StPats\StPats\bin\Owin.dll
+>>>>>>> c371271b4260ee18897a3011e214a9a5b4f96aa3
 B:\Escritorio\Mio\stpats\StPats\StPats\bin\System.Diagnostics.DiagnosticSource.dll
 B:\Escritorio\Mio\stpats\StPats\StPats\bin\System.Web.Helpers.dll
 B:\Escritorio\Mio\stpats\StPats\StPats\bin\System.Web.Mvc.dll
@@ -224,10 +232,14 @@ B:\Escritorio\Mio\stpats\StPats\StPats\bin\Microsoft.AI.Web.xml
 B:\Escritorio\Mio\stpats\StPats\StPats\bin\Microsoft.AI.WindowsServer.xml
 B:\Escritorio\Mio\stpats\StPats\StPats\bin\Microsoft.ApplicationInsights.xml
 B:\Escritorio\Mio\stpats\StPats\StPats\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+<<<<<<< HEAD
 B:\Escritorio\Mio\stpats\StPats\StPats\bin\Microsoft.Azure.KeyVault.Core.xml
 B:\Escritorio\Mio\stpats\StPats\StPats\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 B:\Escritorio\Mio\stpats\StPats\StPats\bin\Microsoft.WindowsAzure.Storage.pdb
 B:\Escritorio\Mio\stpats\StPats\StPats\bin\Microsoft.WindowsAzure.Storage.xml
+=======
+B:\Escritorio\Mio\stpats\StPats\StPats\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+>>>>>>> c371271b4260ee18897a3011e214a9a5b4f96aa3
 B:\Escritorio\Mio\stpats\StPats\StPats\bin\Newtonsoft.Json.xml
 B:\Escritorio\Mio\stpats\StPats\StPats\bin\System.Diagnostics.DiagnosticSource.xml
 B:\Escritorio\Mio\stpats\StPats\StPats\bin\System.Web.Helpers.xml

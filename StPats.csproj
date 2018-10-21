@@ -268,6 +268,15 @@
     </Compile>
     <Compile Include="Models\Shopping_Cart_StPats.cs">
       <DependentUpon>StPats.tt</DependentUpon>
+<<<<<<< HEAD
+=======
+    </Compile>
+    <Compile Include="Models\sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>StPatsDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_helpdiagrams_Result.cs">
+      <DependentUpon>StPatsDB.tt</DependentUpon>
+>>>>>>> c371271b4260ee18897a3011e214a9a5b4f96aa3
     </Compile>
     <Compile Include="Models\StaCi_StPats.cs">
       <DependentUpon>StPats.tt</DependentUpon>
@@ -277,6 +286,24 @@
     </Compile>
     <Compile Include="Models\State_StPats.cs">
       <DependentUpon>StPats.tt</DependentUpon>
+<<<<<<< HEAD
+=======
+    </Compile>
+    <Compile Include="Models\StPats.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StPats.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\StPats.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StPats.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\StPats.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StPats.edmx</DependentUpon>
+>>>>>>> c371271b4260ee18897a3011e214a9a5b4f96aa3
     </Compile>
     <Compile Include="Models\StPats.Context.cs">
       <AutoGen>True</AutoGen>
@@ -479,6 +506,19 @@
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\main.js" />
     <Content Include="Models\StPats.Context.tt">
+<<<<<<< HEAD
+=======
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>StPats.edmx</DependentUpon>
+      <LastGenOutput>StPats.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\StPats.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>StPats.edmx</DependentUpon>
+      <LastGenOutput>StPats.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\StPatsDB.Context.tt">
+>>>>>>> c371271b4260ee18897a3011e214a9a5b4f96aa3
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>StPats.edmx</DependentUpon>
       <LastGenOutput>StPats.Context.cs</LastGenOutput>
@@ -642,7 +682,10 @@
     <Content Include="Models\StPats.edmx.diagram">
       <DependentUpon>StPats.edmx</DependentUpon>
     </Content>
+<<<<<<< HEAD
     <Content Include="Content\img\MOV01032.mp4" />
+=======
+>>>>>>> c371271b4260ee18897a3011e214a9a5b4f96aa3
     <None Include="Properties\PublishProfiles\StPats - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.validate.js" />

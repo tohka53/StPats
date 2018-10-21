@@ -32,7 +32,10 @@ namespace StPats.Models
         public virtual DbSet<Estado_StPats> Estado_StPats { get; set; }
         public virtual DbSet<Filling_Machine_StPats> Filling_Machine_StPats { get; set; }
         public virtual DbSet<Filtros_StPats> Filtros_StPats { get; set; }
+<<<<<<< HEAD
         public virtual DbSet<Labeler_StPats> Labeler_StPats { get; set; }
+=======
+>>>>>>> c371271b4260ee18897a3011e214a9a5b4f96aa3
         public virtual DbSet<Lista_Productos_StPats> Lista_Productos_StPats { get; set; }
         public virtual DbSet<Locations_StPats> Locations_StPats { get; set; }
         public virtual DbSet<Manufactured_Stpats> Manufactured_Stpats { get; set; }
