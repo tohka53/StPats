@@ -19,6 +19,7 @@ namespace StPats.Models
         {
             this.Bottle_Finishing_StPats = new HashSet<Bottle_Finishing_StPats>();
             this.Filling_Machine_StPats = new HashSet<Filling_Machine_StPats>();
+            this.Labeler_StPats = new HashSet<Labeler_StPats>();
             this.Productos_StPats = new HashSet<Productos_StPats>();
         }
     
@@ -29,6 +30,8 @@ namespace StPats.Models
         public virtual ICollection<Bottle_Finishing_StPats> Bottle_Finishing_StPats { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Filling_Machine_StPats> Filling_Machine_StPats { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Labeler_StPats> Labeler_StPats { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Productos_StPats> Productos_StPats { get; set; }
     }

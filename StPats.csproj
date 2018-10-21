@@ -66,12 +66,21 @@
     <Reference Include="Microsoft.AspNet.TelemetryCorrelation, Version=1.0.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.TelemetryCorrelation.1.0.4\lib\net45\Microsoft.AspNet.TelemetryCorrelation.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Azure.KeyVault.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Azure.KeyVault.Core.1.0.0\lib\net40\Microsoft.Azure.KeyVault.Core.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=2.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.WindowsAzure.Storage, Version=9.3.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WindowsAzure.Storage.9.3.2\lib\net45\Microsoft.WindowsAzure.Storage.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Syn.Speech, Version=1.0.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syn.Speech.1.0.3\lib\net45\Syn.Speech.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -200,6 +209,7 @@
     <Compile Include="Controllers\Filling_Machine_StPatsController.cs" />
     <Compile Include="Controllers\Filtros_StPatsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\Labeler_StPatsController.cs" />
     <Compile Include="Controllers\Lista_Productos_StPatsController.cs" />
     <Compile Include="Controllers\Locations_StPatsController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -213,88 +223,85 @@
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Bill_StPats.cs">
-      <DependentUpon>StPatsDB.tt</DependentUpon>
+      <DependentUpon>StPats.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Bottle_Finishing_StPats.cs">
-      <DependentUpon>StPatsDB.tt</DependentUpon>
+      <DependentUpon>StPats.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Ciudades_StPats.cs">
-      <DependentUpon>StPatsDB.tt</DependentUpon>
+      <DependentUpon>StPats.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Clients_StPats.cs">
-      <DependentUpon>StPatsDB.tt</DependentUpon>
+      <DependentUpon>StPats.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Estado_StPats.cs">
-      <DependentUpon>StPatsDB.tt</DependentUpon>
+      <DependentUpon>StPats.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Filling_Machine_StPats.cs">
-      <DependentUpon>StPatsDB.tt</DependentUpon>
+      <DependentUpon>StPats.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Filtros_StPats.cs">
-      <DependentUpon>StPatsDB.tt</DependentUpon>
+      <DependentUpon>StPats.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\Labeler_StPats.cs">
+      <DependentUpon>StPats.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Lista_Productos_StPats.cs">
-      <DependentUpon>StPatsDB.tt</DependentUpon>
+      <DependentUpon>StPats.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Locations_StPats.cs">
-      <DependentUpon>StPatsDB.tt</DependentUpon>
+      <DependentUpon>StPats.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Manufactured_Stpats.cs">
-      <DependentUpon>StPatsDB.tt</DependentUpon>
+      <DependentUpon>StPats.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\PayMet_StPats.cs">
-      <DependentUpon>StPatsDB.tt</DependentUpon>
+      <DependentUpon>StPats.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Productos_StPats.cs">
-      <DependentUpon>StPatsDB.tt</DependentUpon>
+      <DependentUpon>StPats.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Shopping_Cart_Detalle_StPats.cs">
-      <DependentUpon>StPatsDB.tt</DependentUpon>
+      <DependentUpon>StPats.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Shopping_Cart_StPats.cs">
-      <DependentUpon>StPatsDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\sp_helpdiagramdefinition_Result.cs">
-      <DependentUpon>StPatsDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\sp_helpdiagrams_Result.cs">
-      <DependentUpon>StPatsDB.tt</DependentUpon>
+      <DependentUpon>StPats.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\StaCi_StPats.cs">
-      <DependentUpon>StPatsDB.tt</DependentUpon>
+      <DependentUpon>StPats.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Statax_StPats.cs">
-      <DependentUpon>StPatsDB.tt</DependentUpon>
+      <DependentUpon>StPats.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\State_StPats.cs">
-      <DependentUpon>StPatsDB.tt</DependentUpon>
+      <DependentUpon>StPats.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\StPatsDB.Context.cs">
+    <Compile Include="Models\StPats.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>StPatsDB.Context.tt</DependentUpon>
+      <DependentUpon>StPats.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\StPatsDB.cs">
+    <Compile Include="Models\StPats.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>StPatsDB.tt</DependentUpon>
+      <DependentUpon>StPats.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\StPatsDB.Designer.cs">
+    <Compile Include="Models\StPats.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>StPatsDB.edmx</DependentUpon>
+      <DependentUpon>StPats.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\sysdiagram.cs">
-      <DependentUpon>StPatsDB.tt</DependentUpon>
+      <DependentUpon>StPats.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TanksController.cs" />
     <Compile Include="Models\Tanks_StPats.cs">
-      <DependentUpon>StPatsDB.tt</DependentUpon>
+      <DependentUpon>StPats.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Tipo_Producto_StPats.cs">
-      <DependentUpon>StPatsDB.tt</DependentUpon>
+      <DependentUpon>StPats.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -446,6 +453,7 @@
     <Content Include="css\bootstrap.css" />
     <Content Include="css\bootstrap.min.css" />
     <Content Include="css\main.css" />
+    <Content Include="css\simple-sidebar.css" />
     <Content Include="css\util.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\font-awesome-4.7.0\css\font-awesome.css" />
@@ -470,15 +478,15 @@
     <Content Include="js\bootstrap.js" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\main.js" />
-    <Content Include="Models\StPatsDB.Context.tt">
+    <Content Include="Models\StPats.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>StPatsDB.edmx</DependentUpon>
-      <LastGenOutput>StPatsDB.Context.cs</LastGenOutput>
+      <DependentUpon>StPats.edmx</DependentUpon>
+      <LastGenOutput>StPats.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\StPatsDB.tt">
+    <Content Include="Models\StPats.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>StPatsDB.edmx</DependentUpon>
-      <LastGenOutput>StPatsDB.cs</LastGenOutput>
+      <DependentUpon>StPats.edmx</DependentUpon>
+      <LastGenOutput>StPats.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\bootstrap-confirm.js" />
     <Content Include="Scripts\bootstrap-dtpicker.min.css" />
@@ -487,13 +495,6 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <EntityDeploy Include="Models\StPatsDB.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>StPatsDB.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\StPatsDB.edmx.diagram">
-      <DependentUpon>StPatsDB.edmx</DependentUpon>
     </Content>
     <Content Include="fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.eot" />
     <Content Include="fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.ttf" />
@@ -634,6 +635,14 @@
     <Content Include="Content\bootstrap\utilities.less" />
     <Content Include="Content\bootstrap\variables.less" />
     <Content Include="Content\bootstrap\wells.less" />
+    <EntityDeploy Include="Models\StPats.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>StPats.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\StPats.edmx.diagram">
+      <DependentUpon>StPats.edmx</DependentUpon>
+    </Content>
+    <Content Include="Content\img\MOV01032.mp4" />
     <None Include="Properties\PublishProfiles\StPats - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.validate.js" />
@@ -1459,6 +1468,8 @@
     <Content Include="vendor\bootstrap\css\bootstrap-reboot.min.css" />
     <Content Include="vendor\bootstrap\css\bootstrap.css" />
     <Content Include="vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="vendor\bootstrap\js\bootstrap.bundle.js" />
+    <Content Include="vendor\bootstrap\js\bootstrap.bundle.min.js" />
     <Content Include="vendor\bootstrap\js\bootstrap.js" />
     <Content Include="vendor\bootstrap\js\bootstrap.min.js" />
     <Content Include="vendor\bootstrap\js\popper.js" />
@@ -1472,6 +1483,10 @@
     <Content Include="vendor\daterangepicker\moment.js" />
     <Content Include="vendor\daterangepicker\moment.min.js" />
     <Content Include="vendor\jquery\jquery-3.2.1.min.js" />
+    <Content Include="vendor\jquery\jquery.js" />
+    <Content Include="vendor\jquery\jquery.min.js" />
+    <Content Include="vendor\jquery\jquery.slim.js" />
+    <Content Include="vendor\jquery\jquery.slim.min.js" />
     <Content Include="vendor\noui\nouislider.css" />
     <Content Include="vendor\noui\nouislider.js" />
     <Content Include="vendor\noui\nouislider.min.css" />
@@ -1585,6 +1600,17 @@
     <Content Include="Views\Bottle_Finishing_StPats\Edit.cshtml" />
     <Content Include="Views\Bottle_Finishing_StPats\Index.cshtml" />
     <Content Include="Views\Lista_Productos_StPats\Bill.cshtml" />
+    <Content Include="Views\Labeler_StPats\Create.cshtml" />
+    <Content Include="Views\Labeler_StPats\Delete.cshtml" />
+    <Content Include="Views\Labeler_StPats\Details.cshtml" />
+    <Content Include="Views\Labeler_StPats\Edit.cshtml" />
+    <Content Include="Views\Labeler_StPats\Index.cshtml" />
+    <Content Include="vendor\jquery\jquery.min.map" />
+    <Content Include="vendor\jquery\jquery.slim.min.map" />
+    <Content Include="vendor\bootstrap\js\bootstrap.bundle.js.map" />
+    <Content Include="vendor\bootstrap\js\bootstrap.bundle.min.js.map" />
+    <Content Include="vendor\bootstrap\js\bootstrap.js.map" />
+    <Content Include="vendor\bootstrap\js\bootstrap.min.js.map" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
