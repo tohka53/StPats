@@ -4,17 +4,35 @@
     <EntitySetMapping Name="Bill_StPats">
       <EntityTypeMapping TypeName="StPatsDataBaseModel1.Bill_StPats">
         <MappingFragment StoreEntitySet="Bill_StPats">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> c3d3ce6ede3429c36ff6525665e4e6d1c0b1213d
           <ScalarProperty Name="id_estado" ColumnName="id_estado" />
           <ScalarProperty Name="id_shoppingCart" ColumnName="id_shoppingCart" />
           <ScalarProperty Name="id_paymet" ColumnName="id_paymet" />
           <ScalarProperty Name="date" ColumnName="date" />
           <ScalarProperty Name="id_bill" ColumnName="id_bill" />
+<<<<<<< HEAD
+=======
+=======
+          <ScalarProperty Name="id_bill" ColumnName="id_bill" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="id_paymet" ColumnName="id_paymet" />
+          <ScalarProperty Name="id_shoppingCart" ColumnName="id_shoppingCart" />
+          <ScalarProperty Name="id_estado" ColumnName="id_estado" />
+>>>>>>> c371271b4260ee18897a3011e214a9a5b4f96aa3
+>>>>>>> c3d3ce6ede3429c36ff6525665e4e6d1c0b1213d
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Bottle_Finishing_StPats">
       <EntityTypeMapping TypeName="StPatsDataBaseModel1.Bottle_Finishing_StPats">
         <MappingFragment StoreEntitySet="Bottle_Finishing_StPats">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> c3d3ce6ede3429c36ff6525665e4e6d1c0b1213d
           <ScalarProperty Name="extra_things" ColumnName="extra_things" />
           <ScalarProperty Name="id_estado" ColumnName="id_estado" />
           <ScalarProperty Name="stock" ColumnName="stock" />
@@ -30,20 +48,54 @@
           <ScalarProperty Name="id_tipo_product" ColumnName="id_tipo_product" />
           <ScalarProperty Name="id_producto_general" ColumnName="id_producto_general" />
           <ScalarProperty Name="C_id___bottle_finishing" ColumnName="[id_&#xD;&#xA;bottle_finishing" />
+<<<<<<< HEAD
+=======
+=======
+          <ScalarProperty Name="C_id___bottle_finishing" ColumnName="[id_&#xD;&#xA;bottle_finishing" />
+          <ScalarProperty Name="id_producto_general" ColumnName="id_producto_general" />
+          <ScalarProperty Name="id_tipo_product" ColumnName="id_tipo_product" />
+          <ScalarProperty Name="code_product" ColumnName="code_product" />
+          <ScalarProperty Name="name_product" ColumnName="name_product" />
+          <ScalarProperty Name="desctiption" ColumnName="desctiption" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="id_location" ColumnName="id_location" />
+          <ScalarProperty Name="image" ColumnName="image" />
+          <ScalarProperty Name="manual" ColumnName="manual" />
+          <ScalarProperty Name="voltage_regulator" ColumnName="voltage_regulator" />
+          <ScalarProperty Name="id_manufactured" ColumnName="id_manufactured" />
+          <ScalarProperty Name="stock" ColumnName="stock" />
+          <ScalarProperty Name="id_estado" ColumnName="id_estado" />
+          <ScalarProperty Name="extra_things" ColumnName="extra_things" />
+>>>>>>> c371271b4260ee18897a3011e214a9a5b4f96aa3
+>>>>>>> c3d3ce6ede3429c36ff6525665e4e6d1c0b1213d
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Ciudades_StPats">
       <EntityTypeMapping TypeName="StPatsDataBaseModel1.Ciudades_StPats">
         <MappingFragment StoreEntitySet="Ciudades_StPats">
+<<<<<<< HEAD
           <ScalarProperty Name="nombre_ciudad" ColumnName="nombre_ciudad" />
           <ScalarProperty Name="id_ciudad" ColumnName="id_ciudad" />
+=======
+<<<<<<< HEAD
+          <ScalarProperty Name="nombre_ciudad" ColumnName="nombre_ciudad" />
+          <ScalarProperty Name="id_ciudad" ColumnName="id_ciudad" />
+=======
+          <ScalarProperty Name="id_ciudad" ColumnName="id_ciudad" />
+          <ScalarProperty Name="nombre_ciudad" ColumnName="nombre_ciudad" />
+>>>>>>> c371271b4260ee18897a3011e214a9a5b4f96aa3
+>>>>>>> c3d3ce6ede3429c36ff6525665e4e6d1c0b1213d
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Clients_StPats">
       <EntityTypeMapping TypeName="StPatsDataBaseModel1.Clients_StPats">
         <MappingFragment StoreEntitySet="Clients_StPats">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> c3d3ce6ede3429c36ff6525665e4e6d1c0b1213d
           <ScalarProperty Name="estado" ColumnName="estado" />
           <ScalarProperty Name="telefono" ColumnName="telefono" />
           <ScalarProperty Name="zip_code" ColumnName="zip_code" />
@@ -53,20 +105,48 @@
           <ScalarProperty Name="usuario" ColumnName="usuario" />
           <ScalarProperty Name="nombre_cliente" ColumnName="nombre_cliente" />
           <ScalarProperty Name="id_cliente" ColumnName="id_cliente" />
+<<<<<<< HEAD
+=======
+=======
+          <ScalarProperty Name="id_cliente" ColumnName="id_cliente" />
+          <ScalarProperty Name="nombre_cliente" ColumnName="nombre_cliente" />
+          <ScalarProperty Name="usuario" ColumnName="usuario" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="retry_password" ColumnName="retry_password" />
+          <ScalarProperty Name="id_ciudad_estado" ColumnName="id_ciudad_estado" />
+          <ScalarProperty Name="zip_code" ColumnName="zip_code" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+>>>>>>> c371271b4260ee18897a3011e214a9a5b4f96aa3
+>>>>>>> c3d3ce6ede3429c36ff6525665e4e6d1c0b1213d
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Estado_StPats">
       <EntityTypeMapping TypeName="StPatsDataBaseModel1.Estado_StPats">
         <MappingFragment StoreEntitySet="Estado_StPats">
+<<<<<<< HEAD
           <ScalarProperty Name="descripcion" ColumnName="descripcion" />
           <ScalarProperty Name="id_estado" ColumnName="id_estado" />
+=======
+<<<<<<< HEAD
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="id_estado" ColumnName="id_estado" />
+=======
+          <ScalarProperty Name="id_estado" ColumnName="id_estado" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+>>>>>>> c371271b4260ee18897a3011e214a9a5b4f96aa3
+>>>>>>> c3d3ce6ede3429c36ff6525665e4e6d1c0b1213d
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Filling_Machine_StPats">
       <EntityTypeMapping TypeName="StPatsDataBaseModel1.Filling_Machine_StPats">
         <MappingFragment StoreEntitySet="Filling_Machine_StPats">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> c3d3ce6ede3429c36ff6525665e4e6d1c0b1213d
           <ScalarProperty Name="extra_things" ColumnName="extra_things" />
           <ScalarProperty Name="id_estado" ColumnName="id_estado" />
           <ScalarProperty Name="stock" ColumnName="stock" />
@@ -83,12 +163,37 @@
           <ScalarProperty Name="id_tipo_product" ColumnName="id_tipo_product" />
           <ScalarProperty Name="id_producto_general" ColumnName="id_producto_general" />
           <ScalarProperty Name="id_filling_machine" ColumnName="id_filling_machine" />
+<<<<<<< HEAD
+=======
+=======
+          <ScalarProperty Name="id_filling_machine" ColumnName="id_filling_machine" />
+          <ScalarProperty Name="id_producto_general" ColumnName="id_producto_general" />
+          <ScalarProperty Name="id_tipo_product" ColumnName="id_tipo_product" />
+          <ScalarProperty Name="code_produt" ColumnName="code_produt" />
+          <ScalarProperty Name="name_product" ColumnName="name_product" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="id_location" ColumnName="id_location" />
+          <ScalarProperty Name="image" ColumnName="image" />
+          <ScalarProperty Name="manual" ColumnName="manual" />
+          <ScalarProperty Name="voltage_regulator" ColumnName="voltage_regulator" />
+          <ScalarProperty Name="id_manufactured" ColumnName="id_manufactured" />
+          <ScalarProperty Name="regulador" ColumnName="regulador" />
+          <ScalarProperty Name="stock" ColumnName="stock" />
+          <ScalarProperty Name="id_estado" ColumnName="id_estado" />
+          <ScalarProperty Name="extra_things" ColumnName="extra_things" />
+>>>>>>> c371271b4260ee18897a3011e214a9a5b4f96aa3
+>>>>>>> c3d3ce6ede3429c36ff6525665e4e6d1c0b1213d
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Filtros_StPats">
       <EntityTypeMapping TypeName="StPatsDataBaseModel1.Filtros_StPats">
         <MappingFragment StoreEntitySet="Filtros_StPats">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> c3d3ce6ede3429c36ff6525665e4e6d1c0b1213d
           <ScalarProperty Name="precio" ColumnName="precio" />
           <ScalarProperty Name="area_superficie" ColumnName="area_superficie" />
           <ScalarProperty Name="numero_plates" ColumnName="numero_plates" />
@@ -101,6 +206,10 @@
     <EntitySetMapping Name="Labeler_StPats">
       <EntityTypeMapping TypeName="StPatsDataBaseModel1.Labeler_StPats">
         <MappingFragment StoreEntitySet="Labeler_StPats">
+<<<<<<< HEAD
+=======
+          <ScalarProperty Name="voltage_regulator" ColumnName="voltage_regulator" />
+>>>>>>> c3d3ce6ede3429c36ff6525665e4e6d1c0b1213d
           <ScalarProperty Name="extra_things" ColumnName="extra_things" />
           <ScalarProperty Name="stock" ColumnName="stock" />
           <ScalarProperty Name="estado" ColumnName="estado" />
@@ -108,7 +217,10 @@
           <ScalarProperty Name="manual" ColumnName="manual" />
           <ScalarProperty Name="image" ColumnName="image" />
           <ScalarProperty Name="id_location" ColumnName="id_location" />
+<<<<<<< HEAD
           <ScalarProperty Name="voltage_regulator" ColumnName="voltage_regulator" />
+=======
+>>>>>>> c3d3ce6ede3429c36ff6525665e4e6d1c0b1213d
           <ScalarProperty Name="price" ColumnName="price" />
           <ScalarProperty Name="description" ColumnName="description" />
           <ScalarProperty Name="name_product" ColumnName="name_product" />
@@ -116,12 +228,27 @@
           <ScalarProperty Name="id_tipo_product" ColumnName="id_tipo_product" />
           <ScalarProperty Name="id_producto_general" ColumnName="id_producto_general" />
           <ScalarProperty Name="id_labeler" ColumnName="id_labeler" />
+<<<<<<< HEAD
+=======
+=======
+          <ScalarProperty Name="id_location" ColumnName="id_location" />
+          <ScalarProperty Name="id_filtro" ColumnName="id_filtro" />
+          <ScalarProperty Name="filtro_codigo" ColumnName="filtro_codigo" />
+          <ScalarProperty Name="numero_plates" ColumnName="numero_plates" />
+          <ScalarProperty Name="area_superficie" ColumnName="area_superficie" />
+          <ScalarProperty Name="precio" ColumnName="precio" />
+>>>>>>> c371271b4260ee18897a3011e214a9a5b4f96aa3
+>>>>>>> c3d3ce6ede3429c36ff6525665e4e6d1c0b1213d
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Lista_Productos_StPats">
       <EntityTypeMapping TypeName="StPatsDataBaseModel1.Lista_Productos_StPats">
         <MappingFragment StoreEntitySet="Lista_Productos_StPats">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> c3d3ce6ede3429c36ff6525665e4e6d1c0b1213d
           <ScalarProperty Name="date" ColumnName="date" />
           <ScalarProperty Name="id_estado" ColumnName="id_estado" />
           <ScalarProperty Name="precio_total" ColumnName="precio_total" />
@@ -129,36 +256,82 @@
           <ScalarProperty Name="id_cantidad" ColumnName="id_cantidad" />
           <ScalarProperty Name="id_producto" ColumnName="id_producto" />
           <ScalarProperty Name="id_lista_producto" ColumnName="id_lista_producto" />
+<<<<<<< HEAD
+=======
+=======
+          <ScalarProperty Name="id_lista_producto" ColumnName="id_lista_producto" />
+          <ScalarProperty Name="id_producto" ColumnName="id_producto" />
+          <ScalarProperty Name="id_cantidad" ColumnName="id_cantidad" />
+          <ScalarProperty Name="precio_unitario" ColumnName="precio_unitario" />
+          <ScalarProperty Name="precio_total" ColumnName="precio_total" />
+          <ScalarProperty Name="id_estado" ColumnName="id_estado" />
+          <ScalarProperty Name="date" ColumnName="date" />
+>>>>>>> c371271b4260ee18897a3011e214a9a5b4f96aa3
+>>>>>>> c3d3ce6ede3429c36ff6525665e4e6d1c0b1213d
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Locations_StPats">
       <EntityTypeMapping TypeName="StPatsDataBaseModel1.Locations_StPats">
         <MappingFragment StoreEntitySet="Locations_StPats">
+<<<<<<< HEAD
           <ScalarProperty Name="description" ColumnName="description" />
           <ScalarProperty Name="id_location" ColumnName="id_location" />
+=======
+<<<<<<< HEAD
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="id_location" ColumnName="id_location" />
+=======
+          <ScalarProperty Name="id_location" ColumnName="id_location" />
+          <ScalarProperty Name="description" ColumnName="description" />
+>>>>>>> c371271b4260ee18897a3011e214a9a5b4f96aa3
+>>>>>>> c3d3ce6ede3429c36ff6525665e4e6d1c0b1213d
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Manufactured_Stpats">
       <EntityTypeMapping TypeName="StPatsDataBaseModel1.Manufactured_Stpats">
         <MappingFragment StoreEntitySet="Manufactured_Stpats">
+<<<<<<< HEAD
           <ScalarProperty Name="name_manufactured" ColumnName="name_manufactured" />
           <ScalarProperty Name="id_manufactured" ColumnName="id_manufactured" />
+=======
+<<<<<<< HEAD
+          <ScalarProperty Name="name_manufactured" ColumnName="name_manufactured" />
+          <ScalarProperty Name="id_manufactured" ColumnName="id_manufactured" />
+=======
+          <ScalarProperty Name="id_manufactured" ColumnName="id_manufactured" />
+          <ScalarProperty Name="name_manufactured" ColumnName="name_manufactured" />
+>>>>>>> c371271b4260ee18897a3011e214a9a5b4f96aa3
+>>>>>>> c3d3ce6ede3429c36ff6525665e4e6d1c0b1213d
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="PayMet_StPats">
       <EntityTypeMapping TypeName="StPatsDataBaseModel1.PayMet_StPats">
         <MappingFragment StoreEntitySet="PayMet_StPats">
+<<<<<<< HEAD
           <ScalarProperty Name="descripcion" ColumnName="descripcion" />
           <ScalarProperty Name="id_tipo_pago" ColumnName="id_tipo_pago" />
+=======
+<<<<<<< HEAD
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="id_tipo_pago" ColumnName="id_tipo_pago" />
+=======
+          <ScalarProperty Name="id_tipo_pago" ColumnName="id_tipo_pago" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+>>>>>>> c371271b4260ee18897a3011e214a9a5b4f96aa3
+>>>>>>> c3d3ce6ede3429c36ff6525665e4e6d1c0b1213d
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Productos_StPats">
       <EntityTypeMapping TypeName="StPatsDataBaseModel1.Productos_StPats">
         <MappingFragment StoreEntitySet="Productos_StPats">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> c3d3ce6ede3429c36ff6525665e4e6d1c0b1213d
           <ScalarProperty Name="stock_menos_carrito" ColumnName="stock_menos_carrito" />
           <ScalarProperty Name="manual" ColumnName="manual" />
           <ScalarProperty Name="id_estado" ColumnName="id_estado" />
@@ -170,6 +343,7 @@
           <ScalarProperty Name="codigo" ColumnName="codigo" />
           <ScalarProperty Name="id_tipo_producto" ColumnName="id_tipo_producto" />
           <ScalarProperty Name="id_producto" ColumnName="id_producto" />
+<<<<<<< HEAD
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -191,22 +365,54 @@
           <ScalarProperty Name="id_tipo_product" ColumnName="id_tipo_product" />
           <ScalarProperty Name="id_producto_general" ColumnName="id_producto_general" />
           <ScalarProperty Name="id_pump" ColumnName="id_pump" />
+=======
+=======
+          <ScalarProperty Name="id_producto" ColumnName="id_producto" />
+          <ScalarProperty Name="id_tipo_producto" ColumnName="id_tipo_producto" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="stock" ColumnName="stock" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="id_location" ColumnName="id_location" />
+          <ScalarProperty Name="image" ColumnName="image" />
+          <ScalarProperty Name="id_estado" ColumnName="id_estado" />
+          <ScalarProperty Name="manual" ColumnName="manual" />
+          <ScalarProperty Name="stock_menos_carrito" ColumnName="stock_menos_carrito" />
+>>>>>>> c371271b4260ee18897a3011e214a9a5b4f96aa3
+>>>>>>> c3d3ce6ede3429c36ff6525665e4e6d1c0b1213d
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Shopping_Cart_Detalle_StPats">
       <EntityTypeMapping TypeName="StPatsDataBaseModel1.Shopping_Cart_Detalle_StPats">
         <MappingFragment StoreEntitySet="Shopping_Cart_Detalle_StPats">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> c3d3ce6ede3429c36ff6525665e4e6d1c0b1213d
           <ScalarProperty Name="id_estado" ColumnName="id_estado" />
           <ScalarProperty Name="id_lista_producto" ColumnName="id_lista_producto" />
           <ScalarProperty Name="id_shoppingcart" ColumnName="id_shoppingcart" />
           <ScalarProperty Name="id_shoppingcart_detalle" ColumnName="id_shoppingcart_detalle" />
+<<<<<<< HEAD
+=======
+=======
+          <ScalarProperty Name="id_shoppingcart_detalle" ColumnName="id_shoppingcart_detalle" />
+          <ScalarProperty Name="id_shoppingcart" ColumnName="id_shoppingcart" />
+          <ScalarProperty Name="id_lista_producto" ColumnName="id_lista_producto" />
+          <ScalarProperty Name="id_estado" ColumnName="id_estado" />
+>>>>>>> c371271b4260ee18897a3011e214a9a5b4f96aa3
+>>>>>>> c3d3ce6ede3429c36ff6525665e4e6d1c0b1213d
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Shopping_Cart_StPats">
       <EntityTypeMapping TypeName="StPatsDataBaseModel1.Shopping_Cart_StPats">
         <MappingFragment StoreEntitySet="Shopping_Cart_StPats">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> c3d3ce6ede3429c36ff6525665e4e6d1c0b1213d
           <ScalarProperty Name="estado" ColumnName="estado" />
           <ScalarProperty Name="monto_total" ColumnName="monto_total" />
           <ScalarProperty Name="taxes" ColumnName="taxes" />
@@ -214,49 +420,113 @@
           <ScalarProperty Name="date" ColumnName="date" />
           <ScalarProperty Name="id_cliente" ColumnName="id_cliente" />
           <ScalarProperty Name="id_shoppingcart" ColumnName="id_shoppingcart" />
+<<<<<<< HEAD
+=======
+=======
+          <ScalarProperty Name="id_shoppingcart" ColumnName="id_shoppingcart" />
+          <ScalarProperty Name="id_cliente" ColumnName="id_cliente" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="monto_sin_taxes" ColumnName="monto_sin_taxes" />
+          <ScalarProperty Name="taxes" ColumnName="taxes" />
+          <ScalarProperty Name="monto_total" ColumnName="monto_total" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+>>>>>>> c371271b4260ee18897a3011e214a9a5b4f96aa3
+>>>>>>> c3d3ce6ede3429c36ff6525665e4e6d1c0b1213d
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="StaCi_StPats">
       <EntityTypeMapping TypeName="StPatsDataBaseModel1.StaCi_StPats">
         <MappingFragment StoreEntitySet="StaCi_StPats">
+<<<<<<< HEAD
           <ScalarProperty Name="id_ciudad" ColumnName="id_ciudad" />
           <ScalarProperty Name="id_estado" ColumnName="id_estado" />
           <ScalarProperty Name="id_ciudad_estado" ColumnName="id_ciudad_estado" />
+=======
+<<<<<<< HEAD
+          <ScalarProperty Name="id_ciudad" ColumnName="id_ciudad" />
+          <ScalarProperty Name="id_estado" ColumnName="id_estado" />
+          <ScalarProperty Name="id_ciudad_estado" ColumnName="id_ciudad_estado" />
+=======
+          <ScalarProperty Name="id_ciudad_estado" ColumnName="id_ciudad_estado" />
+          <ScalarProperty Name="id_estado" ColumnName="id_estado" />
+          <ScalarProperty Name="id_ciudad" ColumnName="id_ciudad" />
+>>>>>>> c371271b4260ee18897a3011e214a9a5b4f96aa3
+>>>>>>> c3d3ce6ede3429c36ff6525665e4e6d1c0b1213d
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Statax_StPats">
       <EntityTypeMapping TypeName="StPatsDataBaseModel1.Statax_StPats">
         <MappingFragment StoreEntitySet="Statax_StPats">
+<<<<<<< HEAD
           <ScalarProperty Name="impuesto" ColumnName="impuesto" />
           <ScalarProperty Name="id_estado" ColumnName="id_estado" />
           <ScalarProperty Name="id_estado_impuesto" ColumnName="id_estado_impuesto" />
+=======
+<<<<<<< HEAD
+          <ScalarProperty Name="impuesto" ColumnName="impuesto" />
+          <ScalarProperty Name="id_estado" ColumnName="id_estado" />
+          <ScalarProperty Name="id_estado_impuesto" ColumnName="id_estado_impuesto" />
+=======
+          <ScalarProperty Name="id_estado_impuesto" ColumnName="id_estado_impuesto" />
+          <ScalarProperty Name="id_estado" ColumnName="id_estado" />
+          <ScalarProperty Name="impuesto" ColumnName="impuesto" />
+>>>>>>> c371271b4260ee18897a3011e214a9a5b4f96aa3
+>>>>>>> c3d3ce6ede3429c36ff6525665e4e6d1c0b1213d
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="State_StPats">
       <EntityTypeMapping TypeName="StPatsDataBaseModel1.State_StPats">
         <MappingFragment StoreEntitySet="State_StPats">
+<<<<<<< HEAD
           <ScalarProperty Name="nombre_estado" ColumnName="nombre_estado" />
           <ScalarProperty Name="is_estado" ColumnName="is_estado" />
+=======
+<<<<<<< HEAD
+          <ScalarProperty Name="nombre_estado" ColumnName="nombre_estado" />
+          <ScalarProperty Name="is_estado" ColumnName="is_estado" />
+=======
+          <ScalarProperty Name="is_estado" ColumnName="is_estado" />
+          <ScalarProperty Name="nombre_estado" ColumnName="nombre_estado" />
+>>>>>>> c371271b4260ee18897a3011e214a9a5b4f96aa3
+>>>>>>> c3d3ce6ede3429c36ff6525665e4e6d1c0b1213d
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="sysdiagrams">
       <EntityTypeMapping TypeName="StPatsDataBaseModel1.sysdiagram">
         <MappingFragment StoreEntitySet="sysdiagrams">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> c3d3ce6ede3429c36ff6525665e4e6d1c0b1213d
           <ScalarProperty Name="definition" ColumnName="definition" />
           <ScalarProperty Name="version" ColumnName="version" />
           <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
           <ScalarProperty Name="principal_id" ColumnName="principal_id" />
           <ScalarProperty Name="name" ColumnName="name" />
+<<<<<<< HEAD
+=======
+=======
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+>>>>>>> c371271b4260ee18897a3011e214a9a5b4f96aa3
+>>>>>>> c3d3ce6ede3429c36ff6525665e4e6d1c0b1213d
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Tanks_StPats">
       <EntityTypeMapping TypeName="StPatsDataBaseModel1.Tanks_StPats">
         <MappingFragment StoreEntitySet="Tanks_StPats">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> c3d3ce6ede3429c36ff6525665e4e6d1c0b1213d
           <ScalarProperty Name="desription" ColumnName="desription" />
           <ScalarProperty Name="image" ColumnName="image" />
           <ScalarProperty Name="manual" ColumnName="manual" />
@@ -271,14 +541,43 @@
           <ScalarProperty Name="capacidad" ColumnName="capacidad" />
           <ScalarProperty Name="codigo_tanque" ColumnName="codigo_tanque" />
           <ScalarProperty Name="id_tanque" ColumnName="id_tanque" />
+<<<<<<< HEAD
+=======
+=======
+          <ScalarProperty Name="id_tanque" ColumnName="id_tanque" />
+          <ScalarProperty Name="codigo_tanque" ColumnName="codigo_tanque" />
+          <ScalarProperty Name="capacidad" ColumnName="capacidad" />
+          <ScalarProperty Name="bottom_valve" ColumnName="bottom_valve" />
+          <ScalarProperty Name="manway" ColumnName="manway" />
+          <ScalarProperty Name="lifting_arm" ColumnName="lifting_arm" />
+          <ScalarProperty Name="vent" ColumnName="vent" />
+          <ScalarProperty Name="replacemnet_infiatable_gasket" ColumnName="replacemnet_infiatable_gasket" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="stok" ColumnName="stok" />
+          <ScalarProperty Name="location" ColumnName="location" />
+          <ScalarProperty Name="manual" ColumnName="manual" />
+          <ScalarProperty Name="image" ColumnName="image" />
+          <ScalarProperty Name="desription" ColumnName="desription" />
+>>>>>>> c371271b4260ee18897a3011e214a9a5b4f96aa3
+>>>>>>> c3d3ce6ede3429c36ff6525665e4e6d1c0b1213d
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Tipo_Producto_StPats">
       <EntityTypeMapping TypeName="StPatsDataBaseModel1.Tipo_Producto_StPats">
         <MappingFragment StoreEntitySet="Tipo_Producto_StPats">
+<<<<<<< HEAD
           <ScalarProperty Name="descripcion_producto" ColumnName="descripcion_producto" />
           <ScalarProperty Name="id_tipo_producto" ColumnName="id_tipo_producto" />
+=======
+<<<<<<< HEAD
+          <ScalarProperty Name="descripcion_producto" ColumnName="descripcion_producto" />
+          <ScalarProperty Name="id_tipo_producto" ColumnName="id_tipo_producto" />
+=======
+          <ScalarProperty Name="id_tipo_producto" ColumnName="id_tipo_producto" />
+          <ScalarProperty Name="descripcion_producto" ColumnName="descripcion_producto" />
+>>>>>>> c371271b4260ee18897a3011e214a9a5b4f96aa3
+>>>>>>> c3d3ce6ede3429c36ff6525665e4e6d1c0b1213d
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

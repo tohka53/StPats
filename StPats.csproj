@@ -263,15 +263,30 @@
     </Compile>
     <Compile Include="Models\Productos_StPats.cs">
       <DependentUpon>StPats.tt</DependentUpon>
+<<<<<<< HEAD
     </Compile>
     <Compile Include="Models\Pump_StPats.cs">
       <DependentUpon>StPats.tt</DependentUpon>
+=======
+>>>>>>> c3d3ce6ede3429c36ff6525665e4e6d1c0b1213d
     </Compile>
     <Compile Include="Models\Shopping_Cart_Detalle_StPats.cs">
       <DependentUpon>StPats.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Shopping_Cart_StPats.cs">
       <DependentUpon>StPats.tt</DependentUpon>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+    </Compile>
+    <Compile Include="Models\sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>StPatsDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_helpdiagrams_Result.cs">
+      <DependentUpon>StPatsDB.tt</DependentUpon>
+>>>>>>> c371271b4260ee18897a3011e214a9a5b4f96aa3
+>>>>>>> c3d3ce6ede3429c36ff6525665e4e6d1c0b1213d
     </Compile>
     <Compile Include="Models\StaCi_StPats.cs">
       <DependentUpon>StPats.tt</DependentUpon>
@@ -281,6 +296,11 @@
     </Compile>
     <Compile Include="Models\State_StPats.cs">
       <DependentUpon>StPats.tt</DependentUpon>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> c3d3ce6ede3429c36ff6525665e4e6d1c0b1213d
     </Compile>
     <Compile Include="Models\StPats.Context.cs">
       <AutoGen>True</AutoGen>
@@ -296,6 +316,25 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>StPats.edmx</DependentUpon>
+<<<<<<< HEAD
+=======
+>>>>>>> c371271b4260ee18897a3011e214a9a5b4f96aa3
+    </Compile>
+    <Compile Include="Models\StPats.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StPats.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\StPats.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StPats.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\StPats.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StPats.edmx</DependentUpon>
+>>>>>>> c3d3ce6ede3429c36ff6525665e4e6d1c0b1213d
     </Compile>
     <Compile Include="Models\sysdiagram.cs">
       <DependentUpon>StPats.tt</DependentUpon>
@@ -484,6 +523,22 @@
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\main.js" />
     <Content Include="Models\StPats.Context.tt">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>StPats.edmx</DependentUpon>
+      <LastGenOutput>StPats.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\StPats.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>StPats.edmx</DependentUpon>
+      <LastGenOutput>StPats.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\StPatsDB.Context.tt">
+>>>>>>> c371271b4260ee18897a3011e214a9a5b4f96aa3
+>>>>>>> c3d3ce6ede3429c36ff6525665e4e6d1c0b1213d
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>StPats.edmx</DependentUpon>
       <LastGenOutput>StPats.Context.cs</LastGenOutput>
@@ -647,7 +702,14 @@
     <Content Include="Models\StPats.edmx.diagram">
       <DependentUpon>StPats.edmx</DependentUpon>
     </Content>
+<<<<<<< HEAD
     <Content Include="Content\img\MOV01032.mp4" />
+=======
+<<<<<<< HEAD
+    <Content Include="Content\img\MOV01032.mp4" />
+=======
+>>>>>>> c371271b4260ee18897a3011e214a9a5b4f96aa3
+>>>>>>> c3d3ce6ede3429c36ff6525665e4e6d1c0b1213d
     <None Include="Properties\PublishProfiles\StPats - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.validate.js" />
@@ -1616,11 +1678,14 @@
     <Content Include="vendor\bootstrap\js\bootstrap.bundle.min.js.map" />
     <Content Include="vendor\bootstrap\js\bootstrap.js.map" />
     <Content Include="vendor\bootstrap\js\bootstrap.min.js.map" />
+<<<<<<< HEAD
     <Content Include="Views\Pump_StPats\Create.cshtml" />
     <Content Include="Views\Pump_StPats\Delete.cshtml" />
     <Content Include="Views\Pump_StPats\Details.cshtml" />
     <Content Include="Views\Pump_StPats\Edit.cshtml" />
     <Content Include="Views\Pump_StPats\Index.cshtml" />
+=======
+>>>>>>> c3d3ce6ede3429c36ff6525665e4e6d1c0b1213d
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

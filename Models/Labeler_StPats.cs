@@ -21,7 +21,10 @@ namespace StPats.Models
         public string name_product { get; set; }
         public string description { get; set; }
         public decimal price { get; set; }
+<<<<<<< HEAD
         public Nullable<int> voltage_regulator { get; set; }
+=======
+>>>>>>> c3d3ce6ede3429c36ff6525665e4e6d1c0b1213d
         public int id_location { get; set; }
         public string image { get; set; }
         public string manual { get; set; }
@@ -29,6 +32,10 @@ namespace StPats.Models
         public int estado { get; set; }
         public int stock { get; set; }
         public string extra_things { get; set; }
+<<<<<<< HEAD
+=======
+        public Nullable<int> voltage_regulator { get; set; }
+>>>>>>> c3d3ce6ede3429c36ff6525665e4e6d1c0b1213d
     
         public virtual Estado_StPats Estado_StPats { get; set; }
         public virtual Labeler_StPats Labeler_StPats1 { get; set; }

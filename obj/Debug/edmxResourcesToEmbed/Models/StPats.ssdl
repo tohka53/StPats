@@ -90,6 +90,10 @@
     <Property Name="area_superficie" Type="real" Nullable="false" />
     <Property Name="precio" Type="money" Nullable="false" />
   </EntityType>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> c3d3ce6ede3429c36ff6525665e4e6d1c0b1213d
   <EntityType Name="Labeler_StPats">
     <Key>
       <PropertyRef Name="id_labeler" />
@@ -108,8 +112,15 @@
     <Property Name="id_manufactured" Type="int" Nullable="false" />
     <Property Name="estado" Type="int" Nullable="false" />
     <Property Name="stock" Type="int" Nullable="false" />
+<<<<<<< HEAD
     <Property Name="extra_things" Type="varchar" MaxLength="250" Nullable="false" />
   </EntityType>
+=======
+    <Property Name="extra_things" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+=======
+>>>>>>> c371271b4260ee18897a3011e214a9a5b4f96aa3
+>>>>>>> c3d3ce6ede3429c36ff6525665e4e6d1c0b1213d
   <EntityType Name="Lista_Productos_StPats">
     <Key>
       <PropertyRef Name="id_lista_producto" />
@@ -159,6 +170,7 @@
     <Property Name="manual" Type="varchar" MaxLength="150" />
     <Property Name="stock_menos_carrito" Type="int" Nullable="false" />
   </EntityType>
+<<<<<<< HEAD
   <EntityType Name="Pump_StPats">
     <Key>
       <PropertyRef Name="id_pump" />
@@ -179,6 +191,8 @@
     <Property Name="voltage_regulator" Type="int" Nullable="false" />
     <Property Name="id_location" Type="int" Nullable="false" />
   </EntityType>
+=======
+>>>>>>> c3d3ce6ede3429c36ff6525665e4e6d1c0b1213d
   <EntityType Name="Shopping_Cart_Detalle_StPats">
     <Key>
       <PropertyRef Name="id_shoppingcart_detalle" />
@@ -451,6 +465,10 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> c3d3ce6ede3429c36ff6525665e4e6d1c0b1213d
   <Association Name="FK_Labeler_StPats_Estado_StPats">
     <End Role="Estado_StPats" Type="Self.Estado_StPats" Multiplicity="1" />
     <End Role="Labeler_StPats" Type="Self.Labeler_StPats" Multiplicity="*" />
@@ -523,6 +541,11 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> c371271b4260ee18897a3011e214a9a5b4f96aa3
+>>>>>>> c3d3ce6ede3429c36ff6525665e4e6d1c0b1213d
   <Association Name="FK_Lista_Productos_StPats_Estado_StPats">
     <End Role="Estado_StPats" Type="Self.Estado_StPats" Multiplicity="1" />
     <End Role="Lista_Productos_StPats" Type="Self.Lista_Productos_StPats" Multiplicity="*" />
@@ -583,6 +606,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+<<<<<<< HEAD
   <Association Name="FK_Pump_StPats_Estado_StPats">
     <End Role="Estado_StPats" Type="Self.Estado_StPats" Multiplicity="1" />
     <End Role="Pump_StPats" Type="Self.Pump_StPats" Multiplicity="*" />
@@ -643,6 +667,8 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+=======
+>>>>>>> c3d3ce6ede3429c36ff6525665e4e6d1c0b1213d
   <Association Name="FK_Shopping_Cart_Detalle_StPats_Estado_StPats">
     <End Role="Estado_StPats" Type="Self.Estado_StPats" Multiplicity="1" />
     <End Role="Shopping_Cart_Detalle_StPats" Type="Self.Shopping_Cart_Detalle_StPats" Multiplicity="*" />
@@ -759,13 +785,23 @@
     <EntitySet Name="Estado_StPats" EntityType="Self.Estado_StPats" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Filling_Machine_StPats" EntityType="Self.Filling_Machine_StPats" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Filtros_StPats" EntityType="Self.Filtros_StPats" Schema="dbo" store:Type="Tables" />
+<<<<<<< HEAD
     <EntitySet Name="Labeler_StPats" EntityType="Self.Labeler_StPats" Schema="dbo" store:Type="Tables" />
+=======
+<<<<<<< HEAD
+    <EntitySet Name="Labeler_StPats" EntityType="Self.Labeler_StPats" Schema="dbo" store:Type="Tables" />
+=======
+>>>>>>> c371271b4260ee18897a3011e214a9a5b4f96aa3
+>>>>>>> c3d3ce6ede3429c36ff6525665e4e6d1c0b1213d
     <EntitySet Name="Lista_Productos_StPats" EntityType="Self.Lista_Productos_StPats" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Locations_StPats" EntityType="Self.Locations_StPats" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Manufactured_Stpats" EntityType="Self.Manufactured_Stpats" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="PayMet_StPats" EntityType="Self.PayMet_StPats" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Productos_StPats" EntityType="Self.Productos_StPats" Schema="dbo" store:Type="Tables" />
+<<<<<<< HEAD
     <EntitySet Name="Pump_StPats" EntityType="Self.Pump_StPats" Schema="dbo" store:Type="Tables" />
+=======
+>>>>>>> c3d3ce6ede3429c36ff6525665e4e6d1c0b1213d
     <EntitySet Name="Shopping_Cart_Detalle_StPats" EntityType="Self.Shopping_Cart_Detalle_StPats" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Shopping_Cart_StPats" EntityType="Self.Shopping_Cart_StPats" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="StaCi_StPats" EntityType="Self.StaCi_StPats" Schema="dbo" store:Type="Tables" />
@@ -838,6 +874,10 @@
       <End Role="Locations_StPats" EntitySet="Locations_StPats" />
       <End Role="Filtros_StPats" EntitySet="Filtros_StPats" />
     </AssociationSet>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> c3d3ce6ede3429c36ff6525665e4e6d1c0b1213d
     <AssociationSet Name="FK_Labeler_StPats_Estado_StPats" Association="Self.FK_Labeler_StPats_Estado_StPats">
       <End Role="Estado_StPats" EntitySet="Estado_StPats" />
       <End Role="Labeler_StPats" EntitySet="Labeler_StPats" />
@@ -862,6 +902,11 @@
       <End Role="Tipo_Producto_StPats" EntitySet="Tipo_Producto_StPats" />
       <End Role="Labeler_StPats" EntitySet="Labeler_StPats" />
     </AssociationSet>
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> c371271b4260ee18897a3011e214a9a5b4f96aa3
+>>>>>>> c3d3ce6ede3429c36ff6525665e4e6d1c0b1213d
     <AssociationSet Name="FK_Lista_Productos_StPats_Estado_StPats" Association="Self.FK_Lista_Productos_StPats_Estado_StPats">
       <End Role="Estado_StPats" EntitySet="Estado_StPats" />
       <End Role="Lista_Productos_StPats" EntitySet="Lista_Productos_StPats" />
@@ -882,6 +927,7 @@
       <End Role="Tipo_Producto_StPats" EntitySet="Tipo_Producto_StPats" />
       <End Role="Productos_StPats" EntitySet="Productos_StPats" />
     </AssociationSet>
+<<<<<<< HEAD
     <AssociationSet Name="FK_Pump_StPats_Estado_StPats" Association="Self.FK_Pump_StPats_Estado_StPats">
       <End Role="Estado_StPats" EntitySet="Estado_StPats" />
       <End Role="Pump_StPats" EntitySet="Pump_StPats" />
@@ -902,6 +948,8 @@
       <End Role="Tipo_Producto_StPats" EntitySet="Tipo_Producto_StPats" />
       <End Role="Pump_StPats" EntitySet="Pump_StPats" />
     </AssociationSet>
+=======
+>>>>>>> c3d3ce6ede3429c36ff6525665e4e6d1c0b1213d
     <AssociationSet Name="FK_Shopping_Cart_Detalle_StPats_Estado_StPats" Association="Self.FK_Shopping_Cart_Detalle_StPats_Estado_StPats">
       <End Role="Estado_StPats" EntitySet="Estado_StPats" />
       <End Role="Shopping_Cart_Detalle_StPats" EntitySet="Shopping_Cart_Detalle_StPats" />
