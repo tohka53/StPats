@@ -12,7 +12,7 @@ namespace StPats.Controllers
 {
     public class Shopping_Cart_StPatsController : Controller
     {
-        private StPatsDataBaseEntities db = new StPatsDataBaseEntities();
+        private StPatsDataBaseEntities1 db = new StPatsDataBaseEntities1();
 
         // GET: Shopping_Cart_StPats
         public ActionResult Index()

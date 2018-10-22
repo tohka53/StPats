@@ -19,7 +19,9 @@ namespace StPats.Models
         {
             this.Bottle_Finishing_StPats = new HashSet<Bottle_Finishing_StPats>();
             this.Filling_Machine_StPats = new HashSet<Filling_Machine_StPats>();
+            this.Labeler_StPats = new HashSet<Labeler_StPats>();
             this.Lista_Productos_StPats = new HashSet<Lista_Productos_StPats>();
+            this.Pump_StPats = new HashSet<Pump_StPats>();
         }
     
         public int id_producto { get; set; }
@@ -40,8 +42,12 @@ namespace StPats.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Filling_Machine_StPats> Filling_Machine_StPats { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Labeler_StPats> Labeler_StPats { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Lista_Productos_StPats> Lista_Productos_StPats { get; set; }
         public virtual Locations_StPats Locations_StPats { get; set; }
         public virtual Tipo_Producto_StPats Tipo_Producto_StPats { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Pump_StPats> Pump_StPats { get; set; }
     }
 }
