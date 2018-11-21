@@ -1,0 +1,142 @@
+﻿@model IEnumerable<StPats.Models.Filter_PAF_StPats>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<!--  @Html.ActionLink("Create New", "Create")  -->
+<p>
+
+</p>
+<div class="row">
+    <div class="col-md-7">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="text-center"> <strong>Types Of Filters</strong></div>
+            <p></p>
+
+            • Letina 40x40 Plate-and-Frame Filters<br />
+            • Inlet/outlet buttefly valves, pressure gauges, sight glasses, sample taps included<br />
+            • All units come with sanitary piping which provides input to both top and bottom of filter. (also outlet). This provides faster and more efficient filtration than some competitive brands.<br />
+            • Noryl plates--steam sterilizable<br />
+            • Drip tray with drain valve<br />
+            • TriClamp connections<br />
+            • 304 stainless steel<br />
+            • Pump not included. Euro 30 single speed is good choice.<br />
+            • Manufactured by Letina<br />
+            <p></p>
+            <strong>Olive Oil Filtration:</strong> Noryl plates are replaced with Moplen plates for olive oil filtration. Price is same as below. Just let us know and we will exchange the plates.<br />
+            <p></p>
+            <a href="http://www.stpats.com/index.htm" > Click Here for detailed information on using plate and frame filters. </a>
+        </div>
+    </div>
+ 
+    <div class="col-md-5">
+        <img src="~/Content/img/VF420.jpg"width="45%" />
+    </div>
+</div>
+
+
+    <div class="container">
+        <h2>Filter Plate and Frames</h2>
+        <p><strong>Letina 40x40 Plate-and-Frame Filters</strong></p>
+        <input class="form-control" id="myInput" type="text" placeholder="Search..">
+        <br>
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+
+                    <th>
+                        Name Product
+                    </th>
+
+                    <th>
+                        Price of Product
+                    </th>
+                    <th>
+                        Noryl plates
+                    </th>
+                    <th>
+                        Minimum/Maximum
+                        Number Of Plates
+                    </th>
+                    <th>
+                        Filter Surface Area
+                    </th>
+                    <th>
+                        Location
+                    </th>
+                    <th>
+                        Actions
+                    </th>
+
+                </tr>
+            </thead>
+            <tbody id="myTable">
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.name_product)
+                        </td>
+
+                        <td>
+                            $ @Html.DisplayFor(modelItem => item.price)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.noryl_plates)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.number_of_plates)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.filter_surface_area)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Locations_StPats.description)
+                        </td>
+
+                        <td>
+                            <button class="btn btn-info btn-sm" onclick="location.href = '@Url.Action("Details","Filter_PAF_StPats", new { id = item.id_filter_paf })'">
+                                <span class=" glyphicon glyphicon-th-list"></span>&nbsp;  Details
+                            </button>
+                            <p></p>
+                            <button class="btn btn-success btn-sm" onclick="location.href = '@Url.Action("Create","Lista_Productos_StPats", new { id = item.id_producto_general, precio =item.price })'">
+                                <span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart
+                            </button>
+                        </td>
+
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+    </div>
+
+
+    <script>
+        $(document).ready(function () {
+            $("#myInput").on("keyup", function () {
+                var value = $(this).val().toLowerCase();
+                $("#myTable tr").filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+    </script>
+
+
+
+    

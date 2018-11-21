@@ -1,0 +1,220 @@
+﻿@model IEnumerable<StPats.Models.Tank_LCTTCJ_VC_StPats>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<p>
+
+</p>
+<div class="row">
+    <div class="col-md-8">
+        <div class="jumbotron jumbotron-fluid">
+
+            <div class="text-center"><strong>LETINA Closed Top Tanks with Cooling Jackets--Sloped Bottom for Red wine</strong></div>
+            <br />
+            <strong>These are flat bottom tanks that are sloped from back to front (5%) to make cleanout easier.</strong><br />
+            <br />
+            • All welds are polished and treated (not porous) for sanitary food use. Beautiful and seamless manway/tank welds.   <br />
+            • Tank wall is SWAGED before welding on ferrules. This provides a smooth curvature for strength and curved sanitary finish. [as opposed to a welding ferrule to a simple flat punched hole]   <br />
+            • Reinforcing Ring is welded to tank for upper valve. This greatly increases strength---allows mounting of thru-valve mixers.   <br />
+            • Large Cooling Jackets: Maximum inlet pressure is 35 psi. Typical flow rate is 3-6 GPM. [inlet at bottom of jacket]   <br />
+            •  304 Stainless Steel. 2R (aka BA—bright annealed, aka mirror) finish on inside. Marble Finish on outside.   <br />
+            • TriClamp Butterfly valves included   <br />
+            • Sample tap on all tanks   <br />
+            • Welded 304 stainless steel legs   <br />
+            • Superior quality Vent-211 on all tanks.   <br />
+            • extra 2" TC port in top hatch (for optional use of spray ball)   <br />
+            • Complete pump over system with piping and spinning Sprinkler.   <br />
+            • Oval manway for whites on some tanks   <br />
+            • Large Rectangular manway for reds—17"x22" on large tanks. Round on small tanks.   <br />
+            <br />
+            <strong>Please note: these tanks cannot be pressurized above 1 psi.</strong>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="jumbotron jumbotron-fluid text-center">
+
+            <img src="~/images/VIK4500.jpg" width="48%" />
+        </div>
+    </div>
+</div>
+
+<div>
+    <h2>LETINA Closed Top Tanks with Cooling Jackets--Sloped Bottom for Red wine</h2>
+
+    <input class="form-control" id="myInput" type="text" placeholder="Search..">
+    <br>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+
+                <th>
+                    <font size=1> Code Produt</font>
+                </th>
+                <th>
+                    <font size=1>Price</font>
+                </th>
+
+                <th>
+                    <font size=1>Capacity</font>
+                </th>
+                <th>
+                    <font size=1>Number Of Jackets</font>
+                </th>
+                <th>
+                    <font size=1>Orientation</font>
+                </th>
+                <th>
+                    <font size=1>Total Area</font>
+                </th>
+                <th>
+                    <font size=1>Botton Valve</font>
+                </th>
+                <th>
+                    <font size=1>Racking Valve</font>
+                </th>
+                <th>
+                    <font size=1>Pump Over</font>
+                </th>
+                <th>
+                    <font size=1>Vent</font>
+                </th>
+                <th>
+                    <font size=1>Ladder Support</font>
+                </th>
+                <th>
+                    <font size=1>Sample Tap</font>
+                </th>
+                <th>
+                    <font size=1>Thermometer In Thermowell</font>
+                </th>
+                <th>
+                    <font size=1>Thermowell For Sensor</font>
+                </th>
+                <th>
+                    <font size=1>Level Gange</font>
+
+                </th>
+                <th>
+                    <font size=1>Top Hatch</font>
+
+                </th>
+                <th>
+                    <font size=1>Wall Thickness Bottom Thickness</font>
+                </th>
+
+
+                <th>
+                    <font size=1> Location</font>
+                </th>
+                <th>
+                    <font size=1> Actions</font>
+                </th>
+
+
+            </tr>
+        </thead>
+        <tbody id="myTable">
+
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.code_produt)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.price)
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.capacity)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.number_of_jackets)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.orientation)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.total_area)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.botton_valve)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.racking_valve)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.pump_over)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.vent)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ladder_support)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.sample_tap)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.thermometer_in_thermowell)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.thermowell_for_sensor)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.level_gange)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.top_hatch)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.wall_thickness_bottom_thickness)
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Locations_StPats.description)
+                    </td>
+
+                    <td>
+                        <button class="btn btn-info btn-sm" onclick="location.href = '@Url.Action("Details","Tank_LCTTCJ_VC_StPats", new { id = item.id_filter_acf })'">
+                            <span class=" glyphicon glyphicon-th-list"></span>&nbsp;  Details
+                        </button>
+                        <p></p>
+                        <button class="btn btn-success btn-sm" onclick="location.href = '@Url.Action("Create","Lista_Productos_StPats", new { id = item.id_producto_general, precio =item.price })'">
+                            <span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart
+                        </button>
+                    </td>
+
+                </tr>
+            }
+
+        </tbody>
+    </table>
+</div>
+
+
+<script>
+    $(document).ready(function () {
+        $("#myInput").on("keyup", function () {
+            var value = $(this).val().toLowerCase();
+            $("#myTable tr").filter(function () {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+        });
+    });
+</script>
+
+

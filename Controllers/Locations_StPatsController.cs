@@ -12,8 +12,8 @@ namespace StPats.Controllers
 {
     public class Locations_StPatsController : Controller
     {
-        private StPatsDataBaseEntities db = new StPatsDataBaseEntities();
-
+        private StPatsWEB_dbEntities db = new StPatsWEB_dbEntities();
+        // private StPatsEntities db = new StPatsEntities();
         // GET: Locations_StPats
         public ActionResult Index()
         {

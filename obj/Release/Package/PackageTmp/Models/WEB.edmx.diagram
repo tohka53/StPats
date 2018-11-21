@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="1694c83b23584145abb01ebea3492c6d" Name="Diagram1" ZoomLevel="13">
+        <EntityTypeShape EntityType="StPatsWEB_dbModel.Bill_StPats" Width="1.5" PointX="7" PointY="19" IsExpanded="true" />
+        <EntityTypeShape EntityType="StPatsWEB_dbModel.Bottle_Finishing_StPats" Width="1.5" PointX="10" PointY="17.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="StPatsWEB_dbModel.Ciudades_StPats" Width="1.5" PointX="5.5" PointY="29.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="StPatsWEB_dbModel.Clients_StPats" Width="1.5" PointX="7" PointY="14.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="StPatsWEB_dbModel.Estado_StPats" Width="1.5" PointX="4.75" PointY="17.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="StPatsWEB_dbModel.Filling_Machine_StPats" Width="1.5" PointX="7" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="StPatsWEB_dbModel.Filter_ACF_StPats" Width="1.5" PointX="13" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="StPatsWEB_dbModel.Filter_CH_StPats" Width="1.5" PointX="10" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="StPatsWEB_dbModel.Filter_PAF_StPats" Width="1.5" PointX="10" PointY="23.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="StPatsWEB_dbModel.Filter_PES_StPats" Width="1.5" PointX="13" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="StPatsWEB_dbModel.Filter_PP_StPats" Width="1.5" PointX="13" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="StPatsWEB_dbModel.Filter_StPats" Width="1.5" PointX="7" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="StPatsWEB_dbModel.Filtros_StPats" Width="1.5" PointX="7" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="StPatsWEB_dbModel.Labeler_StPats" Width="1.5" PointX="16" PointY="17.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="StPatsWEB_dbModel.Lista_Productos_StPats" Width="1.5" PointX="16" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="StPatsWEB_dbModel.Locations_StPats" Width="1.5" PointX="4.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="StPatsWEB_dbModel.Manufactured_Stpats" Width="1.5" PointX="4.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="StPatsWEB_dbModel.PayMet_StPats" Width="1.5" PointX="4.75" PointY="34.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="StPatsWEB_dbModel.Productos_StPats" Width="1.5" PointX="16" PointY="24.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="StPatsWEB_dbModel.Pump_StPats" Width="1.5" PointX="18.25" PointY="21.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="StPatsWEB_dbModel.Shopping_Cart_Detalle_StPats" Width="1.5" PointX="18.25" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="StPatsWEB_dbModel.Shopping_Cart_StPats" Width="1.5" PointX="15.25" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="StPatsWEB_dbModel.StaCi_StPats" Width="1.5" PointX="4.75" PointY="25.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="StPatsWEB_dbModel.Statax_StPats" Width="1.5" PointX="7.75" PointY="31.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="StPatsWEB_dbModel.State_StPats" Width="1.5" PointX="5.5" PointY="31.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="StPatsWEB_dbModel.Tank_LCBT_VC_ACF_StPats" Width="1.5" PointX="21.25" PointY="20.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="StPatsWEB_dbModel.Tank_LCTTCB_StPats" Width="1.5" PointX="24.25" PointY="20.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="StPatsWEB_dbModel.Tank_LCTTCJ_VC_StPats" Width="1.5" PointX="18.25" PointY="13.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="StPatsWEB_dbModel.Tank_LFBT_VC_StPats" Width="1.5" PointX="18.25" PointY="27.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="StPatsWEB_dbModel.Tank_LFLT_VCCJ_StPats" Width="1.5" PointX="21.25" PointY="12.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="StPatsWEB_dbModel.Tank_LSBT_VC_ACF_StPats" Width="1.5" PointX="21.25" PointY="28.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="StPatsWEB_dbModel.Tank_LWWFWCJCT_VC_StPats" Width="1.5" PointX="24.25" PointY="12.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="StPatsWEB_dbModel.Tank_MXT_StPats" Width="1.5" PointX="24.25" PointY="28.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="StPatsWEB_dbModel.Tank_TONW_StPats" Width="1.5" PointX="27.25" PointY="20.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="StPatsWEB_dbModel.Tanks_StPats" Width="1.5" PointX="7" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="StPatsWEB_dbModel.Tipo_Producto_StPats" Width="1.5" PointX="13.75" PointY="29.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="StPatsWEB_dbModel.Type_Filter_StPats" Width="1.5" PointX="4.75" PointY="13.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="StPatsWEB_dbModel.database_firewall_rules" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Bill_StPats_Estado_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Bill_StPats_PayMet_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Bill_StPats_Shopping_Cart_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Bottle_Finishing_StPats_Estado_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Bottle_Finishing_StPats_Locations_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Bottle_Finishing_StPats_Manufactured_Stpats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Bottle_Finishing_StPats_Productos_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Bottle_Finishing_StPats_Tipo_Producto_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_StaCi_StPats_Ciudades_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Clients_StPats_Estado_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Clients_StPats_StaCi_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Shopping_Cart_StPats_Clients_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Filling_Machine_StPats_Estado_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Filter_ACF_StPats_Estado_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Filter_CH_StPats_Estado_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Filter_PAF_StPats_Estado_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Filter_PES_StPats_Estado_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Filter_PP_StPats_Estado_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Filter_StPats_Estado_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Labeler_StPats_Estado_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Lista_Productos_StPats_Estado_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Productos_StPats_Estado_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Pump_StPats_Estado_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Shopping_Cart_Detalle_StPats_Estado_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Shopping_Cart_StPats_Estado_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Tank_LCBT_VC_ACF_StPats_Estado_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Tank_LCTTCB_StPats_Estado_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Tank_LCTTCJ_VC_StPats_Estado_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Tank_LFBT_VC_StPats_Estado_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Tank_LFLT_VCCJ_StPats_Estado_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Tank_LSBT_VC_ACF_StPats_Estado_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Tank_LWWFWCJCT_VC_StPats_Estado_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Tank_MXT_StPats_Estado_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Tank_TONW_StPats_Estado_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Filling_Machine_StPats_Locations_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Filling_Machine_StPats_Manufactured_Stpats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Filling_Machine_StPats_Productos_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Filling_Machine_StPats_Tipo_Producto_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Filter_ACF_StPats_Locations_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Filter_ACF_StPats_Manufactured_Stpats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Filter_ACF_StPats_Productos_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Filter_ACF_StPats_Tipo_Producto_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Filter_CH_StPats_Locations_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Filter_CH_StPats_Manufactured_Stpats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Filter_CH_StPats_Productos_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Filter_CH_StPats_Tipo_Producto_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Filter_PAF_StPats_Locations_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Filter_PAF_StPats_Manufactured_Stpats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Filter_PAF_StPats_Productos_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Filter_PAF_StPats_Tipo_Producto_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Filter_PES_StPats_Locations_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Filter_PES_StPats_Manufactured_Stpats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Filter_PES_StPats_Productos_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Filter_PES_StPats_Tipo_Producto_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Filter_PP_StPats_Locations_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Filter_PP_StPats_Manufactured_Stpats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Filter_PP_StPats_Productos_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Filter_PP_StPats_Tipo_Producto_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Filter_StPats_Locations_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Filter_StPats_Manufactured_Stpats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Filter_StPats_Productos_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Filter_StPats_Tipo_Producto_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Filter_StPats_Type_Filter_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Filtros_StPats_Locations_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Labeler_StPats_Labeler_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Labeler_StPats_Locations_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Labeler_StPats_Manufactured_Stpats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Labeler_StPats_Productos_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Labeler_StPats_Tipo_Producto_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Lista_Productos_StPats_Productos_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Shopping_Cart_Detalle_StPats_Lista_Productos_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Productos_StPats_Locations_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Pump_StPats_Locations_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Tank_LCBT_VC_ACF_StPats_Locations_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Tank_LCTTCB_StPats_Locations_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Tank_LCTTCJ_VC_StPats_Locations_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Tank_LFBT_VC_StPats_Locations_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Tank_LFLT_VCCJ_StPats_Locations_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Tank_LSBT_VC_ACF_StPats_Locations_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Tank_LWWFWCJCT_VC_StPats_Locations_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Tank_MXT_StPats_Locations_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Tank_TONW_StPats_Locations_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Tanks_StPats_Locations_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Pump_StPats_Manufactured_Stpats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Tank_LCBT_VC_ACF_StPats_Manufactured_Stpats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Tank_LCTTCB_StPats_Manufactured_Stpats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Tank_LCTTCJ_VC_StPats_Manufactured_Stpats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Tank_LFBT_VC_StPats_Manufactured_Stpats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Tank_LFLT_VCCJ_StPats_Manufactured_Stpats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Tank_LSBT_VC_ACF_StPats_Manufactured_Stpats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Tank_LWWFWCJCT_VC_StPats_Manufactured_Stpats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Tank_MXT_StPats_Manufactured_Stpats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Tank_TONW_StPats_Manufactured_Stpats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Productos_StPats_Tipo_Producto_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Pump_StPats_Productos_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Tank_LCBT_VC_ACF_StPats_Productos_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Tank_LCTTCB_StPats_Productos_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Tank_LCTTCJ_VC_StPats_Productos_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Tank_LFBT_VC_StPats_Productos_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Tank_LFLT_VCCJ_StPats_Productos_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Tank_LSBT_VC_ACF_StPats_Productos_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Tank_LWWFWCJCT_VC_StPats_Productos_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Tank_MXT_StPats_Productos_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Tank_TONW_StPats_Productos_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Pump_StPats_Tipo_Producto_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Shopping_Cart_Detalle_StPats_Shopping_Cart_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_StaCi_StPats_State_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Statax_StPats_State_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Tank_LCBT_VC_ACF_StPats_Tipo_Producto_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Tank_LCTTCB_StPats_Tipo_Producto_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Tank_LCTTCJ_VC_StPats_Tipo_Producto_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Tank_LFBT_VC_StPats_Tipo_Producto_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Tank_LFLT_VCCJ_StPats_Tipo_Producto_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Tank_LSBT_VC_ACF_StPats_Tipo_Producto_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Tank_LWWFWCJCT_VC_StPats_Tipo_Producto_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Tank_MXT_StPats_Tipo_Producto_StPats" ManuallyRouted="false" />
+        <AssociationConnector Association="StPatsWEB_dbModel.FK_Tank_TONW_StPats_Tipo_Producto_StPats" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

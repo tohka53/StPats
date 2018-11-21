@@ -1,0 +1,57 @@
+﻿@model IEnumerable<StPats.Models.Filter_StPats>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="row">
+    <div class="col-md-3">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="text-center"> <strong>Types Of Filters</strong></div>
+            <p></p>
+
+            <div class="form-group text-center">
+                <button class="btn-success btn-sm" onclick="location.href = '@Url.Action("Index","Filter_PAF_StPats")'">
+                    <span class="	glyphicon glyphicon-forward"></span>&nbsp; 40x40 Plate-and-Frames
+                </button>
+            </div>
+            <div class="form-group text-center">
+                <button class="btn-secondary btn-sm" onclick="location.href = '@Url.Action("Index","Filter_ACF_StPats")'">
+                    <span class="	glyphicon glyphicon-forward"></span>&nbsp; Activated Carbon Fiber
+                </button>
+            </div>
+            <div class="form-group text-center">
+                <button class="btn-primary btn-sm" onclick="location.href = '@Url.Action("Index","Filter_PES_StPats")'">
+                    <span class="	glyphicon glyphicon-forward"></span>&nbsp; PES (PolyEtherSulfone) Membrane
+                </button>
+            </div>
+            <div class="form-group text-center">
+                <button class="btn-info btn-sm" onclick="location.href = '@Url.Action("Index","Filter_PP_StPats")'">
+                    <span class="	glyphicon glyphicon-forward"></span>&nbsp; PolyPropylene (PP)
+                </button>
+            </div>
+            <div class="form-group text-center">
+                <button class="btn-success btn-sm" onclick="location.href = '@Url.Action("Index","Filter_CH_StPats")'">
+                    <span class="	glyphicon glyphicon-forward"></span>&nbsp; Cartridge Housings
+                </button>
+            </div>
+        
+
+        </div>
+        </div>
+    <div class="col-md-8">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="text-center">
+                <strong>Parts and Manuals</strong></div>
+
+                > 40x40 parts/manual (both Letina and Spadoni)<br />
+                > Cartridge Housing Manual and Parts<br />
+                <div class="text-center"><strong>Additonal Information</strong></div><br />
+                --- detailed specifications of Cartridge Filters including Cleaning Procedures, Flow/pressure charts, ....<br />
+                --- detailed information on Using Plate-and-Frame filters.<br />
+                --- Comparison of Filter Sheets to Cartridge Filters<br />
+            </div>
+    </div>
+</div>
+
+    

@@ -1,0 +1,179 @@
+﻿@model StPats.Models.Tank_LCTTCJ_VC_StPats
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2 class="text-center">Details for the product: @Html.DisplayFor(model => model.code_produt) </h2>
+<div class="container">
+
+    <h5>
+
+        <dt>
+            Code Produt
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.code_produt)
+        </dd>
+        <dt>
+            Capacity
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.capacity)
+        </dd>
+
+
+        <dt>
+            Number of Jackets
+        </dt>
+
+
+        <dd>
+            @Html.DisplayFor(model => model.number_of_jackets)
+        </dd>
+
+        <dt>
+            Orientation
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.orientation)
+        </dd>
+
+        <dt>
+            Total Area
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.total_area)
+        </dd>
+
+        <dt>
+            Botton Valve
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.botton_valve)
+        </dd>
+
+        <dt>
+            Racking Valve
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.racking_valve)
+        </dd>
+
+        <dt>
+            Pump Over
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pump_over)
+        </dd>
+
+        <dt>
+            Vent
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.vent)
+        </dd>
+
+        <dt>
+            Ladder Support
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ladder_support)
+        </dd>
+
+
+        <dt>
+            Sample Tap
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sample_tap)
+        </dd>
+
+        <dt>
+        <dt>
+            Thermometer in Thermowell
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.thermometer_in_thermowell)
+        </dd>
+
+        <dt>
+            Thermowell For Sensor
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.thermowell_for_sensor)
+        </dd>
+
+
+        <dt>
+            Level Gange
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.level_gange)
+        </dd>
+
+        <dt>
+            Top Hatch
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.top_hatch)
+        </dd>
+
+        <dt>
+            Wall Thickness Bottom Thickness
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.wall_thickness_bottom_thickness)
+        </dd>
+
+        
+        <dt>
+            @Html.DisplayNameFor(model => model.Locations_StPats.description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Locations_StPats.description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Manufactured_Stpats.name_manufactured)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Manufactured_Stpats.name_manufactured)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Productos_StPats.product_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Productos_StPats.product_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tipo_Producto_StPats.descripcion_producto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tipo_Producto_StPats.descripcion_producto)
+        </dd>
+
+        </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id_filter_acf }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,171 @@
+﻿@model IEnumerable<StPats.Models.Tank_LFBT_VC_StPats>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<p>
+
+</p>
+<div class="row">
+    <div class="col-md-12">
+        <div class="jumbotron jumbotron-fluid">
+
+            <div class="text-center"><strong>LETINA Flat Bottom Tanks—Variable Capacity</strong></div>
+            <br />
+            <strong>These are flat bottom tanks that are sloped from back to front (5%) to make cleanout easier.</strong><br />
+            <br />
+            • All welds are polished and treated (not porous) for sanitary food use. <br />
+            • Tank wall is SWAGED before welding on ferrules. This provides a smooth curvature for strength and curved sanitary finish. [as opposed to a welding ferrule to a simple flat punched hole] <br />
+            •  Reinforcing Ring is welded to tank for upper valve. This greatly increases strength---allows mounting of thru-valve mixers. <br />
+            •  Superior quality Vent-211 on all tanks. <br />
+            • Superior quality lifting arms mounted to tank with two brackets for stable operation. There are hooks welded to tank wall to neatly wrap rope. <br />
+            • 304 Stainless Steel. 2R (aka BA—bright annealed, aka mirror) finish on inside. Marble Finish on outside. <br />
+            • TriClamp Butterfly valves included <br />
+            • Sample tap on all tanks <br />
+            •  Complete with floating lid, inflatable gasket, air pump, Vent-211 <br />
+            <br />
+            <strong>Instructions for Assembly of Floating Lid of Variable Capacity Tank.</strong>
+        </div>
+    </div>
+
+</div>
+
+<div>
+    <h2>LETINA Flat Bottom Tanks—Variable Capacity</h2>
+
+    <input class="form-control" id="myInput" type="text" placeholder="Search..">
+    <br>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+
+                <th>
+                    <font size=1> Code Produt</font>
+                </th>
+                <th>
+                    <font size=1>Price</font>
+                </th>
+
+                <th>
+                    <font size=1>Capacity</font>
+                </th>
+                <th>
+                    <font size=1>Botton Valve</font>
+                </th>
+                <th>
+                    <font size=1>Racking Valve</font>
+                </th>
+                <th>
+                    <font size=1>Ladder Support</font>
+                </th>
+                <th>
+                    <font size=1>Sample Tap</font>
+                </th>
+                <th>
+                    <font size=1>Liftnin Arm</font>
+                </th>
+                <th>
+                    <font size=1>Vent</font>
+                </th>
+                <th>
+                    <font size=1>Wall Thickness Bottom Thickness</font>
+                </th>
+                <th>
+                    <font size=1 class="text-center">  Replacement Inflatable Gasket</font>
+                </th>
+
+
+                <th>
+                    <font size=1> Location</font>
+                </th>
+                <th>
+                    <font size=1> Actions</font>
+                </th>
+
+            </tr>
+        </thead>
+        <tbody id="myTable">
+
+            @foreach (var item in Model)
+            {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.code_produt)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.price)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.capacity)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.botton_valve)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.racking_valve)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ladder_suport)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.sample_tap)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.liftning_arm)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.vent)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.wall_thickness_bottom_thickness)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.replacement_inflatable_gasket)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.Locations_StPats.description)
+                </td>
+
+                <td>
+                    <button class="btn btn-info btn-sm" onclick="location.href = '@Url.Action("Details","Tank_LFBT_VC_StPats", new { id = item.id_filter_acf })'">
+                        <span class=" glyphicon glyphicon-th-list"></span>&nbsp;  Details
+                    </button>
+                    <p></p>
+                    <button class="btn btn-success btn-sm" onclick="location.href = '@Url.Action("Create","Lista_Productos_StPats", new { id = item.id_producto_general, precio =item.price })'">
+                        <span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart
+                    </button>
+                </td>
+
+            </tr>
+            }
+
+        </tbody>
+    </table>
+</div>
+
+
+<script>
+    $(document).ready(function () {
+        $("#myInput").on("keyup", function () {
+            var value = $(this).val().toLowerCase();
+            $("#myTable tr").filter(function () {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+        });
+    });
+</script>
+
+

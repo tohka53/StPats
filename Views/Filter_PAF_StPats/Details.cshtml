@@ -1,0 +1,116 @@
+﻿@model StPats.Models.Filter_PAF_StPats
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2 class="text-center">Details for the product: @Html.DisplayFor(model => model.code_produt) </h2>
+<div class="container">
+
+    <h4>
+
+        <dt>
+            Name Product
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.name_product)
+        </dd>
+
+        <dt>
+            Description
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.description)
+        </dd>
+
+        <dt>
+            Price
+        </dt>
+
+        <dd>
+            $ @Html.DisplayFor(model => model.price)
+        </dd>
+
+
+        <dt>
+            Noryl Plates
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.noryl_plates)
+        </dd>
+        <dt>
+            Minimum/Maximum Number Of Plates
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.number_of_plates)
+        </dd>
+        <dt>
+            Filter Surface Area
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.filter_surface_area)
+        </dd>
+
+        <dt>
+            Location
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Locations_StPats.description)
+        </dd>
+
+        <dt>
+            Name Manufactured
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Manufactured_Stpats.name_manufactured)
+        </dd>
+
+
+
+
+        <dt>
+            Extra Details
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.extra_things)
+        </dd>
+        <dt>
+            Manual
+        </dt>
+
+        <dd>
+            <a href="@Html.DisplayFor(model => model.manual)"> See Manual</a>
+        </dd>
+
+        <dt>
+            Image
+        </dt>
+
+        <dd>
+            <a href="@Html.DisplayFor(model => model.image)"> See Image</a>
+        </dd>
+        </dl>
+    </h4>
+</div>
+<p>
+    <div class="form-group text-center">
+
+        <button class="btn btn-success btn-sm" onclick="location.href = '@Url.Action("Create","Lista_Productos_StPats", new { id = Model.Productos_StPats.id_producto, precio =Model.price })'">
+            <span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart
+        </button>
+    </div>
+    <div class="form-group text-center">
+        <button class="btn-bitbucket btn-sm" onclick="location.href = '@Url.Action("Index")'">
+            <span class="	glyphicon glyphicon-backward"></span>&nbsp; Back to the last page
+        </button>
+    </div>
+
+</p>

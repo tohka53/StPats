@@ -1,0 +1,151 @@
+﻿@model IEnumerable<StPats.Models.Filter_CH_StPats>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+
+
+<div class="container">
+    <h2>Cartridge Housings </h2>
+    <p><strong>From left to right: Triple with 2 gauges, 30" single with one gauge, 10" housing </strong></p>
+    <p>
+
+
+
+    </p>
+    <input class="form-control" id="myInput" type="text" placeholder="Search..">
+
+    <br>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>
+                    Model
+                </th>
+
+
+                <th>
+                    30" Single with 2 Gauges
+                </th>
+                <th>
+                    10" Single with 2 Gauges
+                </th>
+                <th>
+                    30" TRIPLE with 2 Gauges
+                </th>
+                <th>
+                    Location
+                </th>
+                <th>
+                    Actions
+                </th>
+
+
+
+            </tr>
+        </thead>
+        <tbody id="myTable">
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.name_product)
+                    </td>
+
+
+
+                    <td>
+                        $  @Html.DisplayFor(modelItem => item.price_single_30)
+                        <br />
+                        <button class="btn btn-success btn-sm" onclick="location.href = '@Url.Action("Create","Lista_Productos_StPats", new { id = item.id_producto_general, precio =item.price_single_30 })'">
+                            <span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart
+                        </button>
+                    </td>
+                    <td>
+                        $ @Html.DisplayFor(modelItem => item.price_single_10)
+                        <br />
+                        <button class="btn btn-success btn-sm" onclick="location.href = '@Url.Action("Create","Lista_Productos_StPats", new { id = item.id_producto_general, precio =item.price_single_10 })'">
+                            <span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart
+                        </button>
+                    </td>
+                    <td>
+                        $  @Html.DisplayFor(modelItem => item.price_triple_30)
+                        <br />
+                        <button class="btn btn-success btn-sm" onclick="location.href = '@Url.Action("Create","Lista_Productos_StPats", new { id = item.id_producto_general, precio =item.price_triple_30 })'">
+                            <span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart
+                        </button>
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Locations_StPats.description)
+                    </td>
+
+                    <td>
+                        <button class="btn btn-info btn-sm" onclick="location.href = '@Url.Action("Details","Filter_CH_StPats", new { id = item.id_filter_ch })'">
+                            <span class=" glyphicon glyphicon-th-list"></span>&nbsp;  Details
+                        </button>
+                        <p></p>
+
+                    </td>
+
+                </tr>
+            }
+
+        </tbody>
+    </table>
+</div>
+<div class="row">
+    <div class="col-md-7">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="text-center"> <strong>    Important Details</strong></div>
+            <p></p>
+
+            Cartridge Blanks--these permit the use of the triple housing with one (or two) cartridges. Simply plug the unused port(s) with blank(s).<br />
+
+            Sight Glass: A sight glass can be used at any point in the filter system. It is used to simply indicate when filtration begins or ends. Click here for sight glasses. These units are 1.5" TriClamp.<br />
+
+            Housing bell polish: RA=8 micron-inch (inside and outside). Base polish: RA= 25 micron-inch. These values were measured by St. Patrick's with our Surface Roughness Analyzer.<br />
+
+            <strong>Sanitary Gauge.</strong><br />
+            Glycerin filled diaphragm. Do not remove the base from the gauge.<br />
+            Glycerin filled casing. The purpose of the glycerin is to prevent needle chatter. There will be a bubble in the glycerin.<br />
+             <div class="text-center">   <strong class="text-center">Cartridge Filters</strong></div>
+          <br />
+            All PES and PP cartridge filters are produced in a clean room.<br />
+            <img src="~/Content/img/CartridgeFilters.jpg"width="60%" />
+            <p></p>
+
+        </div>
+    </div>
+
+    <div class="col-md-5">
+        <img src="~/Content/img/CartridgeFilters3.jpg" width="57%"/>
+   
+    </div>
+</div>
+
+
+<script>
+    $(document).ready(function () {
+        $("#myInput").on("keyup", function () {
+            var value = $(this).val().toLowerCase();
+            $("#myTable tr").filter(function () {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+        });
+    });
+</script>
+
+

@@ -1,0 +1,99 @@
+﻿@model StPats.Models.Filter_PES_StPats
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2 class="text-center">Details for the product: @Html.DisplayFor(model => model.name_product) </h2>
+<div class="container">
+
+    <h4>
+
+        <dt>
+            Name Product
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.name_product)
+        </dd>
+
+        <dt>
+            Description
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.description)
+        </dd>
+
+
+        <dt>
+            Extra Things
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.extra_things)
+        </dd>
+
+        <dt>
+            Micron
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.micron)
+        </dd>
+
+        <dt>
+            10" Each
+        </dt>
+
+        <dd>
+            $ @Html.DisplayFor(model => model.price_only_10)<br />
+            <button class="btn btn-success btn-sm" onclick="location.href = '@Url.Action("Create","Lista_Productos_StPats", new { id = Model.Productos_StPats.id_producto, precio =Model.price_only_10 })'">
+                <span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart
+            </button>
+        </dd>
+
+        <dt>
+            10" Box Of 30
+        </dt>
+
+        <dd>
+            $ @Html.DisplayFor(model => model.price_10_30)
+            <br />
+            <button class="btn btn-success btn-sm" onclick="location.href = '@Url.Action("Create","Lista_Productos_StPats", new { id = Model.Productos_StPats.id_producto, precio =Model.price_10_30 })'">
+                <span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart
+            </button>
+        </dd>
+
+        <dt>
+            30" Each
+        </dt>
+
+        <dd>
+            $ @Html.DisplayFor(model => model.price_only_30)
+            <br />
+            <button class="btn btn-success btn-sm" onclick="location.href = '@Url.Action("Create","Lista_Productos_StPats", new { id = Model.Productos_StPats.id_producto, precio =Model.price_only_30 })'">
+                <span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart
+            </button>
+        </dd>
+
+        <dt>
+            30" Box Of 15
+        </dt>
+
+        <dd>
+            $ @Html.DisplayFor(model => model.price_15_30)
+            <br />
+            <button class="btn btn-success btn-sm" onclick="location.href = '@Url.Action("Create","Lista_Productos_StPats", new { id = Model.Productos_StPats.id_producto, precio =Model.price_15_30 })'">
+                <span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart
+            </button>
+        </dd>
+
+
+        </dl>
+</div>
+<div class="form-group text-center">
+    <button class="btn-bitbucket btn-sm" onclick="location.href = '@Url.Action("Index")'">
+        <span class="	glyphicon glyphicon-backward"></span>&nbsp; Back to the last page
+    </button>
+</div>

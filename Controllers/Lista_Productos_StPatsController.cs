@@ -12,13 +12,13 @@ namespace StPats.Controllers
 {
     public class Lista_Productos_StPatsController : Controller
     {
-        private StPatsDataBaseEntities db = new StPatsDataBaseEntities();
-
+        private StPatsWEB_dbEntities db = new StPatsWEB_dbEntities();
+        // private StPatsEntities db = new StPatsEntities();
         // GET: Lista_Productos_StPats
         public ActionResult Index()
         {
-            var lista_Productos_StPats = db.Lista_Productos_StPats.Include(l => l.Estado_StPats).Include(l => l.Productos_StPats);
-            return View(lista_Productos_StPats.ToList());
+
+            return View(db.Lista_Productos_StPats.ToList());
         }
 
         // GET: Lista_Productos_StPats/Details/5
@@ -69,7 +69,7 @@ namespace StPats.Controllers
             ViewBag.id_estado = new SelectList(db.Estado_StPats, "id_estado", "descripcion");
             ViewBag.id_producto = id;
             ViewBag.nombre_producto = new SelectList(db.Productos_StPats, "id_producto", "description");
-            ViewBag.precio = precio;
+            //ViewBag.precio = precio;
             var list = new List<SelectListItem>();
             for (var i = 1; i < 31; i++)
                 list.Add(new SelectListItem { Text = i.ToString(), Value = i.ToString() });
@@ -94,7 +94,7 @@ namespace StPats.Controllers
                 lista_Productos_StPats.precio_unitario = Convert.ToDecimal(precio);
                 lista_Productos_StPats.precio_total = Convert.ToDecimal(precio) * lista_Productos_StPats.id_cantidad;
                 DateTime currentDate = DateTime.Now;
-                var dateResult = currentDate.ToString("yyyy/dd/MM");
+                var dateResult = currentDate.ToString("yyyy/MM/dd");
                 lista_Productos_StPats.date = Convert.ToDateTime(dateResult);
                 db.SaveChanges();
                 return RedirectToAction("Bill", "Lista_Productos_StPats",new {id=lista_Productos_StPats.id_lista_producto });
@@ -102,7 +102,6 @@ namespace StPats.Controllers
 
             ViewBag.id_estado = new SelectList(db.Estado_StPats, "id_estado", "descripcion", lista_Productos_StPats.id_estado);
             ViewBag.id_producto = id;
-            ViewBag.nombre_producto = new SelectList(db.Productos_StPats, "id_producto", "description", lista_Productos_StPats.Productos_StPats.description);
           
             return View(lista_Productos_StPats);
         }

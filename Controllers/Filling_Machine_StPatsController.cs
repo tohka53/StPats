@@ -12,12 +12,12 @@ namespace StPats.Controllers
 {
     public class Filling_Machine_StPatsController : Controller
     {
-        private StPatsDataBaseEntities db = new StPatsDataBaseEntities();
-
+        private StPatsWEB_dbEntities db = new StPatsWEB_dbEntities();
+        // private StPatsEntities db = new StPatsEntities();
         // GET: Filling_Machine_StPats
         public ActionResult Index()
         {
-            var filling_Machine_StPats = db.Filling_Machine_StPats.Include(f => f.Estado_StPats).Include(f => f.Locations_StPats).Include(f => f.Manufactured_Stpats).Include(f => f.Productos_StPats).Include(f => f.Tipo_Producto_StPats);
+            var filling_Machine_StPats = db.Filling_Machine_StPats.Include(f => f.Estado_StPats).Include(f => f.Locations_StPats).Include(f => f.Manufactured_Stpats).Include(f => f.Tipo_Producto_StPats);
             return View(filling_Machine_StPats.ToList());
         }
 

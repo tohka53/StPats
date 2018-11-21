@@ -4,100 +4,183 @@
     ViewBag.Title = "Tanks";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<div class="row">
+    <div class="col-md-3">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="text-center"><strong>You Can Choose : </strong></div><br />
+            <div><strong>  Letina Variable Capacity Tanks </strong></div><br />
 
-<h2>Tanks</h2>
-
-<!---<div class="form-group">
-    <button class="btn btn-sm btn-success" onclick="location.href = '@Url.Action("Create")'">
-        <span class="glyphicon glyphicon-plus-sign"></span>&nbsp;Add New Locatios
-    </button>
-</div> -->
-<table class="table">
-    <tr>
-        <th>
-            Tank Code
-        </th>
-        <th>
-            Capacity
-        </th>
-        <th>
-            Bottom Valve
-        </th>
-        <th>
-            Manway
-        </th>
-        <th>
-            Lifting Arm
-        </th>
-        <th>
-            Vent
-        </th>
-        <th>
-            Replacemnet Infiatable Gasket
-        </th>
-
-        <th>
-            Stock
-        </th>
-        <th>
-            Location
-        </th>
-        <th>
-            Price
-        </th>
-        <th>
-            Actions
-        </th>
-    </tr>
-
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.codigo_tanque)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.capacidad)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.bottom_valve)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.manway)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.lifting_arm)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.vent)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.replacemnet_infiatable_gasket)
-            </td>
-
-            <td>
-                @Html.DisplayFor(modelItem => item.stok)
-            </td>
-
-
-            <td>
-                @Html.DisplayFor(modelItem => item.Locations_StPats.description)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.price)
-            </td>
-            <td>
-                <!--  <button class="btn btn-primary btn-sm" onclick="location.href = '@Url.Action("Edit", new { id = item.id_tanque })'">
-        <span class="glyphicon glyphicon-edit"></span>&nbsp;Edit
-    </button> -->
-                <button class="btn btn-info btn-sm" onclick="location.href = '@Url.Action("Details", new { id = item.id_tanque })'">
-                    <span class="glyphicon glyphicon-list-alt"></span>&nbsp; Details
+            <div class="form-group text-center">
+                <button class="btn-secondary btn-sm" onclick="location.href = '@Url.Action("Index","Tank_LSBT_VC_ACF_StPats")'">
+                    <span class="	glyphicon glyphicon-forward"></span>&nbsp;  Inclined (sloped) Bottom-with or without cooling jackets
                 </button>
-                <!--<button class="btn btn-danger btn-sm" onclick="location.href = '@Url.Action("Delete", new { id = item.id_tanque })'">
-         <span class="glyphicon glyphicon-trash"></span>&nbsp;Delete
-     </button>  -->
-            </td>
-        </tr>
-    }
+            </div>
 
-</table>
+
+            <div class="form-group text-center">
+                <button class="btn-info btn-sm" onclick="location.href = '@Url.Action("Index","Tank_LCBT_VC_ACF_StPats")'">
+                    <span class="	glyphicon glyphicon-forward"></span>&nbsp;    Conical Bottom-with or without cooling jackets
+                </button>
+            </div>
+
+            <div class="form-group text-center">
+                <button class="btn-secondary btn-sm" onclick="location.href = '@Url.Action("Index","Tank_TONW_StPats")'">
+                    <span class="	glyphicon glyphicon-forward"></span>&nbsp;    Tanks on Wheels-open top, with or without cooling jackets
+                </button>
+            </div>
+
+
+            <div class="form-group text-center">
+                <button class="btn-info btn-sm" onclick="location.href = '@Url.Action("Index","Tank_LFLT_VCCJ_StPats")'">
+                    <span class="	glyphicon glyphicon-forward"></span>&nbsp;  Forkliftable--Conical Bottom-with cooling jackets
+                </button>
+            </div>
+
+            <div class="form-group text-center">
+                <button class="btn-secondary btn-sm" onclick="location.href = '@Url.Action("Index","Tank_LFBT_VC_StPats")'">
+                    <span class="	glyphicon glyphicon-forward"></span>&nbsp;  Flat Bottom
+                </button>
+            </div>
+
+
+            <div><strong>   Letina Closed Top Tanks </strong></div><br />
+            <br />
+
+            <div class="form-group text-center">
+                <button class="btn-info btn-sm" onclick="location.href = '@Url.Action("Index","Tank_LCTTCJ_VC_StPats")'">
+                    <span class="	glyphicon glyphicon-forward"></span>&nbsp;   Red Fermenters—Cooling Jackets
+                </button>
+            </div>
+
+
+            <div class="form-group text-center">
+                <button class="btn-secondary btn-sm" onclick="location.href = '@Url.Action("Index","Tank_LWWFWCJCT_VC_StPats")'">
+                    <span class="	glyphicon glyphicon-forward"></span>&nbsp;     White Fermenters—Cooling Jackets
+                </button>
+            </div>
+
+
+            <div class="form-group text-center">
+                <button class="btn-info btn-sm" onclick="location.href = '@Url.Action("Index","Tank_LCTTCB_StPats")'">
+                    <span class="	glyphicon glyphicon-forward"></span>&nbsp;   Storage--with legs or with wheels
+                </button>
+            </div>
+            <div><strong> Letina Mixing Tanks </strong></div><br />
+            <div class="form-group text-center">
+                <button class="btn-secondary btn-sm" onclick="location.href = '@Url.Action("Index","Tank_MXT_StPats")'">
+                    <span class="	glyphicon glyphicon-forward"></span>&nbsp;  Letina Mixing Tanks
+                </button>
+            </div>
+
+
+
+
+            Instructions for Assembly of Floating Lid of Variable Capacity Tank<br />
+            Tank volume vs diameter (Multiply Lt/mm x 6.70997 to get Gallons/inch)<br />
+            Info regarding Stainless Steel Thickness: Gauge vs mm.<br />
+            General info regarding stainless steel finish.<br />
+            <br />
+            <div class="text-center">
+                <img src="~/images/MoetChandon.jpg" width=70%; />
+
+            </div>
+            <div class="text-center">
+                Letina installation at Moet & Chandon, France
+                YouTube video Moet and Chandon installation
+                </div>
+
+            </div>
+        </div>
+    <div class="col-md-6">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="text-center">
+                <strong> LETINA tanks are the BEST QUALITY tanks available.<br /></strong>
+            </div>
+            <br />
+            <div class="text-center"> <strong>              Letina YouTube videos<br /></strong></div>
+            <a href="https://www.youtube.com/watch?v=TUWDY11JbQc&feature=mfu_in_order&list=UL">Moet and Chandon installation </a><br />
+            <a href="https://www.youtube.com/watch?v=2ju_AjX6rOE&feature=mfu_in_order&list=UL">Square tank</a><br />
+            <br />
+
+
+            We have been selling Letina tanks since 2006. They are quite simply the highest quality wine tanks.<br />
+            <br />
+            <div class="text-center"> <strong>Letina tanks have many superior quality features</strong></div><br />
+
+            <p>•  Higher quality lifting arms with 2 brackets (not one) welded to tank for smooth operation.
+            <p> • Higher quality finish of welds—polished and treated—not porous.
+            <p> • Tank ports are Swaged to increase strength (as opposed to simply butt-welding ferrules to flat punched hole)
+            <p>• eamless manway welds
+            <p>• Reinforcing Ring on racking port
+            <p> •  2R finish, 304 stainless. [2R aka BA-bright annealed]
+                <br />
+                <div class="text-center"> <strong>In addition, St. Patrick's provides Letina tanks with additional quality features</strong></div>
+
+                <br />
+
+            <p>•  Large cooling jackets
+            <p>•  Better quality Vent-211(This adds $50 to the price of each tank compared with white plastic vents)<br />
+            <p>•  Extra thermowell for sensor (tanks with cooling jackets)<br />
+            <p>•  Complete Pump-Over with spinning sprinkler on VIK tanks (Red/White Closed Top fermenters)<br />
+            <p>• Complete set of valves----(Compare to suppliers in which valves are optional or only one of two valves is provided.)<br />
+
+
+    <hr />
+    <br />
+    <br />
+    <div class="text-center">
+        <img src="~/images/Sprinkler3.jpg " width=30%; />
+
+    </div>
+    <br />
+
+    <div class="text-center">
+        Letina installation at Moet & Chandon, France
+        YouTube video Moet and Chandon installation
+    </div>
+</div>
+    </div>
+    <div class="col-md-3">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="text-center">
+                <strong>Parts and Manuals</strong>
+            </div>
+            <p>
+                <strong>
+                    Go here for Replacement Parts
+                    and other accessories including
+                </strong>
+
+            <p>
+                Inflatable Gaskets
+                Tank Vent
+                Rotating Racking Arms
+                Sample Tap Parts
+                Spray Ball
+                Carbonation/Aeration Stone
+            </p>
+            <hr />
+            <div class="jumbotron jumbotron-fluid">
+                <div class="text-center"> <strong>Types Of Filters</strong></div>
+                <p></p>
+
+                <p>
+                    Vent-211 is standard on our Letina tanks. The vent attaches to a 2" diameter pipe (~4" long). This pipe reduces the problem of wine coming through the vent. Vent-211 is better quality vent than the white plastic vents that are common to most tanks.
+                </p>
+                <div class="text-center">  <img src="~/images/VentDN50-2.jpg" width=50%; /></div>
+            </div>
+            <hr />
+            <p>
+                <div class="text-center">
+              <strong>Swaged Port and Reinforcing Ring.</strong>
+                </div>
+
+        <p> Swaging means punching a hole, then pushing out the tank wall. This makes a stronger connection. All ports are swaged.
+
+        <p>
+            Reinforcing Ring is actually on the inside of the tank but its outline can be seen in the photo. It is 3.5" diameter x 1/4" thick. This greatly strengthens the racking valve connection.
+        </p>
+        <div class="text-center">  <img src="~/images/ReinforcedFerrule.jpg" width=50%;/></div>
+    </div>
+    </div>
+</div>

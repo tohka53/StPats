@@ -1,0 +1,686 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="StPatsWEB_dbModelStoreContainer" CdmEntityContainer="StPatsWEB_dbEntities">
+    <EntitySetMapping Name="Bill_StPats">
+      <EntityTypeMapping TypeName="StPatsWEB_dbModel.Bill_StPats">
+        <MappingFragment StoreEntitySet="Bill_StPats">
+          <ScalarProperty Name="id_bill" ColumnName="id_bill" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="id_paymet" ColumnName="id_paymet" />
+          <ScalarProperty Name="id_shoppingCart" ColumnName="id_shoppingCart" />
+          <ScalarProperty Name="id_estado" ColumnName="id_estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bottle_Finishing_StPats">
+      <EntityTypeMapping TypeName="StPatsWEB_dbModel.Bottle_Finishing_StPats">
+        <MappingFragment StoreEntitySet="Bottle_Finishing_StPats">
+          <ScalarProperty Name="C_id___bottle_finishing" ColumnName="[id_&#xD;&#xA;bottle_finishing" />
+          <ScalarProperty Name="id_producto_general" ColumnName="id_producto_general" />
+          <ScalarProperty Name="id_tipo_product" ColumnName="id_tipo_product" />
+          <ScalarProperty Name="code_product" ColumnName="code_product" />
+          <ScalarProperty Name="name_product" ColumnName="name_product" />
+          <ScalarProperty Name="desctiption" ColumnName="desctiption" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="id_location" ColumnName="id_location" />
+          <ScalarProperty Name="image" ColumnName="image" />
+          <ScalarProperty Name="manual" ColumnName="manual" />
+          <ScalarProperty Name="voltage_regulator" ColumnName="voltage_regulator" />
+          <ScalarProperty Name="id_manufactured" ColumnName="id_manufactured" />
+          <ScalarProperty Name="stock" ColumnName="stock" />
+          <ScalarProperty Name="id_estado" ColumnName="id_estado" />
+          <ScalarProperty Name="extra_things" ColumnName="extra_things" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ciudades_StPats">
+      <EntityTypeMapping TypeName="StPatsWEB_dbModel.Ciudades_StPats">
+        <MappingFragment StoreEntitySet="Ciudades_StPats">
+          <ScalarProperty Name="id_ciudad" ColumnName="id_ciudad" />
+          <ScalarProperty Name="nombre_ciudad" ColumnName="nombre_ciudad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Clients_StPats">
+      <EntityTypeMapping TypeName="StPatsWEB_dbModel.Clients_StPats">
+        <MappingFragment StoreEntitySet="Clients_StPats">
+          <ScalarProperty Name="id_cliente" ColumnName="id_cliente" />
+          <ScalarProperty Name="nombre_cliente" ColumnName="nombre_cliente" />
+          <ScalarProperty Name="usuario" ColumnName="usuario" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="retry_password" ColumnName="retry_password" />
+          <ScalarProperty Name="id_ciudad_estado" ColumnName="id_ciudad_estado" />
+          <ScalarProperty Name="zip_code" ColumnName="zip_code" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Estado_StPats">
+      <EntityTypeMapping TypeName="StPatsWEB_dbModel.Estado_StPats">
+        <MappingFragment StoreEntitySet="Estado_StPats">
+          <ScalarProperty Name="id_estado" ColumnName="id_estado" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Filling_Machine_StPats">
+      <EntityTypeMapping TypeName="StPatsWEB_dbModel.Filling_Machine_StPats">
+        <MappingFragment StoreEntitySet="Filling_Machine_StPats">
+          <ScalarProperty Name="id_filling_machine" ColumnName="id_filling_machine" />
+          <ScalarProperty Name="id_producto_general" ColumnName="id_producto_general" />
+          <ScalarProperty Name="id_tipo_product" ColumnName="id_tipo_product" />
+          <ScalarProperty Name="code_produt" ColumnName="code_produt" />
+          <ScalarProperty Name="name_product" ColumnName="name_product" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="id_location" ColumnName="id_location" />
+          <ScalarProperty Name="image" ColumnName="image" />
+          <ScalarProperty Name="manual" ColumnName="manual" />
+          <ScalarProperty Name="voltage_regulator" ColumnName="voltage_regulator" />
+          <ScalarProperty Name="id_manufactured" ColumnName="id_manufactured" />
+          <ScalarProperty Name="regulador" ColumnName="regulador" />
+          <ScalarProperty Name="stock" ColumnName="stock" />
+          <ScalarProperty Name="id_estado" ColumnName="id_estado" />
+          <ScalarProperty Name="extra_things" ColumnName="extra_things" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Filter_ACF_StPats">
+      <EntityTypeMapping TypeName="StPatsWEB_dbModel.Filter_ACF_StPats">
+        <MappingFragment StoreEntitySet="Filter_ACF_StPats">
+          <ScalarProperty Name="id_filter_acf" ColumnName="id_filter_acf" />
+          <ScalarProperty Name="id_producto_general" ColumnName="id_producto_general" />
+          <ScalarProperty Name="id_tipo_product" ColumnName="id_tipo_product" />
+          <ScalarProperty Name="code_produt" ColumnName="code_produt" />
+          <ScalarProperty Name="name_product" ColumnName="name_product" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="id_location" ColumnName="id_location" />
+          <ScalarProperty Name="id_manufactured" ColumnName="id_manufactured" />
+          <ScalarProperty Name="stock" ColumnName="stock" />
+          <ScalarProperty Name="id_estado" ColumnName="id_estado" />
+          <ScalarProperty Name="extra_things" ColumnName="extra_things" />
+          <ScalarProperty Name="micron" ColumnName="micron" />
+          <ScalarProperty Name="price_only_10" ColumnName="price_only_10" />
+          <ScalarProperty Name="price_10_30" ColumnName="price_10_30" />
+          <ScalarProperty Name="price_only_30" ColumnName="price_only_30" />
+          <ScalarProperty Name="price_15_30" ColumnName="price_15_30" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Filter_CH_StPats">
+      <EntityTypeMapping TypeName="StPatsWEB_dbModel.Filter_CH_StPats">
+        <MappingFragment StoreEntitySet="Filter_CH_StPats">
+          <ScalarProperty Name="id_filter_ch" ColumnName="id_filter_ch" />
+          <ScalarProperty Name="id_producto_general" ColumnName="id_producto_general" />
+          <ScalarProperty Name="id_tipo_product" ColumnName="id_tipo_product" />
+          <ScalarProperty Name="code_produt" ColumnName="code_produt" />
+          <ScalarProperty Name="name_product" ColumnName="name_product" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="id_location" ColumnName="id_location" />
+          <ScalarProperty Name="id_manufactured" ColumnName="id_manufactured" />
+          <ScalarProperty Name="stock" ColumnName="stock" />
+          <ScalarProperty Name="id_estado" ColumnName="id_estado" />
+          <ScalarProperty Name="extra_things" ColumnName="extra_things" />
+          <ScalarProperty Name="micron" ColumnName="micron" />
+          <ScalarProperty Name="price_single_10" ColumnName="price_single_10" />
+          <ScalarProperty Name="price_single_30" ColumnName="price_single_30" />
+          <ScalarProperty Name="price_triple_30" ColumnName="price_triple_30" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Filter_PAF_StPats">
+      <EntityTypeMapping TypeName="StPatsWEB_dbModel.Filter_PAF_StPats">
+        <MappingFragment StoreEntitySet="Filter_PAF_StPats">
+          <ScalarProperty Name="id_filter_paf" ColumnName="id_filter_paf" />
+          <ScalarProperty Name="id_producto_general" ColumnName="id_producto_general" />
+          <ScalarProperty Name="id_tipo_product" ColumnName="id_tipo_product" />
+          <ScalarProperty Name="code_produt" ColumnName="code_produt" />
+          <ScalarProperty Name="name_product" ColumnName="name_product" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="id_location" ColumnName="id_location" />
+          <ScalarProperty Name="image" ColumnName="image" />
+          <ScalarProperty Name="manual" ColumnName="manual" />
+          <ScalarProperty Name="id_manufactured" ColumnName="id_manufactured" />
+          <ScalarProperty Name="stock" ColumnName="stock" />
+          <ScalarProperty Name="id_estado" ColumnName="id_estado" />
+          <ScalarProperty Name="extra_things" ColumnName="extra_things" />
+          <ScalarProperty Name="noryl_plates" ColumnName="noryl_plates" />
+          <ScalarProperty Name="number_of_plates" ColumnName="number_of_plates" />
+          <ScalarProperty Name="filter_surface_area" ColumnName="filter_surface_area" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Filter_PES_StPats">
+      <EntityTypeMapping TypeName="StPatsWEB_dbModel.Filter_PES_StPats">
+        <MappingFragment StoreEntitySet="Filter_PES_StPats">
+          <ScalarProperty Name="id_filter_pes" ColumnName="id_filter_pes" />
+          <ScalarProperty Name="id_producto_general" ColumnName="id_producto_general" />
+          <ScalarProperty Name="id_tipo_product" ColumnName="id_tipo_product" />
+          <ScalarProperty Name="code_produt" ColumnName="code_produt" />
+          <ScalarProperty Name="name_product" ColumnName="name_product" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="id_location" ColumnName="id_location" />
+          <ScalarProperty Name="id_manufactured" ColumnName="id_manufactured" />
+          <ScalarProperty Name="stock" ColumnName="stock" />
+          <ScalarProperty Name="id_estado" ColumnName="id_estado" />
+          <ScalarProperty Name="extra_things" ColumnName="extra_things" />
+          <ScalarProperty Name="micron" ColumnName="micron" />
+          <ScalarProperty Name="price_only_10" ColumnName="price_only_10" />
+          <ScalarProperty Name="price_10_30" ColumnName="price_10_30" />
+          <ScalarProperty Name="price_only_30" ColumnName="price_only_30" />
+          <ScalarProperty Name="price_15_30" ColumnName="price_15_30" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Filter_PP_StPats">
+      <EntityTypeMapping TypeName="StPatsWEB_dbModel.Filter_PP_StPats">
+        <MappingFragment StoreEntitySet="Filter_PP_StPats">
+          <ScalarProperty Name="id_filter_pp" ColumnName="id_filter_pp" />
+          <ScalarProperty Name="id_producto_general" ColumnName="id_producto_general" />
+          <ScalarProperty Name="id_tipo_product" ColumnName="id_tipo_product" />
+          <ScalarProperty Name="code_produt" ColumnName="code_produt" />
+          <ScalarProperty Name="name_product" ColumnName="name_product" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="id_location" ColumnName="id_location" />
+          <ScalarProperty Name="id_manufactured" ColumnName="id_manufactured" />
+          <ScalarProperty Name="stock" ColumnName="stock" />
+          <ScalarProperty Name="id_estado" ColumnName="id_estado" />
+          <ScalarProperty Name="extra_things" ColumnName="extra_things" />
+          <ScalarProperty Name="micron" ColumnName="micron" />
+          <ScalarProperty Name="price_only_10" ColumnName="price_only_10" />
+          <ScalarProperty Name="price_10_30" ColumnName="price_10_30" />
+          <ScalarProperty Name="price_only_30" ColumnName="price_only_30" />
+          <ScalarProperty Name="price_15_30" ColumnName="price_15_30" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Filter_StPats">
+      <EntityTypeMapping TypeName="StPatsWEB_dbModel.Filter_StPats">
+        <MappingFragment StoreEntitySet="Filter_StPats">
+          <ScalarProperty Name="id_filter" ColumnName="id_filter" />
+          <ScalarProperty Name="id_producto_general" ColumnName="id_producto_general" />
+          <ScalarProperty Name="id_tipo_product" ColumnName="id_tipo_product" />
+          <ScalarProperty Name="code_produt" ColumnName="code_produt" />
+          <ScalarProperty Name="name_product" ColumnName="name_product" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="id_location" ColumnName="id_location" />
+          <ScalarProperty Name="image" ColumnName="image" />
+          <ScalarProperty Name="manual" ColumnName="manual" />
+          <ScalarProperty Name="id_manufactured" ColumnName="id_manufactured" />
+          <ScalarProperty Name="stock" ColumnName="stock" />
+          <ScalarProperty Name="id_estado" ColumnName="id_estado" />
+          <ScalarProperty Name="extra_things" ColumnName="extra_things" />
+          <ScalarProperty Name="id_tipo_filter" ColumnName="id_tipo_filter" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Filtros_StPats">
+      <EntityTypeMapping TypeName="StPatsWEB_dbModel.Filtros_StPats">
+        <MappingFragment StoreEntitySet="Filtros_StPats">
+          <ScalarProperty Name="id_location" ColumnName="id_location" />
+          <ScalarProperty Name="id_filtro" ColumnName="id_filtro" />
+          <ScalarProperty Name="filtro_codigo" ColumnName="filtro_codigo" />
+          <ScalarProperty Name="numero_plates" ColumnName="numero_plates" />
+          <ScalarProperty Name="area_superficie" ColumnName="area_superficie" />
+          <ScalarProperty Name="precio" ColumnName="precio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Labeler_StPats">
+      <EntityTypeMapping TypeName="StPatsWEB_dbModel.Labeler_StPats">
+        <MappingFragment StoreEntitySet="Labeler_StPats">
+          <ScalarProperty Name="id_labeler" ColumnName="id_labeler" />
+          <ScalarProperty Name="id_producto_general" ColumnName="id_producto_general" />
+          <ScalarProperty Name="id_tipo_product" ColumnName="id_tipo_product" />
+          <ScalarProperty Name="code_produt" ColumnName="code_produt" />
+          <ScalarProperty Name="name_product" ColumnName="name_product" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="voltage_regulator" ColumnName="voltage_regulator" />
+          <ScalarProperty Name="id_location" ColumnName="id_location" />
+          <ScalarProperty Name="image" ColumnName="image" />
+          <ScalarProperty Name="manual" ColumnName="manual" />
+          <ScalarProperty Name="id_manufactured" ColumnName="id_manufactured" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="stock" ColumnName="stock" />
+          <ScalarProperty Name="extra_things" ColumnName="extra_things" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Lista_Productos_StPats">
+      <EntityTypeMapping TypeName="StPatsWEB_dbModel.Lista_Productos_StPats">
+        <MappingFragment StoreEntitySet="Lista_Productos_StPats">
+          <ScalarProperty Name="id_lista_producto" ColumnName="id_lista_producto" />
+          <ScalarProperty Name="id_producto" ColumnName="id_producto" />
+          <ScalarProperty Name="id_cantidad" ColumnName="id_cantidad" />
+          <ScalarProperty Name="precio_unitario" ColumnName="precio_unitario" />
+          <ScalarProperty Name="precio_total" ColumnName="precio_total" />
+          <ScalarProperty Name="id_estado" ColumnName="id_estado" />
+          <ScalarProperty Name="date" ColumnName="date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Locations_StPats">
+      <EntityTypeMapping TypeName="StPatsWEB_dbModel.Locations_StPats">
+        <MappingFragment StoreEntitySet="Locations_StPats">
+          <ScalarProperty Name="id_location" ColumnName="id_location" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Manufactured_Stpats">
+      <EntityTypeMapping TypeName="StPatsWEB_dbModel.Manufactured_Stpats">
+        <MappingFragment StoreEntitySet="Manufactured_Stpats">
+          <ScalarProperty Name="id_manufactured" ColumnName="id_manufactured" />
+          <ScalarProperty Name="name_manufactured" ColumnName="name_manufactured" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PayMet_StPats">
+      <EntityTypeMapping TypeName="StPatsWEB_dbModel.PayMet_StPats">
+        <MappingFragment StoreEntitySet="PayMet_StPats">
+          <ScalarProperty Name="id_tipo_pago" ColumnName="id_tipo_pago" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Productos_StPats">
+      <EntityTypeMapping TypeName="StPatsWEB_dbModel.Productos_StPats">
+        <MappingFragment StoreEntitySet="Productos_StPats">
+          <ScalarProperty Name="id_producto" ColumnName="id_producto" />
+          <ScalarProperty Name="id_tipo_producto" ColumnName="id_tipo_producto" />
+          <ScalarProperty Name="product_name" ColumnName="product_name" />
+          <ScalarProperty Name="id_location" ColumnName="id_location" />
+          <ScalarProperty Name="id_estado" ColumnName="id_estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pump_StPats">
+      <EntityTypeMapping TypeName="StPatsWEB_dbModel.Pump_StPats">
+        <MappingFragment StoreEntitySet="Pump_StPats">
+          <ScalarProperty Name="id_pump" ColumnName="id_pump" />
+          <ScalarProperty Name="id_producto_general" ColumnName="id_producto_general" />
+          <ScalarProperty Name="id_tipo_product" ColumnName="id_tipo_product" />
+          <ScalarProperty Name="code_produt" ColumnName="code_produt" />
+          <ScalarProperty Name="name_product" ColumnName="name_product" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="image" ColumnName="image" />
+          <ScalarProperty Name="manual" ColumnName="manual" />
+          <ScalarProperty Name="id_manufactured" ColumnName="id_manufactured" />
+          <ScalarProperty Name="id_estado" ColumnName="id_estado" />
+          <ScalarProperty Name="extra_things" ColumnName="extra_things" />
+          <ScalarProperty Name="stock" ColumnName="stock" />
+          <ScalarProperty Name="voltage_regulator" ColumnName="voltage_regulator" />
+          <ScalarProperty Name="id_location" ColumnName="id_location" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Shopping_Cart_Detalle_StPats">
+      <EntityTypeMapping TypeName="StPatsWEB_dbModel.Shopping_Cart_Detalle_StPats">
+        <MappingFragment StoreEntitySet="Shopping_Cart_Detalle_StPats">
+          <ScalarProperty Name="id_shoppingcart_detalle" ColumnName="id_shoppingcart_detalle" />
+          <ScalarProperty Name="id_shoppingcart" ColumnName="id_shoppingcart" />
+          <ScalarProperty Name="id_lista_producto" ColumnName="id_lista_producto" />
+          <ScalarProperty Name="id_estado" ColumnName="id_estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Shopping_Cart_StPats">
+      <EntityTypeMapping TypeName="StPatsWEB_dbModel.Shopping_Cart_StPats">
+        <MappingFragment StoreEntitySet="Shopping_Cart_StPats">
+          <ScalarProperty Name="id_shoppingcart" ColumnName="id_shoppingcart" />
+          <ScalarProperty Name="id_cliente" ColumnName="id_cliente" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="monto_sin_taxes" ColumnName="monto_sin_taxes" />
+          <ScalarProperty Name="taxes" ColumnName="taxes" />
+          <ScalarProperty Name="monto_total" ColumnName="monto_total" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StaCi_StPats">
+      <EntityTypeMapping TypeName="StPatsWEB_dbModel.StaCi_StPats">
+        <MappingFragment StoreEntitySet="StaCi_StPats">
+          <ScalarProperty Name="id_ciudad_estado" ColumnName="id_ciudad_estado" />
+          <ScalarProperty Name="id_estado" ColumnName="id_estado" />
+          <ScalarProperty Name="id_ciudad" ColumnName="id_ciudad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Statax_StPats">
+      <EntityTypeMapping TypeName="StPatsWEB_dbModel.Statax_StPats">
+        <MappingFragment StoreEntitySet="Statax_StPats">
+          <ScalarProperty Name="id_estado_impuesto" ColumnName="id_estado_impuesto" />
+          <ScalarProperty Name="id_estado" ColumnName="id_estado" />
+          <ScalarProperty Name="impuesto" ColumnName="impuesto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="State_StPats">
+      <EntityTypeMapping TypeName="StPatsWEB_dbModel.State_StPats">
+        <MappingFragment StoreEntitySet="State_StPats">
+          <ScalarProperty Name="is_estado" ColumnName="is_estado" />
+          <ScalarProperty Name="nombre_estado" ColumnName="nombre_estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tank_LCBT_VC_ACF_StPats">
+      <EntityTypeMapping TypeName="StPatsWEB_dbModel.Tank_LCBT_VC_ACF_StPats">
+        <MappingFragment StoreEntitySet="Tank_LCBT-VC_ACF_StPats">
+          <ScalarProperty Name="id_filter_acf" ColumnName="id_filter_acf" />
+          <ScalarProperty Name="id_producto_general" ColumnName="id_producto_general" />
+          <ScalarProperty Name="id_tipo_product" ColumnName="id_tipo_product" />
+          <ScalarProperty Name="code_produt" ColumnName="code_produt" />
+          <ScalarProperty Name="name_product" ColumnName="name_product" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="id_location" ColumnName="id_location" />
+          <ScalarProperty Name="id_manufactured" ColumnName="id_manufactured" />
+          <ScalarProperty Name="stock" ColumnName="stock" />
+          <ScalarProperty Name="id_estado" ColumnName="id_estado" />
+          <ScalarProperty Name="extra_things" ColumnName="extra_things" />
+          <ScalarProperty Name="capacity" ColumnName="capacity" />
+          <ScalarProperty Name="orientation" ColumnName="orientation" />
+          <ScalarProperty Name="total_area" ColumnName="total_area" />
+          <ScalarProperty Name="botton_valve" ColumnName="botton_valve" />
+          <ScalarProperty Name="racking_valve" ColumnName="racking_valve" />
+          <ScalarProperty Name="sample_tap" ColumnName="sample_tap" />
+          <ScalarProperty Name="thermometer_in_thermowell" ColumnName="thermometer_in_thermowell" />
+          <ScalarProperty Name="thermowell_for_sensor" ColumnName="thermowell_for_sensor" />
+          <ScalarProperty Name="liftning_arm" ColumnName="liftning_arm" />
+          <ScalarProperty Name="vent" ColumnName="vent" />
+          <ScalarProperty Name="wall_thickness_bottom_thickness" ColumnName="wall_thickness_bottom_thickness" />
+          <ScalarProperty Name="replacement_inflatable_gasket" ColumnName="replacement_inflatable_gasket" />
+          <ScalarProperty Name="price" ColumnName="price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tank_LCTTCB_StPats">
+      <EntityTypeMapping TypeName="StPatsWEB_dbModel.Tank_LCTTCB_StPats">
+        <MappingFragment StoreEntitySet="Tank_LCTTCB_StPats">
+          <ScalarProperty Name="id_filter_acf" ColumnName="id_filter_acf" />
+          <ScalarProperty Name="id_producto_general" ColumnName="id_producto_general" />
+          <ScalarProperty Name="id_tipo_product" ColumnName="id_tipo_product" />
+          <ScalarProperty Name="code_produt" ColumnName="code_produt" />
+          <ScalarProperty Name="name_product" ColumnName="name_product" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="id_location" ColumnName="id_location" />
+          <ScalarProperty Name="id_manufactured" ColumnName="id_manufactured" />
+          <ScalarProperty Name="stock" ColumnName="stock" />
+          <ScalarProperty Name="id_estado" ColumnName="id_estado" />
+          <ScalarProperty Name="extra_things" ColumnName="extra_things" />
+          <ScalarProperty Name="capacity" ColumnName="capacity" />
+          <ScalarProperty Name="botton_valve" ColumnName="botton_valve" />
+          <ScalarProperty Name="racking_valve" ColumnName="racking_valve" />
+          <ScalarProperty Name="vent" ColumnName="vent" />
+          <ScalarProperty Name="ladder_support" ColumnName="ladder_support" />
+          <ScalarProperty Name="sample_tap" ColumnName="sample_tap" />
+          <ScalarProperty Name="thermometer_in_thermowell" ColumnName="thermometer_in_thermowell" />
+          <ScalarProperty Name="thermowell_for_sensor" ColumnName="thermowell_for_sensor" />
+          <ScalarProperty Name="level_gange" ColumnName="level_gange" />
+          <ScalarProperty Name="top_hatch" ColumnName="top_hatch" />
+          <ScalarProperty Name="wall_thickness_bottom_thickness" ColumnName="wall_thickness_bottom_thickness" />
+          <ScalarProperty Name="price" ColumnName="price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tank_LCTTCJ_VC_StPats">
+      <EntityTypeMapping TypeName="StPatsWEB_dbModel.Tank_LCTTCJ_VC_StPats">
+        <MappingFragment StoreEntitySet="Tank_LCTTCJ-VC_StPats">
+          <ScalarProperty Name="id_filter_acf" ColumnName="id_filter_acf" />
+          <ScalarProperty Name="id_producto_general" ColumnName="id_producto_general" />
+          <ScalarProperty Name="id_tipo_product" ColumnName="id_tipo_product" />
+          <ScalarProperty Name="code_produt" ColumnName="code_produt" />
+          <ScalarProperty Name="name_product" ColumnName="name_product" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="id_location" ColumnName="id_location" />
+          <ScalarProperty Name="id_manufactured" ColumnName="id_manufactured" />
+          <ScalarProperty Name="stock" ColumnName="stock" />
+          <ScalarProperty Name="id_estado" ColumnName="id_estado" />
+          <ScalarProperty Name="extra_things" ColumnName="extra_things" />
+          <ScalarProperty Name="capacity" ColumnName="capacity" />
+          <ScalarProperty Name="number_of_jackets" ColumnName="number_of_jackets" />
+          <ScalarProperty Name="orientation" ColumnName="orientation" />
+          <ScalarProperty Name="total_area" ColumnName="total_area" />
+          <ScalarProperty Name="botton_valve" ColumnName="botton_valve" />
+          <ScalarProperty Name="racking_valve" ColumnName="racking_valve" />
+          <ScalarProperty Name="pump_over" ColumnName="pump_over" />
+          <ScalarProperty Name="vent" ColumnName="vent" />
+          <ScalarProperty Name="ladder_support" ColumnName="ladder_support" />
+          <ScalarProperty Name="sample_tap" ColumnName="sample_tap" />
+          <ScalarProperty Name="thermometer_in_thermowell" ColumnName="thermometer_in_thermowell" />
+          <ScalarProperty Name="thermowell_for_sensor" ColumnName="thermowell_for_sensor" />
+          <ScalarProperty Name="level_gange" ColumnName="level_gange" />
+          <ScalarProperty Name="top_hatch" ColumnName="top_hatch" />
+          <ScalarProperty Name="wall_thickness_bottom_thickness" ColumnName="wall_thickness_bottom_thickness" />
+          <ScalarProperty Name="price" ColumnName="price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tank_LFBT_VC_StPats">
+      <EntityTypeMapping TypeName="StPatsWEB_dbModel.Tank_LFBT_VC_StPats">
+        <MappingFragment StoreEntitySet="Tank_LFBT-VC_StPats">
+          <ScalarProperty Name="id_filter_acf" ColumnName="id_filter_acf" />
+          <ScalarProperty Name="id_producto_general" ColumnName="id_producto_general" />
+          <ScalarProperty Name="id_tipo_product" ColumnName="id_tipo_product" />
+          <ScalarProperty Name="code_produt" ColumnName="code_produt" />
+          <ScalarProperty Name="name_product" ColumnName="name_product" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="id_location" ColumnName="id_location" />
+          <ScalarProperty Name="id_manufactured" ColumnName="id_manufactured" />
+          <ScalarProperty Name="stock" ColumnName="stock" />
+          <ScalarProperty Name="id_estado" ColumnName="id_estado" />
+          <ScalarProperty Name="extra_things" ColumnName="extra_things" />
+          <ScalarProperty Name="capacity" ColumnName="capacity" />
+          <ScalarProperty Name="botton_valve" ColumnName="botton_valve" />
+          <ScalarProperty Name="racking_valve" ColumnName="racking_valve" />
+          <ScalarProperty Name="sample_tap" ColumnName="sample_tap" />
+          <ScalarProperty Name="ladder_suport" ColumnName="ladder_suport" />
+          <ScalarProperty Name="liftning_arm" ColumnName="liftning_arm" />
+          <ScalarProperty Name="vent" ColumnName="vent" />
+          <ScalarProperty Name="wall_thickness_bottom_thickness" ColumnName="wall_thickness_bottom_thickness" />
+          <ScalarProperty Name="replacement_inflatable_gasket" ColumnName="replacement_inflatable_gasket" />
+          <ScalarProperty Name="price" ColumnName="price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tank_LFLT_VCCJ_StPats">
+      <EntityTypeMapping TypeName="StPatsWEB_dbModel.Tank_LFLT_VCCJ_StPats">
+        <MappingFragment StoreEntitySet="Tank_LFLT-VCCJ_StPats">
+          <ScalarProperty Name="id_filter_acf" ColumnName="id_filter_acf" />
+          <ScalarProperty Name="id_producto_general" ColumnName="id_producto_general" />
+          <ScalarProperty Name="id_tipo_product" ColumnName="id_tipo_product" />
+          <ScalarProperty Name="code_produt" ColumnName="code_produt" />
+          <ScalarProperty Name="name_product" ColumnName="name_product" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="id_location" ColumnName="id_location" />
+          <ScalarProperty Name="id_manufactured" ColumnName="id_manufactured" />
+          <ScalarProperty Name="stock" ColumnName="stock" />
+          <ScalarProperty Name="id_estado" ColumnName="id_estado" />
+          <ScalarProperty Name="extra_things" ColumnName="extra_things" />
+          <ScalarProperty Name="capacity" ColumnName="capacity" />
+          <ScalarProperty Name="orientation" ColumnName="orientation" />
+          <ScalarProperty Name="total_area" ColumnName="total_area" />
+          <ScalarProperty Name="botton_valve" ColumnName="botton_valve" />
+          <ScalarProperty Name="racking_valve" ColumnName="racking_valve" />
+          <ScalarProperty Name="sample_tap" ColumnName="sample_tap" />
+          <ScalarProperty Name="thermometer_in_thermowell" ColumnName="thermometer_in_thermowell" />
+          <ScalarProperty Name="thermowell_for_sensor" ColumnName="thermowell_for_sensor" />
+          <ScalarProperty Name="liftning_arm" ColumnName="liftning_arm" />
+          <ScalarProperty Name="vent" ColumnName="vent" />
+          <ScalarProperty Name="wall_thickness_bottom_thickness" ColumnName="wall_thickness_bottom_thickness" />
+          <ScalarProperty Name="replacement_inflatable_gasket" ColumnName="replacement_inflatable_gasket" />
+          <ScalarProperty Name="price" ColumnName="price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tank_LSBT_VC_ACF_StPats">
+      <EntityTypeMapping TypeName="StPatsWEB_dbModel.Tank_LSBT_VC_ACF_StPats">
+        <MappingFragment StoreEntitySet="Tank_LSBT-VC_ACF_StPats">
+          <ScalarProperty Name="id_filter_acf" ColumnName="id_filter_acf" />
+          <ScalarProperty Name="id_producto_general" ColumnName="id_producto_general" />
+          <ScalarProperty Name="id_tipo_product" ColumnName="id_tipo_product" />
+          <ScalarProperty Name="code_produt" ColumnName="code_produt" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="name_product" ColumnName="name_product" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="id_location" ColumnName="id_location" />
+          <ScalarProperty Name="id_manufactured" ColumnName="id_manufactured" />
+          <ScalarProperty Name="stock" ColumnName="stock" />
+          <ScalarProperty Name="id_estado" ColumnName="id_estado" />
+          <ScalarProperty Name="extra_things" ColumnName="extra_things" />
+          <ScalarProperty Name="capacity" ColumnName="capacity" />
+          <ScalarProperty Name="number_of_jackets" ColumnName="number_of_jackets" />
+          <ScalarProperty Name="orientation" ColumnName="orientation" />
+          <ScalarProperty Name="total_area" ColumnName="total_area" />
+          <ScalarProperty Name="botton_valve" ColumnName="botton_valve" />
+          <ScalarProperty Name="racking_valve" ColumnName="racking_valve" />
+          <ScalarProperty Name="manway" ColumnName="manway" />
+          <ScalarProperty Name="liftning_arm" ColumnName="liftning_arm" />
+          <ScalarProperty Name="vent" ColumnName="vent" />
+          <ScalarProperty Name="ladder_support" ColumnName="ladder_support" />
+          <ScalarProperty Name="sample_tap" ColumnName="sample_tap" />
+          <ScalarProperty Name="thermometer_in_thermowell" ColumnName="thermometer_in_thermowell" />
+          <ScalarProperty Name="thermowell_for_sensor" ColumnName="thermowell_for_sensor" />
+          <ScalarProperty Name="wall_thickness_bottom_thickness" ColumnName="wall_thickness_bottom_thickness" />
+          <ScalarProperty Name="Replacement_inflatable_gasket" ColumnName="Replacement_inflatable_gasket" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tank_LWWFWCJCT_VC_StPats">
+      <EntityTypeMapping TypeName="StPatsWEB_dbModel.Tank_LWWFWCJCT_VC_StPats">
+        <MappingFragment StoreEntitySet="Tank_LWWFWCJCT-VC_StPats">
+          <ScalarProperty Name="id_filter_acf" ColumnName="id_filter_acf" />
+          <ScalarProperty Name="id_producto_general" ColumnName="id_producto_general" />
+          <ScalarProperty Name="id_tipo_product" ColumnName="id_tipo_product" />
+          <ScalarProperty Name="code_produt" ColumnName="code_produt" />
+          <ScalarProperty Name="name_product" ColumnName="name_product" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="id_location" ColumnName="id_location" />
+          <ScalarProperty Name="id_manufactured" ColumnName="id_manufactured" />
+          <ScalarProperty Name="stock" ColumnName="stock" />
+          <ScalarProperty Name="id_estado" ColumnName="id_estado" />
+          <ScalarProperty Name="extra_things" ColumnName="extra_things" />
+          <ScalarProperty Name="capacity" ColumnName="capacity" />
+          <ScalarProperty Name="orientation" ColumnName="orientation" />
+          <ScalarProperty Name="total_area" ColumnName="total_area" />
+          <ScalarProperty Name="botton_valve" ColumnName="botton_valve" />
+          <ScalarProperty Name="manway" ColumnName="manway" />
+          <ScalarProperty Name="vent" ColumnName="vent" />
+          <ScalarProperty Name="ladder_support" ColumnName="ladder_support" />
+          <ScalarProperty Name="sample_tap" ColumnName="sample_tap" />
+          <ScalarProperty Name="thermometer_in_thermowell" ColumnName="thermometer_in_thermowell" />
+          <ScalarProperty Name="thermowell_for_sensor" ColumnName="thermowell_for_sensor" />
+          <ScalarProperty Name="level_gange" ColumnName="level_gange" />
+          <ScalarProperty Name="top_hatch" ColumnName="top_hatch" />
+          <ScalarProperty Name="wall_thickness_bottom_thickness" ColumnName="wall_thickness_bottom_thickness" />
+          <ScalarProperty Name="price" ColumnName="price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tank_MXT_StPats">
+      <EntityTypeMapping TypeName="StPatsWEB_dbModel.Tank_MXT_StPats">
+        <MappingFragment StoreEntitySet="Tank_MXT_StPats">
+          <ScalarProperty Name="id_filter_acf" ColumnName="id_filter_acf" />
+          <ScalarProperty Name="id_producto_general" ColumnName="id_producto_general" />
+          <ScalarProperty Name="id_tipo_product" ColumnName="id_tipo_product" />
+          <ScalarProperty Name="code_produt" ColumnName="code_produt" />
+          <ScalarProperty Name="name_product" ColumnName="name_product" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="id_location" ColumnName="id_location" />
+          <ScalarProperty Name="id_manufactured" ColumnName="id_manufactured" />
+          <ScalarProperty Name="stock" ColumnName="stock" />
+          <ScalarProperty Name="id_estado" ColumnName="id_estado" />
+          <ScalarProperty Name="extra_things" ColumnName="extra_things" />
+          <ScalarProperty Name="capacity" ColumnName="capacity" />
+          <ScalarProperty Name="botton_valve" ColumnName="botton_valve" />
+          <ScalarProperty Name="wheels" ColumnName="wheels" />
+          <ScalarProperty Name="motor" ColumnName="motor" />
+          <ScalarProperty Name="wall_thickness_bottom_thickness" ColumnName="wall_thickness_bottom_thickness" />
+          <ScalarProperty Name="price" ColumnName="price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tank_TONW_StPats">
+      <EntityTypeMapping TypeName="StPatsWEB_dbModel.Tank_TONW_StPats">
+        <MappingFragment StoreEntitySet="Tank_TONW_StPats">
+          <ScalarProperty Name="id_filter_acf" ColumnName="id_filter_acf" />
+          <ScalarProperty Name="id_producto_general" ColumnName="id_producto_general" />
+          <ScalarProperty Name="id_tipo_product" ColumnName="id_tipo_product" />
+          <ScalarProperty Name="code_produt" ColumnName="code_produt" />
+          <ScalarProperty Name="name_product" ColumnName="name_product" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="id_location" ColumnName="id_location" />
+          <ScalarProperty Name="id_manufactured" ColumnName="id_manufactured" />
+          <ScalarProperty Name="stock" ColumnName="stock" />
+          <ScalarProperty Name="id_estado" ColumnName="id_estado" />
+          <ScalarProperty Name="extra_things" ColumnName="extra_things" />
+          <ScalarProperty Name="capacity" ColumnName="capacity" />
+          <ScalarProperty Name="orientation" ColumnName="orientation" />
+          <ScalarProperty Name="total_area" ColumnName="total_area" />
+          <ScalarProperty Name="botton_valve" ColumnName="botton_valve" />
+          <ScalarProperty Name="racking_valve" ColumnName="racking_valve" />
+          <ScalarProperty Name="sample_tap" ColumnName="sample_tap" />
+          <ScalarProperty Name="thermometer_in_thermowell" ColumnName="thermometer_in_thermowell" />
+          <ScalarProperty Name="thermowell_for_sensor" ColumnName="thermowell_for_sensor" />
+          <ScalarProperty Name="liftning_arm" ColumnName="liftning_arm" />
+          <ScalarProperty Name="vent" ColumnName="vent" />
+          <ScalarProperty Name="wall_thickness_bottom_thickness" ColumnName="wall_thickness_bottom_thickness" />
+          <ScalarProperty Name="replacement_inflatable_gasket" ColumnName="replacement_inflatable_gasket" />
+          <ScalarProperty Name="price" ColumnName="price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tanks_StPats">
+      <EntityTypeMapping TypeName="StPatsWEB_dbModel.Tanks_StPats">
+        <MappingFragment StoreEntitySet="Tanks_StPats">
+          <ScalarProperty Name="id_tanque" ColumnName="id_tanque" />
+          <ScalarProperty Name="codigo_tanque" ColumnName="codigo_tanque" />
+          <ScalarProperty Name="capacidad" ColumnName="capacidad" />
+          <ScalarProperty Name="bottom_valve" ColumnName="bottom_valve" />
+          <ScalarProperty Name="manway" ColumnName="manway" />
+          <ScalarProperty Name="lifting_arm" ColumnName="lifting_arm" />
+          <ScalarProperty Name="vent" ColumnName="vent" />
+          <ScalarProperty Name="replacemnet_infiatable_gasket" ColumnName="replacemnet_infiatable_gasket" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="stok" ColumnName="stok" />
+          <ScalarProperty Name="location" ColumnName="location" />
+          <ScalarProperty Name="manual" ColumnName="manual" />
+          <ScalarProperty Name="image" ColumnName="image" />
+          <ScalarProperty Name="desription" ColumnName="desription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tipo_Producto_StPats">
+      <EntityTypeMapping TypeName="StPatsWEB_dbModel.Tipo_Producto_StPats">
+        <MappingFragment StoreEntitySet="Tipo_Producto_StPats">
+          <ScalarProperty Name="id_tipo_producto" ColumnName="id_tipo_producto" />
+          <ScalarProperty Name="descripcion_producto" ColumnName="descripcion_producto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Type_Filter_StPats">
+      <EntityTypeMapping TypeName="StPatsWEB_dbModel.Type_Filter_StPats">
+        <MappingFragment StoreEntitySet="Type_Filter_StPats">
+          <ScalarProperty Name="id_tipo_filter" ColumnName="id_tipo_filter" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="database_firewall_rules">
+      <EntityTypeMapping TypeName="StPatsWEB_dbModel.database_firewall_rules">
+        <MappingFragment StoreEntitySet="database_firewall_rules">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="start_ip_address" ColumnName="start_ip_address" />
+          <ScalarProperty Name="end_ip_address" ColumnName="end_ip_address" />
+          <ScalarProperty Name="create_date" ColumnName="create_date" />
+          <ScalarProperty Name="modify_date" ColumnName="modify_date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

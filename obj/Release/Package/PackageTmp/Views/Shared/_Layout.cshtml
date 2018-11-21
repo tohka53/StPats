@@ -17,18 +17,23 @@
 
 
 </head>
+
 <body class="skin-red">
 
     <!-- Left side column. contains the logo and sidebar -->   <!-- Left side column. contains the logo and sidebar -->
     <aside class="main-sidebar">
+        <!-- Sidebar toggle button-->
+      
         <!-- sidebar: style can be found in sidebar.less -->
         <section class="sidebar">
             <!-- Sidebar user panel (optional) -->
             <div class="user-panel">
                 <div class="pull-left image">
-                    
+
                     <img src="~/Content/Content/AdminLte/img/Imagen6.JPG" />
                 </div>
+
+
                 <div class="pull-left info">
                     <p>@Html.Encode(User.Identity.Name.ToUpper())</p>
                     <!-- Status -->
@@ -37,6 +42,7 @@
             </div>
             <!-- Sidebar Menu -->
             <ul class="sidebar-menu">
+
                 <!-- Optionally, you can add icons to the links -->
                 <li>@Html.ActionLink("Home Page", "Index", "Home")</li>
                 <li>@Html.ActionLink("About Us", "About", "Home")</li>
@@ -45,24 +51,27 @@
                 <!--- <li>@Html.ActionLink("Locations", "Index", "Locations_StPats")</li>-->
                 <li>@Html.ActionLink("Filling Machine", "Index", "Filling_Machine_StPats")</li>
                 <li>@Html.ActionLink("Bottle Finishing", "Index", "Bottle_Finishing_StPats")</li>
+                <li>@Html.ActionLink("Labeler", "Index", "Labeler_StPats")</li>
+                <li>@Html.ActionLink("Pump", "Index", "Pump_StPats")</li>
+                <li>@Html.ActionLink("Filter", "Index", "Filter_StPats")</li>
+                <li>@Html.ActionLink("Tanks", "Index", "Tanks_StPats")</li>
+                <!--
+    <li class="treeview">
+        <a href="#"><span>Filters</span> <i class="fa fa-angle-left pull-right"></i></a>
+        <ul class="treeview-menu">
 
+            <li>@Html.ActionLink("Products", "", "Productos_StPats")
+            <li>@Html.ActionLink("Filling Machine", "Index", "Filling_Machine_StPats")</li>
+            <li>@Html.ActionLink("Bottle Finishing", "Index", "Bottle_Finishing_StPats")</li>
+            <li>@Html.ActionLink("Labeler", "", "Labeler_StPats")</li>
 
-                <li class="treeview">
-                    <a href="#"><span>Products</span> <i class="fa fa-angle-left pull-right"></i></a>
-                    <ul class="treeview-menu">
-
-                        <!--<li>@Html.ActionLink("Products", "", "Productos_StPats")-->
-
-
-
-
-                    </ul>
-                </li>
+        </ul>
+    </li>-->
 
 
 
             </ul><!-- /.sidebar-menu -->
-</section>
+        </section>
         <!-- /.sidebar -->
     </aside>
     <!--**********************************-->

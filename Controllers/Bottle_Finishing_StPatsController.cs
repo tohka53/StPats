@@ -12,8 +12,8 @@ namespace StPats.Controllers
 {
     public class Bottle_Finishing_StPatsController : Controller
     {
-        private StPatsDataBaseEntities db = new StPatsDataBaseEntities();
-
+        private StPatsWEB_dbEntities db = new StPatsWEB_dbEntities();
+         //private StPatsEntities db = new StPatsEntities();
         // GET: Bottle_Finishing_StPats
         public ActionResult Index()
         {

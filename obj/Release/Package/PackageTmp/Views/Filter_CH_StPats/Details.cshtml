@@ -1,0 +1,92 @@
+﻿@model StPats.Models.Filter_CH_StPats
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="text-center">Details for the product: @Html.DisplayFor(model => model.name_product) </h2>
+<div class="container">
+
+    <h4>
+
+        <dt>
+            Name Product
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.name_product)
+        </dd>
+
+
+
+        <dt>
+            Description
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.description)
+        </dd>
+
+
+
+        <dt>
+            Extra Details
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.extra_things)
+        </dd>
+
+
+        <dt>
+            10" Single with 2 Gauges
+        </dt>
+
+        <dd>
+            $ @Html.DisplayFor(model => model.price_single_10)<br />
+            <button class="btn btn-success btn-sm" onclick="location.href = '@Url.Action("Create","Lista_Productos_StPats", new { id = Model.Productos_StPats.id_producto, precio =Model.price_single_10 })'">
+                <span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart
+            </button>
+        </dd>
+
+        <dt>
+            30" Single with 2 Gauges
+        </dt>
+
+        <dd>
+            $ @Html.DisplayFor(model => model.price_single_30)<br />
+            <button class="btn btn-success btn-sm" onclick="location.href = '@Url.Action("Create","Lista_Productos_StPats", new { id = Model.Productos_StPats.id_producto, precio =Model.price_single_30 })'">
+                <span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart
+            </button>
+        </dd>
+
+        <dt>
+            30" TRIPLE with 2 Gauges
+        </dt>
+
+        <dd>
+            $ @Html.DisplayFor(model => model.price_triple_30)<br />
+            <button class="btn btn-success btn-sm" onclick="location.href = '@Url.Action("Create","Lista_Productos_StPats", new { id = Model.Productos_StPats.id_producto, precio =Model.price_triple_30 })'">
+                <span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart
+            </button>
+        </dd>
+
+
+
+        <dt>
+            Location
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Locations_StPats.description)
+        </dd>
+
+
+        </dl>
+</div>
+<div class="form-group text-center">
+    <button class="btn-bitbucket btn-sm" onclick="location.href = '@Url.Action("Index")'">
+        <span class="	glyphicon glyphicon-backward"></span>&nbsp; Back to the last page
+    </button>
+</div>

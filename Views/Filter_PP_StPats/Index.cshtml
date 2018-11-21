@@ -1,0 +1,134 @@
+﻿@model IEnumerable<StPats.Models.Filter_PP_StPats>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+
+
+<div class="container">
+    <h2>PolyPropylene (PP) </h2>
+    <p><strong>Please note. Cartridges of different micron size look the same. So be careful to denote which is which after opening the package.</strong></p>
+    <p>
+        Pleated High Efficiency >95%<br />
+        PreFilter for PES<br />
+        Code 7 [aka 2-226, locking tabs, SOE (single open end)]<br />
+        Filtration direction is outside of filter to center.<br />
+
+
+    </p>
+    <input class="form-control" id="myInput" type="text" placeholder="Search..">
+
+    <br>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>
+                    Model
+                </th>
+
+                <th>
+                    Micron
+                </th>
+                <th>
+                    10" each
+                </th>
+                <th>
+                    10" box of 30
+                </th>
+                <th>
+                    30" each
+                </th>
+                <th>
+                    30" box of 15
+                </th>
+
+                <th>
+                    Location
+                </th>
+                <th>
+                    Actions
+                </th>
+
+            </tr>
+        </thead>
+        <tbody id="myTable">
+            @foreach (var item in Model)
+            {
+
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.code_produt)
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.micron)
+                    </td>
+                    <td>
+                        $ @Html.DisplayFor(modelItem => item.price_only_10)<br />
+                        <button class="btn btn-success btn-sm" onclick="location.href = '@Url.Action("Create","Lista_Productos_StPats", new { id = item.id_producto_general, precio =item.price_only_10 })'">
+                            <span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart
+                        </button>
+                    </td>
+                    <td>
+                        $ @Html.DisplayFor(modelItem => item.price_10_30)<br />
+                        <button class="btn btn-success btn-sm" onclick="location.href = '@Url.Action("Create","Lista_Productos_StPats", new { id = item.id_producto_general, precio =item.price_10_30 })'">
+                            <span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart
+                        </button>
+                    </td>
+                    <td>
+                        $ @Html.DisplayFor(modelItem => item.price_only_30)<br />
+                        <button class="btn btn-success btn-sm" onclick="location.href = '@Url.Action("Create","Lista_Productos_StPats", new { id = item.id_producto_general, precio =item.price_only_30 })'">
+                            <span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart
+                        </button>
+                    </td>
+                    <td>
+                        $ @Html.DisplayFor(modelItem => item.price_15_30)<br />
+                        <button class="btn btn-success btn-sm" onclick="location.href = '@Url.Action("Create","Lista_Productos_StPats", new { id = item.id_producto_general, precio =item.price_15_30 })'">
+                            <span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart
+                        </button>
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Locations_StPats.description)
+                    </td>
+
+
+                    <td>
+                        <button class="btn btn-info btn-sm" onclick="location.href = '@Url.Action("Details","Filter_PP_StPats", new { id = item.id_filter_pp })'">
+                            <span class=" glyphicon glyphicon-th-list"></span>&nbsp;  Details
+                        </button>
+                        <p></p>
+
+
+
+                    </td>
+
+                </tr>
+            }
+
+        </tbody>
+    </table>
+</div>
+
+
+<script>
+    $(document).ready(function () {
+        $("#myInput").on("keyup", function () {
+            var value = $(this).val().toLowerCase();
+            $("#myTable tr").filter(function () {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+        });
+    });
+</script>

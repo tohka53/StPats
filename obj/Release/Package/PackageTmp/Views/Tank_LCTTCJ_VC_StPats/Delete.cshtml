@@ -1,0 +1,225 @@
+﻿@model StPats.Models.Tank_LCTTCJ_VC_StPats
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Tank_LCTTCJ_VC_StPats</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.code_produt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.code_produt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.name_product)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.name_product)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.stock)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.stock)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.extra_things)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.extra_things)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.capacity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.capacity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.number_of_jackets)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.number_of_jackets)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.orientation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.orientation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.total_area)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.total_area)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.botton_valve)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.botton_valve)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.racking_valve)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.racking_valve)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pump_over)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pump_over)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.vent)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.vent)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ladder_support)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ladder_support)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.sample_tap)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sample_tap)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.thermometer_in_thermowell)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.thermometer_in_thermowell)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.thermowell_for_sensor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.thermowell_for_sensor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.level_gange)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.level_gange)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.top_hatch)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.top_hatch)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.wall_thickness_bottom_thickness)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.wall_thickness_bottom_thickness)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Estado_StPats.descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estado_StPats.descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Locations_StPats.description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Locations_StPats.description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Manufactured_Stpats.name_manufactured)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Manufactured_Stpats.name_manufactured)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Productos_StPats.product_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Productos_StPats.product_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tipo_Producto_StPats.descripcion_producto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tipo_Producto_StPats.descripcion_producto)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

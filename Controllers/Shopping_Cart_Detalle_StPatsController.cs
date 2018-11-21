@@ -12,8 +12,8 @@ namespace StPats.Controllers
 {
     public class Shopping_Cart_Detalle_StPatsController : Controller
     {
-        private StPatsDataBaseEntities db = new StPatsDataBaseEntities();
-
+        private StPatsWEB_dbEntities db = new StPatsWEB_dbEntities();
+        // private StPatsEntities db = new StPatsEntities();
         // GET: Shopping_Cart_Detalle_StPats
         public ActionResult Index()
         {

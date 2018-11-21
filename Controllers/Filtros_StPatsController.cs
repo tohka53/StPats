@@ -12,8 +12,8 @@ namespace StPats.Controllers
 {
     public class Filtros_StPatsController : Controller
     {
-        private StPatsDataBaseEntities db = new StPatsDataBaseEntities();
-
+       private StPatsDataBaseEntities1 db = new StPatsDataBaseEntities1();
+        // private StPatsEntities db = new StPatsEntities();
         // GET: Filtros_StPats
         public ActionResult Index()
         {

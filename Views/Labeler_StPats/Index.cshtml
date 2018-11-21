@@ -1,0 +1,150 @@
+﻿@model IEnumerable<StPats.Models.Labeler_StPats>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+
+
+<div class="container">
+    <h2>Labeler</h2>
+    <p><strong>Labeler now applies labels to tapered bottles. Send us a bottle and we will set up the unit before shipping. It is easy to make the adjustment but we want to be sure the taper is not too great.</strong></p>
+    <p>Labeler must be crated and shipped LTL</p>
+    <input class="form-control" id="myInput" type="text" placeholder="Search..">
+
+    <br>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>
+                    Name Product
+                </th>
+                <th>
+                    Description
+                <th>
+                    Price of Product
+                </th>
+
+                <th>
+                    Manufactured
+                </th>
+
+                <th>
+                    Stock
+                </th>
+                <th>
+                    Location
+                </th>
+                <th>
+                    Actions
+                </th>
+
+            </tr>
+        </thead>
+        <tbody id="myTable">
+
+            @foreach (var item in Model)
+            {
+
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.name_product)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.description)
+                    </td>
+                    <td>
+                        $ @Html.DisplayFor(modelItem => item.price)
+                    </td>
+
+
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Manufactured_Stpats.name_manufactured)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.stock)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Locations_StPats.description)
+                    </td>
+
+                    <td>
+                        <button class="btn btn-info btn-sm" onclick="location.href = '@Url.Action("Details","Labeler_StPats", new { id = item.id_labeler })'">
+                            <span class=" glyphicon glyphicon-th-list"></span>&nbsp;  Details
+                        </button>
+                        <p></p>
+
+                        <button class="btn btn-success btn-sm" onclick="location.href = '@Url.Action("Create","Lista_Productos_StPats", new { id = item.id_producto_general, precio = item.price })'">
+                            <span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart
+                        </button>
+                    </td>
+
+                </tr>
+            }
+
+        </tbody>
+    </table>
+</div>
+<hr />
+<div class="container">
+    <h3 class="text-center">Labeler general details</h3>
+    <div class="row">
+        <div class="col-6">
+           
+            > Applies both front and back labels (labels must be on same roll)<br />
+            > Front Label width maximum is the circumference of the bottle (i.e., you can use a single label that wraps the entire bottle)<br />
+            > Cylindrical bottles, diameter 2.36" to 4.4"<br />
+            > Now applies labels to tapered bottles --send us a bottle and we will set it up before shipping<br />
+            > 600 bottles/hour. 3.5 seconds per cycle.<br />
+            > Easy to operate and maintain <br />
+            > Bottle is vertical during labeling <br />
+            > Core size 3" <br />
+            > Max roll diameter 8" <br />
+            > Label height max 6" <br />
+            > Dimensions: 165 lbs. 34"x19"x24" (LxDxH). Height on optional cart is 44". <br />
+            > Label Orientation. You must have #4 in this pdf. The orientation is easily seen in the photo above. <br />
+            > Maximum length from the bottom of the bottle to the bottom edge of the lowest label (front or back) is 2-1/8" <br />
+            <a> </a>
+
+        </div>
+        <div class="col-6">
+
+            > The circumference of the bottle must be a minimum of 1" longer than the total length of the front and back labels. <br />
+            > Stainless steel Cart. 20" height for ergonomic use. 4 wheels, 2 are locking.  <br />
+            <p></p>
+            <video controls="controls" width="500" height="300">
+                <source src="~/Content/img/MOV01032.mp4" type="video/mp4" />
+            </video>
+         
+          
+        </div>
+    </div>
+    <br />
+</div>
+
+<hr />
+<script>
+    $(document).ready(function () {
+        $("#myInput").on("keyup", function () {
+            var value = $(this).val().toLowerCase();
+            $("#myTable tr").filter(function () {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+        });
+    });
+</script>
+
+
+
+    </body>

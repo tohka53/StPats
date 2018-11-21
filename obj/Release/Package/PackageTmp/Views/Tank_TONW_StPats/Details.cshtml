@@ -1,0 +1,149 @@
+﻿@model StPats.Models.Tank_TONW_StPats
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+
+<h2 class="text-center">Details for the product: @Html.DisplayFor(model => model.code_produt) </h2>
+<div class="container">
+
+    <h5>
+
+        <dt>
+            Code Produt
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.code_produt)
+        </dd>
+        <dt>
+            Capacity
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.capacity)
+        </dd>
+
+        <dt>
+            Orientation
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.orientation)
+        </dd>
+
+        <dt>
+            Total Area
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.total_area)
+        </dd>
+
+        <dt>
+            Botton Valve
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.botton_valve)
+        </dd>
+
+        <dt>
+            Racking Valve
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.racking_valve)
+        </dd>
+
+
+        <dt>
+            Sample Tap
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sample_tap)
+        </dd>
+
+        <dt>
+            Thermometer in Thermowell
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.thermometer_in_thermowell)
+        </dd>
+
+        <dt>
+            Thermowell For Sensor
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.thermowell_for_sensor)
+        </dd>
+
+        <dt>
+            Liftning Arm
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.liftning_arm)
+        </dd>
+
+        <dt>
+            Vent
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.vent)
+        </dd>
+
+
+        <dt>
+            Wall Thickness Bottom Thickness
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.wall_thickness_bottom_thickness)
+        </dd>
+
+        <dt>
+            Replacement Inflatable Gasket
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.replacement_inflatable_gasket)
+        </dd>
+
+
+
+        <dt>
+            Location
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Locations_StPats.description)
+        </dd>
+
+
+
+        </dl>
+</div>
+</div>
+<p>
+    <div class="form-group text-center">
+
+        <button class="btn btn-success btn-sm" onclick="location.href = '@Url.Action("Create","Lista_Productos_StPats", new { id = Model.Productos_StPats.id_producto, precio =Model.price })'">
+            <span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart
+        </button>
+    </div>
+    <div class="form-group text-center">
+        <button class="btn-bitbucket btn-sm" onclick="location.href = '@Url.Action("Index")'">
+            <span class="	glyphicon glyphicon-backward"></span>&nbsp; Back to the last page
+        </button>
+    </div>
+
+</p>

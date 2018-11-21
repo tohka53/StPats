@@ -1,0 +1,153 @@
+﻿@model StPats.Models.Filter_PES_StPats
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Filter_PES_StPats</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.id_tipo_product)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.id_tipo_product)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.code_produt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.code_produt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.name_product)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.name_product)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.stock)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.stock)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.extra_things)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.extra_things)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.micron)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.micron)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.price_only_10)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.price_only_10)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.price_10_30)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.price_10_30)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.price_only_30)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.price_only_30)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.price_15_30)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.price_15_30)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Estado_StPats.descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estado_StPats.descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Locations_StPats.description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Locations_StPats.description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Manufactured_Stpats.name_manufactured)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Manufactured_Stpats.name_manufactured)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Productos_StPats.codigo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Productos_StPats.codigo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tipo_Producto_StPats.descripcion_producto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tipo_Producto_StPats.descripcion_producto)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

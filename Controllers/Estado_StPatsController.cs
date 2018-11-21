@@ -12,8 +12,8 @@ namespace StPats.Controllers
 {
     public class Estado_StPatsController : Controller
     {
-        private StPatsDataBaseEntities db = new StPatsDataBaseEntities();
-
+        private StPatsWEB_dbEntities db = new StPatsWEB_dbEntities();
+        // private StPatsEntities db = new StPatsEntities();
         // GET: Estado_StPats
         public ActionResult Index()
         {

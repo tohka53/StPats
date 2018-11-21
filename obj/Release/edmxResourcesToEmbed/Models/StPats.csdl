@@ -1,0 +1,2791 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="StPatsDataBaseModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="StPatsDataBaseEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Bill_StPats" EntityType="StPatsDataBaseModel1.Bill_StPats" />
+    <EntitySet Name="Bottle_Finishing_StPats" EntityType="StPatsDataBaseModel1.Bottle_Finishing_StPats" />
+    <EntitySet Name="Ciudades_StPats" EntityType="StPatsDataBaseModel1.Ciudades_StPats" />
+    <EntitySet Name="Clients_StPats" EntityType="StPatsDataBaseModel1.Clients_StPats" />
+    <EntitySet Name="Estado_StPats" EntityType="StPatsDataBaseModel1.Estado_StPats" />
+    <EntitySet Name="Filling_Machine_StPats" EntityType="StPatsDataBaseModel1.Filling_Machine_StPats" />
+    <EntitySet Name="Filter_ACF_StPats" EntityType="StPatsDataBaseModel1.Filter_ACF_StPats" />
+    <EntitySet Name="Filter_CH_StPats" EntityType="StPatsDataBaseModel1.Filter_CH_StPats" />
+    <EntitySet Name="Filter_PAF_StPats" EntityType="StPatsDataBaseModel1.Filter_PAF_StPats" />
+    <EntitySet Name="Filter_PES_StPats" EntityType="StPatsDataBaseModel1.Filter_PES_StPats" />
+    <EntitySet Name="Filter_PP_StPats" EntityType="StPatsDataBaseModel1.Filter_PP_StPats" />
+    <EntitySet Name="Filter_StPats" EntityType="StPatsDataBaseModel1.Filter_StPats" />
+    <EntitySet Name="Filtros_StPats" EntityType="StPatsDataBaseModel1.Filtros_StPats" />
+    <EntitySet Name="Labeler_StPats" EntityType="StPatsDataBaseModel1.Labeler_StPats" />
+    <EntitySet Name="Lista_Productos_StPats" EntityType="StPatsDataBaseModel1.Lista_Productos_StPats" />
+    <EntitySet Name="Locations_StPats" EntityType="StPatsDataBaseModel1.Locations_StPats" />
+    <EntitySet Name="Manufactured_Stpats" EntityType="StPatsDataBaseModel1.Manufactured_Stpats" />
+    <EntitySet Name="PayMet_StPats" EntityType="StPatsDataBaseModel1.PayMet_StPats" />
+    <EntitySet Name="Productos_StPats" EntityType="StPatsDataBaseModel1.Productos_StPats" />
+    <EntitySet Name="Pump_StPats" EntityType="StPatsDataBaseModel1.Pump_StPats" />
+    <EntitySet Name="Shopping_Cart_Detalle_StPats" EntityType="StPatsDataBaseModel1.Shopping_Cart_Detalle_StPats" />
+    <EntitySet Name="Shopping_Cart_StPats" EntityType="StPatsDataBaseModel1.Shopping_Cart_StPats" />
+    <EntitySet Name="StaCi_StPats" EntityType="StPatsDataBaseModel1.StaCi_StPats" />
+    <EntitySet Name="Statax_StPats" EntityType="StPatsDataBaseModel1.Statax_StPats" />
+    <EntitySet Name="State_StPats" EntityType="StPatsDataBaseModel1.State_StPats" />
+    <EntitySet Name="sysdiagrams" EntityType="StPatsDataBaseModel1.sysdiagram" />
+    <EntitySet Name="Tank_LCBT_VC_ACF_StPats" EntityType="StPatsDataBaseModel1.Tank_LCBT_VC_ACF_StPats" />
+    <EntitySet Name="Tank_LCTTCB_StPats" EntityType="StPatsDataBaseModel1.Tank_LCTTCB_StPats" />
+    <EntitySet Name="Tank_LCTTCJ_VC_StPats" EntityType="StPatsDataBaseModel1.Tank_LCTTCJ_VC_StPats" />
+    <EntitySet Name="Tank_LFBT_VC_StPats" EntityType="StPatsDataBaseModel1.Tank_LFBT_VC_StPats" />
+    <EntitySet Name="Tank_LFLT_VCCJ_StPats" EntityType="StPatsDataBaseModel1.Tank_LFLT_VCCJ_StPats" />
+    <EntitySet Name="Tank_LSBT_VC_ACF_StPats" EntityType="StPatsDataBaseModel1.Tank_LSBT_VC_ACF_StPats" />
+    <EntitySet Name="Tank_LWWFWCJCT_VC_StPats" EntityType="StPatsDataBaseModel1.Tank_LWWFWCJCT_VC_StPats" />
+    <EntitySet Name="Tank_MXT_StPats" EntityType="StPatsDataBaseModel1.Tank_MXT_StPats" />
+    <EntitySet Name="Tank_TONW_StPats" EntityType="StPatsDataBaseModel1.Tank_TONW_StPats" />
+    <EntitySet Name="Tanks_StPats" EntityType="StPatsDataBaseModel1.Tanks_StPats" />
+    <EntitySet Name="Tipo_Producto_StPats" EntityType="StPatsDataBaseModel1.Tipo_Producto_StPats" />
+    <EntitySet Name="Type_Filter_StPats" EntityType="StPatsDataBaseModel1.Type_Filter_StPats" />
+    <AssociationSet Name="FK_Bill_StPats_Estado_StPats" Association="StPatsDataBaseModel1.FK_Bill_StPats_Estado_StPats">
+      <End Role="Estado_StPats" EntitySet="Estado_StPats" />
+      <End Role="Bill_StPats" EntitySet="Bill_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Bill_StPats_PayMet_StPats" Association="StPatsDataBaseModel1.FK_Bill_StPats_PayMet_StPats">
+      <End Role="PayMet_StPats" EntitySet="PayMet_StPats" />
+      <End Role="Bill_StPats" EntitySet="Bill_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Bill_StPats_Shopping_Cart_StPats" Association="StPatsDataBaseModel1.FK_Bill_StPats_Shopping_Cart_StPats">
+      <End Role="Shopping_Cart_StPats" EntitySet="Shopping_Cart_StPats" />
+      <End Role="Bill_StPats" EntitySet="Bill_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Bottle_Finishing_StPats_Estado_StPats" Association="StPatsDataBaseModel1.FK_Bottle_Finishing_StPats_Estado_StPats">
+      <End Role="Estado_StPats" EntitySet="Estado_StPats" />
+      <End Role="Bottle_Finishing_StPats" EntitySet="Bottle_Finishing_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Bottle_Finishing_StPats_Locations_StPats" Association="StPatsDataBaseModel1.FK_Bottle_Finishing_StPats_Locations_StPats">
+      <End Role="Locations_StPats" EntitySet="Locations_StPats" />
+      <End Role="Bottle_Finishing_StPats" EntitySet="Bottle_Finishing_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Bottle_Finishing_StPats_Manufactured_Stpats" Association="StPatsDataBaseModel1.FK_Bottle_Finishing_StPats_Manufactured_Stpats">
+      <End Role="Manufactured_Stpats" EntitySet="Manufactured_Stpats" />
+      <End Role="Bottle_Finishing_StPats" EntitySet="Bottle_Finishing_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Bottle_Finishing_StPats_Productos_StPats" Association="StPatsDataBaseModel1.FK_Bottle_Finishing_StPats_Productos_StPats">
+      <End Role="Productos_StPats" EntitySet="Productos_StPats" />
+      <End Role="Bottle_Finishing_StPats" EntitySet="Bottle_Finishing_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Bottle_Finishing_StPats_Tipo_Producto_StPats" Association="StPatsDataBaseModel1.FK_Bottle_Finishing_StPats_Tipo_Producto_StPats">
+      <End Role="Tipo_Producto_StPats" EntitySet="Tipo_Producto_StPats" />
+      <End Role="Bottle_Finishing_StPats" EntitySet="Bottle_Finishing_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StaCi_StPats_Ciudades_StPats" Association="StPatsDataBaseModel1.FK_StaCi_StPats_Ciudades_StPats">
+      <End Role="Ciudades_StPats" EntitySet="Ciudades_StPats" />
+      <End Role="StaCi_StPats" EntitySet="StaCi_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Clients_StPats_Estado_StPats" Association="StPatsDataBaseModel1.FK_Clients_StPats_Estado_StPats">
+      <End Role="Estado_StPats" EntitySet="Estado_StPats" />
+      <End Role="Clients_StPats" EntitySet="Clients_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Clients_StPats_StaCi_StPats" Association="StPatsDataBaseModel1.FK_Clients_StPats_StaCi_StPats">
+      <End Role="StaCi_StPats" EntitySet="StaCi_StPats" />
+      <End Role="Clients_StPats" EntitySet="Clients_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Shopping_Cart_StPats_Clients_StPats" Association="StPatsDataBaseModel1.FK_Shopping_Cart_StPats_Clients_StPats">
+      <End Role="Clients_StPats" EntitySet="Clients_StPats" />
+      <End Role="Shopping_Cart_StPats" EntitySet="Shopping_Cart_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Filling_Machine_StPats_Estado_StPats" Association="StPatsDataBaseModel1.FK_Filling_Machine_StPats_Estado_StPats">
+      <End Role="Estado_StPats" EntitySet="Estado_StPats" />
+      <End Role="Filling_Machine_StPats" EntitySet="Filling_Machine_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Filter_ACF_StPats_Estado_StPats" Association="StPatsDataBaseModel1.FK_Filter_ACF_StPats_Estado_StPats">
+      <End Role="Estado_StPats" EntitySet="Estado_StPats" />
+      <End Role="Filter_ACF_StPats" EntitySet="Filter_ACF_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Filter_CH_StPats_Estado_StPats" Association="StPatsDataBaseModel1.FK_Filter_CH_StPats_Estado_StPats">
+      <End Role="Estado_StPats" EntitySet="Estado_StPats" />
+      <End Role="Filter_CH_StPats" EntitySet="Filter_CH_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Filter_PAF_StPats_Estado_StPats" Association="StPatsDataBaseModel1.FK_Filter_PAF_StPats_Estado_StPats">
+      <End Role="Estado_StPats" EntitySet="Estado_StPats" />
+      <End Role="Filter_PAF_StPats" EntitySet="Filter_PAF_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Filter_PES_StPats_Estado_StPats" Association="StPatsDataBaseModel1.FK_Filter_PES_StPats_Estado_StPats">
+      <End Role="Estado_StPats" EntitySet="Estado_StPats" />
+      <End Role="Filter_PES_StPats" EntitySet="Filter_PES_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Filter_PP_StPats_Estado_StPats" Association="StPatsDataBaseModel1.FK_Filter_PP_StPats_Estado_StPats">
+      <End Role="Estado_StPats" EntitySet="Estado_StPats" />
+      <End Role="Filter_PP_StPats" EntitySet="Filter_PP_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Filter_StPats_Estado_StPats" Association="StPatsDataBaseModel1.FK_Filter_StPats_Estado_StPats">
+      <End Role="Estado_StPats" EntitySet="Estado_StPats" />
+      <End Role="Filter_StPats" EntitySet="Filter_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Labeler_StPats_Estado_StPats" Association="StPatsDataBaseModel1.FK_Labeler_StPats_Estado_StPats">
+      <End Role="Estado_StPats" EntitySet="Estado_StPats" />
+      <End Role="Labeler_StPats" EntitySet="Labeler_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Lista_Productos_StPats_Estado_StPats" Association="StPatsDataBaseModel1.FK_Lista_Productos_StPats_Estado_StPats">
+      <End Role="Estado_StPats" EntitySet="Estado_StPats" />
+      <End Role="Lista_Productos_StPats" EntitySet="Lista_Productos_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Productos_StPats_Estado_StPats" Association="StPatsDataBaseModel1.FK_Productos_StPats_Estado_StPats">
+      <End Role="Estado_StPats" EntitySet="Estado_StPats" />
+      <End Role="Productos_StPats" EntitySet="Productos_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Pump_StPats_Estado_StPats" Association="StPatsDataBaseModel1.FK_Pump_StPats_Estado_StPats">
+      <End Role="Estado_StPats" EntitySet="Estado_StPats" />
+      <End Role="Pump_StPats" EntitySet="Pump_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Shopping_Cart_Detalle_StPats_Estado_StPats" Association="StPatsDataBaseModel1.FK_Shopping_Cart_Detalle_StPats_Estado_StPats">
+      <End Role="Estado_StPats" EntitySet="Estado_StPats" />
+      <End Role="Shopping_Cart_Detalle_StPats" EntitySet="Shopping_Cart_Detalle_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Shopping_Cart_StPats_Estado_StPats" Association="StPatsDataBaseModel1.FK_Shopping_Cart_StPats_Estado_StPats">
+      <End Role="Estado_StPats" EntitySet="Estado_StPats" />
+      <End Role="Shopping_Cart_StPats" EntitySet="Shopping_Cart_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tank_LCBT_VC_ACF_StPats_Estado_StPats" Association="StPatsDataBaseModel1.FK_Tank_LCBT_VC_ACF_StPats_Estado_StPats">
+      <End Role="Estado_StPats" EntitySet="Estado_StPats" />
+      <End Role="Tank_LCBT_VC_ACF_StPats" EntitySet="Tank_LCBT_VC_ACF_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tank_LCTTCB_StPats_Estado_StPats" Association="StPatsDataBaseModel1.FK_Tank_LCTTCB_StPats_Estado_StPats">
+      <End Role="Estado_StPats" EntitySet="Estado_StPats" />
+      <End Role="Tank_LCTTCB_StPats" EntitySet="Tank_LCTTCB_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tank_LCTTCJ_VC_StPats_Estado_StPats" Association="StPatsDataBaseModel1.FK_Tank_LCTTCJ_VC_StPats_Estado_StPats">
+      <End Role="Estado_StPats" EntitySet="Estado_StPats" />
+      <End Role="Tank_LCTTCJ_VC_StPats" EntitySet="Tank_LCTTCJ_VC_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tank_LFBT_VC_StPats_Estado_StPats" Association="StPatsDataBaseModel1.FK_Tank_LFBT_VC_StPats_Estado_StPats">
+      <End Role="Estado_StPats" EntitySet="Estado_StPats" />
+      <End Role="Tank_LFBT_VC_StPats" EntitySet="Tank_LFBT_VC_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tank_LFLT_VCCJ_StPats_Estado_StPats" Association="StPatsDataBaseModel1.FK_Tank_LFLT_VCCJ_StPats_Estado_StPats">
+      <End Role="Estado_StPats" EntitySet="Estado_StPats" />
+      <End Role="Tank_LFLT_VCCJ_StPats" EntitySet="Tank_LFLT_VCCJ_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tank_LSBT_VC_ACF_StPats_Estado_StPats" Association="StPatsDataBaseModel1.FK_Tank_LSBT_VC_ACF_StPats_Estado_StPats">
+      <End Role="Estado_StPats" EntitySet="Estado_StPats" />
+      <End Role="Tank_LSBT_VC_ACF_StPats" EntitySet="Tank_LSBT_VC_ACF_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tank_LWWFWCJCT_VC_StPats_Estado_StPats" Association="StPatsDataBaseModel1.FK_Tank_LWWFWCJCT_VC_StPats_Estado_StPats">
+      <End Role="Estado_StPats" EntitySet="Estado_StPats" />
+      <End Role="Tank_LWWFWCJCT_VC_StPats" EntitySet="Tank_LWWFWCJCT_VC_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tank_MXT_StPats_Estado_StPats" Association="StPatsDataBaseModel1.FK_Tank_MXT_StPats_Estado_StPats">
+      <End Role="Estado_StPats" EntitySet="Estado_StPats" />
+      <End Role="Tank_MXT_StPats" EntitySet="Tank_MXT_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tank_TONW_StPats_Estado_StPats" Association="StPatsDataBaseModel1.FK_Tank_TONW_StPats_Estado_StPats">
+      <End Role="Estado_StPats" EntitySet="Estado_StPats" />
+      <End Role="Tank_TONW_StPats" EntitySet="Tank_TONW_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Filling_Machine_StPats_Locations_StPats" Association="StPatsDataBaseModel1.FK_Filling_Machine_StPats_Locations_StPats">
+      <End Role="Locations_StPats" EntitySet="Locations_StPats" />
+      <End Role="Filling_Machine_StPats" EntitySet="Filling_Machine_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Filling_Machine_StPats_Manufactured_Stpats" Association="StPatsDataBaseModel1.FK_Filling_Machine_StPats_Manufactured_Stpats">
+      <End Role="Manufactured_Stpats" EntitySet="Manufactured_Stpats" />
+      <End Role="Filling_Machine_StPats" EntitySet="Filling_Machine_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Filling_Machine_StPats_Productos_StPats" Association="StPatsDataBaseModel1.FK_Filling_Machine_StPats_Productos_StPats">
+      <End Role="Productos_StPats" EntitySet="Productos_StPats" />
+      <End Role="Filling_Machine_StPats" EntitySet="Filling_Machine_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Filling_Machine_StPats_Tipo_Producto_StPats" Association="StPatsDataBaseModel1.FK_Filling_Machine_StPats_Tipo_Producto_StPats">
+      <End Role="Tipo_Producto_StPats" EntitySet="Tipo_Producto_StPats" />
+      <End Role="Filling_Machine_StPats" EntitySet="Filling_Machine_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Filter_ACF_StPats_Locations_StPats" Association="StPatsDataBaseModel1.FK_Filter_ACF_StPats_Locations_StPats">
+      <End Role="Locations_StPats" EntitySet="Locations_StPats" />
+      <End Role="Filter_ACF_StPats" EntitySet="Filter_ACF_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Filter_ACF_StPats_Manufactured_Stpats" Association="StPatsDataBaseModel1.FK_Filter_ACF_StPats_Manufactured_Stpats">
+      <End Role="Manufactured_Stpats" EntitySet="Manufactured_Stpats" />
+      <End Role="Filter_ACF_StPats" EntitySet="Filter_ACF_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Filter_ACF_StPats_Productos_StPats" Association="StPatsDataBaseModel1.FK_Filter_ACF_StPats_Productos_StPats">
+      <End Role="Productos_StPats" EntitySet="Productos_StPats" />
+      <End Role="Filter_ACF_StPats" EntitySet="Filter_ACF_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Filter_ACF_StPats_Tipo_Producto_StPats" Association="StPatsDataBaseModel1.FK_Filter_ACF_StPats_Tipo_Producto_StPats">
+      <End Role="Tipo_Producto_StPats" EntitySet="Tipo_Producto_StPats" />
+      <End Role="Filter_ACF_StPats" EntitySet="Filter_ACF_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Filter_CH_StPats_Locations_StPats" Association="StPatsDataBaseModel1.FK_Filter_CH_StPats_Locations_StPats">
+      <End Role="Locations_StPats" EntitySet="Locations_StPats" />
+      <End Role="Filter_CH_StPats" EntitySet="Filter_CH_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Filter_CH_StPats_Manufactured_Stpats" Association="StPatsDataBaseModel1.FK_Filter_CH_StPats_Manufactured_Stpats">
+      <End Role="Manufactured_Stpats" EntitySet="Manufactured_Stpats" />
+      <End Role="Filter_CH_StPats" EntitySet="Filter_CH_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Filter_CH_StPats_Productos_StPats" Association="StPatsDataBaseModel1.FK_Filter_CH_StPats_Productos_StPats">
+      <End Role="Productos_StPats" EntitySet="Productos_StPats" />
+      <End Role="Filter_CH_StPats" EntitySet="Filter_CH_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Filter_CH_StPats_Tipo_Producto_StPats" Association="StPatsDataBaseModel1.FK_Filter_CH_StPats_Tipo_Producto_StPats">
+      <End Role="Tipo_Producto_StPats" EntitySet="Tipo_Producto_StPats" />
+      <End Role="Filter_CH_StPats" EntitySet="Filter_CH_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Filter_PAF_StPats_Locations_StPats" Association="StPatsDataBaseModel1.FK_Filter_PAF_StPats_Locations_StPats">
+      <End Role="Locations_StPats" EntitySet="Locations_StPats" />
+      <End Role="Filter_PAF_StPats" EntitySet="Filter_PAF_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Filter_PAF_StPats_Manufactured_Stpats" Association="StPatsDataBaseModel1.FK_Filter_PAF_StPats_Manufactured_Stpats">
+      <End Role="Manufactured_Stpats" EntitySet="Manufactured_Stpats" />
+      <End Role="Filter_PAF_StPats" EntitySet="Filter_PAF_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Filter_PAF_StPats_Productos_StPats" Association="StPatsDataBaseModel1.FK_Filter_PAF_StPats_Productos_StPats">
+      <End Role="Productos_StPats" EntitySet="Productos_StPats" />
+      <End Role="Filter_PAF_StPats" EntitySet="Filter_PAF_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Filter_PAF_StPats_Tipo_Producto_StPats" Association="StPatsDataBaseModel1.FK_Filter_PAF_StPats_Tipo_Producto_StPats">
+      <End Role="Tipo_Producto_StPats" EntitySet="Tipo_Producto_StPats" />
+      <End Role="Filter_PAF_StPats" EntitySet="Filter_PAF_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Filter_PES_StPats_Locations_StPats" Association="StPatsDataBaseModel1.FK_Filter_PES_StPats_Locations_StPats">
+      <End Role="Locations_StPats" EntitySet="Locations_StPats" />
+      <End Role="Filter_PES_StPats" EntitySet="Filter_PES_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Filter_PES_StPats_Manufactured_Stpats" Association="StPatsDataBaseModel1.FK_Filter_PES_StPats_Manufactured_Stpats">
+      <End Role="Manufactured_Stpats" EntitySet="Manufactured_Stpats" />
+      <End Role="Filter_PES_StPats" EntitySet="Filter_PES_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Filter_PES_StPats_Productos_StPats" Association="StPatsDataBaseModel1.FK_Filter_PES_StPats_Productos_StPats">
+      <End Role="Productos_StPats" EntitySet="Productos_StPats" />
+      <End Role="Filter_PES_StPats" EntitySet="Filter_PES_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Filter_PES_StPats_Tipo_Producto_StPats" Association="StPatsDataBaseModel1.FK_Filter_PES_StPats_Tipo_Producto_StPats">
+      <End Role="Tipo_Producto_StPats" EntitySet="Tipo_Producto_StPats" />
+      <End Role="Filter_PES_StPats" EntitySet="Filter_PES_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Filter_PP_StPats_Locations_StPats" Association="StPatsDataBaseModel1.FK_Filter_PP_StPats_Locations_StPats">
+      <End Role="Locations_StPats" EntitySet="Locations_StPats" />
+      <End Role="Filter_PP_StPats" EntitySet="Filter_PP_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Filter_PP_StPats_Manufactured_Stpats" Association="StPatsDataBaseModel1.FK_Filter_PP_StPats_Manufactured_Stpats">
+      <End Role="Manufactured_Stpats" EntitySet="Manufactured_Stpats" />
+      <End Role="Filter_PP_StPats" EntitySet="Filter_PP_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Filter_PP_StPats_Productos_StPats" Association="StPatsDataBaseModel1.FK_Filter_PP_StPats_Productos_StPats">
+      <End Role="Productos_StPats" EntitySet="Productos_StPats" />
+      <End Role="Filter_PP_StPats" EntitySet="Filter_PP_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Filter_PP_StPats_Tipo_Producto_StPats" Association="StPatsDataBaseModel1.FK_Filter_PP_StPats_Tipo_Producto_StPats">
+      <End Role="Tipo_Producto_StPats" EntitySet="Tipo_Producto_StPats" />
+      <End Role="Filter_PP_StPats" EntitySet="Filter_PP_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Filter_StPats_Locations_StPats" Association="StPatsDataBaseModel1.FK_Filter_StPats_Locations_StPats">
+      <End Role="Locations_StPats" EntitySet="Locations_StPats" />
+      <End Role="Filter_StPats" EntitySet="Filter_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Filter_StPats_Manufactured_Stpats" Association="StPatsDataBaseModel1.FK_Filter_StPats_Manufactured_Stpats">
+      <End Role="Manufactured_Stpats" EntitySet="Manufactured_Stpats" />
+      <End Role="Filter_StPats" EntitySet="Filter_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Filter_StPats_Productos_StPats" Association="StPatsDataBaseModel1.FK_Filter_StPats_Productos_StPats">
+      <End Role="Productos_StPats" EntitySet="Productos_StPats" />
+      <End Role="Filter_StPats" EntitySet="Filter_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Filter_StPats_Tipo_Producto_StPats" Association="StPatsDataBaseModel1.FK_Filter_StPats_Tipo_Producto_StPats">
+      <End Role="Tipo_Producto_StPats" EntitySet="Tipo_Producto_StPats" />
+      <End Role="Filter_StPats" EntitySet="Filter_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Filter_StPats_Type_Filter_StPats" Association="StPatsDataBaseModel1.FK_Filter_StPats_Type_Filter_StPats">
+      <End Role="Type_Filter_StPats" EntitySet="Type_Filter_StPats" />
+      <End Role="Filter_StPats" EntitySet="Filter_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Filtros_StPats_Locations_StPats" Association="StPatsDataBaseModel1.FK_Filtros_StPats_Locations_StPats">
+      <End Role="Locations_StPats" EntitySet="Locations_StPats" />
+      <End Role="Filtros_StPats" EntitySet="Filtros_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Labeler_StPats_Labeler_StPats" Association="StPatsDataBaseModel1.FK_Labeler_StPats_Labeler_StPats">
+      <End Role="Labeler_StPats" EntitySet="Labeler_StPats" />
+      <End Role="Labeler_StPats1" EntitySet="Labeler_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Labeler_StPats_Locations_StPats" Association="StPatsDataBaseModel1.FK_Labeler_StPats_Locations_StPats">
+      <End Role="Locations_StPats" EntitySet="Locations_StPats" />
+      <End Role="Labeler_StPats" EntitySet="Labeler_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Labeler_StPats_Manufactured_Stpats" Association="StPatsDataBaseModel1.FK_Labeler_StPats_Manufactured_Stpats">
+      <End Role="Manufactured_Stpats" EntitySet="Manufactured_Stpats" />
+      <End Role="Labeler_StPats" EntitySet="Labeler_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Labeler_StPats_Productos_StPats" Association="StPatsDataBaseModel1.FK_Labeler_StPats_Productos_StPats">
+      <End Role="Productos_StPats" EntitySet="Productos_StPats" />
+      <End Role="Labeler_StPats" EntitySet="Labeler_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Labeler_StPats_Tipo_Producto_StPats" Association="StPatsDataBaseModel1.FK_Labeler_StPats_Tipo_Producto_StPats">
+      <End Role="Tipo_Producto_StPats" EntitySet="Tipo_Producto_StPats" />
+      <End Role="Labeler_StPats" EntitySet="Labeler_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Lista_Productos_StPats_Productos_StPats" Association="StPatsDataBaseModel1.FK_Lista_Productos_StPats_Productos_StPats">
+      <End Role="Productos_StPats" EntitySet="Productos_StPats" />
+      <End Role="Lista_Productos_StPats" EntitySet="Lista_Productos_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Shopping_Cart_Detalle_StPats_Lista_Productos_StPats" Association="StPatsDataBaseModel1.FK_Shopping_Cart_Detalle_StPats_Lista_Productos_StPats">
+      <End Role="Lista_Productos_StPats" EntitySet="Lista_Productos_StPats" />
+      <End Role="Shopping_Cart_Detalle_StPats" EntitySet="Shopping_Cart_Detalle_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Productos_StPats_Locations_StPats" Association="StPatsDataBaseModel1.FK_Productos_StPats_Locations_StPats">
+      <End Role="Locations_StPats" EntitySet="Locations_StPats" />
+      <End Role="Productos_StPats" EntitySet="Productos_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Pump_StPats_Locations_StPats" Association="StPatsDataBaseModel1.FK_Pump_StPats_Locations_StPats">
+      <End Role="Locations_StPats" EntitySet="Locations_StPats" />
+      <End Role="Pump_StPats" EntitySet="Pump_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tank_LCBT_VC_ACF_StPats_Locations_StPats" Association="StPatsDataBaseModel1.FK_Tank_LCBT_VC_ACF_StPats_Locations_StPats">
+      <End Role="Locations_StPats" EntitySet="Locations_StPats" />
+      <End Role="Tank_LCBT_VC_ACF_StPats" EntitySet="Tank_LCBT_VC_ACF_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tank_LCTTCB_StPats_Locations_StPats" Association="StPatsDataBaseModel1.FK_Tank_LCTTCB_StPats_Locations_StPats">
+      <End Role="Locations_StPats" EntitySet="Locations_StPats" />
+      <End Role="Tank_LCTTCB_StPats" EntitySet="Tank_LCTTCB_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tank_LCTTCJ_VC_StPats_Locations_StPats" Association="StPatsDataBaseModel1.FK_Tank_LCTTCJ_VC_StPats_Locations_StPats">
+      <End Role="Locations_StPats" EntitySet="Locations_StPats" />
+      <End Role="Tank_LCTTCJ_VC_StPats" EntitySet="Tank_LCTTCJ_VC_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tank_LFBT_VC_StPats_Locations_StPats" Association="StPatsDataBaseModel1.FK_Tank_LFBT_VC_StPats_Locations_StPats">
+      <End Role="Locations_StPats" EntitySet="Locations_StPats" />
+      <End Role="Tank_LFBT_VC_StPats" EntitySet="Tank_LFBT_VC_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tank_LFLT_VCCJ_StPats_Locations_StPats" Association="StPatsDataBaseModel1.FK_Tank_LFLT_VCCJ_StPats_Locations_StPats">
+      <End Role="Locations_StPats" EntitySet="Locations_StPats" />
+      <End Role="Tank_LFLT_VCCJ_StPats" EntitySet="Tank_LFLT_VCCJ_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tank_LSBT_VC_ACF_StPats_Locations_StPats" Association="StPatsDataBaseModel1.FK_Tank_LSBT_VC_ACF_StPats_Locations_StPats">
+      <End Role="Locations_StPats" EntitySet="Locations_StPats" />
+      <End Role="Tank_LSBT_VC_ACF_StPats" EntitySet="Tank_LSBT_VC_ACF_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tank_LWWFWCJCT_VC_StPats_Locations_StPats" Association="StPatsDataBaseModel1.FK_Tank_LWWFWCJCT_VC_StPats_Locations_StPats">
+      <End Role="Locations_StPats" EntitySet="Locations_StPats" />
+      <End Role="Tank_LWWFWCJCT_VC_StPats" EntitySet="Tank_LWWFWCJCT_VC_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tank_MXT_StPats_Locations_StPats" Association="StPatsDataBaseModel1.FK_Tank_MXT_StPats_Locations_StPats">
+      <End Role="Locations_StPats" EntitySet="Locations_StPats" />
+      <End Role="Tank_MXT_StPats" EntitySet="Tank_MXT_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tank_TONW_StPats_Locations_StPats" Association="StPatsDataBaseModel1.FK_Tank_TONW_StPats_Locations_StPats">
+      <End Role="Locations_StPats" EntitySet="Locations_StPats" />
+      <End Role="Tank_TONW_StPats" EntitySet="Tank_TONW_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tanks_StPats_Locations_StPats" Association="StPatsDataBaseModel1.FK_Tanks_StPats_Locations_StPats">
+      <End Role="Locations_StPats" EntitySet="Locations_StPats" />
+      <End Role="Tanks_StPats" EntitySet="Tanks_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Pump_StPats_Manufactured_Stpats" Association="StPatsDataBaseModel1.FK_Pump_StPats_Manufactured_Stpats">
+      <End Role="Manufactured_Stpats" EntitySet="Manufactured_Stpats" />
+      <End Role="Pump_StPats" EntitySet="Pump_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tank_LCBT_VC_ACF_StPats_Manufactured_Stpats" Association="StPatsDataBaseModel1.FK_Tank_LCBT_VC_ACF_StPats_Manufactured_Stpats">
+      <End Role="Manufactured_Stpats" EntitySet="Manufactured_Stpats" />
+      <End Role="Tank_LCBT_VC_ACF_StPats" EntitySet="Tank_LCBT_VC_ACF_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tank_LCTTCB_StPats_Manufactured_Stpats" Association="StPatsDataBaseModel1.FK_Tank_LCTTCB_StPats_Manufactured_Stpats">
+      <End Role="Manufactured_Stpats" EntitySet="Manufactured_Stpats" />
+      <End Role="Tank_LCTTCB_StPats" EntitySet="Tank_LCTTCB_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tank_LCTTCJ_VC_StPats_Manufactured_Stpats" Association="StPatsDataBaseModel1.FK_Tank_LCTTCJ_VC_StPats_Manufactured_Stpats">
+      <End Role="Manufactured_Stpats" EntitySet="Manufactured_Stpats" />
+      <End Role="Tank_LCTTCJ_VC_StPats" EntitySet="Tank_LCTTCJ_VC_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tank_LFBT_VC_StPats_Manufactured_Stpats" Association="StPatsDataBaseModel1.FK_Tank_LFBT_VC_StPats_Manufactured_Stpats">
+      <End Role="Manufactured_Stpats" EntitySet="Manufactured_Stpats" />
+      <End Role="Tank_LFBT_VC_StPats" EntitySet="Tank_LFBT_VC_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tank_LFLT_VCCJ_StPats_Manufactured_Stpats" Association="StPatsDataBaseModel1.FK_Tank_LFLT_VCCJ_StPats_Manufactured_Stpats">
+      <End Role="Manufactured_Stpats" EntitySet="Manufactured_Stpats" />
+      <End Role="Tank_LFLT_VCCJ_StPats" EntitySet="Tank_LFLT_VCCJ_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tank_LSBT_VC_ACF_StPats_Manufactured_Stpats" Association="StPatsDataBaseModel1.FK_Tank_LSBT_VC_ACF_StPats_Manufactured_Stpats">
+      <End Role="Manufactured_Stpats" EntitySet="Manufactured_Stpats" />
+      <End Role="Tank_LSBT_VC_ACF_StPats" EntitySet="Tank_LSBT_VC_ACF_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tank_LWWFWCJCT_VC_StPats_Manufactured_Stpats" Association="StPatsDataBaseModel1.FK_Tank_LWWFWCJCT_VC_StPats_Manufactured_Stpats">
+      <End Role="Manufactured_Stpats" EntitySet="Manufactured_Stpats" />
+      <End Role="Tank_LWWFWCJCT_VC_StPats" EntitySet="Tank_LWWFWCJCT_VC_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tank_MXT_StPats_Manufactured_Stpats" Association="StPatsDataBaseModel1.FK_Tank_MXT_StPats_Manufactured_Stpats">
+      <End Role="Manufactured_Stpats" EntitySet="Manufactured_Stpats" />
+      <End Role="Tank_MXT_StPats" EntitySet="Tank_MXT_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tank_TONW_StPats_Manufactured_Stpats" Association="StPatsDataBaseModel1.FK_Tank_TONW_StPats_Manufactured_Stpats">
+      <End Role="Manufactured_Stpats" EntitySet="Manufactured_Stpats" />
+      <End Role="Tank_TONW_StPats" EntitySet="Tank_TONW_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Productos_StPats_Tipo_Producto_StPats" Association="StPatsDataBaseModel1.FK_Productos_StPats_Tipo_Producto_StPats">
+      <End Role="Tipo_Producto_StPats" EntitySet="Tipo_Producto_StPats" />
+      <End Role="Productos_StPats" EntitySet="Productos_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Pump_StPats_Productos_StPats" Association="StPatsDataBaseModel1.FK_Pump_StPats_Productos_StPats">
+      <End Role="Productos_StPats" EntitySet="Productos_StPats" />
+      <End Role="Pump_StPats" EntitySet="Pump_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tank_LCBT_VC_ACF_StPats_Productos_StPats" Association="StPatsDataBaseModel1.FK_Tank_LCBT_VC_ACF_StPats_Productos_StPats">
+      <End Role="Productos_StPats" EntitySet="Productos_StPats" />
+      <End Role="Tank_LCBT_VC_ACF_StPats" EntitySet="Tank_LCBT_VC_ACF_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tank_LCTTCB_StPats_Productos_StPats" Association="StPatsDataBaseModel1.FK_Tank_LCTTCB_StPats_Productos_StPats">
+      <End Role="Productos_StPats" EntitySet="Productos_StPats" />
+      <End Role="Tank_LCTTCB_StPats" EntitySet="Tank_LCTTCB_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tank_LCTTCJ_VC_StPats_Productos_StPats" Association="StPatsDataBaseModel1.FK_Tank_LCTTCJ_VC_StPats_Productos_StPats">
+      <End Role="Productos_StPats" EntitySet="Productos_StPats" />
+      <End Role="Tank_LCTTCJ_VC_StPats" EntitySet="Tank_LCTTCJ_VC_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tank_LFBT_VC_StPats_Productos_StPats" Association="StPatsDataBaseModel1.FK_Tank_LFBT_VC_StPats_Productos_StPats">
+      <End Role="Productos_StPats" EntitySet="Productos_StPats" />
+      <End Role="Tank_LFBT_VC_StPats" EntitySet="Tank_LFBT_VC_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tank_LFLT_VCCJ_StPats_Productos_StPats" Association="StPatsDataBaseModel1.FK_Tank_LFLT_VCCJ_StPats_Productos_StPats">
+      <End Role="Productos_StPats" EntitySet="Productos_StPats" />
+      <End Role="Tank_LFLT_VCCJ_StPats" EntitySet="Tank_LFLT_VCCJ_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tank_LSBT_VC_ACF_StPats_Productos_StPats" Association="StPatsDataBaseModel1.FK_Tank_LSBT_VC_ACF_StPats_Productos_StPats">
+      <End Role="Productos_StPats" EntitySet="Productos_StPats" />
+      <End Role="Tank_LSBT_VC_ACF_StPats" EntitySet="Tank_LSBT_VC_ACF_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tank_LWWFWCJCT_VC_StPats_Productos_StPats" Association="StPatsDataBaseModel1.FK_Tank_LWWFWCJCT_VC_StPats_Productos_StPats">
+      <End Role="Productos_StPats" EntitySet="Productos_StPats" />
+      <End Role="Tank_LWWFWCJCT_VC_StPats" EntitySet="Tank_LWWFWCJCT_VC_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tank_MXT_StPats_Productos_StPats" Association="StPatsDataBaseModel1.FK_Tank_MXT_StPats_Productos_StPats">
+      <End Role="Productos_StPats" EntitySet="Productos_StPats" />
+      <End Role="Tank_MXT_StPats" EntitySet="Tank_MXT_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tank_TONW_StPats_Productos_StPats" Association="StPatsDataBaseModel1.FK_Tank_TONW_StPats_Productos_StPats">
+      <End Role="Productos_StPats" EntitySet="Productos_StPats" />
+      <End Role="Tank_TONW_StPats" EntitySet="Tank_TONW_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Pump_StPats_Tipo_Producto_StPats" Association="StPatsDataBaseModel1.FK_Pump_StPats_Tipo_Producto_StPats">
+      <End Role="Tipo_Producto_StPats" EntitySet="Tipo_Producto_StPats" />
+      <End Role="Pump_StPats" EntitySet="Pump_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Shopping_Cart_Detalle_StPats_Shopping_Cart_StPats" Association="StPatsDataBaseModel1.FK_Shopping_Cart_Detalle_StPats_Shopping_Cart_StPats">
+      <End Role="Shopping_Cart_StPats" EntitySet="Shopping_Cart_StPats" />
+      <End Role="Shopping_Cart_Detalle_StPats" EntitySet="Shopping_Cart_Detalle_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StaCi_StPats_State_StPats" Association="StPatsDataBaseModel1.FK_StaCi_StPats_State_StPats">
+      <End Role="State_StPats" EntitySet="State_StPats" />
+      <End Role="StaCi_StPats" EntitySet="StaCi_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Statax_StPats_State_StPats" Association="StPatsDataBaseModel1.FK_Statax_StPats_State_StPats">
+      <End Role="State_StPats" EntitySet="State_StPats" />
+      <End Role="Statax_StPats" EntitySet="Statax_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tank_LCBT_VC_ACF_StPats_Tipo_Producto_StPats" Association="StPatsDataBaseModel1.FK_Tank_LCBT_VC_ACF_StPats_Tipo_Producto_StPats">
+      <End Role="Tipo_Producto_StPats" EntitySet="Tipo_Producto_StPats" />
+      <End Role="Tank_LCBT_VC_ACF_StPats" EntitySet="Tank_LCBT_VC_ACF_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tank_LCTTCB_StPats_Tipo_Producto_StPats" Association="StPatsDataBaseModel1.FK_Tank_LCTTCB_StPats_Tipo_Producto_StPats">
+      <End Role="Tipo_Producto_StPats" EntitySet="Tipo_Producto_StPats" />
+      <End Role="Tank_LCTTCB_StPats" EntitySet="Tank_LCTTCB_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tank_LCTTCJ_VC_StPats_Tipo_Producto_StPats" Association="StPatsDataBaseModel1.FK_Tank_LCTTCJ_VC_StPats_Tipo_Producto_StPats">
+      <End Role="Tipo_Producto_StPats" EntitySet="Tipo_Producto_StPats" />
+      <End Role="Tank_LCTTCJ_VC_StPats" EntitySet="Tank_LCTTCJ_VC_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tank_LFBT_VC_StPats_Tipo_Producto_StPats" Association="StPatsDataBaseModel1.FK_Tank_LFBT_VC_StPats_Tipo_Producto_StPats">
+      <End Role="Tipo_Producto_StPats" EntitySet="Tipo_Producto_StPats" />
+      <End Role="Tank_LFBT_VC_StPats" EntitySet="Tank_LFBT_VC_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tank_LFLT_VCCJ_StPats_Tipo_Producto_StPats" Association="StPatsDataBaseModel1.FK_Tank_LFLT_VCCJ_StPats_Tipo_Producto_StPats">
+      <End Role="Tipo_Producto_StPats" EntitySet="Tipo_Producto_StPats" />
+      <End Role="Tank_LFLT_VCCJ_StPats" EntitySet="Tank_LFLT_VCCJ_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tank_LSBT_VC_ACF_StPats_Tipo_Producto_StPats" Association="StPatsDataBaseModel1.FK_Tank_LSBT_VC_ACF_StPats_Tipo_Producto_StPats">
+      <End Role="Tipo_Producto_StPats" EntitySet="Tipo_Producto_StPats" />
+      <End Role="Tank_LSBT_VC_ACF_StPats" EntitySet="Tank_LSBT_VC_ACF_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tank_LWWFWCJCT_VC_StPats_Tipo_Producto_StPats" Association="StPatsDataBaseModel1.FK_Tank_LWWFWCJCT_VC_StPats_Tipo_Producto_StPats">
+      <End Role="Tipo_Producto_StPats" EntitySet="Tipo_Producto_StPats" />
+      <End Role="Tank_LWWFWCJCT_VC_StPats" EntitySet="Tank_LWWFWCJCT_VC_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tank_MXT_StPats_Tipo_Producto_StPats" Association="StPatsDataBaseModel1.FK_Tank_MXT_StPats_Tipo_Producto_StPats">
+      <End Role="Tipo_Producto_StPats" EntitySet="Tipo_Producto_StPats" />
+      <End Role="Tank_MXT_StPats" EntitySet="Tank_MXT_StPats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tank_TONW_StPats_Tipo_Producto_StPats" Association="StPatsDataBaseModel1.FK_Tank_TONW_StPats_Tipo_Producto_StPats">
+      <End Role="Tipo_Producto_StPats" EntitySet="Tipo_Producto_StPats" />
+      <End Role="Tank_TONW_StPats" EntitySet="Tank_TONW_StPats" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Bill_StPats">
+    <Key>
+      <PropertyRef Name="id_bill" />
+    </Key>
+    <Property Name="id_bill" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="id_paymet" Type="Int32" Nullable="false" />
+    <Property Name="id_shoppingCart" Type="Int64" Nullable="false" />
+    <Property Name="id_estado" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Estado_StPats" Relationship="StPatsDataBaseModel1.FK_Bill_StPats_Estado_StPats" FromRole="Bill_StPats" ToRole="Estado_StPats" />
+    <NavigationProperty Name="PayMet_StPats" Relationship="StPatsDataBaseModel1.FK_Bill_StPats_PayMet_StPats" FromRole="Bill_StPats" ToRole="PayMet_StPats" />
+    <NavigationProperty Name="Shopping_Cart_StPats" Relationship="StPatsDataBaseModel1.FK_Bill_StPats_Shopping_Cart_StPats" FromRole="Bill_StPats" ToRole="Shopping_Cart_StPats" />
+  </EntityType>
+  <EntityType Name="Bottle_Finishing_StPats">
+    <Key>
+      <PropertyRef Name="C_id___bottle_finishing" />
+    </Key>
+    <Property Name="C_id___bottle_finishing" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_producto_general" Type="Int32" Nullable="false" />
+    <Property Name="id_tipo_product" Type="Int32" Nullable="false" />
+    <Property Name="code_product" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="name_product" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="desctiption" Type="String" Nullable="false" MaxLength="999" FixedLength="false" Unicode="false" />
+    <Property Name="price" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="id_location" Type="Int32" Nullable="false" />
+    <Property Name="image" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="manual" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="voltage_regulator" Type="Int32" Nullable="false" />
+    <Property Name="id_manufactured" Type="Int32" Nullable="false" />
+    <Property Name="stock" Type="Int32" Nullable="false" />
+    <Property Name="id_estado" Type="Int32" Nullable="false" />
+    <Property Name="extra_things" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Estado_StPats" Relationship="StPatsDataBaseModel1.FK_Bottle_Finishing_StPats_Estado_StPats" FromRole="Bottle_Finishing_StPats" ToRole="Estado_StPats" />
+    <NavigationProperty Name="Locations_StPats" Relationship="StPatsDataBaseModel1.FK_Bottle_Finishing_StPats_Locations_StPats" FromRole="Bottle_Finishing_StPats" ToRole="Locations_StPats" />
+    <NavigationProperty Name="Manufactured_Stpats" Relationship="StPatsDataBaseModel1.FK_Bottle_Finishing_StPats_Manufactured_Stpats" FromRole="Bottle_Finishing_StPats" ToRole="Manufactured_Stpats" />
+    <NavigationProperty Name="Productos_StPats" Relationship="StPatsDataBaseModel1.FK_Bottle_Finishing_StPats_Productos_StPats" FromRole="Bottle_Finishing_StPats" ToRole="Productos_StPats" />
+    <NavigationProperty Name="Tipo_Producto_StPats" Relationship="StPatsDataBaseModel1.FK_Bottle_Finishing_StPats_Tipo_Producto_StPats" FromRole="Bottle_Finishing_StPats" ToRole="Tipo_Producto_StPats" />
+  </EntityType>
+  <EntityType Name="Ciudades_StPats">
+    <Key>
+      <PropertyRef Name="id_ciudad" />
+    </Key>
+    <Property Name="id_ciudad" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre_ciudad" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="StaCi_StPats" Relationship="StPatsDataBaseModel1.FK_StaCi_StPats_Ciudades_StPats" FromRole="Ciudades_StPats" ToRole="StaCi_StPats" />
+  </EntityType>
+  <EntityType Name="Clients_StPats">
+    <Key>
+      <PropertyRef Name="id_cliente" />
+    </Key>
+    <Property Name="id_cliente" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre_cliente" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="usuario" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="retry_password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="id_ciudad_estado" Type="Int32" Nullable="false" />
+    <Property Name="zip_code" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="telefono" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="estado" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Estado_StPats" Relationship="StPatsDataBaseModel1.FK_Clients_StPats_Estado_StPats" FromRole="Clients_StPats" ToRole="Estado_StPats" />
+    <NavigationProperty Name="StaCi_StPats" Relationship="StPatsDataBaseModel1.FK_Clients_StPats_StaCi_StPats" FromRole="Clients_StPats" ToRole="StaCi_StPats" />
+    <NavigationProperty Name="Shopping_Cart_StPats" Relationship="StPatsDataBaseModel1.FK_Shopping_Cart_StPats_Clients_StPats" FromRole="Clients_StPats" ToRole="Shopping_Cart_StPats" />
+  </EntityType>
+  <EntityType Name="Estado_StPats">
+    <Key>
+      <PropertyRef Name="id_estado" />
+    </Key>
+    <Property Name="id_estado" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="descripcion" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Bill_StPats" Relationship="StPatsDataBaseModel1.FK_Bill_StPats_Estado_StPats" FromRole="Estado_StPats" ToRole="Bill_StPats" />
+    <NavigationProperty Name="Bottle_Finishing_StPats" Relationship="StPatsDataBaseModel1.FK_Bottle_Finishing_StPats_Estado_StPats" FromRole="Estado_StPats" ToRole="Bottle_Finishing_StPats" />
+    <NavigationProperty Name="Clients_StPats" Relationship="StPatsDataBaseModel1.FK_Clients_StPats_Estado_StPats" FromRole="Estado_StPats" ToRole="Clients_StPats" />
+    <NavigationProperty Name="Filling_Machine_StPats" Relationship="StPatsDataBaseModel1.FK_Filling_Machine_StPats_Estado_StPats" FromRole="Estado_StPats" ToRole="Filling_Machine_StPats" />
+    <NavigationProperty Name="Filter_ACF_StPats" Relationship="StPatsDataBaseModel1.FK_Filter_ACF_StPats_Estado_StPats" FromRole="Estado_StPats" ToRole="Filter_ACF_StPats" />
+    <NavigationProperty Name="Filter_CH_StPats" Relationship="StPatsDataBaseModel1.FK_Filter_CH_StPats_Estado_StPats" FromRole="Estado_StPats" ToRole="Filter_CH_StPats" />
+    <NavigationProperty Name="Filter_PAF_StPats" Relationship="StPatsDataBaseModel1.FK_Filter_PAF_StPats_Estado_StPats" FromRole="Estado_StPats" ToRole="Filter_PAF_StPats" />
+    <NavigationProperty Name="Filter_PES_StPats" Relationship="StPatsDataBaseModel1.FK_Filter_PES_StPats_Estado_StPats" FromRole="Estado_StPats" ToRole="Filter_PES_StPats" />
+    <NavigationProperty Name="Filter_PP_StPats" Relationship="StPatsDataBaseModel1.FK_Filter_PP_StPats_Estado_StPats" FromRole="Estado_StPats" ToRole="Filter_PP_StPats" />
+    <NavigationProperty Name="Filter_StPats" Relationship="StPatsDataBaseModel1.FK_Filter_StPats_Estado_StPats" FromRole="Estado_StPats" ToRole="Filter_StPats" />
+    <NavigationProperty Name="Labeler_StPats" Relationship="StPatsDataBaseModel1.FK_Labeler_StPats_Estado_StPats" FromRole="Estado_StPats" ToRole="Labeler_StPats" />
+    <NavigationProperty Name="Lista_Productos_StPats" Relationship="StPatsDataBaseModel1.FK_Lista_Productos_StPats_Estado_StPats" FromRole="Estado_StPats" ToRole="Lista_Productos_StPats" />
+    <NavigationProperty Name="Productos_StPats" Relationship="StPatsDataBaseModel1.FK_Productos_StPats_Estado_StPats" FromRole="Estado_StPats" ToRole="Productos_StPats" />
+    <NavigationProperty Name="Pump_StPats" Relationship="StPatsDataBaseModel1.FK_Pump_StPats_Estado_StPats" FromRole="Estado_StPats" ToRole="Pump_StPats" />
+    <NavigationProperty Name="Shopping_Cart_Detalle_StPats" Relationship="StPatsDataBaseModel1.FK_Shopping_Cart_Detalle_StPats_Estado_StPats" FromRole="Estado_StPats" ToRole="Shopping_Cart_Detalle_StPats" />
+    <NavigationProperty Name="Shopping_Cart_StPats" Relationship="StPatsDataBaseModel1.FK_Shopping_Cart_StPats_Estado_StPats" FromRole="Estado_StPats" ToRole="Shopping_Cart_StPats" />
+    <NavigationProperty Name="Tank_LCBT_VC_ACF_StPats" Relationship="StPatsDataBaseModel1.FK_Tank_LCBT_VC_ACF_StPats_Estado_StPats" FromRole="Estado_StPats" ToRole="Tank_LCBT_VC_ACF_StPats" />
+    <NavigationProperty Name="Tank_LCTTCB_StPats" Relationship="StPatsDataBaseModel1.FK_Tank_LCTTCB_StPats_Estado_StPats" FromRole="Estado_StPats" ToRole="Tank_LCTTCB_StPats" />
+    <NavigationProperty Name="Tank_LCTTCJ_VC_StPats" Relationship="StPatsDataBaseModel1.FK_Tank_LCTTCJ_VC_StPats_Estado_StPats" FromRole="Estado_StPats" ToRole="Tank_LCTTCJ_VC_StPats" />
+    <NavigationProperty Name="Tank_LFBT_VC_StPats" Relationship="StPatsDataBaseModel1.FK_Tank_LFBT_VC_StPats_Estado_StPats" FromRole="Estado_StPats" ToRole="Tank_LFBT_VC_StPats" />
+    <NavigationProperty Name="Tank_LFLT_VCCJ_StPats" Relationship="StPatsDataBaseModel1.FK_Tank_LFLT_VCCJ_StPats_Estado_StPats" FromRole="Estado_StPats" ToRole="Tank_LFLT_VCCJ_StPats" />
+    <NavigationProperty Name="Tank_LSBT_VC_ACF_StPats" Relationship="StPatsDataBaseModel1.FK_Tank_LSBT_VC_ACF_StPats_Estado_StPats" FromRole="Estado_StPats" ToRole="Tank_LSBT_VC_ACF_StPats" />
+    <NavigationProperty Name="Tank_LWWFWCJCT_VC_StPats" Relationship="StPatsDataBaseModel1.FK_Tank_LWWFWCJCT_VC_StPats_Estado_StPats" FromRole="Estado_StPats" ToRole="Tank_LWWFWCJCT_VC_StPats" />
+    <NavigationProperty Name="Tank_MXT_StPats" Relationship="StPatsDataBaseModel1.FK_Tank_MXT_StPats_Estado_StPats" FromRole="Estado_StPats" ToRole="Tank_MXT_StPats" />
+    <NavigationProperty Name="Tank_TONW_StPats" Relationship="StPatsDataBaseModel1.FK_Tank_TONW_StPats_Estado_StPats" FromRole="Estado_StPats" ToRole="Tank_TONW_StPats" />
+  </EntityType>
+  <EntityType Name="Filling_Machine_StPats">
+    <Key>
+      <PropertyRef Name="id_filling_machine" />
+    </Key>
+    <Property Name="id_filling_machine" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_producto_general" Type="Int32" Nullable="false" />
+    <Property Name="id_tipo_product" Type="Int32" Nullable="false" />
+    <Property Name="code_produt" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="name_product" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="description" Type="String" Nullable="false" MaxLength="999" FixedLength="false" Unicode="false" />
+    <Property Name="price" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="id_location" Type="Int32" Nullable="false" />
+    <Property Name="image" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="manual" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="voltage_regulator" Type="Int32" Nullable="false" />
+    <Property Name="id_manufactured" Type="Int32" Nullable="false" />
+    <Property Name="regulador" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="stock" Type="Int32" Nullable="false" />
+    <Property Name="id_estado" Type="Int32" Nullable="false" />
+    <Property Name="extra_things" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Estado_StPats" Relationship="StPatsDataBaseModel1.FK_Filling_Machine_StPats_Estado_StPats" FromRole="Filling_Machine_StPats" ToRole="Estado_StPats" />
+    <NavigationProperty Name="Locations_StPats" Relationship="StPatsDataBaseModel1.FK_Filling_Machine_StPats_Locations_StPats" FromRole="Filling_Machine_StPats" ToRole="Locations_StPats" />
+    <NavigationProperty Name="Manufactured_Stpats" Relationship="StPatsDataBaseModel1.FK_Filling_Machine_StPats_Manufactured_Stpats" FromRole="Filling_Machine_StPats" ToRole="Manufactured_Stpats" />
+    <NavigationProperty Name="Productos_StPats" Relationship="StPatsDataBaseModel1.FK_Filling_Machine_StPats_Productos_StPats" FromRole="Filling_Machine_StPats" ToRole="Productos_StPats" />
+    <NavigationProperty Name="Tipo_Producto_StPats" Relationship="StPatsDataBaseModel1.FK_Filling_Machine_StPats_Tipo_Producto_StPats" FromRole="Filling_Machine_StPats" ToRole="Tipo_Producto_StPats" />
+  </EntityType>
+  <EntityType Name="Filter_ACF_StPats">
+    <Key>
+      <PropertyRef Name="id_filter_acf" />
+    </Key>
+    <Property Name="id_filter_acf" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_producto_general" Type="Int32" Nullable="false" />
+    <Property Name="id_tipo_product" Type="Int32" Nullable="false" />
+    <Property Name="code_produt" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="name_product" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="description" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="id_location" Type="Int32" Nullable="false" />
+    <Property Name="id_manufactured" Type="Int32" Nullable="false" />
+    <Property Name="stock" Type="Int32" Nullable="false" />
+    <Property Name="id_estado" Type="Int32" Nullable="false" />
+    <Property Name="extra_things" Type="String" Nullable="false" MaxLength="950" FixedLength="false" Unicode="false" />
+    <Property Name="micron" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="price_only_10" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="price_10_30" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="price_only_30" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="price_15_30" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <NavigationProperty Name="Estado_StPats" Relationship="StPatsDataBaseModel1.FK_Filter_ACF_StPats_Estado_StPats" FromRole="Filter_ACF_StPats" ToRole="Estado_StPats" />
+    <NavigationProperty Name="Locations_StPats" Relationship="StPatsDataBaseModel1.FK_Filter_ACF_StPats_Locations_StPats" FromRole="Filter_ACF_StPats" ToRole="Locations_StPats" />
+    <NavigationProperty Name="Manufactured_Stpats" Relationship="StPatsDataBaseModel1.FK_Filter_ACF_StPats_Manufactured_Stpats" FromRole="Filter_ACF_StPats" ToRole="Manufactured_Stpats" />
+    <NavigationProperty Name="Productos_StPats" Relationship="StPatsDataBaseModel1.FK_Filter_ACF_StPats_Productos_StPats" FromRole="Filter_ACF_StPats" ToRole="Productos_StPats" />
+    <NavigationProperty Name="Tipo_Producto_StPats" Relationship="StPatsDataBaseModel1.FK_Filter_ACF_StPats_Tipo_Producto_StPats" FromRole="Filter_ACF_StPats" ToRole="Tipo_Producto_StPats" />
+  </EntityType>
+  <EntityType Name="Filter_CH_StPats">
+    <Key>
+      <PropertyRef Name="id_filter_ch" />
+    </Key>
+    <Property Name="id_filter_ch" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_producto_general" Type="Int32" Nullable="false" />
+    <Property Name="id_tipo_product" Type="Int32" Nullable="false" />
+    <Property Name="code_produt" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="name_product" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="description" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="id_location" Type="Int32" Nullable="false" />
+    <Property Name="id_manufactured" Type="Int32" Nullable="false" />
+    <Property Name="stock" Type="Int32" Nullable="false" />
+    <Property Name="id_estado" Type="Int32" Nullable="false" />
+    <Property Name="extra_things" Type="String" Nullable="false" MaxLength="950" FixedLength="false" Unicode="false" />
+    <Property Name="micron" Type="Single" Nullable="false" />
+    <Property Name="price_single_10" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="price_single_30" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="price_triple_30" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <NavigationProperty Name="Estado_StPats" Relationship="StPatsDataBaseModel1.FK_Filter_CH_StPats_Estado_StPats" FromRole="Filter_CH_StPats" ToRole="Estado_StPats" />
+    <NavigationProperty Name="Locations_StPats" Relationship="StPatsDataBaseModel1.FK_Filter_CH_StPats_Locations_StPats" FromRole="Filter_CH_StPats" ToRole="Locations_StPats" />
+    <NavigationProperty Name="Manufactured_Stpats" Relationship="StPatsDataBaseModel1.FK_Filter_CH_StPats_Manufactured_Stpats" FromRole="Filter_CH_StPats" ToRole="Manufactured_Stpats" />
+    <NavigationProperty Name="Productos_StPats" Relationship="StPatsDataBaseModel1.FK_Filter_CH_StPats_Productos_StPats" FromRole="Filter_CH_StPats" ToRole="Productos_StPats" />
+    <NavigationProperty Name="Tipo_Producto_StPats" Relationship="StPatsDataBaseModel1.FK_Filter_CH_StPats_Tipo_Producto_StPats" FromRole="Filter_CH_StPats" ToRole="Tipo_Producto_StPats" />
+  </EntityType>
+  <EntityType Name="Filter_PAF_StPats">
+    <Key>
+      <PropertyRef Name="id_filter_paf" />
+    </Key>
+    <Property Name="id_filter_paf" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_producto_general" Type="Int32" Nullable="false" />
+    <Property Name="id_tipo_product" Type="Int32" Nullable="false" />
+    <Property Name="code_produt" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="name_product" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="description" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="price" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="id_location" Type="Int32" Nullable="false" />
+    <Property Name="image" Type="String" Nullable="false" MaxLength="350" FixedLength="false" Unicode="false" />
+    <Property Name="manual" Type="String" Nullable="false" MaxLength="350" FixedLength="false" Unicode="false" />
+    <Property Name="id_manufactured" Type="Int32" Nullable="false" />
+    <Property Name="stock" Type="Int32" Nullable="false" />
+    <Property Name="id_estado" Type="Int32" Nullable="false" />
+    <Property Name="extra_things" Type="String" Nullable="false" MaxLength="950" FixedLength="false" Unicode="false" />
+    <Property Name="noryl_plates" Type="Int32" Nullable="false" />
+    <Property Name="number_of_plates" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="filter_surface_area" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Estado_StPats" Relationship="StPatsDataBaseModel1.FK_Filter_PAF_StPats_Estado_StPats" FromRole="Filter_PAF_StPats" ToRole="Estado_StPats" />
+    <NavigationProperty Name="Locations_StPats" Relationship="StPatsDataBaseModel1.FK_Filter_PAF_StPats_Locations_StPats" FromRole="Filter_PAF_StPats" ToRole="Locations_StPats" />
+    <NavigationProperty Name="Manufactured_Stpats" Relationship="StPatsDataBaseModel1.FK_Filter_PAF_StPats_Manufactured_Stpats" FromRole="Filter_PAF_StPats" ToRole="Manufactured_Stpats" />
+    <NavigationProperty Name="Productos_StPats" Relationship="StPatsDataBaseModel1.FK_Filter_PAF_StPats_Productos_StPats" FromRole="Filter_PAF_StPats" ToRole="Productos_StPats" />
+    <NavigationProperty Name="Tipo_Producto_StPats" Relationship="StPatsDataBaseModel1.FK_Filter_PAF_StPats_Tipo_Producto_StPats" FromRole="Filter_PAF_StPats" ToRole="Tipo_Producto_StPats" />
+  </EntityType>
+  <EntityType Name="Filter_PES_StPats">
+    <Key>
+      <PropertyRef Name="id_filter_pes" />
+    </Key>
+    <Property Name="id_filter_pes" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_producto_general" Type="Int32" Nullable="false" />
+    <Property Name="id_tipo_product" Type="Int32" Nullable="false" />
+    <Property Name="code_produt" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="name_product" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="description" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="id_location" Type="Int32" Nullable="false" />
+    <Property Name="id_manufactured" Type="Int32" Nullable="false" />
+    <Property Name="stock" Type="Int32" Nullable="false" />
+    <Property Name="id_estado" Type="Int32" Nullable="false" />
+    <Property Name="extra_things" Type="String" Nullable="false" MaxLength="950" FixedLength="false" Unicode="false" />
+    <Property Name="micron" Type="Single" Nullable="false" />
+    <Property Name="price_only_10" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="price_10_30" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="price_only_30" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="price_15_30" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <NavigationProperty Name="Estado_StPats" Relationship="StPatsDataBaseModel1.FK_Filter_PES_StPats_Estado_StPats" FromRole="Filter_PES_StPats" ToRole="Estado_StPats" />
+    <NavigationProperty Name="Locations_StPats" Relationship="StPatsDataBaseModel1.FK_Filter_PES_StPats_Locations_StPats" FromRole="Filter_PES_StPats" ToRole="Locations_StPats" />
+    <NavigationProperty Name="Manufactured_Stpats" Relationship="StPatsDataBaseModel1.FK_Filter_PES_StPats_Manufactured_Stpats" FromRole="Filter_PES_StPats" ToRole="Manufactured_Stpats" />
+    <NavigationProperty Name="Productos_StPats" Relationship="StPatsDataBaseModel1.FK_Filter_PES_StPats_Productos_StPats" FromRole="Filter_PES_StPats" ToRole="Productos_StPats" />
+    <NavigationProperty Name="Tipo_Producto_StPats" Relationship="StPatsDataBaseModel1.FK_Filter_PES_StPats_Tipo_Producto_StPats" FromRole="Filter_PES_StPats" ToRole="Tipo_Producto_StPats" />
+  </EntityType>
+  <EntityType Name="Filter_PP_StPats">
+    <Key>
+      <PropertyRef Name="id_filter_pp" />
+    </Key>
+    <Property Name="id_filter_pp" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_producto_general" Type="Int32" Nullable="false" />
+    <Property Name="id_tipo_product" Type="Int32" Nullable="false" />
+    <Property Name="code_produt" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="name_product" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="description" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="id_location" Type="Int32" Nullable="false" />
+    <Property Name="id_manufactured" Type="Int32" Nullable="false" />
+    <Property Name="stock" Type="Int32" Nullable="false" />
+    <Property Name="id_estado" Type="Int32" Nullable="false" />
+    <Property Name="extra_things" Type="String" Nullable="false" MaxLength="950" FixedLength="false" Unicode="false" />
+    <Property Name="micron" Type="Single" Nullable="false" />
+    <Property Name="price_only_10" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="price_10_30" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="price_only_30" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="price_15_30" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <NavigationProperty Name="Estado_StPats" Relationship="StPatsDataBaseModel1.FK_Filter_PP_StPats_Estado_StPats" FromRole="Filter_PP_StPats" ToRole="Estado_StPats" />
+    <NavigationProperty Name="Locations_StPats" Relationship="StPatsDataBaseModel1.FK_Filter_PP_StPats_Locations_StPats" FromRole="Filter_PP_StPats" ToRole="Locations_StPats" />
+    <NavigationProperty Name="Manufactured_Stpats" Relationship="StPatsDataBaseModel1.FK_Filter_PP_StPats_Manufactured_Stpats" FromRole="Filter_PP_StPats" ToRole="Manufactured_Stpats" />
+    <NavigationProperty Name="Productos_StPats" Relationship="StPatsDataBaseModel1.FK_Filter_PP_StPats_Productos_StPats" FromRole="Filter_PP_StPats" ToRole="Productos_StPats" />
+    <NavigationProperty Name="Tipo_Producto_StPats" Relationship="StPatsDataBaseModel1.FK_Filter_PP_StPats_Tipo_Producto_StPats" FromRole="Filter_PP_StPats" ToRole="Tipo_Producto_StPats" />
+  </EntityType>
+  <EntityType Name="Filter_StPats">
+    <Key>
+      <PropertyRef Name="id_filter" />
+    </Key>
+    <Property Name="id_filter" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_producto_general" Type="Int32" Nullable="false" />
+    <Property Name="id_tipo_product" Type="Int32" Nullable="false" />
+    <Property Name="code_produt" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="name_product" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="description" Type="String" Nullable="false" MaxLength="999" FixedLength="false" Unicode="false" />
+    <Property Name="price" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="id_location" Type="Int32" Nullable="false" />
+    <Property Name="image" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="manual" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="id_manufactured" Type="Int32" Nullable="false" />
+    <Property Name="stock" Type="Int32" Nullable="false" />
+    <Property Name="id_estado" Type="Int32" Nullable="false" />
+    <Property Name="extra_things" Type="String" Nullable="false" MaxLength="555" FixedLength="false" Unicode="false" />
+    <Property Name="id_tipo_filter" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Estado_StPats" Relationship="StPatsDataBaseModel1.FK_Filter_StPats_Estado_StPats" FromRole="Filter_StPats" ToRole="Estado_StPats" />
+    <NavigationProperty Name="Locations_StPats" Relationship="StPatsDataBaseModel1.FK_Filter_StPats_Locations_StPats" FromRole="Filter_StPats" ToRole="Locations_StPats" />
+    <NavigationProperty Name="Manufactured_Stpats" Relationship="StPatsDataBaseModel1.FK_Filter_StPats_Manufactured_Stpats" FromRole="Filter_StPats" ToRole="Manufactured_Stpats" />
+    <NavigationProperty Name="Productos_StPats" Relationship="StPatsDataBaseModel1.FK_Filter_StPats_Productos_StPats" FromRole="Filter_StPats" ToRole="Productos_StPats" />
+    <NavigationProperty Name="Tipo_Producto_StPats" Relationship="StPatsDataBaseModel1.FK_Filter_StPats_Tipo_Producto_StPats" FromRole="Filter_StPats" ToRole="Tipo_Producto_StPats" />
+    <NavigationProperty Name="Type_Filter_StPats" Relationship="StPatsDataBaseModel1.FK_Filter_StPats_Type_Filter_StPats" FromRole="Filter_StPats" ToRole="Type_Filter_StPats" />
+  </EntityType>
+  <EntityType Name="Filtros_StPats">
+    <Key>
+      <PropertyRef Name="id_filtro" />
+    </Key>
+    <Property Name="id_location" Type="Int32" />
+    <Property Name="id_filtro" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="filtro_codigo" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="numero_plates" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="area_superficie" Type="Single" Nullable="false" />
+    <Property Name="precio" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <NavigationProperty Name="Locations_StPats" Relationship="StPatsDataBaseModel1.FK_Filtros_StPats_Locations_StPats" FromRole="Filtros_StPats" ToRole="Locations_StPats" />
+  </EntityType>
+  <EntityType Name="Labeler_StPats">
+    <Key>
+      <PropertyRef Name="id_labeler" />
+    </Key>
+    <Property Name="id_labeler" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_producto_general" Type="Int32" Nullable="false" />
+    <Property Name="id_tipo_product" Type="Int32" Nullable="false" />
+    <Property Name="code_produt" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="name_product" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="description" Type="String" Nullable="false" MaxLength="950" FixedLength="false" Unicode="false" />
+    <Property Name="price" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="voltage_regulator" Type="Int32" />
+    <Property Name="id_location" Type="Int32" Nullable="false" />
+    <Property Name="image" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="manual" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="id_manufactured" Type="Int32" Nullable="false" />
+    <Property Name="estado" Type="Int32" Nullable="false" />
+    <Property Name="stock" Type="Int32" Nullable="false" />
+    <Property Name="extra_things" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Estado_StPats" Relationship="StPatsDataBaseModel1.FK_Labeler_StPats_Estado_StPats" FromRole="Labeler_StPats" ToRole="Estado_StPats" />
+    <NavigationProperty Name="Labeler_StPats1" Relationship="StPatsDataBaseModel1.FK_Labeler_StPats_Labeler_StPats" FromRole="Labeler_StPats" ToRole="Labeler_StPats1" />
+    <NavigationProperty Name="Labeler_StPats2" Relationship="StPatsDataBaseModel1.FK_Labeler_StPats_Labeler_StPats" FromRole="Labeler_StPats1" ToRole="Labeler_StPats" />
+    <NavigationProperty Name="Locations_StPats" Relationship="StPatsDataBaseModel1.FK_Labeler_StPats_Locations_StPats" FromRole="Labeler_StPats" ToRole="Locations_StPats" />
+    <NavigationProperty Name="Manufactured_Stpats" Relationship="StPatsDataBaseModel1.FK_Labeler_StPats_Manufactured_Stpats" FromRole="Labeler_StPats" ToRole="Manufactured_Stpats" />
+    <NavigationProperty Name="Productos_StPats" Relationship="StPatsDataBaseModel1.FK_Labeler_StPats_Productos_StPats" FromRole="Labeler_StPats" ToRole="Productos_StPats" />
+    <NavigationProperty Name="Tipo_Producto_StPats" Relationship="StPatsDataBaseModel1.FK_Labeler_StPats_Tipo_Producto_StPats" FromRole="Labeler_StPats" ToRole="Tipo_Producto_StPats" />
+  </EntityType>
+  <EntityType Name="Lista_Productos_StPats">
+    <Key>
+      <PropertyRef Name="id_lista_producto" />
+    </Key>
+    <Property Name="id_lista_producto" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_producto" Type="Int32" Nullable="false" />
+    <Property Name="id_cantidad" Type="Int32" Nullable="false" />
+    <Property Name="precio_unitario" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="precio_total" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="id_estado" Type="Int32" Nullable="false" />
+    <Property Name="date" Type="DateTime" Nullable="false" Precision="0" />
+    <NavigationProperty Name="Estado_StPats" Relationship="StPatsDataBaseModel1.FK_Lista_Productos_StPats_Estado_StPats" FromRole="Lista_Productos_StPats" ToRole="Estado_StPats" />
+    <NavigationProperty Name="Productos_StPats" Relationship="StPatsDataBaseModel1.FK_Lista_Productos_StPats_Productos_StPats" FromRole="Lista_Productos_StPats" ToRole="Productos_StPats" />
+    <NavigationProperty Name="Shopping_Cart_Detalle_StPats" Relationship="StPatsDataBaseModel1.FK_Shopping_Cart_Detalle_StPats_Lista_Productos_StPats" FromRole="Lista_Productos_StPats" ToRole="Shopping_Cart_Detalle_StPats" />
+  </EntityType>
+  <EntityType Name="Locations_StPats">
+    <Key>
+      <PropertyRef Name="id_location" />
+    </Key>
+    <Property Name="id_location" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="description" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Bottle_Finishing_StPats" Relationship="StPatsDataBaseModel1.FK_Bottle_Finishing_StPats_Locations_StPats" FromRole="Locations_StPats" ToRole="Bottle_Finishing_StPats" />
+    <NavigationProperty Name="Filling_Machine_StPats" Relationship="StPatsDataBaseModel1.FK_Filling_Machine_StPats_Locations_StPats" FromRole="Locations_StPats" ToRole="Filling_Machine_StPats" />
+    <NavigationProperty Name="Filter_ACF_StPats" Relationship="StPatsDataBaseModel1.FK_Filter_ACF_StPats_Locations_StPats" FromRole="Locations_StPats" ToRole="Filter_ACF_StPats" />
+    <NavigationProperty Name="Filter_CH_StPats" Relationship="StPatsDataBaseModel1.FK_Filter_CH_StPats_Locations_StPats" FromRole="Locations_StPats" ToRole="Filter_CH_StPats" />
+    <NavigationProperty Name="Filter_PAF_StPats" Relationship="StPatsDataBaseModel1.FK_Filter_PAF_StPats_Locations_StPats" FromRole="Locations_StPats" ToRole="Filter_PAF_StPats" />
+    <NavigationProperty Name="Filter_PES_StPats" Relationship="StPatsDataBaseModel1.FK_Filter_PES_StPats_Locations_StPats" FromRole="Locations_StPats" ToRole="Filter_PES_StPats" />
+    <NavigationProperty Name="Filter_PP_StPats" Relationship="StPatsDataBaseModel1.FK_Filter_PP_StPats_Locations_StPats" FromRole="Locations_StPats" ToRole="Filter_PP_StPats" />
+    <NavigationProperty Name="Filter_StPats" Relationship="StPatsDataBaseModel1.FK_Filter_StPats_Locations_StPats" FromRole="Locations_StPats" ToRole="Filter_StPats" />
+    <NavigationProperty Name="Filtros_StPats" Relationship="StPatsDataBaseModel1.FK_Filtros_StPats_Locations_StPats" FromRole="Locations_StPats" ToRole="Filtros_StPats" />
+    <NavigationProperty Name="Labeler_StPats" Relationship="StPatsDataBaseModel1.FK_Labeler_StPats_Locations_StPats" FromRole="Locations_StPats" ToRole="Labeler_StPats" />
+    <NavigationProperty Name="Productos_StPats" Relationship="StPatsDataBaseModel1.FK_Productos_StPats_Locations_StPats" FromRole="Locations_StPats" ToRole="Productos_StPats" />
+    <NavigationProperty Name="Pump_StPats" Relationship="StPatsDataBaseModel1.FK_Pump_StPats_Locations_StPats" FromRole="Locations_StPats" ToRole="Pump_StPats" />
+    <NavigationProperty Name="Tank_LCBT_VC_ACF_StPats" Relationship="StPatsDataBaseModel1.FK_Tank_LCBT_VC_ACF_StPats_Locations_StPats" FromRole="Locations_StPats" ToRole="Tank_LCBT_VC_ACF_StPats" />
+    <NavigationProperty Name="Tank_LCTTCB_StPats" Relationship="StPatsDataBaseModel1.FK_Tank_LCTTCB_StPats_Locations_StPats" FromRole="Locations_StPats" ToRole="Tank_LCTTCB_StPats" />
+    <NavigationProperty Name="Tank_LCTTCJ_VC_StPats" Relationship="StPatsDataBaseModel1.FK_Tank_LCTTCJ_VC_StPats_Locations_StPats" FromRole="Locations_StPats" ToRole="Tank_LCTTCJ_VC_StPats" />
+    <NavigationProperty Name="Tank_LFBT_VC_StPats" Relationship="StPatsDataBaseModel1.FK_Tank_LFBT_VC_StPats_Locations_StPats" FromRole="Locations_StPats" ToRole="Tank_LFBT_VC_StPats" />
+    <NavigationProperty Name="Tank_LFLT_VCCJ_StPats" Relationship="StPatsDataBaseModel1.FK_Tank_LFLT_VCCJ_StPats_Locations_StPats" FromRole="Locations_StPats" ToRole="Tank_LFLT_VCCJ_StPats" />
+    <NavigationProperty Name="Tank_LSBT_VC_ACF_StPats" Relationship="StPatsDataBaseModel1.FK_Tank_LSBT_VC_ACF_StPats_Locations_StPats" FromRole="Locations_StPats" ToRole="Tank_LSBT_VC_ACF_StPats" />
+    <NavigationProperty Name="Tank_LWWFWCJCT_VC_StPats" Relationship="StPatsDataBaseModel1.FK_Tank_LWWFWCJCT_VC_StPats_Locations_StPats" FromRole="Locations_StPats" ToRole="Tank_LWWFWCJCT_VC_StPats" />
+    <NavigationProperty Name="Tank_MXT_StPats" Relationship="StPatsDataBaseModel1.FK_Tank_MXT_StPats_Locations_StPats" FromRole="Locations_StPats" ToRole="Tank_MXT_StPats" />
+    <NavigationProperty Name="Tank_TONW_StPats" Relationship="StPatsDataBaseModel1.FK_Tank_TONW_StPats_Locations_StPats" FromRole="Locations_StPats" ToRole="Tank_TONW_StPats" />
+    <NavigationProperty Name="Tanks_StPats" Relationship="StPatsDataBaseModel1.FK_Tanks_StPats_Locations_StPats" FromRole="Locations_StPats" ToRole="Tanks_StPats" />
+  </EntityType>
+  <EntityType Name="Manufactured_Stpats">
+    <Key>
+      <PropertyRef Name="id_manufactured" />
+    </Key>
+    <Property Name="id_manufactured" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name_manufactured" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Bottle_Finishing_StPats" Relationship="StPatsDataBaseModel1.FK_Bottle_Finishing_StPats_Manufactured_Stpats" FromRole="Manufactured_Stpats" ToRole="Bottle_Finishing_StPats" />
+    <NavigationProperty Name="Filling_Machine_StPats" Relationship="StPatsDataBaseModel1.FK_Filling_Machine_StPats_Manufactured_Stpats" FromRole="Manufactured_Stpats" ToRole="Filling_Machine_StPats" />
+    <NavigationProperty Name="Filter_ACF_StPats" Relationship="StPatsDataBaseModel1.FK_Filter_ACF_StPats_Manufactured_Stpats" FromRole="Manufactured_Stpats" ToRole="Filter_ACF_StPats" />
+    <NavigationProperty Name="Filter_CH_StPats" Relationship="StPatsDataBaseModel1.FK_Filter_CH_StPats_Manufactured_Stpats" FromRole="Manufactured_Stpats" ToRole="Filter_CH_StPats" />
+    <NavigationProperty Name="Filter_PAF_StPats" Relationship="StPatsDataBaseModel1.FK_Filter_PAF_StPats_Manufactured_Stpats" FromRole="Manufactured_Stpats" ToRole="Filter_PAF_StPats" />
+    <NavigationProperty Name="Filter_PES_StPats" Relationship="StPatsDataBaseModel1.FK_Filter_PES_StPats_Manufactured_Stpats" FromRole="Manufactured_Stpats" ToRole="Filter_PES_StPats" />
+    <NavigationProperty Name="Filter_PP_StPats" Relationship="StPatsDataBaseModel1.FK_Filter_PP_StPats_Manufactured_Stpats" FromRole="Manufactured_Stpats" ToRole="Filter_PP_StPats" />
+    <NavigationProperty Name="Filter_StPats" Relationship="StPatsDataBaseModel1.FK_Filter_StPats_Manufactured_Stpats" FromRole="Manufactured_Stpats" ToRole="Filter_StPats" />
+    <NavigationProperty Name="Labeler_StPats" Relationship="StPatsDataBaseModel1.FK_Labeler_StPats_Manufactured_Stpats" FromRole="Manufactured_Stpats" ToRole="Labeler_StPats" />
+    <NavigationProperty Name="Pump_StPats" Relationship="StPatsDataBaseModel1.FK_Pump_StPats_Manufactured_Stpats" FromRole="Manufactured_Stpats" ToRole="Pump_StPats" />
+    <NavigationProperty Name="Tank_LCBT_VC_ACF_StPats" Relationship="StPatsDataBaseModel1.FK_Tank_LCBT_VC_ACF_StPats_Manufactured_Stpats" FromRole="Manufactured_Stpats" ToRole="Tank_LCBT_VC_ACF_StPats" />
+    <NavigationProperty Name="Tank_LCTTCB_StPats" Relationship="StPatsDataBaseModel1.FK_Tank_LCTTCB_StPats_Manufactured_Stpats" FromRole="Manufactured_Stpats" ToRole="Tank_LCTTCB_StPats" />
+    <NavigationProperty Name="Tank_LCTTCJ_VC_StPats" Relationship="StPatsDataBaseModel1.FK_Tank_LCTTCJ_VC_StPats_Manufactured_Stpats" FromRole="Manufactured_Stpats" ToRole="Tank_LCTTCJ_VC_StPats" />
+    <NavigationProperty Name="Tank_LFBT_VC_StPats" Relationship="StPatsDataBaseModel1.FK_Tank_LFBT_VC_StPats_Manufactured_Stpats" FromRole="Manufactured_Stpats" ToRole="Tank_LFBT_VC_StPats" />
+    <NavigationProperty Name="Tank_LFLT_VCCJ_StPats" Relationship="StPatsDataBaseModel1.FK_Tank_LFLT_VCCJ_StPats_Manufactured_Stpats" FromRole="Manufactured_Stpats" ToRole="Tank_LFLT_VCCJ_StPats" />
+    <NavigationProperty Name="Tank_LSBT_VC_ACF_StPats" Relationship="StPatsDataBaseModel1.FK_Tank_LSBT_VC_ACF_StPats_Manufactured_Stpats" FromRole="Manufactured_Stpats" ToRole="Tank_LSBT_VC_ACF_StPats" />
+    <NavigationProperty Name="Tank_LWWFWCJCT_VC_StPats" Relationship="StPatsDataBaseModel1.FK_Tank_LWWFWCJCT_VC_StPats_Manufactured_Stpats" FromRole="Manufactured_Stpats" ToRole="Tank_LWWFWCJCT_VC_StPats" />
+    <NavigationProperty Name="Tank_MXT_StPats" Relationship="StPatsDataBaseModel1.FK_Tank_MXT_StPats_Manufactured_Stpats" FromRole="Manufactured_Stpats" ToRole="Tank_MXT_StPats" />
+    <NavigationProperty Name="Tank_TONW_StPats" Relationship="StPatsDataBaseModel1.FK_Tank_TONW_StPats_Manufactured_Stpats" FromRole="Manufactured_Stpats" ToRole="Tank_TONW_StPats" />
+  </EntityType>
+  <EntityType Name="PayMet_StPats">
+    <Key>
+      <PropertyRef Name="id_tipo_pago" />
+    </Key>
+    <Property Name="id_tipo_pago" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="descripcion" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Bill_StPats" Relationship="StPatsDataBaseModel1.FK_Bill_StPats_PayMet_StPats" FromRole="PayMet_StPats" ToRole="Bill_StPats" />
+  </EntityType>
+  <EntityType Name="Productos_StPats">
+    <Key>
+      <PropertyRef Name="id_producto" />
+    </Key>
+    <Property Name="id_producto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_tipo_producto" Type="Int32" Nullable="false" />
+    <Property Name="product_name" Type="String" Nullable="false" MaxLength="350" FixedLength="false" Unicode="false" />
+    <Property Name="id_location" Type="Int32" Nullable="false" />
+    <Property Name="id_estado" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Bottle_Finishing_StPats" Relationship="StPatsDataBaseModel1.FK_Bottle_Finishing_StPats_Productos_StPats" FromRole="Productos_StPats" ToRole="Bottle_Finishing_StPats" />
+    <NavigationProperty Name="Estado_StPats" Relationship="StPatsDataBaseModel1.FK_Productos_StPats_Estado_StPats" FromRole="Productos_StPats" ToRole="Estado_StPats" />
+    <NavigationProperty Name="Filling_Machine_StPats" Relationship="StPatsDataBaseModel1.FK_Filling_Machine_StPats_Productos_StPats" FromRole="Productos_StPats" ToRole="Filling_Machine_StPats" />
+    <NavigationProperty Name="Filter_ACF_StPats" Relationship="StPatsDataBaseModel1.FK_Filter_ACF_StPats_Productos_StPats" FromRole="Productos_StPats" ToRole="Filter_ACF_StPats" />
+    <NavigationProperty Name="Filter_CH_StPats" Relationship="StPatsDataBaseModel1.FK_Filter_CH_StPats_Productos_StPats" FromRole="Productos_StPats" ToRole="Filter_CH_StPats" />
+    <NavigationProperty Name="Filter_PAF_StPats" Relationship="StPatsDataBaseModel1.FK_Filter_PAF_StPats_Productos_StPats" FromRole="Productos_StPats" ToRole="Filter_PAF_StPats" />
+    <NavigationProperty Name="Filter_PES_StPats" Relationship="StPatsDataBaseModel1.FK_Filter_PES_StPats_Productos_StPats" FromRole="Productos_StPats" ToRole="Filter_PES_StPats" />
+    <NavigationProperty Name="Filter_PP_StPats" Relationship="StPatsDataBaseModel1.FK_Filter_PP_StPats_Productos_StPats" FromRole="Productos_StPats" ToRole="Filter_PP_StPats" />
+    <NavigationProperty Name="Filter_StPats" Relationship="StPatsDataBaseModel1.FK_Filter_StPats_Productos_StPats" FromRole="Productos_StPats" ToRole="Filter_StPats" />
+    <NavigationProperty Name="Labeler_StPats" Relationship="StPatsDataBaseModel1.FK_Labeler_StPats_Productos_StPats" FromRole="Productos_StPats" ToRole="Labeler_StPats" />
+    <NavigationProperty Name="Lista_Productos_StPats" Relationship="StPatsDataBaseModel1.FK_Lista_Productos_StPats_Productos_StPats" FromRole="Productos_StPats" ToRole="Lista_Productos_StPats" />
+    <NavigationProperty Name="Locations_StPats" Relationship="StPatsDataBaseModel1.FK_Productos_StPats_Locations_StPats" FromRole="Productos_StPats" ToRole="Locations_StPats" />
+    <NavigationProperty Name="Tipo_Producto_StPats" Relationship="StPatsDataBaseModel1.FK_Productos_StPats_Tipo_Producto_StPats" FromRole="Productos_StPats" ToRole="Tipo_Producto_StPats" />
+    <NavigationProperty Name="Pump_StPats" Relationship="StPatsDataBaseModel1.FK_Pump_StPats_Productos_StPats" FromRole="Productos_StPats" ToRole="Pump_StPats" />
+    <NavigationProperty Name="Tank_LCBT_VC_ACF_StPats" Relationship="StPatsDataBaseModel1.FK_Tank_LCBT_VC_ACF_StPats_Productos_StPats" FromRole="Productos_StPats" ToRole="Tank_LCBT_VC_ACF_StPats" />
+    <NavigationProperty Name="Tank_LCTTCB_StPats" Relationship="StPatsDataBaseModel1.FK_Tank_LCTTCB_StPats_Productos_StPats" FromRole="Productos_StPats" ToRole="Tank_LCTTCB_StPats" />
+    <NavigationProperty Name="Tank_LCTTCJ_VC_StPats" Relationship="StPatsDataBaseModel1.FK_Tank_LCTTCJ_VC_StPats_Productos_StPats" FromRole="Productos_StPats" ToRole="Tank_LCTTCJ_VC_StPats" />
+    <NavigationProperty Name="Tank_LFBT_VC_StPats" Relationship="StPatsDataBaseModel1.FK_Tank_LFBT_VC_StPats_Productos_StPats" FromRole="Productos_StPats" ToRole="Tank_LFBT_VC_StPats" />
+    <NavigationProperty Name="Tank_LFLT_VCCJ_StPats" Relationship="StPatsDataBaseModel1.FK_Tank_LFLT_VCCJ_StPats_Productos_StPats" FromRole="Productos_StPats" ToRole="Tank_LFLT_VCCJ_StPats" />
+    <NavigationProperty Name="Tank_LSBT_VC_ACF_StPats" Relationship="StPatsDataBaseModel1.FK_Tank_LSBT_VC_ACF_StPats_Productos_StPats" FromRole="Productos_StPats" ToRole="Tank_LSBT_VC_ACF_StPats" />
+    <NavigationProperty Name="Tank_LWWFWCJCT_VC_StPats" Relationship="StPatsDataBaseModel1.FK_Tank_LWWFWCJCT_VC_StPats_Productos_StPats" FromRole="Productos_StPats" ToRole="Tank_LWWFWCJCT_VC_StPats" />
+    <NavigationProperty Name="Tank_MXT_StPats" Relationship="StPatsDataBaseModel1.FK_Tank_MXT_StPats_Productos_StPats" FromRole="Productos_StPats" ToRole="Tank_MXT_StPats" />
+    <NavigationProperty Name="Tank_TONW_StPats" Relationship="StPatsDataBaseModel1.FK_Tank_TONW_StPats_Productos_StPats" FromRole="Productos_StPats" ToRole="Tank_TONW_StPats" />
+  </EntityType>
+  <EntityType Name="Pump_StPats">
+    <Key>
+      <PropertyRef Name="id_pump" />
+    </Key>
+    <Property Name="id_pump" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_producto_general" Type="Int32" Nullable="false" />
+    <Property Name="id_tipo_product" Type="Int32" Nullable="false" />
+    <Property Name="code_produt" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="name_product" Type="String" Nullable="false" MaxLength="350" FixedLength="false" Unicode="false" />
+    <Property Name="description" Type="String" Nullable="false" MaxLength="950" FixedLength="false" Unicode="false" />
+    <Property Name="price" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="image" Type="String" Nullable="false" MaxLength="750" FixedLength="false" Unicode="false" />
+    <Property Name="manual" Type="String" Nullable="false" MaxLength="750" FixedLength="false" Unicode="false" />
+    <Property Name="id_manufactured" Type="Int32" Nullable="false" />
+    <Property Name="id_estado" Type="Int32" Nullable="false" />
+    <Property Name="extra_things" Type="String" Nullable="false" MaxLength="850" FixedLength="false" Unicode="false" />
+    <Property Name="stock" Type="Int32" Nullable="false" />
+    <Property Name="voltage_regulator" Type="Int32" Nullable="false" />
+    <Property Name="id_location" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Estado_StPats" Relationship="StPatsDataBaseModel1.FK_Pump_StPats_Estado_StPats" FromRole="Pump_StPats" ToRole="Estado_StPats" />
+    <NavigationProperty Name="Locations_StPats" Relationship="StPatsDataBaseModel1.FK_Pump_StPats_Locations_StPats" FromRole="Pump_StPats" ToRole="Locations_StPats" />
+    <NavigationProperty Name="Manufactured_Stpats" Relationship="StPatsDataBaseModel1.FK_Pump_StPats_Manufactured_Stpats" FromRole="Pump_StPats" ToRole="Manufactured_Stpats" />
+    <NavigationProperty Name="Productos_StPats" Relationship="StPatsDataBaseModel1.FK_Pump_StPats_Productos_StPats" FromRole="Pump_StPats" ToRole="Productos_StPats" />
+    <NavigationProperty Name="Tipo_Producto_StPats" Relationship="StPatsDataBaseModel1.FK_Pump_StPats_Tipo_Producto_StPats" FromRole="Pump_StPats" ToRole="Tipo_Producto_StPats" />
+  </EntityType>
+  <EntityType Name="Shopping_Cart_Detalle_StPats">
+    <Key>
+      <PropertyRef Name="id_shoppingcart_detalle" />
+    </Key>
+    <Property Name="id_shoppingcart_detalle" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_shoppingcart" Type="Int64" Nullable="false" />
+    <Property Name="id_lista_producto" Type="Int64" Nullable="false" />
+    <Property Name="id_estado" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Estado_StPats" Relationship="StPatsDataBaseModel1.FK_Shopping_Cart_Detalle_StPats_Estado_StPats" FromRole="Shopping_Cart_Detalle_StPats" ToRole="Estado_StPats" />
+    <NavigationProperty Name="Lista_Productos_StPats" Relationship="StPatsDataBaseModel1.FK_Shopping_Cart_Detalle_StPats_Lista_Productos_StPats" FromRole="Shopping_Cart_Detalle_StPats" ToRole="Lista_Productos_StPats" />
+    <NavigationProperty Name="Shopping_Cart_StPats" Relationship="StPatsDataBaseModel1.FK_Shopping_Cart_Detalle_StPats_Shopping_Cart_StPats" FromRole="Shopping_Cart_Detalle_StPats" ToRole="Shopping_Cart_StPats" />
+  </EntityType>
+  <EntityType Name="Shopping_Cart_StPats">
+    <Key>
+      <PropertyRef Name="id_shoppingcart" />
+    </Key>
+    <Property Name="id_shoppingcart" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_cliente" Type="Int32" Nullable="false" />
+    <Property Name="date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="monto_sin_taxes" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="taxes" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="monto_total" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="estado" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Bill_StPats" Relationship="StPatsDataBaseModel1.FK_Bill_StPats_Shopping_Cart_StPats" FromRole="Shopping_Cart_StPats" ToRole="Bill_StPats" />
+    <NavigationProperty Name="Clients_StPats" Relationship="StPatsDataBaseModel1.FK_Shopping_Cart_StPats_Clients_StPats" FromRole="Shopping_Cart_StPats" ToRole="Clients_StPats" />
+    <NavigationProperty Name="Estado_StPats" Relationship="StPatsDataBaseModel1.FK_Shopping_Cart_StPats_Estado_StPats" FromRole="Shopping_Cart_StPats" ToRole="Estado_StPats" />
+    <NavigationProperty Name="Shopping_Cart_Detalle_StPats" Relationship="StPatsDataBaseModel1.FK_Shopping_Cart_Detalle_StPats_Shopping_Cart_StPats" FromRole="Shopping_Cart_StPats" ToRole="Shopping_Cart_Detalle_StPats" />
+  </EntityType>
+  <EntityType Name="StaCi_StPats">
+    <Key>
+      <PropertyRef Name="id_ciudad_estado" />
+    </Key>
+    <Property Name="id_ciudad_estado" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_estado" Type="Int32" Nullable="false" />
+    <Property Name="id_ciudad" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Ciudades_StPats" Relationship="StPatsDataBaseModel1.FK_StaCi_StPats_Ciudades_StPats" FromRole="StaCi_StPats" ToRole="Ciudades_StPats" />
+    <NavigationProperty Name="Clients_StPats" Relationship="StPatsDataBaseModel1.FK_Clients_StPats_StaCi_StPats" FromRole="StaCi_StPats" ToRole="Clients_StPats" />
+    <NavigationProperty Name="State_StPats" Relationship="StPatsDataBaseModel1.FK_StaCi_StPats_State_StPats" FromRole="StaCi_StPats" ToRole="State_StPats" />
+  </EntityType>
+  <EntityType Name="Statax_StPats">
+    <Key>
+      <PropertyRef Name="id_estado_impuesto" />
+    </Key>
+    <Property Name="id_estado_impuesto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_estado" Type="Int32" Nullable="false" />
+    <Property Name="impuesto" Type="Single" Nullable="false" />
+    <NavigationProperty Name="State_StPats" Relationship="StPatsDataBaseModel1.FK_Statax_StPats_State_StPats" FromRole="Statax_StPats" ToRole="State_StPats" />
+  </EntityType>
+  <EntityType Name="State_StPats">
+    <Key>
+      <PropertyRef Name="is_estado" />
+    </Key>
+    <Property Name="is_estado" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre_estado" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="StaCi_StPats" Relationship="StPatsDataBaseModel1.FK_StaCi_StPats_State_StPats" FromRole="State_StPats" ToRole="StaCi_StPats" />
+    <NavigationProperty Name="Statax_StPats" Relationship="StPatsDataBaseModel1.FK_Statax_StPats_State_StPats" FromRole="State_StPats" ToRole="Statax_StPats" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Tank_LCBT_VC_ACF_StPats">
+    <Key>
+      <PropertyRef Name="id_filter_acf" />
+    </Key>
+    <Property Name="id_filter_acf" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_producto_general" Type="Int32" Nullable="false" />
+    <Property Name="id_tipo_product" Type="Int32" Nullable="false" />
+    <Property Name="code_produt" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="name_product" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="description" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="id_location" Type="Int32" Nullable="false" />
+    <Property Name="id_manufactured" Type="Int32" Nullable="false" />
+    <Property Name="stock" Type="Int32" Nullable="false" />
+    <Property Name="id_estado" Type="Int32" Nullable="false" />
+    <Property Name="extra_things" Type="String" Nullable="false" MaxLength="950" FixedLength="false" Unicode="false" />
+    <Property Name="capacity" Type="String" Nullable="false" MaxLength="350" FixedLength="false" Unicode="false" />
+    <Property Name="orientation" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="total_area" Type="Single" Nullable="false" />
+    <Property Name="botton_valve" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="racking_valve" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="sample_tap" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="thermometer_in_thermowell" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="thermowell_for_sensor" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="liftning_arm" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="vent" Type="Int32" Nullable="false" />
+    <Property Name="wall_thickness_bottom_thickness" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="replacement_inflatable_gasket" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="price" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <NavigationProperty Name="Estado_StPats" Relationship="StPatsDataBaseModel1.FK_Tank_LCBT_VC_ACF_StPats_Estado_StPats" FromRole="Tank_LCBT_VC_ACF_StPats" ToRole="Estado_StPats" />
+    <NavigationProperty Name="Locations_StPats" Relationship="StPatsDataBaseModel1.FK_Tank_LCBT_VC_ACF_StPats_Locations_StPats" FromRole="Tank_LCBT_VC_ACF_StPats" ToRole="Locations_StPats" />
+    <NavigationProperty Name="Manufactured_Stpats" Relationship="StPatsDataBaseModel1.FK_Tank_LCBT_VC_ACF_StPats_Manufactured_Stpats" FromRole="Tank_LCBT_VC_ACF_StPats" ToRole="Manufactured_Stpats" />
+    <NavigationProperty Name="Productos_StPats" Relationship="StPatsDataBaseModel1.FK_Tank_LCBT_VC_ACF_StPats_Productos_StPats" FromRole="Tank_LCBT_VC_ACF_StPats" ToRole="Productos_StPats" />
+    <NavigationProperty Name="Tipo_Producto_StPats" Relationship="StPatsDataBaseModel1.FK_Tank_LCBT_VC_ACF_StPats_Tipo_Producto_StPats" FromRole="Tank_LCBT_VC_ACF_StPats" ToRole="Tipo_Producto_StPats" />
+  </EntityType>
+  <EntityType Name="Tank_LCTTCB_StPats">
+    <Key>
+      <PropertyRef Name="id_filter_acf" />
+    </Key>
+    <Property Name="id_filter_acf" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_producto_general" Type="Int32" Nullable="false" />
+    <Property Name="id_tipo_product" Type="Int32" Nullable="false" />
+    <Property Name="code_produt" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="name_product" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="description" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="id_location" Type="Int32" Nullable="false" />
+    <Property Name="id_manufactured" Type="Int32" Nullable="false" />
+    <Property Name="stock" Type="Int32" Nullable="false" />
+    <Property Name="id_estado" Type="Int32" Nullable="false" />
+    <Property Name="extra_things" Type="String" Nullable="false" MaxLength="950" FixedLength="false" Unicode="false" />
+    <Property Name="capacity" Type="String" Nullable="false" MaxLength="350" FixedLength="false" Unicode="false" />
+    <Property Name="botton_valve" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="racking_valve" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="vent" Type="Int32" Nullable="false" />
+    <Property Name="ladder_support" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="sample_tap" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="thermometer_in_thermowell" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="thermowell_for_sensor" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="level_gange" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="top_hatch" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="wall_thickness_bottom_thickness" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="price" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <NavigationProperty Name="Estado_StPats" Relationship="StPatsDataBaseModel1.FK_Tank_LCTTCB_StPats_Estado_StPats" FromRole="Tank_LCTTCB_StPats" ToRole="Estado_StPats" />
+    <NavigationProperty Name="Locations_StPats" Relationship="StPatsDataBaseModel1.FK_Tank_LCTTCB_StPats_Locations_StPats" FromRole="Tank_LCTTCB_StPats" ToRole="Locations_StPats" />
+    <NavigationProperty Name="Manufactured_Stpats" Relationship="StPatsDataBaseModel1.FK_Tank_LCTTCB_StPats_Manufactured_Stpats" FromRole="Tank_LCTTCB_StPats" ToRole="Manufactured_Stpats" />
+    <NavigationProperty Name="Productos_StPats" Relationship="StPatsDataBaseModel1.FK_Tank_LCTTCB_StPats_Productos_StPats" FromRole="Tank_LCTTCB_StPats" ToRole="Productos_StPats" />
+    <NavigationProperty Name="Tipo_Producto_StPats" Relationship="StPatsDataBaseModel1.FK_Tank_LCTTCB_StPats_Tipo_Producto_StPats" FromRole="Tank_LCTTCB_StPats" ToRole="Tipo_Producto_StPats" />
+  </EntityType>
+  <EntityType Name="Tank_LCTTCJ_VC_StPats">
+    <Key>
+      <PropertyRef Name="id_filter_acf" />
+    </Key>
+    <Property Name="id_filter_acf" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_producto_general" Type="Int32" Nullable="false" />
+    <Property Name="id_tipo_product" Type="Int32" Nullable="false" />
+    <Property Name="code_produt" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="name_product" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="description" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="id_location" Type="Int32" Nullable="false" />
+    <Property Name="id_manufactured" Type="Int32" Nullable="false" />
+    <Property Name="stock" Type="Int32" Nullable="false" />
+    <Property Name="id_estado" Type="Int32" Nullable="false" />
+    <Property Name="extra_things" Type="String" Nullable="false" MaxLength="950" FixedLength="false" Unicode="false" />
+    <Property Name="capacity" Type="String" Nullable="false" MaxLength="350" FixedLength="false" Unicode="false" />
+    <Property Name="number_of_jackets" Type="Int32" Nullable="false" />
+    <Property Name="orientation" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="total_area" Type="Single" Nullable="false" />
+    <Property Name="botton_valve" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="racking_valve" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="pump_over" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="vent" Type="Int32" Nullable="false" />
+    <Property Name="ladder_support" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="sample_tap" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="thermometer_in_thermowell" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="thermowell_for_sensor" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="level_gange" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="top_hatch" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="wall_thickness_bottom_thickness" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="price" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <NavigationProperty Name="Estado_StPats" Relationship="StPatsDataBaseModel1.FK_Tank_LCTTCJ_VC_StPats_Estado_StPats" FromRole="Tank_LCTTCJ_VC_StPats" ToRole="Estado_StPats" />
+    <NavigationProperty Name="Locations_StPats" Relationship="StPatsDataBaseModel1.FK_Tank_LCTTCJ_VC_StPats_Locations_StPats" FromRole="Tank_LCTTCJ_VC_StPats" ToRole="Locations_StPats" />
+    <NavigationProperty Name="Manufactured_Stpats" Relationship="StPatsDataBaseModel1.FK_Tank_LCTTCJ_VC_StPats_Manufactured_Stpats" FromRole="Tank_LCTTCJ_VC_StPats" ToRole="Manufactured_Stpats" />
+    <NavigationProperty Name="Productos_StPats" Relationship="StPatsDataBaseModel1.FK_Tank_LCTTCJ_VC_StPats_Productos_StPats" FromRole="Tank_LCTTCJ_VC_StPats" ToRole="Productos_StPats" />
+    <NavigationProperty Name="Tipo_Producto_StPats" Relationship="StPatsDataBaseModel1.FK_Tank_LCTTCJ_VC_StPats_Tipo_Producto_StPats" FromRole="Tank_LCTTCJ_VC_StPats" ToRole="Tipo_Producto_StPats" />
+  </EntityType>
+  <EntityType Name="Tank_LFBT_VC_StPats">
+    <Key>
+      <PropertyRef Name="id_filter_acf" />
+    </Key>
+    <Property Name="id_filter_acf" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_producto_general" Type="Int32" Nullable="false" />
+    <Property Name="id_tipo_product" Type="Int32" Nullable="false" />
+    <Property Name="code_produt" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="name_product" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="description" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="id_location" Type="Int32" Nullable="false" />
+    <Property Name="id_manufactured" Type="Int32" Nullable="false" />
+    <Property Name="stock" Type="Int32" Nullable="false" />
+    <Property Name="id_estado" Type="Int32" Nullable="false" />
+    <Property Name="extra_things" Type="String" Nullable="false" MaxLength="950" FixedLength="false" Unicode="false" />
+    <Property Name="capacity" Type="String" Nullable="false" MaxLength="350" FixedLength="false" Unicode="false" />
+    <Property Name="botton_valve" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="racking_valve" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="sample_tap" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ladder_suport" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="liftning_arm" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="vent" Type="Int32" Nullable="false" />
+    <Property Name="wall_thickness_bottom_thickness" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="replacement_inflatable_gasket" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="price" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <NavigationProperty Name="Estado_StPats" Relationship="StPatsDataBaseModel1.FK_Tank_LFBT_VC_StPats_Estado_StPats" FromRole="Tank_LFBT_VC_StPats" ToRole="Estado_StPats" />
+    <NavigationProperty Name="Locations_StPats" Relationship="StPatsDataBaseModel1.FK_Tank_LFBT_VC_StPats_Locations_StPats" FromRole="Tank_LFBT_VC_StPats" ToRole="Locations_StPats" />
+    <NavigationProperty Name="Manufactured_Stpats" Relationship="StPatsDataBaseModel1.FK_Tank_LFBT_VC_StPats_Manufactured_Stpats" FromRole="Tank_LFBT_VC_StPats" ToRole="Manufactured_Stpats" />
+    <NavigationProperty Name="Productos_StPats" Relationship="StPatsDataBaseModel1.FK_Tank_LFBT_VC_StPats_Productos_StPats" FromRole="Tank_LFBT_VC_StPats" ToRole="Productos_StPats" />
+    <NavigationProperty Name="Tipo_Producto_StPats" Relationship="StPatsDataBaseModel1.FK_Tank_LFBT_VC_StPats_Tipo_Producto_StPats" FromRole="Tank_LFBT_VC_StPats" ToRole="Tipo_Producto_StPats" />
+  </EntityType>
+  <EntityType Name="Tank_LFLT_VCCJ_StPats">
+    <Key>
+      <PropertyRef Name="id_filter_acf" />
+    </Key>
+    <Property Name="id_filter_acf" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_producto_general" Type="Int32" Nullable="false" />
+    <Property Name="id_tipo_product" Type="Int32" Nullable="false" />
+    <Property Name="code_produt" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="name_product" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="description" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="id_location" Type="Int32" Nullable="false" />
+    <Property Name="id_manufactured" Type="Int32" Nullable="false" />
+    <Property Name="stock" Type="Int32" Nullable="false" />
+    <Property Name="id_estado" Type="Int32" Nullable="false" />
+    <Property Name="extra_things" Type="String" Nullable="false" MaxLength="950" FixedLength="false" Unicode="false" />
+    <Property Name="capacity" Type="String" Nullable="false" MaxLength="350" FixedLength="false" Unicode="false" />
+    <Property Name="orientation" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="total_area" Type="Single" Nullable="false" />
+    <Property Name="botton_valve" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="racking_valve" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="sample_tap" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="thermometer_in_thermowell" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="thermowell_for_sensor" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="liftning_arm" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="vent" Type="Int32" Nullable="false" />
+    <Property Name="wall_thickness_bottom_thickness" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="replacement_inflatable_gasket" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="price" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <NavigationProperty Name="Estado_StPats" Relationship="StPatsDataBaseModel1.FK_Tank_LFLT_VCCJ_StPats_Estado_StPats" FromRole="Tank_LFLT_VCCJ_StPats" ToRole="Estado_StPats" />
+    <NavigationProperty Name="Locations_StPats" Relationship="StPatsDataBaseModel1.FK_Tank_LFLT_VCCJ_StPats_Locations_StPats" FromRole="Tank_LFLT_VCCJ_StPats" ToRole="Locations_StPats" />
+    <NavigationProperty Name="Manufactured_Stpats" Relationship="StPatsDataBaseModel1.FK_Tank_LFLT_VCCJ_StPats_Manufactured_Stpats" FromRole="Tank_LFLT_VCCJ_StPats" ToRole="Manufactured_Stpats" />
+    <NavigationProperty Name="Productos_StPats" Relationship="StPatsDataBaseModel1.FK_Tank_LFLT_VCCJ_StPats_Productos_StPats" FromRole="Tank_LFLT_VCCJ_StPats" ToRole="Productos_StPats" />
+    <NavigationProperty Name="Tipo_Producto_StPats" Relationship="StPatsDataBaseModel1.FK_Tank_LFLT_VCCJ_StPats_Tipo_Producto_StPats" FromRole="Tank_LFLT_VCCJ_StPats" ToRole="Tipo_Producto_StPats" />
+  </EntityType>
+  <EntityType Name="Tank_LSBT_VC_ACF_StPats">
+    <Key>
+      <PropertyRef Name="id_filter_acf" />
+    </Key>
+    <Property Name="id_filter_acf" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_producto_general" Type="Int32" Nullable="false" />
+    <Property Name="id_tipo_product" Type="Int32" Nullable="false" />
+    <Property Name="code_produt" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="price" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="name_product" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="description" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="id_location" Type="Int32" Nullable="false" />
+    <Property Name="id_manufactured" Type="Int32" Nullable="false" />
+    <Property Name="stock" Type="Int32" Nullable="false" />
+    <Property Name="id_estado" Type="Int32" Nullable="false" />
+    <Property Name="extra_things" Type="String" Nullable="false" MaxLength="950" FixedLength="false" Unicode="false" />
+    <Property Name="capacity" Type="String" Nullable="false" MaxLength="350" FixedLength="false" Unicode="false" />
+    <Property Name="number_of_jackets" Type="Int32" Nullable="false" />
+    <Property Name="orientation" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="total_area" Type="Single" Nullable="false" />
+    <Property Name="botton_valve" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="racking_valve" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="manway" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="liftning_arm" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="vent" Type="Int32" Nullable="false" />
+    <Property Name="ladder_support" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="sample_tap" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="thermometer_in_thermowell" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="thermowell_for_sensor" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="wall_thickness_bottom_thickness" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Replacement_inflatable_gasket" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Estado_StPats" Relationship="StPatsDataBaseModel1.FK_Tank_LSBT_VC_ACF_StPats_Estado_StPats" FromRole="Tank_LSBT_VC_ACF_StPats" ToRole="Estado_StPats" />
+    <NavigationProperty Name="Locations_StPats" Relationship="StPatsDataBaseModel1.FK_Tank_LSBT_VC_ACF_StPats_Locations_StPats" FromRole="Tank_LSBT_VC_ACF_StPats" ToRole="Locations_StPats" />
+    <NavigationProperty Name="Manufactured_Stpats" Relationship="StPatsDataBaseModel1.FK_Tank_LSBT_VC_ACF_StPats_Manufactured_Stpats" FromRole="Tank_LSBT_VC_ACF_StPats" ToRole="Manufactured_Stpats" />
+    <NavigationProperty Name="Productos_StPats" Relationship="StPatsDataBaseModel1.FK_Tank_LSBT_VC_ACF_StPats_Productos_StPats" FromRole="Tank_LSBT_VC_ACF_StPats" ToRole="Productos_StPats" />
+    <NavigationProperty Name="Tipo_Producto_StPats" Relationship="StPatsDataBaseModel1.FK_Tank_LSBT_VC_ACF_StPats_Tipo_Producto_StPats" FromRole="Tank_LSBT_VC_ACF_StPats" ToRole="Tipo_Producto_StPats" />
+  </EntityType>
+  <EntityType Name="Tank_LWWFWCJCT_VC_StPats">
+    <Key>
+      <PropertyRef Name="id_filter_acf" />
+    </Key>
+    <Property Name="id_filter_acf" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_producto_general" Type="Int32" Nullable="false" />
+    <Property Name="id_tipo_product" Type="Int32" Nullable="false" />
+    <Property Name="code_produt" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="name_product" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="description" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="id_location" Type="Int32" Nullable="false" />
+    <Property Name="id_manufactured" Type="Int32" Nullable="false" />
+    <Property Name="stock" Type="Int32" Nullable="false" />
+    <Property Name="id_estado" Type="Int32" Nullable="false" />
+    <Property Name="extra_things" Type="String" Nullable="false" MaxLength="950" FixedLength="false" Unicode="false" />
+    <Property Name="capacity" Type="String" Nullable="false" MaxLength="350" FixedLength="false" Unicode="false" />
+    <Property Name="orientation" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="total_area" Type="Single" Nullable="false" />
+    <Property Name="botton_valve" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="manway" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="vent" Type="Int32" Nullable="false" />
+    <Property Name="ladder_support" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="sample_tap" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="thermometer_in_thermowell" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="thermowell_for_sensor" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="level_gange" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="top_hatch" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="wall_thickness_bottom_thickness" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="price" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <NavigationProperty Name="Estado_StPats" Relationship="StPatsDataBaseModel1.FK_Tank_LWWFWCJCT_VC_StPats_Estado_StPats" FromRole="Tank_LWWFWCJCT_VC_StPats" ToRole="Estado_StPats" />
+    <NavigationProperty Name="Locations_StPats" Relationship="StPatsDataBaseModel1.FK_Tank_LWWFWCJCT_VC_StPats_Locations_StPats" FromRole="Tank_LWWFWCJCT_VC_StPats" ToRole="Locations_StPats" />
+    <NavigationProperty Name="Manufactured_Stpats" Relationship="StPatsDataBaseModel1.FK_Tank_LWWFWCJCT_VC_StPats_Manufactured_Stpats" FromRole="Tank_LWWFWCJCT_VC_StPats" ToRole="Manufactured_Stpats" />
+    <NavigationProperty Name="Productos_StPats" Relationship="StPatsDataBaseModel1.FK_Tank_LWWFWCJCT_VC_StPats_Productos_StPats" FromRole="Tank_LWWFWCJCT_VC_StPats" ToRole="Productos_StPats" />
+    <NavigationProperty Name="Tipo_Producto_StPats" Relationship="StPatsDataBaseModel1.FK_Tank_LWWFWCJCT_VC_StPats_Tipo_Producto_StPats" FromRole="Tank_LWWFWCJCT_VC_StPats" ToRole="Tipo_Producto_StPats" />
+  </EntityType>
+  <EntityType Name="Tank_MXT_StPats">
+    <Key>
+      <PropertyRef Name="id_filter_acf" />
+    </Key>
+    <Property Name="id_filter_acf" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_producto_general" Type="Int32" Nullable="false" />
+    <Property Name="id_tipo_product" Type="Int32" Nullable="false" />
+    <Property Name="code_produt" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="name_product" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="description" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="id_location" Type="Int32" Nullable="false" />
+    <Property Name="id_manufactured" Type="Int32" Nullable="false" />
+    <Property Name="stock" Type="Int32" Nullable="false" />
+    <Property Name="id_estado" Type="Int32" Nullable="false" />
+    <Property Name="extra_things" Type="String" Nullable="false" MaxLength="950" FixedLength="false" Unicode="false" />
+    <Property Name="capacity" Type="String" Nullable="false" MaxLength="350" FixedLength="false" Unicode="false" />
+    <Property Name="botton_valve" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="wheels" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="motor" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="wall_thickness_bottom_thickness" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="price" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <NavigationProperty Name="Estado_StPats" Relationship="StPatsDataBaseModel1.FK_Tank_MXT_StPats_Estado_StPats" FromRole="Tank_MXT_StPats" ToRole="Estado_StPats" />
+    <NavigationProperty Name="Locations_StPats" Relationship="StPatsDataBaseModel1.FK_Tank_MXT_StPats_Locations_StPats" FromRole="Tank_MXT_StPats" ToRole="Locations_StPats" />
+    <NavigationProperty Name="Manufactured_Stpats" Relationship="StPatsDataBaseModel1.FK_Tank_MXT_StPats_Manufactured_Stpats" FromRole="Tank_MXT_StPats" ToRole="Manufactured_Stpats" />
+    <NavigationProperty Name="Productos_StPats" Relationship="StPatsDataBaseModel1.FK_Tank_MXT_StPats_Productos_StPats" FromRole="Tank_MXT_StPats" ToRole="Productos_StPats" />
+    <NavigationProperty Name="Tipo_Producto_StPats" Relationship="StPatsDataBaseModel1.FK_Tank_MXT_StPats_Tipo_Producto_StPats" FromRole="Tank_MXT_StPats" ToRole="Tipo_Producto_StPats" />
+  </EntityType>
+  <EntityType Name="Tank_TONW_StPats">
+    <Key>
+      <PropertyRef Name="id_filter_acf" />
+    </Key>
+    <Property Name="id_filter_acf" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_producto_general" Type="Int32" Nullable="false" />
+    <Property Name="id_tipo_product" Type="Int32" Nullable="false" />
+    <Property Name="code_produt" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="name_product" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="description" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="id_location" Type="Int32" Nullable="false" />
+    <Property Name="id_manufactured" Type="Int32" Nullable="false" />
+    <Property Name="stock" Type="Int32" Nullable="false" />
+    <Property Name="id_estado" Type="Int32" Nullable="false" />
+    <Property Name="extra_things" Type="String" Nullable="false" MaxLength="950" FixedLength="false" Unicode="false" />
+    <Property Name="capacity" Type="String" Nullable="false" MaxLength="550" FixedLength="false" Unicode="false" />
+    <Property Name="orientation" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="total_area" Type="Single" Nullable="false" />
+    <Property Name="botton_valve" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="racking_valve" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="sample_tap" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="thermometer_in_thermowell" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="thermowell_for_sensor" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="liftning_arm" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="vent" Type="Int32" Nullable="false" />
+    <Property Name="wall_thickness_bottom_thickness" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="replacement_inflatable_gasket" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="price" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <NavigationProperty Name="Estado_StPats" Relationship="StPatsDataBaseModel1.FK_Tank_TONW_StPats_Estado_StPats" FromRole="Tank_TONW_StPats" ToRole="Estado_StPats" />
+    <NavigationProperty Name="Locations_StPats" Relationship="StPatsDataBaseModel1.FK_Tank_TONW_StPats_Locations_StPats" FromRole="Tank_TONW_StPats" ToRole="Locations_StPats" />
+    <NavigationProperty Name="Manufactured_Stpats" Relationship="StPatsDataBaseModel1.FK_Tank_TONW_StPats_Manufactured_Stpats" FromRole="Tank_TONW_StPats" ToRole="Manufactured_Stpats" />
+    <NavigationProperty Name="Productos_StPats" Relationship="StPatsDataBaseModel1.FK_Tank_TONW_StPats_Productos_StPats" FromRole="Tank_TONW_StPats" ToRole="Productos_StPats" />
+    <NavigationProperty Name="Tipo_Producto_StPats" Relationship="StPatsDataBaseModel1.FK_Tank_TONW_StPats_Tipo_Producto_StPats" FromRole="Tank_TONW_StPats" ToRole="Tipo_Producto_StPats" />
+  </EntityType>
+  <EntityType Name="Tanks_StPats">
+    <Key>
+      <PropertyRef Name="id_tanque" />
+    </Key>
+    <Property Name="id_tanque" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="codigo_tanque" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="capacidad" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="bottom_valve" Type="Single" Nullable="false" />
+    <Property Name="manway" Type="Int32" Nullable="false" />
+    <Property Name="lifting_arm" Type="Int32" Nullable="false" />
+    <Property Name="vent" Type="Int32" Nullable="false" />
+    <Property Name="replacemnet_infiatable_gasket" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="price" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="stok" Type="Int32" Nullable="false" />
+    <Property Name="location" Type="Int32" Nullable="false" />
+    <Property Name="manual" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="image" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="desription" Type="String" MaxLength="450" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Locations_StPats" Relationship="StPatsDataBaseModel1.FK_Tanks_StPats_Locations_StPats" FromRole="Tanks_StPats" ToRole="Locations_StPats" />
+  </EntityType>
+  <EntityType Name="Tipo_Producto_StPats">
+    <Key>
+      <PropertyRef Name="id_tipo_producto" />
+    </Key>
+    <Property Name="id_tipo_producto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="descripcion_producto" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Bottle_Finishing_StPats" Relationship="StPatsDataBaseModel1.FK_Bottle_Finishing_StPats_Tipo_Producto_StPats" FromRole="Tipo_Producto_StPats" ToRole="Bottle_Finishing_StPats" />
+    <NavigationProperty Name="Filling_Machine_StPats" Relationship="StPatsDataBaseModel1.FK_Filling_Machine_StPats_Tipo_Producto_StPats" FromRole="Tipo_Producto_StPats" ToRole="Filling_Machine_StPats" />
+    <NavigationProperty Name="Filter_ACF_StPats" Relationship="StPatsDataBaseModel1.FK_Filter_ACF_StPats_Tipo_Producto_StPats" FromRole="Tipo_Producto_StPats" ToRole="Filter_ACF_StPats" />
+    <NavigationProperty Name="Filter_CH_StPats" Relationship="StPatsDataBaseModel1.FK_Filter_CH_StPats_Tipo_Producto_StPats" FromRole="Tipo_Producto_StPats" ToRole="Filter_CH_StPats" />
+    <NavigationProperty Name="Filter_PAF_StPats" Relationship="StPatsDataBaseModel1.FK_Filter_PAF_StPats_Tipo_Producto_StPats" FromRole="Tipo_Producto_StPats" ToRole="Filter_PAF_StPats" />
+    <NavigationProperty Name="Filter_PES_StPats" Relationship="StPatsDataBaseModel1.FK_Filter_PES_StPats_Tipo_Producto_StPats" FromRole="Tipo_Producto_StPats" ToRole="Filter_PES_StPats" />
+    <NavigationProperty Name="Filter_PP_StPats" Relationship="StPatsDataBaseModel1.FK_Filter_PP_StPats_Tipo_Producto_StPats" FromRole="Tipo_Producto_StPats" ToRole="Filter_PP_StPats" />
+    <NavigationProperty Name="Filter_StPats" Relationship="StPatsDataBaseModel1.FK_Filter_StPats_Tipo_Producto_StPats" FromRole="Tipo_Producto_StPats" ToRole="Filter_StPats" />
+    <NavigationProperty Name="Labeler_StPats" Relationship="StPatsDataBaseModel1.FK_Labeler_StPats_Tipo_Producto_StPats" FromRole="Tipo_Producto_StPats" ToRole="Labeler_StPats" />
+    <NavigationProperty Name="Productos_StPats" Relationship="StPatsDataBaseModel1.FK_Productos_StPats_Tipo_Producto_StPats" FromRole="Tipo_Producto_StPats" ToRole="Productos_StPats" />
+    <NavigationProperty Name="Pump_StPats" Relationship="StPatsDataBaseModel1.FK_Pump_StPats_Tipo_Producto_StPats" FromRole="Tipo_Producto_StPats" ToRole="Pump_StPats" />
+    <NavigationProperty Name="Tank_LCBT_VC_ACF_StPats" Relationship="StPatsDataBaseModel1.FK_Tank_LCBT_VC_ACF_StPats_Tipo_Producto_StPats" FromRole="Tipo_Producto_StPats" ToRole="Tank_LCBT_VC_ACF_StPats" />
+    <NavigationProperty Name="Tank_LCTTCB_StPats" Relationship="StPatsDataBaseModel1.FK_Tank_LCTTCB_StPats_Tipo_Producto_StPats" FromRole="Tipo_Producto_StPats" ToRole="Tank_LCTTCB_StPats" />
+    <NavigationProperty Name="Tank_LCTTCJ_VC_StPats" Relationship="StPatsDataBaseModel1.FK_Tank_LCTTCJ_VC_StPats_Tipo_Producto_StPats" FromRole="Tipo_Producto_StPats" ToRole="Tank_LCTTCJ_VC_StPats" />
+    <NavigationProperty Name="Tank_LFBT_VC_StPats" Relationship="StPatsDataBaseModel1.FK_Tank_LFBT_VC_StPats_Tipo_Producto_StPats" FromRole="Tipo_Producto_StPats" ToRole="Tank_LFBT_VC_StPats" />
+    <NavigationProperty Name="Tank_LFLT_VCCJ_StPats" Relationship="StPatsDataBaseModel1.FK_Tank_LFLT_VCCJ_StPats_Tipo_Producto_StPats" FromRole="Tipo_Producto_StPats" ToRole="Tank_LFLT_VCCJ_StPats" />
+    <NavigationProperty Name="Tank_LSBT_VC_ACF_StPats" Relationship="StPatsDataBaseModel1.FK_Tank_LSBT_VC_ACF_StPats_Tipo_Producto_StPats" FromRole="Tipo_Producto_StPats" ToRole="Tank_LSBT_VC_ACF_StPats" />
+    <NavigationProperty Name="Tank_LWWFWCJCT_VC_StPats" Relationship="StPatsDataBaseModel1.FK_Tank_LWWFWCJCT_VC_StPats_Tipo_Producto_StPats" FromRole="Tipo_Producto_StPats" ToRole="Tank_LWWFWCJCT_VC_StPats" />
+    <NavigationProperty Name="Tank_MXT_StPats" Relationship="StPatsDataBaseModel1.FK_Tank_MXT_StPats_Tipo_Producto_StPats" FromRole="Tipo_Producto_StPats" ToRole="Tank_MXT_StPats" />
+    <NavigationProperty Name="Tank_TONW_StPats" Relationship="StPatsDataBaseModel1.FK_Tank_TONW_StPats_Tipo_Producto_StPats" FromRole="Tipo_Producto_StPats" ToRole="Tank_TONW_StPats" />
+  </EntityType>
+  <EntityType Name="Type_Filter_StPats">
+    <Key>
+      <PropertyRef Name="id_tipo_filter" />
+    </Key>
+    <Property Name="id_tipo_filter" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="descripcion" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Filter_StPats" Relationship="StPatsDataBaseModel1.FK_Filter_StPats_Type_Filter_StPats" FromRole="Type_Filter_StPats" ToRole="Filter_StPats" />
+  </EntityType>
+  <Association Name="FK_Bill_StPats_Estado_StPats">
+    <End Type="StPatsDataBaseModel1.Estado_StPats" Role="Estado_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Bill_StPats" Role="Bill_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado_StPats">
+        <PropertyRef Name="id_estado" />
+      </Principal>
+      <Dependent Role="Bill_StPats">
+        <PropertyRef Name="id_estado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Bill_StPats_PayMet_StPats">
+    <End Type="StPatsDataBaseModel1.PayMet_StPats" Role="PayMet_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Bill_StPats" Role="Bill_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PayMet_StPats">
+        <PropertyRef Name="id_tipo_pago" />
+      </Principal>
+      <Dependent Role="Bill_StPats">
+        <PropertyRef Name="id_paymet" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Bill_StPats_Shopping_Cart_StPats">
+    <End Type="StPatsDataBaseModel1.Shopping_Cart_StPats" Role="Shopping_Cart_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Bill_StPats" Role="Bill_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Shopping_Cart_StPats">
+        <PropertyRef Name="id_shoppingcart" />
+      </Principal>
+      <Dependent Role="Bill_StPats">
+        <PropertyRef Name="id_shoppingCart" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Bottle_Finishing_StPats_Estado_StPats">
+    <End Type="StPatsDataBaseModel1.Estado_StPats" Role="Estado_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Bottle_Finishing_StPats" Role="Bottle_Finishing_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado_StPats">
+        <PropertyRef Name="id_estado" />
+      </Principal>
+      <Dependent Role="Bottle_Finishing_StPats">
+        <PropertyRef Name="id_estado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Bottle_Finishing_StPats_Locations_StPats">
+    <End Type="StPatsDataBaseModel1.Locations_StPats" Role="Locations_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Bottle_Finishing_StPats" Role="Bottle_Finishing_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Locations_StPats">
+        <PropertyRef Name="id_location" />
+      </Principal>
+      <Dependent Role="Bottle_Finishing_StPats">
+        <PropertyRef Name="id_location" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Bottle_Finishing_StPats_Manufactured_Stpats">
+    <End Type="StPatsDataBaseModel1.Manufactured_Stpats" Role="Manufactured_Stpats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Bottle_Finishing_StPats" Role="Bottle_Finishing_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Manufactured_Stpats">
+        <PropertyRef Name="id_manufactured" />
+      </Principal>
+      <Dependent Role="Bottle_Finishing_StPats">
+        <PropertyRef Name="id_manufactured" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Bottle_Finishing_StPats_Productos_StPats">
+    <End Type="StPatsDataBaseModel1.Productos_StPats" Role="Productos_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Bottle_Finishing_StPats" Role="Bottle_Finishing_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Productos_StPats">
+        <PropertyRef Name="id_producto" />
+      </Principal>
+      <Dependent Role="Bottle_Finishing_StPats">
+        <PropertyRef Name="id_producto_general" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Bottle_Finishing_StPats_Tipo_Producto_StPats">
+    <End Type="StPatsDataBaseModel1.Tipo_Producto_StPats" Role="Tipo_Producto_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Bottle_Finishing_StPats" Role="Bottle_Finishing_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tipo_Producto_StPats">
+        <PropertyRef Name="id_tipo_producto" />
+      </Principal>
+      <Dependent Role="Bottle_Finishing_StPats">
+        <PropertyRef Name="id_tipo_product" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StaCi_StPats_Ciudades_StPats">
+    <End Type="StPatsDataBaseModel1.Ciudades_StPats" Role="Ciudades_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.StaCi_StPats" Role="StaCi_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ciudades_StPats">
+        <PropertyRef Name="id_ciudad" />
+      </Principal>
+      <Dependent Role="StaCi_StPats">
+        <PropertyRef Name="id_ciudad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Clients_StPats_Estado_StPats">
+    <End Type="StPatsDataBaseModel1.Estado_StPats" Role="Estado_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Clients_StPats" Role="Clients_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado_StPats">
+        <PropertyRef Name="id_estado" />
+      </Principal>
+      <Dependent Role="Clients_StPats">
+        <PropertyRef Name="estado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Clients_StPats_StaCi_StPats">
+    <End Type="StPatsDataBaseModel1.StaCi_StPats" Role="StaCi_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Clients_StPats" Role="Clients_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StaCi_StPats">
+        <PropertyRef Name="id_ciudad_estado" />
+      </Principal>
+      <Dependent Role="Clients_StPats">
+        <PropertyRef Name="id_ciudad_estado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Shopping_Cart_StPats_Clients_StPats">
+    <End Type="StPatsDataBaseModel1.Clients_StPats" Role="Clients_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Shopping_Cart_StPats" Role="Shopping_Cart_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Clients_StPats">
+        <PropertyRef Name="id_cliente" />
+      </Principal>
+      <Dependent Role="Shopping_Cart_StPats">
+        <PropertyRef Name="id_cliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Filling_Machine_StPats_Estado_StPats">
+    <End Type="StPatsDataBaseModel1.Estado_StPats" Role="Estado_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Filling_Machine_StPats" Role="Filling_Machine_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado_StPats">
+        <PropertyRef Name="id_estado" />
+      </Principal>
+      <Dependent Role="Filling_Machine_StPats">
+        <PropertyRef Name="id_estado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Filter_ACF_StPats_Estado_StPats">
+    <End Type="StPatsDataBaseModel1.Estado_StPats" Role="Estado_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Filter_ACF_StPats" Role="Filter_ACF_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado_StPats">
+        <PropertyRef Name="id_estado" />
+      </Principal>
+      <Dependent Role="Filter_ACF_StPats">
+        <PropertyRef Name="id_estado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Filter_CH_StPats_Estado_StPats">
+    <End Type="StPatsDataBaseModel1.Estado_StPats" Role="Estado_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Filter_CH_StPats" Role="Filter_CH_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado_StPats">
+        <PropertyRef Name="id_estado" />
+      </Principal>
+      <Dependent Role="Filter_CH_StPats">
+        <PropertyRef Name="id_estado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Filter_PAF_StPats_Estado_StPats">
+    <End Type="StPatsDataBaseModel1.Estado_StPats" Role="Estado_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Filter_PAF_StPats" Role="Filter_PAF_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado_StPats">
+        <PropertyRef Name="id_estado" />
+      </Principal>
+      <Dependent Role="Filter_PAF_StPats">
+        <PropertyRef Name="id_estado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Filter_PES_StPats_Estado_StPats">
+    <End Type="StPatsDataBaseModel1.Estado_StPats" Role="Estado_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Filter_PES_StPats" Role="Filter_PES_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado_StPats">
+        <PropertyRef Name="id_estado" />
+      </Principal>
+      <Dependent Role="Filter_PES_StPats">
+        <PropertyRef Name="id_estado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Filter_PP_StPats_Estado_StPats">
+    <End Type="StPatsDataBaseModel1.Estado_StPats" Role="Estado_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Filter_PP_StPats" Role="Filter_PP_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado_StPats">
+        <PropertyRef Name="id_estado" />
+      </Principal>
+      <Dependent Role="Filter_PP_StPats">
+        <PropertyRef Name="id_estado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Filter_StPats_Estado_StPats">
+    <End Type="StPatsDataBaseModel1.Estado_StPats" Role="Estado_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Filter_StPats" Role="Filter_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado_StPats">
+        <PropertyRef Name="id_estado" />
+      </Principal>
+      <Dependent Role="Filter_StPats">
+        <PropertyRef Name="id_estado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Labeler_StPats_Estado_StPats">
+    <End Type="StPatsDataBaseModel1.Estado_StPats" Role="Estado_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Labeler_StPats" Role="Labeler_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado_StPats">
+        <PropertyRef Name="id_estado" />
+      </Principal>
+      <Dependent Role="Labeler_StPats">
+        <PropertyRef Name="estado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Lista_Productos_StPats_Estado_StPats">
+    <End Type="StPatsDataBaseModel1.Estado_StPats" Role="Estado_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Lista_Productos_StPats" Role="Lista_Productos_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado_StPats">
+        <PropertyRef Name="id_estado" />
+      </Principal>
+      <Dependent Role="Lista_Productos_StPats">
+        <PropertyRef Name="id_estado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Productos_StPats_Estado_StPats">
+    <End Type="StPatsDataBaseModel1.Estado_StPats" Role="Estado_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Productos_StPats" Role="Productos_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado_StPats">
+        <PropertyRef Name="id_estado" />
+      </Principal>
+      <Dependent Role="Productos_StPats">
+        <PropertyRef Name="id_estado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Pump_StPats_Estado_StPats">
+    <End Type="StPatsDataBaseModel1.Estado_StPats" Role="Estado_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Pump_StPats" Role="Pump_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado_StPats">
+        <PropertyRef Name="id_estado" />
+      </Principal>
+      <Dependent Role="Pump_StPats">
+        <PropertyRef Name="id_estado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Shopping_Cart_Detalle_StPats_Estado_StPats">
+    <End Type="StPatsDataBaseModel1.Estado_StPats" Role="Estado_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Shopping_Cart_Detalle_StPats" Role="Shopping_Cart_Detalle_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado_StPats">
+        <PropertyRef Name="id_estado" />
+      </Principal>
+      <Dependent Role="Shopping_Cart_Detalle_StPats">
+        <PropertyRef Name="id_estado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Shopping_Cart_StPats_Estado_StPats">
+    <End Type="StPatsDataBaseModel1.Estado_StPats" Role="Estado_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Shopping_Cart_StPats" Role="Shopping_Cart_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado_StPats">
+        <PropertyRef Name="id_estado" />
+      </Principal>
+      <Dependent Role="Shopping_Cart_StPats">
+        <PropertyRef Name="estado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tank_LCBT_VC_ACF_StPats_Estado_StPats">
+    <End Type="StPatsDataBaseModel1.Estado_StPats" Role="Estado_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Tank_LCBT_VC_ACF_StPats" Role="Tank_LCBT_VC_ACF_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado_StPats">
+        <PropertyRef Name="id_estado" />
+      </Principal>
+      <Dependent Role="Tank_LCBT_VC_ACF_StPats">
+        <PropertyRef Name="id_estado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tank_LCTTCB_StPats_Estado_StPats">
+    <End Type="StPatsDataBaseModel1.Estado_StPats" Role="Estado_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Tank_LCTTCB_StPats" Role="Tank_LCTTCB_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado_StPats">
+        <PropertyRef Name="id_estado" />
+      </Principal>
+      <Dependent Role="Tank_LCTTCB_StPats">
+        <PropertyRef Name="id_estado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tank_LCTTCJ_VC_StPats_Estado_StPats">
+    <End Type="StPatsDataBaseModel1.Estado_StPats" Role="Estado_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Tank_LCTTCJ_VC_StPats" Role="Tank_LCTTCJ_VC_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado_StPats">
+        <PropertyRef Name="id_estado" />
+      </Principal>
+      <Dependent Role="Tank_LCTTCJ_VC_StPats">
+        <PropertyRef Name="id_estado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tank_LFBT_VC_StPats_Estado_StPats">
+    <End Type="StPatsDataBaseModel1.Estado_StPats" Role="Estado_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Tank_LFBT_VC_StPats" Role="Tank_LFBT_VC_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado_StPats">
+        <PropertyRef Name="id_estado" />
+      </Principal>
+      <Dependent Role="Tank_LFBT_VC_StPats">
+        <PropertyRef Name="id_estado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tank_LFLT_VCCJ_StPats_Estado_StPats">
+    <End Type="StPatsDataBaseModel1.Estado_StPats" Role="Estado_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Tank_LFLT_VCCJ_StPats" Role="Tank_LFLT_VCCJ_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado_StPats">
+        <PropertyRef Name="id_estado" />
+      </Principal>
+      <Dependent Role="Tank_LFLT_VCCJ_StPats">
+        <PropertyRef Name="id_estado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tank_LSBT_VC_ACF_StPats_Estado_StPats">
+    <End Type="StPatsDataBaseModel1.Estado_StPats" Role="Estado_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Tank_LSBT_VC_ACF_StPats" Role="Tank_LSBT_VC_ACF_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado_StPats">
+        <PropertyRef Name="id_estado" />
+      </Principal>
+      <Dependent Role="Tank_LSBT_VC_ACF_StPats">
+        <PropertyRef Name="id_estado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tank_LWWFWCJCT_VC_StPats_Estado_StPats">
+    <End Type="StPatsDataBaseModel1.Estado_StPats" Role="Estado_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Tank_LWWFWCJCT_VC_StPats" Role="Tank_LWWFWCJCT_VC_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado_StPats">
+        <PropertyRef Name="id_estado" />
+      </Principal>
+      <Dependent Role="Tank_LWWFWCJCT_VC_StPats">
+        <PropertyRef Name="id_estado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tank_MXT_StPats_Estado_StPats">
+    <End Type="StPatsDataBaseModel1.Estado_StPats" Role="Estado_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Tank_MXT_StPats" Role="Tank_MXT_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado_StPats">
+        <PropertyRef Name="id_estado" />
+      </Principal>
+      <Dependent Role="Tank_MXT_StPats">
+        <PropertyRef Name="id_estado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tank_TONW_StPats_Estado_StPats">
+    <End Type="StPatsDataBaseModel1.Estado_StPats" Role="Estado_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Tank_TONW_StPats" Role="Tank_TONW_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado_StPats">
+        <PropertyRef Name="id_estado" />
+      </Principal>
+      <Dependent Role="Tank_TONW_StPats">
+        <PropertyRef Name="id_estado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Filling_Machine_StPats_Locations_StPats">
+    <End Type="StPatsDataBaseModel1.Locations_StPats" Role="Locations_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Filling_Machine_StPats" Role="Filling_Machine_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Locations_StPats">
+        <PropertyRef Name="id_location" />
+      </Principal>
+      <Dependent Role="Filling_Machine_StPats">
+        <PropertyRef Name="id_location" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Filling_Machine_StPats_Manufactured_Stpats">
+    <End Type="StPatsDataBaseModel1.Manufactured_Stpats" Role="Manufactured_Stpats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Filling_Machine_StPats" Role="Filling_Machine_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Manufactured_Stpats">
+        <PropertyRef Name="id_manufactured" />
+      </Principal>
+      <Dependent Role="Filling_Machine_StPats">
+        <PropertyRef Name="id_manufactured" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Filling_Machine_StPats_Productos_StPats">
+    <End Type="StPatsDataBaseModel1.Productos_StPats" Role="Productos_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Filling_Machine_StPats" Role="Filling_Machine_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Productos_StPats">
+        <PropertyRef Name="id_producto" />
+      </Principal>
+      <Dependent Role="Filling_Machine_StPats">
+        <PropertyRef Name="id_producto_general" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Filling_Machine_StPats_Tipo_Producto_StPats">
+    <End Type="StPatsDataBaseModel1.Tipo_Producto_StPats" Role="Tipo_Producto_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Filling_Machine_StPats" Role="Filling_Machine_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tipo_Producto_StPats">
+        <PropertyRef Name="id_tipo_producto" />
+      </Principal>
+      <Dependent Role="Filling_Machine_StPats">
+        <PropertyRef Name="id_tipo_product" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Filter_ACF_StPats_Locations_StPats">
+    <End Type="StPatsDataBaseModel1.Locations_StPats" Role="Locations_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Filter_ACF_StPats" Role="Filter_ACF_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Locations_StPats">
+        <PropertyRef Name="id_location" />
+      </Principal>
+      <Dependent Role="Filter_ACF_StPats">
+        <PropertyRef Name="id_location" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Filter_ACF_StPats_Manufactured_Stpats">
+    <End Type="StPatsDataBaseModel1.Manufactured_Stpats" Role="Manufactured_Stpats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Filter_ACF_StPats" Role="Filter_ACF_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Manufactured_Stpats">
+        <PropertyRef Name="id_manufactured" />
+      </Principal>
+      <Dependent Role="Filter_ACF_StPats">
+        <PropertyRef Name="id_manufactured" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Filter_ACF_StPats_Productos_StPats">
+    <End Type="StPatsDataBaseModel1.Productos_StPats" Role="Productos_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Filter_ACF_StPats" Role="Filter_ACF_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Productos_StPats">
+        <PropertyRef Name="id_producto" />
+      </Principal>
+      <Dependent Role="Filter_ACF_StPats">
+        <PropertyRef Name="id_producto_general" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Filter_ACF_StPats_Tipo_Producto_StPats">
+    <End Type="StPatsDataBaseModel1.Tipo_Producto_StPats" Role="Tipo_Producto_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Filter_ACF_StPats" Role="Filter_ACF_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tipo_Producto_StPats">
+        <PropertyRef Name="id_tipo_producto" />
+      </Principal>
+      <Dependent Role="Filter_ACF_StPats">
+        <PropertyRef Name="id_tipo_product" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Filter_CH_StPats_Locations_StPats">
+    <End Type="StPatsDataBaseModel1.Locations_StPats" Role="Locations_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Filter_CH_StPats" Role="Filter_CH_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Locations_StPats">
+        <PropertyRef Name="id_location" />
+      </Principal>
+      <Dependent Role="Filter_CH_StPats">
+        <PropertyRef Name="id_location" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Filter_CH_StPats_Manufactured_Stpats">
+    <End Type="StPatsDataBaseModel1.Manufactured_Stpats" Role="Manufactured_Stpats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Filter_CH_StPats" Role="Filter_CH_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Manufactured_Stpats">
+        <PropertyRef Name="id_manufactured" />
+      </Principal>
+      <Dependent Role="Filter_CH_StPats">
+        <PropertyRef Name="id_manufactured" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Filter_CH_StPats_Productos_StPats">
+    <End Type="StPatsDataBaseModel1.Productos_StPats" Role="Productos_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Filter_CH_StPats" Role="Filter_CH_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Productos_StPats">
+        <PropertyRef Name="id_producto" />
+      </Principal>
+      <Dependent Role="Filter_CH_StPats">
+        <PropertyRef Name="id_producto_general" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Filter_CH_StPats_Tipo_Producto_StPats">
+    <End Type="StPatsDataBaseModel1.Tipo_Producto_StPats" Role="Tipo_Producto_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Filter_CH_StPats" Role="Filter_CH_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tipo_Producto_StPats">
+        <PropertyRef Name="id_tipo_producto" />
+      </Principal>
+      <Dependent Role="Filter_CH_StPats">
+        <PropertyRef Name="id_tipo_product" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Filter_PAF_StPats_Locations_StPats">
+    <End Type="StPatsDataBaseModel1.Locations_StPats" Role="Locations_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Filter_PAF_StPats" Role="Filter_PAF_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Locations_StPats">
+        <PropertyRef Name="id_location" />
+      </Principal>
+      <Dependent Role="Filter_PAF_StPats">
+        <PropertyRef Name="id_location" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Filter_PAF_StPats_Manufactured_Stpats">
+    <End Type="StPatsDataBaseModel1.Manufactured_Stpats" Role="Manufactured_Stpats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Filter_PAF_StPats" Role="Filter_PAF_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Manufactured_Stpats">
+        <PropertyRef Name="id_manufactured" />
+      </Principal>
+      <Dependent Role="Filter_PAF_StPats">
+        <PropertyRef Name="id_manufactured" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Filter_PAF_StPats_Productos_StPats">
+    <End Type="StPatsDataBaseModel1.Productos_StPats" Role="Productos_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Filter_PAF_StPats" Role="Filter_PAF_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Productos_StPats">
+        <PropertyRef Name="id_producto" />
+      </Principal>
+      <Dependent Role="Filter_PAF_StPats">
+        <PropertyRef Name="id_producto_general" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Filter_PAF_StPats_Tipo_Producto_StPats">
+    <End Type="StPatsDataBaseModel1.Tipo_Producto_StPats" Role="Tipo_Producto_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Filter_PAF_StPats" Role="Filter_PAF_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tipo_Producto_StPats">
+        <PropertyRef Name="id_tipo_producto" />
+      </Principal>
+      <Dependent Role="Filter_PAF_StPats">
+        <PropertyRef Name="id_tipo_product" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Filter_PES_StPats_Locations_StPats">
+    <End Type="StPatsDataBaseModel1.Locations_StPats" Role="Locations_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Filter_PES_StPats" Role="Filter_PES_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Locations_StPats">
+        <PropertyRef Name="id_location" />
+      </Principal>
+      <Dependent Role="Filter_PES_StPats">
+        <PropertyRef Name="id_location" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Filter_PES_StPats_Manufactured_Stpats">
+    <End Type="StPatsDataBaseModel1.Manufactured_Stpats" Role="Manufactured_Stpats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Filter_PES_StPats" Role="Filter_PES_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Manufactured_Stpats">
+        <PropertyRef Name="id_manufactured" />
+      </Principal>
+      <Dependent Role="Filter_PES_StPats">
+        <PropertyRef Name="id_manufactured" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Filter_PES_StPats_Productos_StPats">
+    <End Type="StPatsDataBaseModel1.Productos_StPats" Role="Productos_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Filter_PES_StPats" Role="Filter_PES_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Productos_StPats">
+        <PropertyRef Name="id_producto" />
+      </Principal>
+      <Dependent Role="Filter_PES_StPats">
+        <PropertyRef Name="id_producto_general" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Filter_PES_StPats_Tipo_Producto_StPats">
+    <End Type="StPatsDataBaseModel1.Tipo_Producto_StPats" Role="Tipo_Producto_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Filter_PES_StPats" Role="Filter_PES_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tipo_Producto_StPats">
+        <PropertyRef Name="id_tipo_producto" />
+      </Principal>
+      <Dependent Role="Filter_PES_StPats">
+        <PropertyRef Name="id_tipo_product" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Filter_PP_StPats_Locations_StPats">
+    <End Type="StPatsDataBaseModel1.Locations_StPats" Role="Locations_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Filter_PP_StPats" Role="Filter_PP_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Locations_StPats">
+        <PropertyRef Name="id_location" />
+      </Principal>
+      <Dependent Role="Filter_PP_StPats">
+        <PropertyRef Name="id_location" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Filter_PP_StPats_Manufactured_Stpats">
+    <End Type="StPatsDataBaseModel1.Manufactured_Stpats" Role="Manufactured_Stpats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Filter_PP_StPats" Role="Filter_PP_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Manufactured_Stpats">
+        <PropertyRef Name="id_manufactured" />
+      </Principal>
+      <Dependent Role="Filter_PP_StPats">
+        <PropertyRef Name="id_manufactured" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Filter_PP_StPats_Productos_StPats">
+    <End Type="StPatsDataBaseModel1.Productos_StPats" Role="Productos_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Filter_PP_StPats" Role="Filter_PP_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Productos_StPats">
+        <PropertyRef Name="id_producto" />
+      </Principal>
+      <Dependent Role="Filter_PP_StPats">
+        <PropertyRef Name="id_producto_general" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Filter_PP_StPats_Tipo_Producto_StPats">
+    <End Type="StPatsDataBaseModel1.Tipo_Producto_StPats" Role="Tipo_Producto_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Filter_PP_StPats" Role="Filter_PP_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tipo_Producto_StPats">
+        <PropertyRef Name="id_tipo_producto" />
+      </Principal>
+      <Dependent Role="Filter_PP_StPats">
+        <PropertyRef Name="id_tipo_product" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Filter_StPats_Locations_StPats">
+    <End Type="StPatsDataBaseModel1.Locations_StPats" Role="Locations_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Filter_StPats" Role="Filter_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Locations_StPats">
+        <PropertyRef Name="id_location" />
+      </Principal>
+      <Dependent Role="Filter_StPats">
+        <PropertyRef Name="id_location" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Filter_StPats_Manufactured_Stpats">
+    <End Type="StPatsDataBaseModel1.Manufactured_Stpats" Role="Manufactured_Stpats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Filter_StPats" Role="Filter_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Manufactured_Stpats">
+        <PropertyRef Name="id_manufactured" />
+      </Principal>
+      <Dependent Role="Filter_StPats">
+        <PropertyRef Name="id_manufactured" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Filter_StPats_Productos_StPats">
+    <End Type="StPatsDataBaseModel1.Productos_StPats" Role="Productos_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Filter_StPats" Role="Filter_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Productos_StPats">
+        <PropertyRef Name="id_producto" />
+      </Principal>
+      <Dependent Role="Filter_StPats">
+        <PropertyRef Name="id_producto_general" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Filter_StPats_Tipo_Producto_StPats">
+    <End Type="StPatsDataBaseModel1.Tipo_Producto_StPats" Role="Tipo_Producto_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Filter_StPats" Role="Filter_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tipo_Producto_StPats">
+        <PropertyRef Name="id_tipo_producto" />
+      </Principal>
+      <Dependent Role="Filter_StPats">
+        <PropertyRef Name="id_tipo_product" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Filter_StPats_Type_Filter_StPats">
+    <End Type="StPatsDataBaseModel1.Type_Filter_StPats" Role="Type_Filter_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Filter_StPats" Role="Filter_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Type_Filter_StPats">
+        <PropertyRef Name="id_tipo_filter" />
+      </Principal>
+      <Dependent Role="Filter_StPats">
+        <PropertyRef Name="id_tipo_filter" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Filtros_StPats_Locations_StPats">
+    <End Type="StPatsDataBaseModel1.Locations_StPats" Role="Locations_StPats" Multiplicity="0..1" />
+    <End Type="StPatsDataBaseModel1.Filtros_StPats" Role="Filtros_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Locations_StPats">
+        <PropertyRef Name="id_location" />
+      </Principal>
+      <Dependent Role="Filtros_StPats">
+        <PropertyRef Name="id_location" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Labeler_StPats_Labeler_StPats">
+    <End Type="StPatsDataBaseModel1.Labeler_StPats" Role="Labeler_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Labeler_StPats" Role="Labeler_StPats1" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Labeler_StPats">
+        <PropertyRef Name="id_labeler" />
+      </Principal>
+      <Dependent Role="Labeler_StPats1">
+        <PropertyRef Name="id_labeler" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Labeler_StPats_Locations_StPats">
+    <End Type="StPatsDataBaseModel1.Locations_StPats" Role="Locations_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Labeler_StPats" Role="Labeler_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Locations_StPats">
+        <PropertyRef Name="id_location" />
+      </Principal>
+      <Dependent Role="Labeler_StPats">
+        <PropertyRef Name="id_location" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Labeler_StPats_Manufactured_Stpats">
+    <End Type="StPatsDataBaseModel1.Manufactured_Stpats" Role="Manufactured_Stpats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Labeler_StPats" Role="Labeler_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Manufactured_Stpats">
+        <PropertyRef Name="id_manufactured" />
+      </Principal>
+      <Dependent Role="Labeler_StPats">
+        <PropertyRef Name="id_manufactured" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Labeler_StPats_Productos_StPats">
+    <End Type="StPatsDataBaseModel1.Productos_StPats" Role="Productos_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Labeler_StPats" Role="Labeler_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Productos_StPats">
+        <PropertyRef Name="id_producto" />
+      </Principal>
+      <Dependent Role="Labeler_StPats">
+        <PropertyRef Name="id_producto_general" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Labeler_StPats_Tipo_Producto_StPats">
+    <End Type="StPatsDataBaseModel1.Tipo_Producto_StPats" Role="Tipo_Producto_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Labeler_StPats" Role="Labeler_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tipo_Producto_StPats">
+        <PropertyRef Name="id_tipo_producto" />
+      </Principal>
+      <Dependent Role="Labeler_StPats">
+        <PropertyRef Name="id_tipo_product" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Lista_Productos_StPats_Productos_StPats">
+    <End Type="StPatsDataBaseModel1.Productos_StPats" Role="Productos_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Lista_Productos_StPats" Role="Lista_Productos_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Productos_StPats">
+        <PropertyRef Name="id_producto" />
+      </Principal>
+      <Dependent Role="Lista_Productos_StPats">
+        <PropertyRef Name="id_producto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Shopping_Cart_Detalle_StPats_Lista_Productos_StPats">
+    <End Type="StPatsDataBaseModel1.Lista_Productos_StPats" Role="Lista_Productos_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Shopping_Cart_Detalle_StPats" Role="Shopping_Cart_Detalle_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Lista_Productos_StPats">
+        <PropertyRef Name="id_lista_producto" />
+      </Principal>
+      <Dependent Role="Shopping_Cart_Detalle_StPats">
+        <PropertyRef Name="id_lista_producto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Productos_StPats_Locations_StPats">
+    <End Type="StPatsDataBaseModel1.Locations_StPats" Role="Locations_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Productos_StPats" Role="Productos_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Locations_StPats">
+        <PropertyRef Name="id_location" />
+      </Principal>
+      <Dependent Role="Productos_StPats">
+        <PropertyRef Name="id_location" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Pump_StPats_Locations_StPats">
+    <End Type="StPatsDataBaseModel1.Locations_StPats" Role="Locations_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Pump_StPats" Role="Pump_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Locations_StPats">
+        <PropertyRef Name="id_location" />
+      </Principal>
+      <Dependent Role="Pump_StPats">
+        <PropertyRef Name="id_location" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tank_LCBT_VC_ACF_StPats_Locations_StPats">
+    <End Type="StPatsDataBaseModel1.Locations_StPats" Role="Locations_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Tank_LCBT_VC_ACF_StPats" Role="Tank_LCBT_VC_ACF_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Locations_StPats">
+        <PropertyRef Name="id_location" />
+      </Principal>
+      <Dependent Role="Tank_LCBT_VC_ACF_StPats">
+        <PropertyRef Name="id_location" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tank_LCTTCB_StPats_Locations_StPats">
+    <End Type="StPatsDataBaseModel1.Locations_StPats" Role="Locations_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Tank_LCTTCB_StPats" Role="Tank_LCTTCB_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Locations_StPats">
+        <PropertyRef Name="id_location" />
+      </Principal>
+      <Dependent Role="Tank_LCTTCB_StPats">
+        <PropertyRef Name="id_estado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tank_LCTTCJ_VC_StPats_Locations_StPats">
+    <End Type="StPatsDataBaseModel1.Locations_StPats" Role="Locations_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Tank_LCTTCJ_VC_StPats" Role="Tank_LCTTCJ_VC_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Locations_StPats">
+        <PropertyRef Name="id_location" />
+      </Principal>
+      <Dependent Role="Tank_LCTTCJ_VC_StPats">
+        <PropertyRef Name="id_location" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tank_LFBT_VC_StPats_Locations_StPats">
+    <End Type="StPatsDataBaseModel1.Locations_StPats" Role="Locations_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Tank_LFBT_VC_StPats" Role="Tank_LFBT_VC_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Locations_StPats">
+        <PropertyRef Name="id_location" />
+      </Principal>
+      <Dependent Role="Tank_LFBT_VC_StPats">
+        <PropertyRef Name="id_location" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tank_LFLT_VCCJ_StPats_Locations_StPats">
+    <End Type="StPatsDataBaseModel1.Locations_StPats" Role="Locations_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Tank_LFLT_VCCJ_StPats" Role="Tank_LFLT_VCCJ_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Locations_StPats">
+        <PropertyRef Name="id_location" />
+      </Principal>
+      <Dependent Role="Tank_LFLT_VCCJ_StPats">
+        <PropertyRef Name="id_location" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tank_LSBT_VC_ACF_StPats_Locations_StPats">
+    <End Type="StPatsDataBaseModel1.Locations_StPats" Role="Locations_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Tank_LSBT_VC_ACF_StPats" Role="Tank_LSBT_VC_ACF_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Locations_StPats">
+        <PropertyRef Name="id_location" />
+      </Principal>
+      <Dependent Role="Tank_LSBT_VC_ACF_StPats">
+        <PropertyRef Name="id_location" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tank_LWWFWCJCT_VC_StPats_Locations_StPats">
+    <End Type="StPatsDataBaseModel1.Locations_StPats" Role="Locations_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Tank_LWWFWCJCT_VC_StPats" Role="Tank_LWWFWCJCT_VC_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Locations_StPats">
+        <PropertyRef Name="id_location" />
+      </Principal>
+      <Dependent Role="Tank_LWWFWCJCT_VC_StPats">
+        <PropertyRef Name="id_location" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tank_MXT_StPats_Locations_StPats">
+    <End Type="StPatsDataBaseModel1.Locations_StPats" Role="Locations_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Tank_MXT_StPats" Role="Tank_MXT_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Locations_StPats">
+        <PropertyRef Name="id_location" />
+      </Principal>
+      <Dependent Role="Tank_MXT_StPats">
+        <PropertyRef Name="id_location" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tank_TONW_StPats_Locations_StPats">
+    <End Type="StPatsDataBaseModel1.Locations_StPats" Role="Locations_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Tank_TONW_StPats" Role="Tank_TONW_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Locations_StPats">
+        <PropertyRef Name="id_location" />
+      </Principal>
+      <Dependent Role="Tank_TONW_StPats">
+        <PropertyRef Name="id_location" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tanks_StPats_Locations_StPats">
+    <End Type="StPatsDataBaseModel1.Locations_StPats" Role="Locations_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Tanks_StPats" Role="Tanks_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Locations_StPats">
+        <PropertyRef Name="id_location" />
+      </Principal>
+      <Dependent Role="Tanks_StPats">
+        <PropertyRef Name="location" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Pump_StPats_Manufactured_Stpats">
+    <End Type="StPatsDataBaseModel1.Manufactured_Stpats" Role="Manufactured_Stpats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Pump_StPats" Role="Pump_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Manufactured_Stpats">
+        <PropertyRef Name="id_manufactured" />
+      </Principal>
+      <Dependent Role="Pump_StPats">
+        <PropertyRef Name="id_manufactured" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tank_LCBT_VC_ACF_StPats_Manufactured_Stpats">
+    <End Type="StPatsDataBaseModel1.Manufactured_Stpats" Role="Manufactured_Stpats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Tank_LCBT_VC_ACF_StPats" Role="Tank_LCBT_VC_ACF_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Manufactured_Stpats">
+        <PropertyRef Name="id_manufactured" />
+      </Principal>
+      <Dependent Role="Tank_LCBT_VC_ACF_StPats">
+        <PropertyRef Name="id_manufactured" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tank_LCTTCB_StPats_Manufactured_Stpats">
+    <End Type="StPatsDataBaseModel1.Manufactured_Stpats" Role="Manufactured_Stpats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Tank_LCTTCB_StPats" Role="Tank_LCTTCB_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Manufactured_Stpats">
+        <PropertyRef Name="id_manufactured" />
+      </Principal>
+      <Dependent Role="Tank_LCTTCB_StPats">
+        <PropertyRef Name="id_manufactured" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tank_LCTTCJ_VC_StPats_Manufactured_Stpats">
+    <End Type="StPatsDataBaseModel1.Manufactured_Stpats" Role="Manufactured_Stpats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Tank_LCTTCJ_VC_StPats" Role="Tank_LCTTCJ_VC_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Manufactured_Stpats">
+        <PropertyRef Name="id_manufactured" />
+      </Principal>
+      <Dependent Role="Tank_LCTTCJ_VC_StPats">
+        <PropertyRef Name="id_manufactured" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tank_LFBT_VC_StPats_Manufactured_Stpats">
+    <End Type="StPatsDataBaseModel1.Manufactured_Stpats" Role="Manufactured_Stpats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Tank_LFBT_VC_StPats" Role="Tank_LFBT_VC_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Manufactured_Stpats">
+        <PropertyRef Name="id_manufactured" />
+      </Principal>
+      <Dependent Role="Tank_LFBT_VC_StPats">
+        <PropertyRef Name="id_manufactured" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tank_LFLT_VCCJ_StPats_Manufactured_Stpats">
+    <End Type="StPatsDataBaseModel1.Manufactured_Stpats" Role="Manufactured_Stpats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Tank_LFLT_VCCJ_StPats" Role="Tank_LFLT_VCCJ_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Manufactured_Stpats">
+        <PropertyRef Name="id_manufactured" />
+      </Principal>
+      <Dependent Role="Tank_LFLT_VCCJ_StPats">
+        <PropertyRef Name="id_manufactured" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tank_LSBT_VC_ACF_StPats_Manufactured_Stpats">
+    <End Type="StPatsDataBaseModel1.Manufactured_Stpats" Role="Manufactured_Stpats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Tank_LSBT_VC_ACF_StPats" Role="Tank_LSBT_VC_ACF_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Manufactured_Stpats">
+        <PropertyRef Name="id_manufactured" />
+      </Principal>
+      <Dependent Role="Tank_LSBT_VC_ACF_StPats">
+        <PropertyRef Name="id_manufactured" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tank_LWWFWCJCT_VC_StPats_Manufactured_Stpats">
+    <End Type="StPatsDataBaseModel1.Manufactured_Stpats" Role="Manufactured_Stpats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Tank_LWWFWCJCT_VC_StPats" Role="Tank_LWWFWCJCT_VC_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Manufactured_Stpats">
+        <PropertyRef Name="id_manufactured" />
+      </Principal>
+      <Dependent Role="Tank_LWWFWCJCT_VC_StPats">
+        <PropertyRef Name="id_manufactured" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tank_MXT_StPats_Manufactured_Stpats">
+    <End Type="StPatsDataBaseModel1.Manufactured_Stpats" Role="Manufactured_Stpats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Tank_MXT_StPats" Role="Tank_MXT_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Manufactured_Stpats">
+        <PropertyRef Name="id_manufactured" />
+      </Principal>
+      <Dependent Role="Tank_MXT_StPats">
+        <PropertyRef Name="id_manufactured" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tank_TONW_StPats_Manufactured_Stpats">
+    <End Type="StPatsDataBaseModel1.Manufactured_Stpats" Role="Manufactured_Stpats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Tank_TONW_StPats" Role="Tank_TONW_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Manufactured_Stpats">
+        <PropertyRef Name="id_manufactured" />
+      </Principal>
+      <Dependent Role="Tank_TONW_StPats">
+        <PropertyRef Name="id_manufactured" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Productos_StPats_Tipo_Producto_StPats">
+    <End Type="StPatsDataBaseModel1.Tipo_Producto_StPats" Role="Tipo_Producto_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Productos_StPats" Role="Productos_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tipo_Producto_StPats">
+        <PropertyRef Name="id_tipo_producto" />
+      </Principal>
+      <Dependent Role="Productos_StPats">
+        <PropertyRef Name="id_tipo_producto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Pump_StPats_Productos_StPats">
+    <End Type="StPatsDataBaseModel1.Productos_StPats" Role="Productos_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Pump_StPats" Role="Pump_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Productos_StPats">
+        <PropertyRef Name="id_producto" />
+      </Principal>
+      <Dependent Role="Pump_StPats">
+        <PropertyRef Name="id_producto_general" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tank_LCBT_VC_ACF_StPats_Productos_StPats">
+    <End Type="StPatsDataBaseModel1.Productos_StPats" Role="Productos_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Tank_LCBT_VC_ACF_StPats" Role="Tank_LCBT_VC_ACF_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Productos_StPats">
+        <PropertyRef Name="id_producto" />
+      </Principal>
+      <Dependent Role="Tank_LCBT_VC_ACF_StPats">
+        <PropertyRef Name="id_producto_general" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tank_LCTTCB_StPats_Productos_StPats">
+    <End Type="StPatsDataBaseModel1.Productos_StPats" Role="Productos_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Tank_LCTTCB_StPats" Role="Tank_LCTTCB_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Productos_StPats">
+        <PropertyRef Name="id_producto" />
+      </Principal>
+      <Dependent Role="Tank_LCTTCB_StPats">
+        <PropertyRef Name="id_producto_general" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tank_LCTTCJ_VC_StPats_Productos_StPats">
+    <End Type="StPatsDataBaseModel1.Productos_StPats" Role="Productos_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Tank_LCTTCJ_VC_StPats" Role="Tank_LCTTCJ_VC_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Productos_StPats">
+        <PropertyRef Name="id_producto" />
+      </Principal>
+      <Dependent Role="Tank_LCTTCJ_VC_StPats">
+        <PropertyRef Name="id_producto_general" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tank_LFBT_VC_StPats_Productos_StPats">
+    <End Type="StPatsDataBaseModel1.Productos_StPats" Role="Productos_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Tank_LFBT_VC_StPats" Role="Tank_LFBT_VC_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Productos_StPats">
+        <PropertyRef Name="id_producto" />
+      </Principal>
+      <Dependent Role="Tank_LFBT_VC_StPats">
+        <PropertyRef Name="id_producto_general" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tank_LFLT_VCCJ_StPats_Productos_StPats">
+    <End Type="StPatsDataBaseModel1.Productos_StPats" Role="Productos_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Tank_LFLT_VCCJ_StPats" Role="Tank_LFLT_VCCJ_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Productos_StPats">
+        <PropertyRef Name="id_producto" />
+      </Principal>
+      <Dependent Role="Tank_LFLT_VCCJ_StPats">
+        <PropertyRef Name="id_producto_general" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tank_LSBT_VC_ACF_StPats_Productos_StPats">
+    <End Type="StPatsDataBaseModel1.Productos_StPats" Role="Productos_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Tank_LSBT_VC_ACF_StPats" Role="Tank_LSBT_VC_ACF_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Productos_StPats">
+        <PropertyRef Name="id_producto" />
+      </Principal>
+      <Dependent Role="Tank_LSBT_VC_ACF_StPats">
+        <PropertyRef Name="id_producto_general" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tank_LWWFWCJCT_VC_StPats_Productos_StPats">
+    <End Type="StPatsDataBaseModel1.Productos_StPats" Role="Productos_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Tank_LWWFWCJCT_VC_StPats" Role="Tank_LWWFWCJCT_VC_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Productos_StPats">
+        <PropertyRef Name="id_producto" />
+      </Principal>
+      <Dependent Role="Tank_LWWFWCJCT_VC_StPats">
+        <PropertyRef Name="id_producto_general" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tank_MXT_StPats_Productos_StPats">
+    <End Type="StPatsDataBaseModel1.Productos_StPats" Role="Productos_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Tank_MXT_StPats" Role="Tank_MXT_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Productos_StPats">
+        <PropertyRef Name="id_producto" />
+      </Principal>
+      <Dependent Role="Tank_MXT_StPats">
+        <PropertyRef Name="id_producto_general" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tank_TONW_StPats_Productos_StPats">
+    <End Type="StPatsDataBaseModel1.Productos_StPats" Role="Productos_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Tank_TONW_StPats" Role="Tank_TONW_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Productos_StPats">
+        <PropertyRef Name="id_producto" />
+      </Principal>
+      <Dependent Role="Tank_TONW_StPats">
+        <PropertyRef Name="id_producto_general" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Pump_StPats_Tipo_Producto_StPats">
+    <End Type="StPatsDataBaseModel1.Tipo_Producto_StPats" Role="Tipo_Producto_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Pump_StPats" Role="Pump_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tipo_Producto_StPats">
+        <PropertyRef Name="id_tipo_producto" />
+      </Principal>
+      <Dependent Role="Pump_StPats">
+        <PropertyRef Name="id_tipo_product" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Shopping_Cart_Detalle_StPats_Shopping_Cart_StPats">
+    <End Type="StPatsDataBaseModel1.Shopping_Cart_StPats" Role="Shopping_Cart_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Shopping_Cart_Detalle_StPats" Role="Shopping_Cart_Detalle_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Shopping_Cart_StPats">
+        <PropertyRef Name="id_shoppingcart" />
+      </Principal>
+      <Dependent Role="Shopping_Cart_Detalle_StPats">
+        <PropertyRef Name="id_shoppingcart" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StaCi_StPats_State_StPats">
+    <End Type="StPatsDataBaseModel1.State_StPats" Role="State_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.StaCi_StPats" Role="StaCi_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="State_StPats">
+        <PropertyRef Name="is_estado" />
+      </Principal>
+      <Dependent Role="StaCi_StPats">
+        <PropertyRef Name="id_estado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Statax_StPats_State_StPats">
+    <End Type="StPatsDataBaseModel1.State_StPats" Role="State_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Statax_StPats" Role="Statax_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="State_StPats">
+        <PropertyRef Name="is_estado" />
+      </Principal>
+      <Dependent Role="Statax_StPats">
+        <PropertyRef Name="id_estado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tank_LCBT_VC_ACF_StPats_Tipo_Producto_StPats">
+    <End Type="StPatsDataBaseModel1.Tipo_Producto_StPats" Role="Tipo_Producto_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Tank_LCBT_VC_ACF_StPats" Role="Tank_LCBT_VC_ACF_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tipo_Producto_StPats">
+        <PropertyRef Name="id_tipo_producto" />
+      </Principal>
+      <Dependent Role="Tank_LCBT_VC_ACF_StPats">
+        <PropertyRef Name="id_tipo_product" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tank_LCTTCB_StPats_Tipo_Producto_StPats">
+    <End Type="StPatsDataBaseModel1.Tipo_Producto_StPats" Role="Tipo_Producto_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Tank_LCTTCB_StPats" Role="Tank_LCTTCB_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tipo_Producto_StPats">
+        <PropertyRef Name="id_tipo_producto" />
+      </Principal>
+      <Dependent Role="Tank_LCTTCB_StPats">
+        <PropertyRef Name="id_tipo_product" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tank_LCTTCJ_VC_StPats_Tipo_Producto_StPats">
+    <End Type="StPatsDataBaseModel1.Tipo_Producto_StPats" Role="Tipo_Producto_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Tank_LCTTCJ_VC_StPats" Role="Tank_LCTTCJ_VC_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tipo_Producto_StPats">
+        <PropertyRef Name="id_tipo_producto" />
+      </Principal>
+      <Dependent Role="Tank_LCTTCJ_VC_StPats">
+        <PropertyRef Name="id_tipo_product" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tank_LFBT_VC_StPats_Tipo_Producto_StPats">
+    <End Type="StPatsDataBaseModel1.Tipo_Producto_StPats" Role="Tipo_Producto_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Tank_LFBT_VC_StPats" Role="Tank_LFBT_VC_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tipo_Producto_StPats">
+        <PropertyRef Name="id_tipo_producto" />
+      </Principal>
+      <Dependent Role="Tank_LFBT_VC_StPats">
+        <PropertyRef Name="id_tipo_product" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tank_LFLT_VCCJ_StPats_Tipo_Producto_StPats">
+    <End Type="StPatsDataBaseModel1.Tipo_Producto_StPats" Role="Tipo_Producto_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Tank_LFLT_VCCJ_StPats" Role="Tank_LFLT_VCCJ_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tipo_Producto_StPats">
+        <PropertyRef Name="id_tipo_producto" />
+      </Principal>
+      <Dependent Role="Tank_LFLT_VCCJ_StPats">
+        <PropertyRef Name="id_tipo_product" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tank_LSBT_VC_ACF_StPats_Tipo_Producto_StPats">
+    <End Type="StPatsDataBaseModel1.Tipo_Producto_StPats" Role="Tipo_Producto_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Tank_LSBT_VC_ACF_StPats" Role="Tank_LSBT_VC_ACF_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tipo_Producto_StPats">
+        <PropertyRef Name="id_tipo_producto" />
+      </Principal>
+      <Dependent Role="Tank_LSBT_VC_ACF_StPats">
+        <PropertyRef Name="id_tipo_product" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tank_LWWFWCJCT_VC_StPats_Tipo_Producto_StPats">
+    <End Type="StPatsDataBaseModel1.Tipo_Producto_StPats" Role="Tipo_Producto_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Tank_LWWFWCJCT_VC_StPats" Role="Tank_LWWFWCJCT_VC_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tipo_Producto_StPats">
+        <PropertyRef Name="id_tipo_producto" />
+      </Principal>
+      <Dependent Role="Tank_LWWFWCJCT_VC_StPats">
+        <PropertyRef Name="id_tipo_product" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tank_MXT_StPats_Tipo_Producto_StPats">
+    <End Type="StPatsDataBaseModel1.Tipo_Producto_StPats" Role="Tipo_Producto_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Tank_MXT_StPats" Role="Tank_MXT_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tipo_Producto_StPats">
+        <PropertyRef Name="id_tipo_producto" />
+      </Principal>
+      <Dependent Role="Tank_MXT_StPats">
+        <PropertyRef Name="id_tipo_product" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tank_TONW_StPats_Tipo_Producto_StPats">
+    <End Type="StPatsDataBaseModel1.Tipo_Producto_StPats" Role="Tipo_Producto_StPats" Multiplicity="1" />
+    <End Type="StPatsDataBaseModel1.Tank_TONW_StPats" Role="Tank_TONW_StPats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tipo_Producto_StPats">
+        <PropertyRef Name="id_tipo_producto" />
+      </Principal>
+      <Dependent Role="Tank_TONW_StPats">
+        <PropertyRef Name="id_tipo_product" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
